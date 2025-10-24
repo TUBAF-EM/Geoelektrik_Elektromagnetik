@@ -2,8 +2,6 @@
 
 /.quarto/
 
-*.html
-*.js
 search.json
 bootstrap*.*
 
