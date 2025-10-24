@@ -10,6 +10,7 @@ profile:
 book:
   title: "Modul Geoelektrik und Elektromagnetik"
   author: "Thomas Günther und Ralph-Uwe Börner"
+  date: today
   chapters:
     - index.qmd
     - history.qmd
@@ -20,7 +21,13 @@ format:
   html:
     theme: cosmo
     number-sections: true
+    crossref:
+      chapters: true
+      eq-prefix: ""
     lib-dir: site_libs
+    code-fold: true
+    code-summary: "Code anzeigen"
+    html-math-method: mathjax
     include-in-header:
       - text: |
           <script>
@@ -33,5 +40,5 @@ format:
             }
           };
           </script>
-
+ 
 editor: source
