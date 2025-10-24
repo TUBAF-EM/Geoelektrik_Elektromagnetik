@@ -1,7 +1,7 @@
 project:
   type: book
   output-dir: docs
-
+lang: "de"
 profile:
   default: book
   group:
@@ -13,11 +13,17 @@ book:
   date: today
   chapters:
     - index.qmd
-    - history.qmd
-    - methods.qmd
+    - einfuehrung.qmd
+    - part: "Geoelektrik"
+      chapters:
+        - grundgleichungen_dc.qmd
+    - part: "Elektromagnetik"
+      chapters:
+        - magnetotellurik.qmd
+    - zusammenfassung.qmd
     - slidedecks.qmd
 
-format: 
+format:
   html:
     theme: cosmo
     number-sections: true
@@ -40,5 +46,5 @@ format:
             }
           };
           </script>
- 
+
 editor: source
