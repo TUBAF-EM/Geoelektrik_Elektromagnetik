@@ -1,0 +1,64 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Modul Geoelektrik und Elektromagnetik",
+    "section": "",
+    "text": "Vorwort\nVorrede.",
+    "crumbs": [
+      "Vorwort"
+    ]
+  },
+  {
+    "objectID": "einfuehrung.html",
+    "href": "einfuehrung.html",
+    "title": "1  Einführung",
+    "section": "",
+    "text": "Ipsum lorum",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "grundgleichungen_dc.html",
+    "href": "grundgleichungen_dc.html",
+    "title": "2  Grundgleichungen",
+    "section": "",
+    "text": "Ipsum lorum",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
+    ]
+  },
+  {
+    "objectID": "magnetotellurik.html",
+    "href": "magnetotellurik.html",
+    "title": "3  Magnetotellurik",
+    "section": "",
+    "text": "Ipsum lorum darum",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Magnetotellurik</span>"
+    ]
+  },
+  {
+    "objectID": "zusammenfassung.html",
+    "href": "zusammenfassung.html",
+    "title": "4  Zusammenfassung",
+    "section": "",
+    "text": "Ipsum lorum",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Zusammenfassung</span>"
+    ]
+  },
+  {
+    "objectID": "slidedecks.html",
+    "href": "slidedecks.html",
+    "title": "5  Slide decks",
+    "section": "",
+    "text": "Here are the slide decks:\n\n👉 Methods — Slides\n\n\n\n\n👉 History — Slides",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Slide decks</span>"
+    ]
+  }
+]
