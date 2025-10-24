@@ -1,0 +1,6 @@
+---
+title: "Magnetotellurik"
+editor: source
+---
+
+Ipsum lorum
