@@ -1,0 +1,225 @@
+---
+title: "Sensitivitäten und Messanordnungen"
+editor: source
+---
+
+# Sensitivitäten
+![](pics/sens_scheme.png)
+
+## Herleitung
+Wie wirkt sich eine Änderung der Leitfähigkeit auf den Messwert aus?
+$$S(\vb r)=\pdv{\rho_a}{\rho(\vb r)}$$
+
+$$\div((\sigma+\delta\sigma)\grad (u+\delta u))=0$$
+
+$$\div(\sigma\grad u)+\div(\delta\sigma\grad u)+\div(\sigma\grad \delta u)+\div(\delta\sigma\grad \delta u)=0$$
+
+$$\Rightarrow S(\vb r)=\frac{k}{\rho^2} \frac{\grad u^{AB}}{I^{AB}} \frac{\grad u^{MN}}{I^{MN}}=
+\frac{k}{4\pi^2} \qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})$$
+
+
+## Wenner-Anordnung
+![](pics/sens/wa-empty.svg)
+
+## Wenner-Anordnung - Sensitivität
+![](pics/sens/sens_wa13.svg)
+
+## Schlumberger-Anordnung - Sensitivität
+![](pics/sens/sens_slm18.svg)
+
+## Wenner-$\alpha$ Anordnung - Sensitivität
+![](pics/sens/sens_wa13.svg)
+
+## Wenner-$\beta$ Anordnung - Sensitivität
+![](pics/sens/sens_wb13.svg)
+
+## Dipol-Dipol-Anordnung - Sensitivität
+![](pics/sens/sens_dd27.svg)
+
+## Sensitivitäten erklärt
+
+Wenner-Messung (A-M-N-B) mit flacher Einlagerung
+
+::: {.r-stack}
+![](pics/ert/sens/sens_hom.svg){width=1200}
+
+![](pics/ert/sens/sens_res1.svg){.fragment width=1200}
+
+![](pics/ert/sens/sens_hom.svg){.fragment width=1200}
+
+![](pics/ert/sens/sens_con1.svg){.fragment width=1200}
+
+![](pics/ert/sens/sens_hom.svg){.fragment width=1200}
+
+![](pics/ert/sens/sens_res2.svg){.fragment width=1200}
+
+![](pics/ert/sens/sens_hom.svg){.fragment width=1200}
+
+![](pics/ert/sens/sens_con2.svg){.fragment width=1200}
+:::
+
+# ERT Feldausbreitung
+
+Einstieg siehe Notebook
+
+## Homogener Untergrund: Potentialverteilung
+![](pics/ert/sens/pot-hom.svg)
+
+## Homogener Untergrund: Stromlinien
+![](pics/ert/sens/pot-hom-stream.svg)
+
+## Stetigkeit an Grenzflächen
+
+:::: {.columns}
+::: {.column}
+$$\Rightarrow \div(\sigma\vb E)=-\div(\sigma\grad U)=0$$
+![](pics/ert/currentdensity.png)
+**Brechungsgesetz**:
+:::
+::: {.column}
+**Stetigkeit von**
+
+* Potential $u$
+* Tangentialkomponente von E
+$E_1=E_2\Rightarrow \rho_1 j_{x1}=\rho_2 j_{x2}$
+* Normalkomponente v. $j_{z1}=j_{z2}$
+$$\Rightarrow \rho_1\frac{j_{x1}}{j_{z1}}=\rho_2\frac{j_{x2}}{j_{z2}}$$
+$$\rho_1\tan\theta_1=\rho_2\tan\theta_2$$
+:::
+::::
+
+## Schlechter Leiter: Stromlinien
+![](pics/ert/badconductor.svg)
+
+## Guter Leiter: Stromlinien
+![](pics/ert/goodconductor.svg)
+
+## Mess-Strategien
+
+::: {.callout-note title="Kartierung"}
+"Bewegung" einer festen Anordnung entlang eines Profils
+:::
+
+::: {.callout-note title="Sondierung"}
+Vergrößerung der Auslage bei festem Mittelpunkt
+:::
+
+::: {.callout-note title="Sondierungskartierung/2D-Geoelektrik"}
+Kombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)
+:::
+
+## Widerstands-Kartierung
+
+::: {.r-stack}
+![](pics/sens/sens_wa1.svg){width=1200}
+
+![](pics/sens/sens_wa2.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa3.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa4.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa5.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa6.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa7.svg){.fragment width=1200}
+:::
+
+# Widerstands-Tiefensondierung
+
+## Tiefensondierung - Schlumberger
+
+::: {.r-stack}
+![](pics/sens/sens_slm3.svg){width=1200}
+
+![](pics/sens/sens_slm10.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm15.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm18.svg){.fragment width=1200}
+:::
+
+## Horizontale Stromdichte
+:::: {.columns}
+::: {.column}
+$j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})$
+
+in der Mitte ($r_A=r_B$, AB=$L$):
+$$j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}$$
+
+
+:::
+::: {.column}
+```{python}
+#| eval: true
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+```
+```{python}
+#| eval: true
+#| echo: true
+#| code-line-numbers: false
+zL = np.arange(0, 3, .01)
+jx = 1/(zL**2+0.25)**1.5/2/np.pi
+sumjx = np.cumsum(jx)
+plt.plot(zL, jx/jx[0], label="jx")
+plt.plot(zL, sumjx/sumjx[-1], label="sum")
+plt.legend()
+plt.xlabel("z/L")
+plt.ylabel(r"$j_x$/$\Sigma j_x$ (normalized)")
+plt.grid()
+```
+:::
+::::
+
+## Horizontale Stromdichte integriert
+$$\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}$$
+
+:::: {.columns}
+::: {.column}
+$$\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} $$
+- Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2
+:::
+::: {.column}
+```{python}
+#| eval: true
+#| echo: true
+#| code-line-numbers: false
+plt.plot(zL, np.arctan(2*zL)*2/np.pi)
+plt.xlabel("z/L")
+plt.grid()
+```
+:::
+::::
+
+## 1D-Sensitivitäten
+:::: {.columns}
+::: {.column}
+![](pics/ves/ves_sens1d.svg){width="150%"}
+:::
+::: {.column}
+- logarithmisch äquidistante L (AB)
+- Sondierungsparameter AB/2
+- Maximum bei AB/2/2
+- 90%-Summe bei AB/2*3
+:::
+::::
+
+## Notebook mit Sondierung
+
+## Zielfunktion schlechter Leiter
+
+::: {.columns}
+::: {.column}
+- 3-Schicht-Fall
+- Mächtigkeiten 20m
+- spez. Widerstände 100/10/100 $\Omega$m
+:::
+::: {.column}
+![](pics/ves/objfun-resistor.svg)
+:::
+::::
+
+
