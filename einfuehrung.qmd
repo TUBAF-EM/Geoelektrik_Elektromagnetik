@@ -3,4 +3,486 @@ title: "Einführung"
 editor: source
 ---
 
-Ipsum lorum
+## Gliederung Teil Geoelektrik
+
+1. Grundgleichungen und elektrische Felder
+1. Petrophysikalische Grundlagen
+1. Anordnungen, Profilmessungen und Sensitivitäten
+1. Widerstandstiefensondierung
+1. 2D-Geoelektrik, Modellierung und Inversion
+1. 3D-Geoelektrik und crosshole-ERT
+1. Prozessmonitoring und Timelapse-Verfahren
+1. Induzierte Polarisation im Zeit- und Frequenzbereich
+
+## Gliederung Teil Elektromagnetik
+
+1. Grundlagen der Geoelektromagnetik
+1. Magnetotellurik
+1. CSEM-Methoden im Frequenzbereich
+1. Transientelektromagnetik
+1. Gemeinsame Inversion
+1. Nuklearmagnetische Resonanz
+
+## Empfohlene Lehrbücher
+:::::: columns
+:::  {.column width="32%"}
+![Telford, Geldart, Sherriff (1990): Cambridge ](pics/telford_cover.png)
+:::
+
+:::  {.column width="28.5%"}
+![Knoedel, Krummel, Lange (2005): Springer](pics/knoedel.png)
+:::
+
+:::  {.column width="34%"}
+![Everett (2013): Cambridge](pics/everette-cover.png)
+:::
+::::::
+
+## Literatur
+
+- Knödel/Krummel/Lange.: Geophysik, Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten, Springer [frei über UB](https://link.springer.com/book/10.1007/b137869)
+- Everett (2013): [Near Surface Applied Geophysics](https://doi.org/10.1017/CBO9781139088435), Cambridge
+- Binley (2015): Tools and Techniques: Electrical Methods, in *Treatise on Geophysics*, vol 11, 2nd ed., Elsevier, doi:[10.1016/B978-0-444-53802-4.00192-5](http://dx.doi.org/10.1016/B978-0-444-53802-4.00192-5)
+- Burger et al. (2023): [Introduction to Applied Geophysics - Exploring the Shallow Subsurface](https://www.cambridge.org/de/academic/subjects/earth-and-environmental-science/solid-earth-geophysics/introduction-applied-geophysics-exploring-shallow-subsurface), Cambridge
+
+## Lernpyramide
+
+::: {.columns}
+::: {.column width="60%"}
+![](pics/Lernpyramide-NTL.png)
+:::
+::: {.column width="40%"}
+* Vorlesung und Scripte
+* Notebooks zum Spielen
+* Übungen
+* praktische Messungen
+* gemeinsame Auswertung
+:::
+::::
+
+
+
+# Einführung
+
+![](pics/ert/ohm.png){fig-align="center"}
+
+## Elektromagnetische Größen
+
+::::{.columns}
+:::{.column}
+* magn. Feldstärke $H$ [A/m]
+* magn. Flussdichte $B$ [Vs/m²]
+  $B=\mu H$ (oft "Magnetfeld")
+* magn. Permeabilität $\mu$ [Vs/Am]
+  $\mu=\mu_0\mu_r$ , $\mu_0$=4$\pi$ 1e-7\pi Vs/Am
+* mag. Suszeptibilität $\chi_m=\mu_r$-1
+* magn. Fluss $\Phi$ [Vs]
+* spez. el. Widerstand $\rho$ [$\Omega$m]
+:::
+:::{.column}
+* elektr. Feldstärke $E$ [V/m]
+* dielektr. Verschiebung $D$ [As/m²]
+  $D=\epsilon E$ (Hilfsfeld)
+* elektr. Permittivität $\epsilon$ [As/Vm]
+  $\epsilon=\epsilon_0\epsilon_r$ , $\epsilon_0$=8.854e-12As/Vm
+* el. Suszeptibilität $\chi_e=\epsilon_r$-1
+* elektr. Stromdichte $j$ [A/m²]
+* el. Leitfähigkeit $\sigma$ [S/m]
+:::
+::::
+
+## Maxwell-Gleichungen
+::::{.columns}
+:::{.column}
+$$ \curl\vb E = -\pdv{\vb B}{t} $$
+:::
+:::{.column}
+$$ \curl \vb H = \pdv{\vb D}{t} + \vb j $$
+:::
+::::
+![](pics/curlEB.png)
+
+## Maxwell - Quellen und Material
+Ladungsträger erzeugen eine elektrische Verschiebung
+$$\div \vb D = \varrho$$
+
+Das Magnetfeld ist frei von Quellen und Senken
+$$\div \vb B = 0$$
+
+Materialgleichungen: $\vb B=\mu\vb H$, $\vb D=\epsilon\vb E$, $\vb j=\sigma\vb E$
+
+## Amperesches Gesetz in der Geophysik
+$$ \curl \vb H = \pdv{\vb D}{t} + \vb j $$
+
+* Wellenausbreitung $\curl\vb H=\pdv*{\vb D}{t}$: Georadar
+* Induktion $\curl\vb H=\vb j$, $\curl\vb E=-\pdv*{\vb B}{t}$ <br>
+  Magnetotellurik, EMI in Zeit- und Frequenzbereich
+* Magnetostatik $\curl\vb H=\vb j$, $\curl\vb E=0$
+
+## Näherung und Methoden
+
+$$ \curl \vb H = \pdv{\vb D}{t} + \vb j \qquad
+ \curl\vb E = -\pdv{\vb B}{t} $$
+
+Vorgänge/Felder | $\curl\vb H$            | $\curl\vb E$       | Methoden    |
+----------------|-------------------------|--------------------|-------------|
+Stationär       | $\vb j$                 | 0                  | Geoelektrik |
+Quasistationär  | $\vb j$                 | $-\pdv*{\vb B}{t}$ | Induktion   |
+Wellenvorgänge  | $\pdv*{\vb D}{t}+\vb j$ | $-\pdv*{\vb B}{t}$ | Georadar    |
+
+## Elektrische Leitfähigkeit
+
+:::: {.columns}
+::: {.column width="53%"}
+![Elektrischer Widerstand](pics/ert/resistor.png)
+
+* Länge $L$, Querschnitt $A$
+* Spannung $U$ [V], Stromstärke $I$ [A]
+* Ohmscher Widerstand $R$=$U$/$I$ [$\Omega$]
+:::
+::: {.column width="47%"}
+
+:::{.fragment}
+* Stromdichte $j$=$I$/$A$ [A/m²]
+* Elektr. Feld $E$=$U$/$L$ [V/m]
+:::
+:::{.fragment}
+* **Ohmsches Gesetz**<br>
+$j=\sigma E$ (Leitfähigkeit $\sigma$ [A/Vm])<br>
+$\Rightarrow \rho=1/\sigma=E/j$ [$\Omega$m]
+spezifischer Widerstand
+:::
+:::{.fragment}
+$\Rightarrow \rho = \frac{U/L}{I/A}=\frac{U}{I}\frac{A}{L}=R\cdot k$
+Konfigurations-Faktor $k$ [m]
+:::
+:::
+::::
+
+## Spezifischer Widerstand (Knödel, 2005)
+
+:::: {.columns}
+::: {.column width="30%"}
+25 Dekaden:
+
+- Diamant: 1e18 $\Omega$m
+- Kupfer: 1e-7 $\Omega$m
+
+abhängig von:
+
+- Wassergehalt
+- Fluidleitfähigkeit
+- Tonanteil
+:::
+::: {.column width="70%"}
+![](pics/ert/resistivity2.png){fig-align="center"}
+:::
+::::
+
+# Anwendung
+
+* Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)
+* Hydrogeologie (Aquifer-Architektur, Kontaminationen)
+* Salzwasser-Intrusion in Grundwasser-Aquifere
+* Geologisch/tektonische Untersuchungen (Störungen)
+* Archäologie (Fundamente, Hütten und Schlacken)
+* Landwirtschaft (Feuchtigkeit und Tonanteil)
+* Georisiken (Hangrutschungen, Verkarstung)
+* Prozessmonitoring (Wasser- und Stoff-Transport)
+
+## Kleinskalig (Martin&Günther, 2013)
+
+![](pics/ert/treetomography.png)
+
+## Mittelskalig: Geologie
+
+![Tanner et al. (2019): Störungszone Irland](pics/ert/kilmore.png)
+
+## Großskalig: Geologie
+
+![Nickschick et al. (2017): CO2-Aufstieg an Störung im Egergraben](pics/ert/nickschick.png)
+
+## Salzwasser-Intrusion von Süßwasseraquiferen
+
+![](pics/ert/spiekeroog1.png)
+![](pics/ert/spiekeroog2.png){.fragment}
+
+## Hydrogeologie (Hübner et al., 2015)
+
+![Wasserspeicher in Hangdellen am Teststandort Mulda](pics/ert/mulda3d1.png)
+
+## Untersuchung von Halden (Günther et al., 2006)
+
+![](pics/ert/haldeModel.png)
+
+
+
+
+## Zielfunktion guter Leiter
+
+::: {.columns}
+::: {.column}
+- 3-Schicht-Fall
+- Mächtigkeiten 20m
+- spez. Widerstände 100/1000/100 $\Omega$m
+:::
+::: {.column}
+![](pics/ves/objfun-conductor.svg)
+:::
+::::
+
+## Sensitivitäten
+![](pics/sens_scheme.png)
+
+
+## Wenner-Anordnung
+![](pics/sens/sens_wa13.svg)
+
+## Schlumberger-Anordnung
+![](pics/sens/sens_slm18.svg)
+
+## Wenner-$\beta$ Anordnung
+![](pics/sens/sens_wb13.svg)
+
+## Dipol-Dipol-Anordnung
+![](pics/sens/sens_dd27.svg)
+
+## Mess-Strategien
+
+::: {.callout-note title="Kartierung"}
+"Bewegung" einer festen Anordnung entlang eines Profils
+:::
+
+::: {.callout-note title="Sondierung"}
+Vergrößerung der Auslage bei festem Mittelpunkt
+:::
+
+::: {.callout-note title="Sondierungskartierung/2D-Geoelektrik"}
+Kombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)
+:::
+
+## Widerstands-Kartierung (Wenner)
+
+::: {.r-stack}
+![](pics/sens/sens_wa1.svg){width=1200}
+
+![](pics/sens/sens_wa2.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa3.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa4.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa5.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa6.svg){.fragment width=1200}
+
+![](pics/sens/sens_wa7.svg){.fragment width=1200}
+:::
+
+## Tiefensondierung (Schlumberger)
+
+::: {.r-stack}
+![](pics/sens/sens_slm3.svg){width=1200}
+
+![](pics/sens/sens_slm10.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm15.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm18.svg){.fragment width=1200}
+:::
+
+<!-- ------------------------------------------ -->
+# 2D-Geoelektrik
+
+* Kombination aus Kartierung und Sondierung, automatisiert mit Relais
+* Entwicklung von Multi-Elektroden-Apparaturen (1990er Jahre)
+* Hersteller weltweit: ABEM (GeoGuideline, SE), IRIS Instruments (FR), SuperSting (US), Resecs, Lippmann, GeoTom (DE), ARES (CZ), Eigenbau-Systeme (OhmPi, FR)
+
+## Praktische Realisierung
+
+* Kombination aus positiver & negativer Phase mit Ausschaltpausen
+
+![Stromsignal (square wave with 50% duty cycle)](pics/stromsignal.png){fig-align="center"}
+
+
+## 2D-Geoelektrik (Schlumberger)
+
+::: {.r-stack}
+![](pics/sens/sens_slm0.svg){width=1200}
+
+![](pics/sens/sens_slm1.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm2.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm3.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm4.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm5.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm6.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm7.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm8.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm9.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm10.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm11.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm12.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm13.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm14.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm15.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm16.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm17.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm18.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm19.svg){.fragment width=1200}
+:::
+
+## 2D-Geoelektrik (Wenner-$\beta$)
+
+::: {.r-stack}
+![](pics/sens/sens_wb0.svg){width=1200}
+
+![](pics/sens/sens_wb1.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb2.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb3.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb4.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb5.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb6.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb7.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb8.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb9.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb10.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb11.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb12.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb13.svg){.fragment width=1200}
+
+![](pics/sens/sens_wb14.svg){.fragment width=1200}
+:::
+
+
+<!-- ------------------------------------------ -->
+
+## Beispiel: Modell
+![](pics/inhom-model.svg)
+
+## Stromverteilung homogener Fall
+![](pics/hom-current.svg)
+
+## Beispiel: Strom & Potential
+![](pics/inhom-current.svg)
+
+## Beispiel: Pseudosektion
+![](pics/inhom-pseudo.svg)
+
+## Beispiel: Untergrundmodell
+![](pics/inhom-result.svg)
+
+
+
+## Pseudosektion Wenner-Array
+
+{{< video https://www.youtube.com/watch?v=IlqWXWprC1g?autoplay=1 width="100%" height="73%" >}}
+
+## Pseudosektion Schlumberger-Array
+
+{{< video https://www.youtube.com/watch?v=h0fnnpU5Pf8?autoplay=1 width="100%" height="53%" >}}
+
+## Dipol-Dipol mit leitfähiger Einlagerung
+
+{{< video https://www.youtube.com/watch?v=lt1qV-2d5Ps?autoplay=1 width="100%" height="53%" >}}
+
+
+## Dipol-Dipol mit resistiver Einlagerung
+
+{{< video https://www.youtube.com/watch?v=IUzSEVa4CCw?autoplay=1 width="100%" height="53%" >}}
+
+# Das pyGIMLi-Modul ERT
+
+- Generierung von Datensätzen (Quadrupolanordnung)
+- Berechnung von Geometriefaktoren analytisch oder numerisch
+- Synthetische Simulation von Widerstandsverteilungen
+- Daten-Import, -Filterung, Fehlerbestimmung
+- 2D/3D-Inversion von Datensätzen
+- Auswertung von Frequenz- und Zeitbereichs-IP-Daten
+- Timelapse-Inversion von Monitoring-Daten
+
+# Das pyGIMLi-Modul VES
+
+- Beliebige Anordnungen, typisch Schlumberger (AB/2, MN/2)
+- Simulation beliebiger Schichtmodelle
+- Auswertung von n-Schicht-Modellen (Widerstände & Mächtigkeiten)
+- Auswertung glatter Verteilung (nur Widerstände)
+
+
+
+## Vergleich von Elektrodenanordnungen
+
+|                      |WA|WB|SL|DD|MG|
+|----------------------|--|--|--|--|--|
+|Signalstärke          |H |M |M |L |H |
+|Horizontale Auflösung |M |M |M |H |M |
+|Vertikale Auflösung   |L |L |M |L |M |
+|Erkundungstiefe       |H |H |M |L |L |
+|Vertikale Sondierung  |L |L |H |M |M |
+|Kartierung            |H |H |L |H |M |
+
+(Wenner-$\alpha$/$\beta$, Schlumberger, Dipol-dipol, Multi-gradient)
+
+## Beispiel: Modell
+![](pics/inhom-model.svg)
+
+## Beispiel: Pseudosektion
+![](pics/inhom-pseudo.svg)
+
+## Beispiel: Untergrundmodell
+![](pics/inhom-result.svg)
+
+## Inversion
+
+::: {.r-stack}
+![](pics/intro-0){height=650}
+
+![](pics/intro-1){.fragment height=650}
+
+![](pics/intro-2){.fragment height=650}
+
+![](pics/intro-3){.fragment height=650}
+:::
+
+## Inversion - Methodik
+
+Datenvektor $\vb d=\{d_i\}=\{\rho^a_i\}$,
+Modellvektor $\vb m=\{m_j\}=\{\rho_j\}$
+
+Datenmisfit $\vb \delta \vb d = \vb d - \vb f(\vb m)$ soll klein sein (Quadrate)
+
+Modellveränderung $\delta\vb m$ über Sensitivitätsmatrix $S_{i,j}=\pdv{f_i(\vb m)}{m_j}=\pdv{\rho_a(\rho)}{\rho}$
+
+$$\Rightarrow \vb S \vb \delta \vb m = \delta \vb d$$
+
+Least-SquaresLösung $\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d$ +Zusatzterme
+

@@ -17,6 +17,8 @@ book:
     - part: "Geoelektrik"
       chapters:
         - grundgleichungen_dc.qmd
+        - sens_arrays.qmd
+        - ves.qmd
     - part: "Elektromagnetik"
       chapters:
         - magnetotellurik.qmd

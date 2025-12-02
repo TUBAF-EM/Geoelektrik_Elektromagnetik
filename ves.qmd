@@ -1,0 +1,105 @@
+
+
+# Inversion am Beispiel Tiefensondierung
+
+- früher Auswertung mit Kurvenschablonen
+- Datenanpassung durch iterative Veränderung des Modells
+- Inversion: Minimierung des Misfits zwischen Daten & Modellantwort
+  - Sensitivitäten als wichtigste Zutat ($\delta\rho\rightarrow\delta\rho_a$)
+- Zielfunktion: Quadratmittel der Abweichung darstellen
+
+## Horizontale Stromdichte
+:::: {.columns}
+::: {.column}
+$j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})$
+
+in der Mitte ($r_A=r_B$, AB=$L$):
+$$j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}$$
+
+
+:::
+::: {.column}
+```{python}
+#| eval: true
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+```
+```{python}
+#| eval: true
+#| echo: true
+#| code-line-numbers: false
+zL = np.arange(0, 3, .01)
+jx = 1/(zL**2+0.25)**1.5/2/np.pi
+sumjx = np.cumsum(jx)
+plt.plot(zL, jx/jx[0], label="jx")
+plt.plot(zL, sumjx/sumjx[-1], label="sum")
+plt.legend()
+plt.xlabel("z/L")
+plt.ylabel(r"$j_x$/$\Sigma j_x$ (normalized)")
+plt.grid()
+```
+:::
+::::
+
+## Horizontale Stromdichte integriert
+$$\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}$$
+
+:::: {.columns}
+::: {.column}
+$$\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} $$
+- Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2
+:::
+::: {.column}
+```{python}
+#| eval: true
+#| echo: true
+#| code-line-numbers: false
+plt.plot(zL, np.arctan(2*zL)*2/np.pi)
+plt.xlabel("z/L")
+plt.grid()
+```
+:::
+::::
+
+## 1D-Sensitivitäten
+:::: {.columns}
+::: {.column}
+![](pics/ves/ves_sens1d.svg){width="150%"}
+:::
+::: {.column}
+- logarithmisch äquidistante L (AB)
+- Sondierungsparameter AB/2
+- Maximum bei AB/2/2
+- 90%-Summe bei AB/2*3
+:::
+::::
+
+## Notebook mit Sondierung
+
+## Zielfunktion schlechter Leiter
+
+::: {.columns}
+::: {.column}
+- 3-Schicht-Fall
+- Mächtigkeiten 20m
+- spez. Widerstände 100/10/100 $\Omega$m
+:::
+::: {.column}
+![](pics/ves/objfun-resistor.svg)
+:::
+::::
+
+
+## Zielfunktion guter Leiter
+
+::: {.columns}
+::: {.column}
+- 3-Schicht-Fall
+- Mächtigkeiten 20m
+- spez. Widerstände 100/1000/100 $\Omega$m
+:::
+::: {.column}
+![](pics/ves/objfun-conductor.svg)
+:::
+::::
