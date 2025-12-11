@@ -1,0 +1,79 @@
+---
+editor: source
+---
+
+# Grundgleichungen
+
+Feldgrößen werden im Zeitbereich als Funktion der Zeit und des Ortes gemessen.
+
+Bei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.
+
+::: {.callout-note}
+Im Zeitbereich werden die Feldgrößen kleingeschrieben, z.B. $\mathbf{e}$, $\mathbf{h}$. 
+
+Im Frequenzbereich schreiben wir die Feldgrößen mit Großbuchstaben, z.B. $\mathbf{B}$.
+
+Der Zusammenhang wird durch die Fouriertransformation hergestellt:
+
+$$
+\begin{align}
+f(t) & = \frac{1}{2 \pi} \int_{-\infty}^{\infty} F(\omega) e^{ +i \omega t }\, \mathrm d  \omega \\
+F(\omega) & = \phantom{\frac{1}{2 \pi}} \int_{-\infty}^{\infty} f(t) e^{ -i \omega t }\, \mathrm d t
+\end{align}
+$$
+
+Die Zeitabhängigkeit wird durch den Term $e^{ i \omega t }$ eingeführt, und wir schreiben
+$$
+\mathbf{E}(\omega) = \mathbf{E}_{0} e^{ i \omega t }.
+$$
+Der Term $e^{ i \omega t }$ tritt bei allen Feldgrößen als derselbe Faktor auf und wird daher der besseren Übersicht halber weggelassen.
+
+Die physikalisch relevante Größe ist die Feldamplitude $\mathbf{E}_{0}$.
+:::
+
+## Maxwell-Gleichungen
+
+### Zeitbereich
+$$
+\begin{align}
+\curl \mathbf{h} & = \mathbf{j} + \frac{ \partial \mathbf{d} }{ \partial t } \\
+\curl \mathbf{e} & = -\frac{ \partial \mathbf{b} }{ \partial t } \\
+\div \mathbf{b} & = 0 \\
+\div \mathbf{d} & = \rho_{E}
+\end{align}
+$$
+
+### Frequenzbereich
+$$
+\begin{align}
+\curl \mathbf{H} & = \mathbf{J} + i \omega \mathbf{D} \\
+\curl \mathbf{E} & = -i \omega \mathbf{B} \\
+\div \mathbf{B} & = 0 \\
+\div \mathbf{D} & = \rho_{E}
+\end{align}
+$$
+
+## Materialgleichungen
+
+$$
+\begin{align}
+\mathbf{b} & = \mu \mathbf{h} \\
+\mathbf{d} & = \varepsilon \mathbf{e}
+\end{align}
+$$
+
+bzw.
+$$
+\begin{align}
+\mathbf{B} & = \mu \mathbf{H} \\
+\mathbf{E} & = \varepsilon \mathbf{E}
+\end{align}
+$$
+
+
+## Ohmsches Gesetz
+$$
+\mathbf{j} = \sigma \mathbf{e} \quad\text{  bzw.  }\quad \mathbf{J} = \sigma \mathbf{E}.
+$$
+
+

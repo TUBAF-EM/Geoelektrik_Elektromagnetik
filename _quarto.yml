@@ -21,6 +21,7 @@ book:
         - ves.qmd
     - part: "Elektromagnetik"
       chapters:
+        - grundgleichungen_em.qmd
         - magnetotellurik.qmd
     - zusammenfassung.qmd
     - slidedecks.qmd
@@ -50,3 +51,4 @@ format:
           </script>
 
 editor: source
+jupyter: python3
