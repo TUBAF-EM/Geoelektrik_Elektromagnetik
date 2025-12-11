@@ -1,3 +1,16 @@
+# Widerstands-Tiefensondierung
+
+## Tiefensondierung - Schlumberger
+
+::: {.r-stack}
+![](pics/sens/sens_slm3.svg){width=1200}
+
+![](pics/sens/sens_slm10.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm15.svg){.fragment width=1200}
+
+![](pics/sens/sens_slm18.svg){.fragment width=1200}
+:::
 
 
 # Inversion am Beispiel Tiefensondierung

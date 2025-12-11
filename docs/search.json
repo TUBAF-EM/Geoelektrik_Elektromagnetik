@@ -210,96 +210,6 @@
     ]
   },
   {
-    "objectID": "einfuehrung.html#zielfunktion-guter-leiter",
-    "href": "einfuehrung.html#zielfunktion-guter-leiter",
-    "title": "1  Einführung",
-    "section": "3.7 Zielfunktion guter Leiter",
-    "text": "3.7 Zielfunktion guter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/1000/100 \\(\\Omega\\)m",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#sensitivitäten",
-    "href": "einfuehrung.html#sensitivitäten",
-    "title": "1  Einführung",
-    "section": "3.8 Sensitivitäten",
-    "text": "3.8 Sensitivitäten",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#wenner-anordnung",
-    "href": "einfuehrung.html#wenner-anordnung",
-    "title": "1  Einführung",
-    "section": "3.9 Wenner-Anordnung",
-    "text": "3.9 Wenner-Anordnung",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#schlumberger-anordnung",
-    "href": "einfuehrung.html#schlumberger-anordnung",
-    "title": "1  Einführung",
-    "section": "3.10 Schlumberger-Anordnung",
-    "text": "3.10 Schlumberger-Anordnung",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#wenner-beta-anordnung",
-    "href": "einfuehrung.html#wenner-beta-anordnung",
-    "title": "1  Einführung",
-    "section": "3.11 Wenner-\\(\\beta\\) Anordnung",
-    "text": "3.11 Wenner-\\(\\beta\\) Anordnung",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#dipol-dipol-anordnung",
-    "href": "einfuehrung.html#dipol-dipol-anordnung",
-    "title": "1  Einführung",
-    "section": "3.12 Dipol-Dipol-Anordnung",
-    "text": "3.12 Dipol-Dipol-Anordnung",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#mess-strategien",
-    "href": "einfuehrung.html#mess-strategien",
-    "title": "1  Einführung",
-    "section": "3.13 Mess-Strategien",
-    "text": "3.13 Mess-Strategien\n\n\n\n\n\n\nKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#widerstands-kartierung-wenner",
-    "href": "einfuehrung.html#widerstands-kartierung-wenner",
-    "title": "1  Einführung",
-    "section": "3.14 Widerstands-Kartierung (Wenner)",
-    "text": "3.14 Widerstands-Kartierung (Wenner)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#tiefensondierung-schlumberger",
-    "href": "einfuehrung.html#tiefensondierung-schlumberger",
-    "title": "1  Einführung",
-    "section": "3.15 Tiefensondierung (Schlumberger)",
-    "text": "3.15 Tiefensondierung (Schlumberger)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
     "objectID": "einfuehrung.html#praktische-realisierung",
     "href": "einfuehrung.html#praktische-realisierung",
     "title": "1  Einführung",
@@ -474,7 +384,7 @@
     "href": "einfuehrung.html#inversion---methodik",
     "title": "1  Einführung",
     "section": "6.6 Inversion - Methodik",
-    "text": "6.6 Inversion - Methodik\nDatenvektor \\(\\vb d=\\{d_i\\}=\\{\\rho^a_i\\}\\), Modellvektor \\(\\vb m=\\{m_j\\}=\\{\\rho_j\\}\\)\nDatenmisfit \\(\\vb \\delta \\vb d = \\vb d - \\vb f(\\vb m)\\) soll klein sein (Quadrate)\nModellveränderung \\(\\delta\\vb m\\) über Sensitivitätsmatrix \\(S_{i,j}=\\pdv{f_i(\\vb m)}{m_j}=\\pdv{\\rho_a(\\rho)}{\\rho}\\)\n\\[\\Rightarrow \\vb S \\vb \\delta \\vb m = \\delta \\vb d\\]\nLeast-SquaresLösung \\(\\vb S^T \\vb S \\delta \\vb m=\\vb S^T \\delta \\vb d\\) +Zusatzterme",
+    "text": "6.6 Inversion - Methodik\nDatenvektor \\(\\vb d=\\{d_i\\}=\\{\\rho^a_i\\}\\), Modellvektor \\(\\vb m=\\{m_j\\}=\\{\\rho_j\\}\\)\nDatenmisfit \\(\\vb \\delta \\vb d = \\vb d - \\vb f(\\vb m)\\) soll klein sein (Quadrate)\nModellveränderung \\(\\delta\\vb m\\) über Sensitivitätsmatrix \\(S_{i,j}=\\pdv{f_i(\\vb m)}{m_j}=\\pdv{\\rho_a(\\rho)}{\\rho}\\)\n\\[\\Rightarrow \\vb S \\vb \\delta \\vb m = \\delta \\vb d\\]\nLeast-SquaresLösung \\(\\vb S^T \\vb S \\delta \\vb m=\\vb S^T \\delta \\vb d\\) +Zusatzterme –&gt;",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
     ]
@@ -836,7 +746,7 @@
     "href": "sens_arrays.html#sensitivitäten-erklärt",
     "title": "3  Sensitivitäten und Messanordnungen",
     "section": "4.8 Sensitivitäten erklärt",
-    "text": "4.8 Sensitivitäten erklärt\nWenner-Messung (A-M-N-B) mit flacher Einlagerung",
+    "text": "4.8 Sensitivitäten erklärt\nDie Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?\nWir betrachten eine Wenner-Messung (A-M-N-B).\n\n\n\nPotential und Strom für homogenen Fall\n\n\nNun erzeugen wir kleine flache Einlagerungen (Kreise), zunächst im Bereich der negativen Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nLeitfähige Einlagerung\n\n\nNun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nResistive Einlagerung",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -920,146 +830,80 @@
     ]
   },
   {
-    "objectID": "sens_arrays.html#tiefensondierung---schlumberger",
-    "href": "sens_arrays.html#tiefensondierung---schlumberger",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "6.1 Tiefensondierung - Schlumberger",
-    "text": "6.1 Tiefensondierung - Schlumberger",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#horizontale-stromdichte",
-    "href": "sens_arrays.html#horizontale-stromdichte",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "6.2 Horizontale Stromdichte",
-    "text": "6.2 Horizontale Stromdichte\n\n\n\\(j_x=\\sigma\\pdv{u}{x}=-\\frac{I}{2\\pi}\\pdv{x} (\\frac{1}{r_A}-\\frac{1}{r_B})\\)\nin der Mitte (\\(r_A=r_B\\), AB=\\(L\\)): \\[j_x=\\frac{I}{2\\pi} \\frac{L}{(z^2+L^2/4)^{3/2}}\\]\n\n\n\nCode anzeigen\nzL = np.arange(0, 3, .01)\njx = 1/(zL**2+0.25)**1.5/2/np.pi\nsumjx = np.cumsum(jx)\nplt.plot(zL, jx/jx[0], label=\"jx\")\nplt.plot(zL, sumjx/sumjx[-1], label=\"sum\")\nplt.legend()\nplt.xlabel(\"z/L\")\nplt.ylabel(r\"$j_x$/$\\Sigma j_x$ (normalized)\")\nplt.grid()",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#horizontale-stromdichte-integriert",
-    "href": "sens_arrays.html#horizontale-stromdichte-integriert",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "6.3 Horizontale Stromdichte integriert",
-    "text": "6.3 Horizontale Stromdichte integriert\n\\[\\frac{I_x}{I}(z)=\\frac{L}{2\\pi}\\int\\limits_{-\\infty}^{\\infty} \\frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\\]\n\n\n\\[\\frac{I_x}{I}(z)=\\frac{2}{\\pi}\\arctan\\frac{2z}{L} \\] - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2\n\n\n\nCode anzeigen\nplt.plot(zL, np.arctan(2*zL)*2/np.pi)\nplt.xlabel(\"z/L\")\nplt.grid()",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#d-sensitivitäten",
-    "href": "sens_arrays.html#d-sensitivitäten",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "6.4 1D-Sensitivitäten",
-    "text": "6.4 1D-Sensitivitäten\n\n\n\n\n\nlogarithmisch äquidistante L (AB)\nSondierungsparameter AB/2\nMaximum bei AB/2/2\n90%-Summe bei AB/2*3",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#notebook-mit-sondierung",
-    "href": "sens_arrays.html#notebook-mit-sondierung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "6.5 Notebook mit Sondierung",
-    "text": "6.5 Notebook mit Sondierung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#zielfunktion-schlechter-leiter",
-    "href": "sens_arrays.html#zielfunktion-schlechter-leiter",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "6.6 Zielfunktion schlechter Leiter",
-    "text": "6.6 Zielfunktion schlechter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/10/100 \\(\\Omega\\)m",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
     "objectID": "ves.html",
     "href": "ves.html",
-    "title": "4  Inversion am Beispiel Tiefensondierung",
+    "title": "4  Widerstands-Tiefensondierung",
     "section": "",
-    "text": "4.1 Horizontale Stromdichte",
+    "text": "4.1 Tiefensondierung - Schlumberger",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Inversion am Beispiel Tiefensondierung</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
     "objectID": "ves.html#horizontale-stromdichte",
     "href": "ves.html#horizontale-stromdichte",
-    "title": "4  Inversion am Beispiel Tiefensondierung",
-    "section": "",
-    "text": "\\(j_x=\\sigma\\pdv{u}{x}=-\\frac{I}{2\\pi}\\pdv{x} (\\frac{1}{r_A}-\\frac{1}{r_B})\\)\nin der Mitte (\\(r_A=r_B\\), AB=\\(L\\)): \\[j_x=\\frac{I}{2\\pi} \\frac{L}{(z^2+L^2/4)^{3/2}}\\]\n\n\n\nCode anzeigen\nzL = np.arange(0, 3, .01)\njx = 1/(zL**2+0.25)**1.5/2/np.pi\nsumjx = np.cumsum(jx)\nplt.plot(zL, jx/jx[0], label=\"jx\")\nplt.plot(zL, sumjx/sumjx[-1], label=\"sum\")\nplt.legend()\nplt.xlabel(\"z/L\")\nplt.ylabel(r\"$j_x$/$\\Sigma j_x$ (normalized)\")\nplt.grid()",
+    "title": "4  Widerstands-Tiefensondierung",
+    "section": "5.1 Horizontale Stromdichte",
+    "text": "5.1 Horizontale Stromdichte\n\n\n\\(j_x=\\sigma\\pdv{u}{x}=-\\frac{I}{2\\pi}\\pdv{x} (\\frac{1}{r_A}-\\frac{1}{r_B})\\)\nin der Mitte (\\(r_A=r_B\\), AB=\\(L\\)): \\[j_x=\\frac{I}{2\\pi} \\frac{L}{(z^2+L^2/4)^{3/2}}\\]\n\n\n\nCode anzeigen\nzL = np.arange(0, 3, .01)\njx = 1/(zL**2+0.25)**1.5/2/np.pi\nsumjx = np.cumsum(jx)\nplt.plot(zL, jx/jx[0], label=\"jx\")\nplt.plot(zL, sumjx/sumjx[-1], label=\"sum\")\nplt.legend()\nplt.xlabel(\"z/L\")\nplt.ylabel(r\"$j_x$/$\\Sigma j_x$ (normalized)\")\nplt.grid()",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Inversion am Beispiel Tiefensondierung</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
     "objectID": "ves.html#horizontale-stromdichte-integriert",
     "href": "ves.html#horizontale-stromdichte-integriert",
-    "title": "4  Inversion am Beispiel Tiefensondierung",
-    "section": "4.2 Horizontale Stromdichte integriert",
-    "text": "4.2 Horizontale Stromdichte integriert\n\\[\\frac{I_x}{I}(z)=\\frac{L}{2\\pi}\\int\\limits_{-\\infty}^{\\infty} \\frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\\]\n\n\n\\[\\frac{I_x}{I}(z)=\\frac{2}{\\pi}\\arctan\\frac{2z}{L} \\] - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2\n\n\n\nCode anzeigen\nplt.plot(zL, np.arctan(2*zL)*2/np.pi)\nplt.xlabel(\"z/L\")\nplt.grid()",
+    "title": "4  Widerstands-Tiefensondierung",
+    "section": "5.2 Horizontale Stromdichte integriert",
+    "text": "5.2 Horizontale Stromdichte integriert\n\\[\\frac{I_x}{I}(z)=\\frac{L}{2\\pi}\\int\\limits_{-\\infty}^{\\infty} \\frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\\]\n\n\n\\[\\frac{I_x}{I}(z)=\\frac{2}{\\pi}\\arctan\\frac{2z}{L} \\] - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2\n\n\n\nCode anzeigen\nplt.plot(zL, np.arctan(2*zL)*2/np.pi)\nplt.xlabel(\"z/L\")\nplt.grid()",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Inversion am Beispiel Tiefensondierung</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
     "objectID": "ves.html#d-sensitivitäten",
     "href": "ves.html#d-sensitivitäten",
-    "title": "4  Inversion am Beispiel Tiefensondierung",
-    "section": "4.3 1D-Sensitivitäten",
-    "text": "4.3 1D-Sensitivitäten\n\n\n\n\n\nlogarithmisch äquidistante L (AB)\nSondierungsparameter AB/2\nMaximum bei AB/2/2\n90%-Summe bei AB/2*3",
+    "title": "4  Widerstands-Tiefensondierung",
+    "section": "5.3 1D-Sensitivitäten",
+    "text": "5.3 1D-Sensitivitäten\n\n\n\n\n\nlogarithmisch äquidistante L (AB)\nSondierungsparameter AB/2\nMaximum bei AB/2/2\n90%-Summe bei AB/2*3",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Inversion am Beispiel Tiefensondierung</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
     "objectID": "ves.html#notebook-mit-sondierung",
     "href": "ves.html#notebook-mit-sondierung",
-    "title": "4  Inversion am Beispiel Tiefensondierung",
-    "section": "4.4 Notebook mit Sondierung",
-    "text": "4.4 Notebook mit Sondierung",
+    "title": "4  Widerstands-Tiefensondierung",
+    "section": "5.4 Notebook mit Sondierung",
+    "text": "5.4 Notebook mit Sondierung",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Inversion am Beispiel Tiefensondierung</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
     "objectID": "ves.html#zielfunktion-schlechter-leiter",
     "href": "ves.html#zielfunktion-schlechter-leiter",
-    "title": "4  Inversion am Beispiel Tiefensondierung",
-    "section": "4.5 Zielfunktion schlechter Leiter",
-    "text": "4.5 Zielfunktion schlechter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/10/100 \\(\\Omega\\)m",
+    "title": "4  Widerstands-Tiefensondierung",
+    "section": "5.5 Zielfunktion schlechter Leiter",
+    "text": "5.5 Zielfunktion schlechter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/10/100 \\(\\Omega\\)m",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Inversion am Beispiel Tiefensondierung</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
     "objectID": "ves.html#zielfunktion-guter-leiter",
     "href": "ves.html#zielfunktion-guter-leiter",
-    "title": "4  Inversion am Beispiel Tiefensondierung",
-    "section": "4.6 Zielfunktion guter Leiter",
-    "text": "4.6 Zielfunktion guter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/1000/100 \\(\\Omega\\)m",
+    "title": "4  Widerstands-Tiefensondierung",
+    "section": "5.6 Zielfunktion guter Leiter",
+    "text": "5.6 Zielfunktion guter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/1000/100 \\(\\Omega\\)m",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Inversion am Beispiel Tiefensondierung</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {

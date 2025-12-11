@@ -216,7 +216,7 @@ abhängig von:
 ![](pics/ert/haldeModel.png)
 
 
-
+<!--
 
 ## Zielfunktion guter Leiter
 
@@ -485,4 +485,4 @@ Modellveränderung $\delta\vb m$ über Sensitivitätsmatrix $S_{i,j}=\pdv{f_i(\v
 $$\Rightarrow \vb S \vb \delta \vb m = \delta \vb d$$
 
 Least-SquaresLösung $\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d$ +Zusatzterme
-
+ -->
