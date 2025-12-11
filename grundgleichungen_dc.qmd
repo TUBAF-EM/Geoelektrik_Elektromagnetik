@@ -92,7 +92,7 @@ $$u(\vb r) = \frac{I\rho}{2\pi} \Big(\frac{1}{|\vb r - \vb r_A|}-\frac{1}{|\vb r
 
 ## 4-Punktmessung (Knödel, 2005)
 
-![](pics/ert/knoedel.png){fig-align="center"}
+![](pics/ert/knoedelDE.png){fig-align="center"}
 
 ## Konfigurations/Geometrie-Faktor
 

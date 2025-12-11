@@ -30,11 +30,11 @@ editor: source
 :::
 
 :::  {.column width="28.5%"}
-![Knoedel, Krummel, Lange (2005): Springer](pics/knoedel.png)
+![Knoedel, Krummel, Lange (2005): Springer](pics/knoedel-cover.png)
 :::
 
 :::  {.column width="34%"}
-![Everett (2013): Cambridge](pics/everette-cover.png)
+![Everett (2013): Cambridge](pics/everett-cover.png)
 :::
 ::::::
 
