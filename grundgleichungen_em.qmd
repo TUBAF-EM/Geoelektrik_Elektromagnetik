@@ -2,13 +2,24 @@
 editor: source
 ---
 
+::: {.callout-tip title="Lernziele"}
+- Maxwellgleichungen
+- Feldgrößen der Elektromagnetik
+- Materialgleichungen, Ohmsches Gesetz
+:::
+
 # Grundgleichungen
 
-Feldgrößen werden im Zeitbereich als Funktion der Zeit und des Ortes gemessen.
+Feldgrößen werden im Zeitbereich als Funktion des Ortes und der Zeit gemessen, z.B.
+
+$$
+\mathbf{e} = \mathbf{e}(\mathbf{r}, t).
+$$
+
 
 Bei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.
 
-::: {.callout-note}
+::: {.callout-note title="Bemerkungen zur Notation"}
 Im Zeitbereich werden die Feldgrößen kleingeschrieben, z.B. $\mathbf{e}$, $\mathbf{h}$. 
 
 Im Frequenzbereich schreiben wir die Feldgrößen mit Großbuchstaben, z.B. $\mathbf{B}$.
@@ -36,9 +47,9 @@ Die physikalisch relevante Größe ist die Feldamplitude $\mathbf{E}_{0}$.
 ### Zeitbereich
 $$
 \begin{align}
-\curl \mathbf{h} & = \mathbf{j} + \frac{ \partial \mathbf{d} }{ \partial t } \\
-\curl \mathbf{e} & = -\frac{ \partial \mathbf{b} }{ \partial t } \\
-\div \mathbf{b} & = 0 \\
+\curl \mathbf{h} & = \mathbf{j} + \frac{ \partial \mathbf{d} }{ \partial t } \qq{Ampere} \\
+\curl \mathbf{e} & = -\frac{ \partial \mathbf{b} }{ \partial t } \qq{Faraday} \\
+\div \mathbf{b} & = 0 \qq{Gauß} \\
 \div \mathbf{d} & = \rho_{E}
 \end{align}
 $$
@@ -46,9 +57,9 @@ $$
 ### Frequenzbereich
 $$
 \begin{align}
-\curl \mathbf{H} & = \mathbf{J} + i \omega \mathbf{D} \\
-\curl \mathbf{E} & = -i \omega \mathbf{B} \\
-\div \mathbf{B} & = 0 \\
+\curl \mathbf{H} & = \mathbf{J} + i \omega \mathbf{D} \qq{Ampere} \\
+\curl \mathbf{E} & = -i \omega \mathbf{B} \qq{Faraday} \\
+\div \mathbf{B} & = 0 \qq{Gauß} \\
 \div \mathbf{D} & = \rho_{E}
 \end{align}
 $$

@@ -1098,7 +1098,7 @@
     "href": "grundgleichungen_em.html",
     "title": "5  Grundgleichungen",
     "section": "",
-    "text": "5.1 Maxwell-Gleichungen\nFeldgrößen werden im Zeitbereich als Funktion der Zeit und des Ortes gemessen.\nBei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.",
+    "text": "5.1 Maxwell-Gleichungen\nFeldgrößen werden im Zeitbereich als Funktion des Ortes und der Zeit gemessen, z.B.\n\\[\n\\mathbf{e} = \\mathbf{e}(\\mathbf{r}, t).\n\\]\nBei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.",
     "crumbs": [
       "Elektromagnetik",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grundgleichungen</span>"
@@ -1131,10 +1131,54 @@
     "href": "grundgleichungen_em.html#maxwell-gleichungen",
     "title": "5  Grundgleichungen",
     "section": "",
-    "text": "5.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\\\\n\\div \\mathbf{b} & = 0 \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n5.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\\\\n\\div \\mathbf{B} & = 0 \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
+    "text": "5.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\qq{Ampere} \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\qq{Faraday} \\\\\n\\div \\mathbf{b} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n5.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\qq{Ampere} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\qq{Faraday} \\\\\n\\div \\mathbf{B} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
     "crumbs": [
       "Elektromagnetik",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grundgleichungen</span>"
+    ]
+  },
+  {
+    "objectID": "einfuehrung_em.html",
+    "href": "einfuehrung_em.html",
+    "title": "5  Einführung",
+    "section": "",
+    "text": "5.1 Motivation",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "einfuehrung_em.html#airborne-em",
+    "href": "einfuehrung_em.html#airborne-em",
+    "title": "5  Einführung",
+    "section": "5.2 Airborne EM",
+    "text": "5.2 Airborne EM",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "einfuehrung_em.html#magnetotellurik",
+    "href": "einfuehrung_em.html#magnetotellurik",
+    "title": "5  Einführung",
+    "section": "5.3 Magnetotellurik",
+    "text": "5.3 Magnetotellurik",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "einfuehrung_em.html#beispiele",
+    "href": "einfuehrung_em.html#beispiele",
+    "title": "5  Einführung",
+    "section": "5.2 Beispiele",
+    "text": "5.2 Beispiele\n\n5.2.1 Marine CSEM\n\n\n\n5.2.2 Airborne EM\n\n\n\n5.2.3 Magnetotellurik",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
     ]
   }
 ]
