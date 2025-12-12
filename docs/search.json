@@ -274,7 +274,7 @@
     "href": "einfuehrung.html#mess-strategien",
     "title": "1  Einführung",
     "section": "3.13 Mess-Strategien",
-    "text": "3.13 Mess-Strategien\n\n\n\n\n\n\nKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)",
+    "text": "3.13 Mess-Strategien\n\n\n\n\n\n\nHinweisKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nHinweisSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nHinweisSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
     ]
@@ -539,7 +539,7 @@
     "href": "grundgleichungen_dc.html#zwei-strom-elektroden",
     "title": "2  Grundgleichungen",
     "section": "3.5 Zwei Strom-Elektroden",
-    "text": "3.5 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\n\nPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]",
+    "text": "3.5 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\n\nHinweisPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
@@ -693,7 +693,7 @@
     "href": "grundgleichungen_dc.html#zwei-strom-elektroden-1",
     "title": "2  Grundgleichungen",
     "section": "4.11 Zwei Strom-Elektroden",
-    "text": "4.11 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\nPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]",
+    "text": "4.11 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\nHinweisPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
@@ -1096,45 +1096,45 @@
   {
     "objectID": "grundgleichungen_em.html",
     "href": "grundgleichungen_em.html",
-    "title": "5  Grundgleichungen",
+    "title": "6  Grundgleichungen",
     "section": "",
-    "text": "5.1 Maxwell-Gleichungen\nFeldgrößen werden im Zeitbereich als Funktion des Ortes und der Zeit gemessen, z.B.\n\\[\n\\mathbf{e} = \\mathbf{e}(\\mathbf{r}, t).\n\\]\nBei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.",
+    "text": "6.1 Maxwell-Gleichungen\nFeldgrößen werden im Zeitbereich als Funktion des Ortes und der Zeit gemessen, z.B.\n\\[\n\\mathbf{e} = \\mathbf{e}(\\mathbf{r}, t).\n\\]\nBei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_em.html#materialgleichungen",
     "href": "grundgleichungen_em.html#materialgleichungen",
-    "title": "5  Grundgleichungen",
-    "section": "5.2 Materialgleichungen",
-    "text": "5.2 Materialgleichungen\n\\[\n\\begin{align}\n\\mathbf{b} & = \\mu \\mathbf{h} \\\\\n\\mathbf{d} & = \\varepsilon \\mathbf{e}\n\\end{align}\n\\]\nbzw. \\[\n\\begin{align}\n\\mathbf{B} & = \\mu \\mathbf{H} \\\\\n\\mathbf{E} & = \\varepsilon \\mathbf{E}\n\\end{align}\n\\]",
+    "title": "6  Grundgleichungen",
+    "section": "6.2 Materialgleichungen",
+    "text": "6.2 Materialgleichungen\n\\[\n\\begin{align}\n\\mathbf{b} & = \\mu \\mathbf{h} \\\\\n\\mathbf{d} & = \\varepsilon \\mathbf{e}\n\\end{align}\n\\]\nbzw. \\[\n\\begin{align}\n\\mathbf{B} & = \\mu \\mathbf{H} \\\\\n\\mathbf{E} & = \\varepsilon \\mathbf{E}\n\\end{align}\n\\]",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_em.html#ohmsches-gesetz",
     "href": "grundgleichungen_em.html#ohmsches-gesetz",
-    "title": "5  Grundgleichungen",
-    "section": "5.3 Ohmsches Gesetz",
-    "text": "5.3 Ohmsches Gesetz\n\\[\n\\mathbf{j} = \\sigma \\mathbf{e} \\quad\\text{  bzw.  }\\quad \\mathbf{J} = \\sigma \\mathbf{E}.\n\\]",
+    "title": "6  Grundgleichungen",
+    "section": "6.3 Ohmsches Gesetz",
+    "text": "6.3 Ohmsches Gesetz\n\\[\n\\mathbf{j} = \\sigma \\mathbf{e} \\quad\\text{  bzw.  }\\quad \\mathbf{J} = \\sigma \\mathbf{E}.\n\\]",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_em.html#maxwell-gleichungen",
     "href": "grundgleichungen_em.html#maxwell-gleichungen",
-    "title": "5  Grundgleichungen",
+    "title": "6  Grundgleichungen",
     "section": "",
-    "text": "5.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\qq{Ampere} \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\qq{Faraday} \\\\\n\\div \\mathbf{b} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n5.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\qq{Ampere} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\qq{Faraday} \\\\\n\\div \\mathbf{B} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
+    "text": "6.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\qq{Ampere} \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\qq{Faraday} \\\\\n\\div \\mathbf{b} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n6.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\qq{Ampere} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\qq{Faraday} \\\\\n\\div \\mathbf{B} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
