@@ -907,34 +907,25 @@
     ]
   },
   {
-    "objectID": "magnetotellurik.html",
-    "href": "magnetotellurik.html",
-    "title": "5  Magnetotellurik",
+    "objectID": "einfuehrung_em.html",
+    "href": "einfuehrung_em.html",
+    "title": "5  Einführung",
     "section": "",
-    "text": "Ipsum lorum darum",
+    "text": "5.1 Motivation",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Magnetotellurik</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
     ]
   },
   {
-    "objectID": "zusammenfassung.html",
-    "href": "zusammenfassung.html",
-    "title": "6  Zusammenfassung",
-    "section": "",
-    "text": "Ipsum lorum",
+    "objectID": "einfuehrung_em.html#beispiele",
+    "href": "einfuehrung_em.html#beispiele",
+    "title": "5  Einführung",
+    "section": "5.2 Beispiele",
+    "text": "5.2 Beispiele\n\n5.2.1 Marine CSEM\n\n\n\n5.2.2 Airborne EM\n\n\n\n5.2.3 Magnetotellurik",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Zusammenfassung</span>"
-    ]
-  },
-  {
-    "objectID": "slidedecks.html",
-    "href": "slidedecks.html",
-    "title": "7  Slide decks",
-    "section": "",
-    "text": "Here are the slide decks:\n\n👉 Methods — Slides\n\n\n\n\n👉 History — Slides",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Slide decks</span>"
+      "Elektromagnetik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
     ]
   },
   {
@@ -943,6 +934,17 @@
     "title": "6  Grundgleichungen",
     "section": "",
     "text": "6.1 Maxwell-Gleichungen\nFeldgrößen werden im Zeitbereich als Funktion des Ortes und der Zeit gemessen, z.B.\n\\[\n\\mathbf{e} = \\mathbf{e}(\\mathbf{r}, t).\n\\]\nBei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+    ]
+  },
+  {
+    "objectID": "grundgleichungen_em.html#maxwell-gleichungen",
+    "href": "grundgleichungen_em.html#maxwell-gleichungen",
+    "title": "6  Grundgleichungen",
+    "section": "",
+    "text": "6.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\qq{Ampere} \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\qq{Faraday} \\\\\n\\div \\mathbf{b} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n6.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\qq{Ampere} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\qq{Faraday} \\\\\n\\div \\mathbf{B} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
     "crumbs": [
       "Elektromagnetik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
@@ -971,58 +973,34 @@
     ]
   },
   {
-    "objectID": "grundgleichungen_em.html#maxwell-gleichungen",
-    "href": "grundgleichungen_em.html#maxwell-gleichungen",
-    "title": "6  Grundgleichungen",
+    "objectID": "magnetotellurik.html",
+    "href": "magnetotellurik.html",
+    "title": "7  Magnetotellurik",
     "section": "",
-    "text": "6.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\qq{Ampere} \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\qq{Faraday} \\\\\n\\div \\mathbf{b} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n6.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\qq{Ampere} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\qq{Faraday} \\\\\n\\div \\mathbf{B} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
+    "text": "Ipsum lorum darum",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Magnetotellurik</span>"
     ]
   },
   {
-    "objectID": "einfuehrung_em.html",
-    "href": "einfuehrung_em.html",
-    "title": "5  Einführung",
+    "objectID": "zusammenfassung.html",
+    "href": "zusammenfassung.html",
+    "title": "8  Zusammenfassung",
     "section": "",
-    "text": "5.1 Motivation",
+    "text": "Ipsum lorum",
     "crumbs": [
-      "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Zusammenfassung</span>"
     ]
   },
   {
-    "objectID": "einfuehrung_em.html#airborne-em",
-    "href": "einfuehrung_em.html#airborne-em",
-    "title": "5  Einführung",
-    "section": "5.2 Airborne EM",
-    "text": "5.2 Airborne EM",
+    "objectID": "slidedecks.html",
+    "href": "slidedecks.html",
+    "title": "9  Slide decks",
+    "section": "",
+    "text": "Here are the slide decks:\n\n👉 Methods — Slides\n\n\n\n\n👉 History — Slides",
     "crumbs": [
-      "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung_em.html#magnetotellurik",
-    "href": "einfuehrung_em.html#magnetotellurik",
-    "title": "5  Einführung",
-    "section": "5.3 Magnetotellurik",
-    "text": "5.3 Magnetotellurik",
-    "crumbs": [
-      "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung_em.html#beispiele",
-    "href": "einfuehrung_em.html#beispiele",
-    "title": "5  Einführung",
-    "section": "5.2 Beispiele",
-    "text": "5.2 Beispiele\n\n5.2.1 Marine CSEM\n\n\n\n5.2.2 Airborne EM\n\n\n\n5.2.3 Magnetotellurik",
-    "crumbs": [
-      "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Slide decks</span>"
     ]
   }
 ]
