@@ -1,0 +1,21 @@
+---
+editor: source
+---
+
+# Einführung
+
+## Motivation
+
+## Beispiele
+
+### Marine CSEM
+
+![](pics/em/CSEM_MTconcepts.jpg)
+
+### Airborne EM
+
+![](pics/em/hubschrauber_namibia.jpg)
+
+### Magnetotellurik
+
+![](pics/em/mtexamplepic.png)

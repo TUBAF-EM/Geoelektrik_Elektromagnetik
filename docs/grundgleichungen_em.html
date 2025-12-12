@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Sensitivitäten und Messanordnungen – Modul Geoelektrik und Elektromagnetik</title>
+<title>6&nbsp; Grundgleichungen – Modul Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ves.html" rel="next">
-<link href="./grundgleichungen_dc.html" rel="prev">
+<link href="./magnetotellurik.html" rel="next">
+<link href="./einfuehrung_em.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -122,7 +122,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./sens_arrays.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./grundgleichungen_em.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -176,14 +176,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sens_arrays.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sens_arrays.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Inversion am Beispiel Tiefensondierung</span></span></a>
   </div>
 </li>
       </ul>
@@ -205,7 +205,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grundgleichungen_em.html" class="sidebar-item-text sidebar-link">
+  <a href="./grundgleichungen_em.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span></a>
   </div>
 </li>
@@ -239,36 +239,22 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#sensitivitäten" id="toc-sensitivitäten" class="nav-link active" data-scroll-target="#sensitivitäten"><span class="header-section-number">4</span> Sensitivitäten</a>
+  <li><a href="#maxwell-gleichungen" id="toc-maxwell-gleichungen" class="nav-link active" data-scroll-target="#maxwell-gleichungen"><span class="header-section-number">6.1</span> Maxwell-Gleichungen</a>
   <ul class="collapse">
-  <li><a href="#herleitung" id="toc-herleitung" class="nav-link" data-scroll-target="#herleitung"><span class="header-section-number">4.1</span> Herleitung</a></li>
-  <li><a href="#wenner-anordnung" id="toc-wenner-anordnung" class="nav-link" data-scroll-target="#wenner-anordnung"><span class="header-section-number">4.2</span> Wenner-Anordnung</a></li>
-  <li><a href="#wenner-anordnung---sensitivität" id="toc-wenner-anordnung---sensitivität" class="nav-link" data-scroll-target="#wenner-anordnung---sensitivität"><span class="header-section-number">4.3</span> Wenner-Anordnung - Sensitivität</a></li>
-  <li><a href="#schlumberger-anordnung---sensitivität" id="toc-schlumberger-anordnung---sensitivität" class="nav-link" data-scroll-target="#schlumberger-anordnung---sensitivität"><span class="header-section-number">4.4</span> Schlumberger-Anordnung - Sensitivität</a></li>
-  <li><a href="#wenner-alpha-anordnung---sensitivität" id="toc-wenner-alpha-anordnung---sensitivität" class="nav-link" data-scroll-target="#wenner-alpha-anordnung---sensitivität"><span class="header-section-number">4.5</span> Wenner-<span class="math inline">\(\alpha\)</span> Anordnung - Sensitivität</a></li>
-  <li><a href="#wenner-beta-anordnung---sensitivität" id="toc-wenner-beta-anordnung---sensitivität" class="nav-link" data-scroll-target="#wenner-beta-anordnung---sensitivität"><span class="header-section-number">4.6</span> Wenner-<span class="math inline">\(\beta\)</span> Anordnung - Sensitivität</a></li>
-  <li><a href="#dipol-dipol-anordnung---sensitivität" id="toc-dipol-dipol-anordnung---sensitivität" class="nav-link" data-scroll-target="#dipol-dipol-anordnung---sensitivität"><span class="header-section-number">4.7</span> Dipol-Dipol-Anordnung - Sensitivität</a></li>
-  <li><a href="#sensitivitäten-erklärt" id="toc-sensitivitäten-erklärt" class="nav-link" data-scroll-target="#sensitivitäten-erklärt"><span class="header-section-number">4.8</span> Sensitivitäten erklärt</a></li>
+  <li><a href="#zeitbereich" id="toc-zeitbereich" class="nav-link" data-scroll-target="#zeitbereich"><span class="header-section-number">6.1.1</span> Zeitbereich</a></li>
+  <li><a href="#frequenzbereich" id="toc-frequenzbereich" class="nav-link" data-scroll-target="#frequenzbereich"><span class="header-section-number">6.1.2</span> Frequenzbereich</a></li>
   </ul></li>
-  <li><a href="#ert-feldausbreitung" id="toc-ert-feldausbreitung" class="nav-link" data-scroll-target="#ert-feldausbreitung"><span class="header-section-number">5</span> ERT Feldausbreitung</a>
-  <ul class="collapse">
-  <li><a href="#homogener-untergrund-potentialverteilung" id="toc-homogener-untergrund-potentialverteilung" class="nav-link" data-scroll-target="#homogener-untergrund-potentialverteilung"><span class="header-section-number">5.1</span> Homogener Untergrund: Potentialverteilung</a></li>
-  <li><a href="#homogener-untergrund-stromlinien" id="toc-homogener-untergrund-stromlinien" class="nav-link" data-scroll-target="#homogener-untergrund-stromlinien"><span class="header-section-number">5.2</span> Homogener Untergrund: Stromlinien</a></li>
-  <li><a href="#stetigkeit-an-grenzflächen" id="toc-stetigkeit-an-grenzflächen" class="nav-link" data-scroll-target="#stetigkeit-an-grenzflächen"><span class="header-section-number">5.3</span> Stetigkeit an Grenzflächen</a></li>
-  <li><a href="#schlechter-leiter-stromlinien" id="toc-schlechter-leiter-stromlinien" class="nav-link" data-scroll-target="#schlechter-leiter-stromlinien"><span class="header-section-number">5.4</span> Schlechter Leiter: Stromlinien</a></li>
-  <li><a href="#guter-leiter-stromlinien" id="toc-guter-leiter-stromlinien" class="nav-link" data-scroll-target="#guter-leiter-stromlinien"><span class="header-section-number">5.5</span> Guter Leiter: Stromlinien</a></li>
-  <li><a href="#mess-strategien" id="toc-mess-strategien" class="nav-link" data-scroll-target="#mess-strategien"><span class="header-section-number">5.6</span> Mess-Strategien</a></li>
-  <li><a href="#widerstands-kartierung" id="toc-widerstands-kartierung" class="nav-link" data-scroll-target="#widerstands-kartierung"><span class="header-section-number">5.7</span> Widerstands-Kartierung</a></li>
-  </ul></li>
+  <li><a href="#materialgleichungen" id="toc-materialgleichungen" class="nav-link" data-scroll-target="#materialgleichungen"><span class="header-section-number">6.2</span> Materialgleichungen</a></li>
+  <li><a href="#ohmsches-gesetz" id="toc-ohmsches-gesetz" class="nav-link" data-scroll-target="#ohmsches-gesetz"><span class="header-section-number">6.3</span> Ohmsches Gesetz</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./sens_arrays.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./grundgleichungen_em.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></h1>
 </div>
 
 
@@ -285,169 +271,100 @@ window.Quarto = {
 </header>
 
 
-<section id="sensitivitäten" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Sensitivitäten</h1>
-<p><img src="pics/sens_scheme.png" class="img-fluid"></p>
-<section id="herleitung" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="herleitung"><span class="header-section-number">4.1</span> Herleitung</h2>
-<p>Wie wirkt sich eine Änderung der Leitfähigkeit auf den Messwert aus? <span class="math display">\[S(\vb r)=\pdv{\rho_a}{\rho(\vb r)}\]</span></p>
-<p><span class="math display">\[\div((\sigma+\delta\sigma)\grad (u+\delta u))=0\]</span></p>
-<p><span class="math display">\[\div(\sigma\grad u)+\div(\delta\sigma\grad u)+\div(\sigma\grad \delta u)+\div(\delta\sigma\grad \delta u)=0\]</span></p>
-<p><span class="math display">\[\Rightarrow S(\vb r)=\frac{k}{\rho^2} \frac{\grad u^{AB}}{I^{AB}} \frac{\grad u^{MN}}{I^{MN}}=
-\frac{k}{4\pi^2} \qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})\]</span></p>
-</section>
-<section id="wenner-anordnung" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="wenner-anordnung"><span class="header-section-number">4.2</span> Wenner-Anordnung</h2>
-<p><img src="pics/sens/wa-empty.svg" class="img-fluid"></p>
-</section>
-<section id="wenner-anordnung---sensitivität" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="wenner-anordnung---sensitivität"><span class="header-section-number">4.3</span> Wenner-Anordnung - Sensitivität</h2>
-<p><img src="pics/sens/sens_wa13.svg" class="img-fluid"></p>
-</section>
-<section id="schlumberger-anordnung---sensitivität" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="schlumberger-anordnung---sensitivität"><span class="header-section-number">4.4</span> Schlumberger-Anordnung - Sensitivität</h2>
-<p><img src="pics/sens/sens_slm18.svg" class="img-fluid"></p>
-</section>
-<section id="wenner-alpha-anordnung---sensitivität" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="wenner-alpha-anordnung---sensitivität"><span class="header-section-number">4.5</span> Wenner-<span class="math inline">\(\alpha\)</span> Anordnung - Sensitivität</h2>
-<p><img src="pics/sens/sens_wa13.svg" class="img-fluid"></p>
-</section>
-<section id="wenner-beta-anordnung---sensitivität" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="wenner-beta-anordnung---sensitivität"><span class="header-section-number">4.6</span> Wenner-<span class="math inline">\(\beta\)</span> Anordnung - Sensitivität</h2>
-<p><img src="pics/sens/sens_wb13.svg" class="img-fluid"></p>
-</section>
-<section id="dipol-dipol-anordnung---sensitivität" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="dipol-dipol-anordnung---sensitivität"><span class="header-section-number">4.7</span> Dipol-Dipol-Anordnung - Sensitivität</h2>
-<p><img src="pics/sens/sens_dd27.svg" class="img-fluid"></p>
-</section>
-<section id="sensitivitäten-erklärt" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="sensitivitäten-erklärt"><span class="header-section-number">4.8</span> Sensitivitäten erklärt</h2>
-<p>Die Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?</p>
-<p>Wir betrachten eine Wenner-Messung (A-M-N-B).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/ert/sens/sens_hom.svg" class="img-fluid figure-img"></p>
-<figcaption>Potential und Strom für homogenen Fall</figcaption>
-</figure>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lernziele">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Nun erzeugen wir kleine flache Einlagerungen (Kreise), zunächst im Bereich der negativen Sensitivitäten.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/ert/sens/sens_res1.svg" class="img-fluid figure-img"></p>
-<figcaption>Resistive Einlagerung</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tipp</span>Lernziele
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/ert/sens/sens_con1.svg" class="img-fluid figure-img"></p>
-<figcaption>Leitfähige Einlagerung</figcaption>
-</figure>
 </div>
-<p>Nun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/ert/sens/sens_res2.svg" class="img-fluid figure-img"></p>
-<figcaption>Resistive Einlagerung</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/ert/sens/sens_con2.svg" class="img-fluid figure-img"></p>
-<figcaption>Resistive Einlagerung</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="ert-feldausbreitung" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> ERT Feldausbreitung</h1>
-<p>Einstieg siehe Notebook</p>
-<section id="homogener-untergrund-potentialverteilung" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="homogener-untergrund-potentialverteilung"><span class="header-section-number">5.1</span> Homogener Untergrund: Potentialverteilung</h2>
-<p><img src="pics/ert/sens/pot-hom.svg" class="img-fluid"></p>
-</section>
-<section id="homogener-untergrund-stromlinien" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="homogener-untergrund-stromlinien"><span class="header-section-number">5.2</span> Homogener Untergrund: Stromlinien</h2>
-<p><img src="pics/ert/sens/pot-hom-stream.svg" class="img-fluid"></p>
-</section>
-<section id="stetigkeit-an-grenzflächen" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="stetigkeit-an-grenzflächen"><span class="header-section-number">5.3</span> Stetigkeit an Grenzflächen</h2>
-<div class="columns">
-<div class="column">
-<p><span class="math display">\[\Rightarrow \div(\sigma\vb E)=-\div(\sigma\grad U)=0\]</span> <img src="pics/ert/currentdensity.png" class="img-fluid"> <strong>Brechungsgesetz</strong>:</p>
-</div><div class="column">
-<p><strong>Stetigkeit von</strong></p>
+<div class="callout-body-container callout-body">
 <ul>
-<li>Potential <span class="math inline">\(u\)</span></li>
-<li>Tangentialkomponente von E <span class="math inline">\(E_1=E_2\Rightarrow \rho_1 j_{x1}=\rho_2 j_{x2}\)</span></li>
-<li>Normalkomponente v. <span class="math inline">\(j_{z1}=j_{z2}\)</span> <span class="math display">\[\Rightarrow \rho_1\frac{j_{x1}}{j_{z1}}=\rho_2\frac{j_{x2}}{j_{z2}}\]</span> <span class="math display">\[\rho_1\tan\theta_1=\rho_2\tan\theta_2\]</span></li>
+<li>Maxwellgleichungen</li>
+<li>Feldgrößen der Elektromagnetik</li>
+<li>Materialgleichungen, Ohmsches Gesetz</li>
 </ul>
 </div>
 </div>
-</section>
-<section id="schlechter-leiter-stromlinien" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="schlechter-leiter-stromlinien"><span class="header-section-number">5.4</span> Schlechter Leiter: Stromlinien</h2>
-<p><img src="pics/ert/badconductor.svg" class="img-fluid"></p>
-</section>
-<section id="guter-leiter-stromlinien" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="guter-leiter-stromlinien"><span class="header-section-number">5.5</span> Guter Leiter: Stromlinien</h2>
-<p><img src="pics/ert/goodconductor.svg" class="img-fluid"></p>
-</section>
-<section id="mess-strategien" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="mess-strategien"><span class="header-section-number">5.6</span> Mess-Strategien</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Kartierung">
+<p>Feldgrößen werden im Zeitbereich als Funktion des Ortes und der Zeit gemessen, z.B.</p>
+<p><span class="math display">\[
+\mathbf{e} = \mathbf{e}(\mathbf{r}, t).
+\]</span></p>
+<p>Bei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Bemerkungen zur Notation">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Kartierung
+<span class="screen-reader-only">Hinweis</span>Bemerkungen zur Notation
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>“Bewegung” einer festen Anordnung entlang eines Profils</p>
+<p>Im Zeitbereich werden die Feldgrößen kleingeschrieben, z.B. <span class="math inline">\(\mathbf{e}\)</span>, <span class="math inline">\(\mathbf{h}\)</span>.</p>
+<p>Im Frequenzbereich schreiben wir die Feldgrößen mit Großbuchstaben, z.B. <span class="math inline">\(\mathbf{B}\)</span>.</p>
+<p>Der Zusammenhang wird durch die Fouriertransformation hergestellt:</p>
+<p><span class="math display">\[
+\begin{align}
+f(t) &amp; = \frac{1}{2 \pi} \int_{-\infty}^{\infty} F(\omega) e^{ +i \omega t }\, \mathrm d  \omega \\
+F(\omega) &amp; = \phantom{\frac{1}{2 \pi}} \int_{-\infty}^{\infty} f(t) e^{ -i \omega t }\, \mathrm d t
+\end{align}
+\]</span></p>
+<p>Die Zeitabhängigkeit wird durch den Term <span class="math inline">\(e^{ i \omega t }\)</span> eingeführt, und wir schreiben <span class="math display">\[
+\mathbf{E}(\omega) = \mathbf{E}_{0} e^{ i \omega t }.
+\]</span> Der Term <span class="math inline">\(e^{ i \omega t }\)</span> tritt bei allen Feldgrößen als derselbe Faktor auf und wird daher der besseren Übersicht halber weggelassen.</p>
+<p>Die physikalisch relevante Größe ist die Feldamplitude <span class="math inline">\(\mathbf{E}_{0}\)</span>.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Sondierung">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Sondierung
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Vergrößerung der Auslage bei festem Mittelpunkt</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Sondierungskartierung/2D-Geoelektrik">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Sondierungskartierung/2D-Geoelektrik
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Kombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)</p>
-</div>
-</div>
+<section id="maxwell-gleichungen" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="maxwell-gleichungen"><span class="header-section-number">6.1</span> Maxwell-Gleichungen</h2>
+<section id="zeitbereich" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="zeitbereich"><span class="header-section-number">6.1.1</span> Zeitbereich</h3>
+<p><span class="math display">\[
+\begin{align}
+\curl \mathbf{h} &amp; = \mathbf{j} + \frac{ \partial \mathbf{d} }{ \partial t } \qq{Ampere} \\
+\curl \mathbf{e} &amp; = -\frac{ \partial \mathbf{b} }{ \partial t } \qq{Faraday} \\
+\div \mathbf{b} &amp; = 0 \qq{Gauß} \\
+\div \mathbf{d} &amp; = \rho_{E}
+\end{align}
+\]</span></p>
 </section>
-<section id="widerstands-kartierung" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="widerstands-kartierung"><span class="header-section-number">5.7</span> Widerstands-Kartierung</h2>
-<div class="r-stack">
-<p><img src="pics/sens/sens_wa1.svg" class="img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_wa2.svg" class="fragment img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_wa3.svg" class="fragment img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_wa4.svg" class="fragment img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_wa5.svg" class="fragment img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_wa6.svg" class="fragment img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_wa7.svg" class="fragment img-fluid" width="1200"></p>
-</div>
+<section id="frequenzbereich" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="frequenzbereich"><span class="header-section-number">6.1.2</span> Frequenzbereich</h3>
+<p><span class="math display">\[
+\begin{align}
+\curl \mathbf{H} &amp; = \mathbf{J} + i \omega \mathbf{D} \qq{Ampere} \\
+\curl \mathbf{E} &amp; = -i \omega \mathbf{B} \qq{Faraday} \\
+\div \mathbf{B} &amp; = 0 \qq{Gauß} \\
+\div \mathbf{D} &amp; = \rho_{E}
+\end{align}
+\]</span></p>
+</section>
+</section>
+<section id="materialgleichungen" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="materialgleichungen"><span class="header-section-number">6.2</span> Materialgleichungen</h2>
+<p><span class="math display">\[
+\begin{align}
+\mathbf{b} &amp; = \mu \mathbf{h} \\
+\mathbf{d} &amp; = \varepsilon \mathbf{e}
+\end{align}
+\]</span></p>
+<p>bzw. <span class="math display">\[
+\begin{align}
+\mathbf{B} &amp; = \mu \mathbf{H} \\
+\mathbf{E} &amp; = \varepsilon \mathbf{E}
+\end{align}
+\]</span></p>
+</section>
+<section id="ohmsches-gesetz" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="ohmsches-gesetz"><span class="header-section-number">6.3</span> Ohmsches Gesetz</h2>
+<p><span class="math display">\[
+\mathbf{j} = \sigma \mathbf{e} \quad\text{  bzw.  }\quad \mathbf{J} = \sigma \mathbf{E}.
+\]</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -853,13 +770,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./grundgleichungen_dc.html" class="pagination-link" aria-label="Grundgleichungen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span>
+      <a href="./einfuehrung_em.html" class="pagination-link" aria-label="Einführung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ves.html" class="pagination-link" aria-label="Widerstands-Tiefensondierung">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./magnetotellurik.html" class="pagination-link" aria-label="Magnetotellurik">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
