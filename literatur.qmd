@@ -1,4 +1,4 @@
-# Literatur{.unnumbered}
+# Literatur {.unnumbered}
 ---
 bibliography: "geoelem.bib"
 csl: "harvard.csl"

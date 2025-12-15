@@ -6,11 +6,13 @@ profile:
   default: book
   group:
     - [book, slides]
+bibliography: geoelem.bib
 
 book:
   title: "Geoelektrik und Elektromagnetik"
   author: "Thomas Günther und Ralph-Uwe Börner"
   date: today
+  # csl: harvard.csl
   chapters:
     - index.qmd
     - einfuehrung.qmd

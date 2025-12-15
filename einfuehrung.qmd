@@ -180,24 +180,13 @@ $$ \sigma = \sigma_f/F + \sigma_s $$
 :::
 ::::
 
-## Abhängigkeit der Leitfähigkeit
-
-:::: {.columns}
-::: {.column width="60%"}
-### Temperatur
+### Temperatur-Abhängigkeit
 
 komplexe Abhängigkeit, aber Linearisierung um Temperatur $T_0$ (meist 25°C)
 
 $$ \sigma = \sigma_0 (1 + \alpha (T-T_0)) $$
 
 $\alpha$ - meist 0.02 (2% pro K)
-:::
-::: {.column width="40%"}
-### Frequenz
-
-![Polarisationen [@Loewer2017]](pics/petro/loewer_fig1.png)
-:::
-::::
 
 
 <!--
@@ -394,3 +383,5 @@ $$\Rightarrow \vb S \vb \delta \vb m = \delta \vb d$$
 
 Least-SquaresLösung $\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d$ +Zusatzterme
 -->
+
+## Literatur {.unnumbered}

@@ -7,7 +7,7 @@ editor: source
 ![](pics/ert/ohm.png){fig-align="center"}
 
 
-## Geoelektrik
+## Anwendung
 Die Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds.
 
 Die Anwendungsgebiete sind entsprechend vielfältig:
@@ -21,35 +21,41 @@ Die Anwendungsgebiete sind entsprechend vielfältig:
 * Georisiken (Hangrutschungen, Verkarstung)
 * Prozessmonitoring (Wasser- und Stoff-Transport)
 
-### Kleinskalig [@Martin2013]
+### Anwendungs-Skalen
 
-![](pics/ert/treetomography.png)
+#### Kleinskalig: Bäume, Böden
 
-### Mittelskalig: Geologie
+![Baumtomographie [@Martin2013]](pics/ert/treetomography.png)
 
-![Tanner et al. (2019): Störungszone Irland](pics/ert/kilmore.png)
+#### Mittelskalig: Geologie
 
-### Großskalig: Geologie [@Nickschick2019]
+![Störungszone Irland [@Tanner2020]](pics/ert/kilmore.png)
 
-![CO2-Aufstieg an Störung im Egergraben](pics/ert/nickschick.png)
+### Großskalig: Geologie
 
-### Salzwasser-Intrusion von Süßwasseraquiferen [@Skibbe2024]
+![CO2-Aufstieg an Störung im Egergraben [@Nickschick2019]](pics/ert/nickschick.png)
 
-![](pics/ert/spiekeroog1.png)
-![](pics/ert/spiekeroog2.png){.fragment}
+### Skalenübergreifend
 
-### Hydrogeologie [@Huebner2015]
+::: {#fig-subplots}
+![Skalenübergreifende Geoelektrik-Messungen](pics/ert/spiekeroog1.png)
+![Salinitäts-Bild](pics/ert/spiekeroog2.png)
 
-![Wasserspeicher in Hangdellen am Teststandort Mulda](pics/ert/mulda3d1.png)
+Salz-Süßwasser-Interaktion im [DynaDeep-Projekt](https://www.liag-institut.de/forschung/projekte/drittmittelprojekte/dynadeep.html) [@Skibbe2024]
+:::
 
-### Untersuchung von Halden [@Guenther2006]
+### Hydrogeologie
 
-![](pics/ert/haldeModel.png)
+![Wasserspeicher in Hangdellen am Teststandort Mulda [@Huebner2015]](pics/ert/mulda3d1.png)
 
-# Grundgleichungen
+### 3D-Geoelektrik
+
+![Untersuchung von Halden [@Guenther2006]](pics/ert/haldeModel.png)
+
+## Grundgleichungen
 ![](pics/halfspace.png)
 
-## Kontinuitäts-Gleichung
+### Kontinuitäts-Gleichung
 
 Maxwell-Gleichungen stationär
 $$\curl \vb H = \vb j = \sigma \vb E + \vb j_s$$
@@ -60,7 +66,7 @@ $$\Rightarrow -\div(\sigma\vb E)=-\div(\sigma\grad U)=\div\vb j_s$$
 
 Diese partielle Differential-Gleichung (PDE) ist eine Poisson-Gleichung & beschreibt die Potentialverteilung für beliebige Leitfähigkeiten. Im Allgemeinen lösen wir sie numerisch, für einfache Fälle analytisch.
 
-## Das Konzept der Punktquelle
+### Das Konzept der Punktquelle
 
 Elektroden sind "klein" (gegenüber Abstand zu Potentialmessung), der Strom wird an einem "Punkt" eingespeist (Integral $I$):
 
@@ -76,14 +82,14 @@ $$\div\vb j = I \delta(\vb r - \vb r_s)$$
 $\Rightarrow$ endliche Stromdichte
 :::
 ::: {.column width="40%"}
-![Elektrode (Rücker & Günther, 2011)](pics/ellipse_electrode.png)
+![Elektrode [@Ruecker2011]](pics/ellipse_electrode.png)
 :::
 ::::
 
 
 <!-- (Halb-)Kugelförmige Quelle: gleiche Verteilung der Stromdichte ab $r\ge R$ -->
 
-## Lösung für homogenen Vollraum
+### Lösung für homogenen Vollraum
 
 $$-\div(\sigma\grad U)=\div \vb j_s$$
 
@@ -97,7 +103,7 @@ Berechnung des (scheinbaren) spezifischen Widerstands aus $U$ und $I$
 
 $$\Rightarrow \rho_a = \frac{U}{I} 4\pi r=R\cdot k \quad\mbox{mit}\quad k=4\pi r$$
 
-## Lösung für homogenen Halbraum
+### Lösung für homogenen Halbraum
 
 $$-\div(\sigma\grad U)=\div \vb j_s$$
 
@@ -111,7 +117,7 @@ Berechnung des (scheinbaren) spezifischen Widerstands aus $U$ und $I$
 
 $$\Rightarrow \rho = \frac{U}{I} 2\pi r=R\cdot k \quad\mbox{mit}\quad k=2\pi r$$
 
-## Zwei Strom-Elektroden
+### Zwei Strom-Elektroden
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -131,11 +137,9 @@ $$u(\vb r) = \frac{I\rho}{2\pi} \Big(\frac{1}{|\vb r - \vb r_A|}-\frac{1}{|\vb r
 :::
 ::::
 
-## 4-Punktmessung (Knödel, 2005)
+![4-Punktmessung [@Knoedel2005]](pics/ert/knoedelDE.png){fig-align="center"}
 
-![](pics/ert/knoedelDE.png){fig-align="center"}
-
-## Konfigurations/Geometrie-Faktor
+### Konfigurations/Geometrie-Faktor
 
 $U_{AM} = \rho I \frac{1}{2\pi \overline{AM}}$, $U_{AN} = \rho I \frac{1}{2\pi \overline{AN}}$ etc.
 
@@ -145,7 +149,7 @@ $$ \Delta U = \rho I \big( \frac{1}{2\pi \overline{AM}} - \frac{1}{2\pi \overlin
 
 $$ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{mit}\quad k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} $$
 
-## Stetigkeit an Grenzflächen
+### Stetigkeit an Grenzflächen
 
 :::: {.columns}
 ::: {.column}
@@ -159,35 +163,33 @@ $j_{z1}=j_{z2}$
 :::
 ::::
 
-# ERT Feldausbreitung
+## ERT Feldausbreitung
 
-Einstieg siehe Notebook
-
-## Homogener Untergrund: Potentialverteilung
+### Homogener Untergrund: Potentialverteilung
 ![](pics/ert/sens/pot-hom.svg)
 
-## Homogener Untergrund: Stromlinien
+### Homogener Untergrund: Stromlinien
 ![](pics/ert/sens/pot-hom-stream.svg)
 
-## Schlechter Leiter: Stromlinien
+### Schlechter Leiter: Stromlinien
 ![](pics/ert/badconductor.svg)
 
-## Guter Leiter: Stromlinien
+### Guter Leiter: Stromlinien
 ![](pics/ert/goodconductor.svg)
 
-## Inhomogener Untergrund
+### Inhomogener Untergrund
 ![](pics/ert/sens/inhom.svg)
 
-## Inhomogener Untergrund: Stromlinien
+### Inhomogener Untergrund: Stromlinien
 ![](pics/ert/sens/pot-inhom-stream.svg)
 
-## Inhomogener Untergrund: Potentialverteilung
+### Inhomogener Untergrund: Potentialverteilung
 ![](pics/ert/sens/pot-inhom.svg)
 
-## Homogener Untergrund: Potentialverteilung
+### Homogener Untergrund: Potentialverteilung
 ![](pics/ert/sens/pot-hom.svg)
 
-## Laplace-Gleichung
+### Laplace-Gleichung
 
 in einem kugelsymmetrischen Koordinatensystem
 
@@ -213,7 +215,7 @@ Berechnung des (scheinbaren) spezifischen Widerstands aus $U$ und $I$
 
 $$\Rightarrow \rho = \frac{U}{I} 2\pi r=R\cdot k \quad\mbox{mit}\quad k=2\pi r$$
 
-## Zwei Strom-Elektroden
+### Zwei Strom-Elektroden
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -232,15 +234,11 @@ $$u(\vb r) = \frac{I\rho}{2\pi} \Big(\frac{1}{|\vb r - \vb r_A|}-\frac{1}{|\vb r
 :::
 ::::
 
-## Potentialverteilung
+### Potentialverteilung
 ![](pics/ert/sens/pot-hom.svg)
 
-## Stromlinien
+### Stromlinien
 ![](pics/ert/sens/pot-hom-stream.svg)
-
-## 4-Punktmessung (Knödel, 2005)
-
-![](pics/ert/knoedelDE.png){fig-align="center"}
 
 ## Konfigurations/Geometrie-Faktor
 
@@ -256,3 +254,4 @@ $$ \Delta U = \frac{\rho I}{2\pi} \big( \frac{1}{\overline{AM}} - \frac{1}{\over
 
 $$ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{mit}\quad k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} $$
 
+### Literatur {.unnumbered}
