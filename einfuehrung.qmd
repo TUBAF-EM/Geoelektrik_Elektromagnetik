@@ -119,83 +119,88 @@ abhängig von:
 :::
 ::::
 
+## Archies Gesetz
 
-<!--
-
-## Zielfunktion guter Leiter
-
-::: {.columns}
+:::: {.columns}
 ::: {.column}
-- 3-Schicht-Fall
-- Mächtigkeiten 20m
-- spez. Widerstände 100/1000/100 $\Omega$m
+::: {.callout-note title="Archies Gesetz"}
+Der **Formationsfaktor** ist (bei **tonfreien**, **gesättigten** Sedimenten) exponentiell von der Porosität $\phi$ abhängig.
+Der Exponent $m$ heißt Zementationsexponent.
 :::
-::: {.column}
-![](pics/ves/objfun-conductor.svg)
+$$ F = \frac{\sigma_f}{\sigma}=\frac{\rho}{\rho_f} = \frac{a}{\phi^m} $$
+
+* negativer Anstieg im log-log-Plot
+:::
+::: {.column .fragment}
+![[@dm2014]](pics/petro/DentithMudge_fig516.png)
 :::
 ::::
 
-## Sensitivitäten
-![](pics/sens_scheme.png)
 
+## Archies Gesetz II
 
-## Wenner-Anordnung
-![](pics/sens/sens_wa13.svg)
+Elektrische Leitfähigkeit des gesättigten (tonfreien) Porenraums:
 
-## Schlumberger-Anordnung
-![](pics/sens/sens_slm18.svg)
+$$ \sigma = \sigma_f / F = \sigma \phi^m S^n \quad \rho=\rho_f \phi^{-m} S^{-n}$$
 
-## Wenner-$\beta$ Anordnung
-![](pics/sens/sens_wb13.svg)
+:::: {.columns}
+::: {.column}
+* $\phi$-Porosität
+* $m$-Zementationsexponent
+* $S$-Sättigung
+* $n$-Sättigungsexponent
+:::
+::: {.column}
+**Werte für $m$**:
 
-## Dipol-Dipol-Anordnung
-![](pics/sens/sens_dd27.svg)
+- unverfestigte Sedimente: 1.3
+- verfestigte Sedimente: 1.5-1.6
+- Sandsteine: 2.0
+:::
+::::
 
-## Mess-Strategien
+## Grenzflächenleitfähigkeit
 
-::: {.callout-note title="Kartierung"}
-"Bewegung" einer festen Anordnung entlang eines Profils
+:::: {.columns}
+::: {.column}
+::: {.callout-caution title="Bei kleinen Leitfähigkeiten"}
+strebt die Leitfähigkeit gegen einen Grenzwert, die Grenzflächenleitfähigkeit
 :::
 
-::: {.callout-note title="Sondierung"}
-Vergrößerung der Auslage bei festem Mittelpunkt
+$$ \sigma = \sigma_f/F + \sigma_s $$
+
+* kleine Wasserleitfähigkeit
+* geringe Porosität
+* Tonminerale (Ton, Schluff)
+* metallische Partikel (Fe2/3)
+
 :::
-
-::: {.callout-note title="Sondierungskartierung/2D-Geoelektrik"}
-Kombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)
+::: {.column}
+![](pics/petro/DentithMudge_fig518.png)
 :::
+::::
 
-## Widerstands-Kartierung (Wenner)
+## Abhängigkeit der Leitfähigkeit
 
-::: {.r-stack}
-![](pics/sens/sens_wa1.svg){width=1200}
+:::: {.columns}
+::: {.column width="60%"}
+### Temperatur
 
-![](pics/sens/sens_wa2.svg){.fragment width=1200}
+komplexe Abhängigkeit, aber Linearisierung um Temperatur $T_0$ (meist 25°C)
 
-![](pics/sens/sens_wa3.svg){.fragment width=1200}
+$$ \sigma = \sigma_0 (1 + \alpha (T-T_0)) $$
 
-![](pics/sens/sens_wa4.svg){.fragment width=1200}
-
-![](pics/sens/sens_wa5.svg){.fragment width=1200}
-
-![](pics/sens/sens_wa6.svg){.fragment width=1200}
-
-![](pics/sens/sens_wa7.svg){.fragment width=1200}
+$\alpha$ - meist 0.02 (2% pro K)
 :::
+::: {.column width="40%"}
+### Frequenz
 
-## Tiefensondierung (Schlumberger)
-
-::: {.r-stack}
-![](pics/sens/sens_slm3.svg){width=1200}
-
-![](pics/sens/sens_slm10.svg){.fragment width=1200}
-
-![](pics/sens/sens_slm15.svg){.fragment width=1200}
-
-![](pics/sens/sens_slm18.svg){.fragment width=1200}
+![Polarisationen [@Loewer2017]](pics/petro/loewer_fig1.png)
 :::
+::::
 
-<!-- ------------------------------------------ -->
+
+<!--
 # 2D-Geoelektrik
 
 * Kombination aus Kartierung und Sondierung, automatisiert mit Relais
@@ -288,7 +293,6 @@ Kombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektro
 :::
 
 
-<!-- ------------------------------------------ -->
 
 ## Beispiel: Modell
 ![](pics/inhom-model.svg)
@@ -389,4 +393,4 @@ Modellveränderung $\delta\vb m$ über Sensitivitätsmatrix $S_{i,j}=\pdv{f_i(\v
 $$\Rightarrow \vb S \vb \delta \vb m = \delta \vb d$$
 
 Least-SquaresLösung $\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d$ +Zusatzterme
- -->
+-->

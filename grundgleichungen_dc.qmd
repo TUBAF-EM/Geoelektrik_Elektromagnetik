@@ -21,7 +21,7 @@ Die Anwendungsgebiete sind entsprechend vielfältig:
 * Georisiken (Hangrutschungen, Verkarstung)
 * Prozessmonitoring (Wasser- und Stoff-Transport)
 
-### Kleinskalig (Martin&Günther, 2013)
+### Kleinskalig [@Martin2013]
 
 ![](pics/ert/treetomography.png)
 
@@ -29,20 +29,20 @@ Die Anwendungsgebiete sind entsprechend vielfältig:
 
 ![Tanner et al. (2019): Störungszone Irland](pics/ert/kilmore.png)
 
-### Großskalig: Geologie
+### Großskalig: Geologie [@Nickschick2019]
 
-![Nickschick et al. (2017): CO2-Aufstieg an Störung im Egergraben](pics/ert/nickschick.png)
+![CO2-Aufstieg an Störung im Egergraben](pics/ert/nickschick.png)
 
-### Salzwasser-Intrusion von Süßwasseraquiferen
+### Salzwasser-Intrusion von Süßwasseraquiferen [@Skibbe2024]
 
 ![](pics/ert/spiekeroog1.png)
 ![](pics/ert/spiekeroog2.png){.fragment}
 
-### Hydrogeologie (Hübner et al., 2015)
+### Hydrogeologie [@Huebner2015]
 
 ![Wasserspeicher in Hangdellen am Teststandort Mulda](pics/ert/mulda3d1.png)
 
-### Untersuchung von Halden (Günther et al., 2006)
+### Untersuchung von Halden [@Guenther2006]
 
 ![](pics/ert/haldeModel.png)
 
@@ -51,8 +51,6 @@ Die Anwendungsgebiete sind entsprechend vielfältig:
 
 ## Kontinuitäts-Gleichung
 
-<!-- :::: {.columns}
-::: {.column} -->
 Maxwell-Gleichungen stationär
 $$\curl \vb H = \vb j = \sigma \vb E + \vb j_s$$
 
