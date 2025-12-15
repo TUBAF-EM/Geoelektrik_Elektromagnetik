@@ -1,27 +1,12 @@
 # Widerstands-Tiefensondierung
 
-## Tiefensondierung - Schlumberger
+Eine Tiefensondierung erreicht man, indem man am gleichen Mess-Mittelpunkt die Elektrodenabstände (z.T. nur die der Stromelektroden) sukzessive erhöht.
+Die dafür meist eingesetzte Anordnung ist die Schlumberger-Anordnung.
+Dabei bleiben die Spannungselektroden konstant und die beiden Stromelektroden entfernen sich vom Mittelpunkt immer weiter.
 
-::: {.r-stack}
-![](pics/sens/sens_slm3.svg){width=1200}
+![Sensitivitäten einer Schlumberger-Tiefensondierung](pics/sens/ves.gif)
 
-![](pics/sens/sens_slm10.svg){.fragment width=1200}
-
-![](pics/sens/sens_slm15.svg){.fragment width=1200}
-
-![](pics/sens/sens_slm18.svg){.fragment width=1200}
-:::
-
-
-# Inversion am Beispiel Tiefensondierung
-
-- früher Auswertung mit Kurvenschablonen
-- Datenanpassung durch iterative Veränderung des Modells
-- Inversion: Minimierung des Misfits zwischen Daten & Modellantwort
-  - Sensitivitäten als wichtigste Zutat ($\delta\rho\rightarrow\delta\rho_a$)
-- Zielfunktion: Quadratmittel der Abweichung darstellen
-
-## Horizontale Stromdichte
+### Horizontale Stromdichte
 :::: {.columns}
 ::: {.column}
 $j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})$
@@ -55,7 +40,7 @@ plt.grid()
 :::
 ::::
 
-## Horizontale Stromdichte integriert
+### Horizontale Stromdichte integriert
 $$\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}$$
 
 :::: {.columns}
@@ -75,7 +60,7 @@ plt.grid()
 :::
 ::::
 
-## 1D-Sensitivitäten
+### 1D-Sensitivitäten
 :::: {.columns}
 ::: {.column}
 ![](pics/ves/ves_sens1d.svg){width="150%"}
@@ -88,7 +73,15 @@ plt.grid()
 :::
 ::::
 
-## Notebook mit Sondierung
+## Inversion am Beispiel Tiefensondierung
+
+- früher Auswertung mit Kurvenschablonen
+- Datenanpassung durch iterative Veränderung des Modells
+- Zielfunktion: Quadratmittel der Abweichung Daten und Modellantwort
+  $$ \Phi=\sum (d_i-f_i(\vb m))^2 \rightarrow \min $$
+- Inversion: Minimierung des Misfits zwischen Daten &
+  - Sensitivitäten als wichtigste Zutat ($\delta\rho\rightarrow\delta\rho_a$)
+
 
 ## Zielfunktion schlechter Leiter
 

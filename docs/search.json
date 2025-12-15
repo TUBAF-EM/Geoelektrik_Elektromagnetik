@@ -180,84 +180,7 @@
     "href": "sens_arrays.html",
     "title": "3  Sensitivitäten und Messanordnungen",
     "section": "",
-    "text": "4 Sensitivitäten",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#herleitung",
-    "href": "sens_arrays.html#herleitung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.1 Herleitung",
-    "text": "4.1 Herleitung\nWie wirkt sich eine Änderung der Leitfähigkeit auf den Messwert aus? \\[S(\\vb r)=\\pdv{\\rho_a}{\\rho(\\vb r)}\\]\n\\[\\div((\\sigma+\\delta\\sigma)\\grad (u+\\delta u))=0\\]\n\\[\\div(\\sigma\\grad u)+\\div(\\delta\\sigma\\grad u)+\\div(\\sigma\\grad \\delta u)+\\div(\\delta\\sigma\\grad \\delta u)=0\\]\n\\[\\Rightarrow S(\\vb r)=\\frac{k}{\\rho^2} \\frac{\\grad u^{AB}}{I^{AB}} \\frac{\\grad u^{MN}}{I^{MN}}=\n\\frac{k}{4\\pi^2} \\qty(\\frac{\\vb r_A}{r_A^3}-\\frac{\\vb r_B}{r_B^3})\\qty(\\frac{\\vb r_M}{r_M^3}-\\frac{\\vb r_N}{r_N^3})\\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-anordnung",
-    "href": "sens_arrays.html#wenner-anordnung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.2 Wenner-Anordnung",
-    "text": "4.2 Wenner-Anordnung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-anordnung---sensitivität",
-    "href": "sens_arrays.html#wenner-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.3 Wenner-Anordnung - Sensitivität",
-    "text": "4.3 Wenner-Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#schlumberger-anordnung---sensitivität",
-    "href": "sens_arrays.html#schlumberger-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.4 Schlumberger-Anordnung - Sensitivität",
-    "text": "4.4 Schlumberger-Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-alpha-anordnung---sensitivität",
-    "href": "sens_arrays.html#wenner-alpha-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.5 Wenner-\\(\\alpha\\) Anordnung - Sensitivität",
-    "text": "4.5 Wenner-\\(\\alpha\\) Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-beta-anordnung---sensitivität",
-    "href": "sens_arrays.html#wenner-beta-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.6 Wenner-\\(\\beta\\) Anordnung - Sensitivität",
-    "text": "4.6 Wenner-\\(\\beta\\) Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#dipol-dipol-anordnung---sensitivität",
-    "href": "sens_arrays.html#dipol-dipol-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.7 Dipol-Dipol-Anordnung - Sensitivität",
-    "text": "4.7 Dipol-Dipol-Anordnung - Sensitivität",
+    "text": "3.1 Herleitung\nGegeben sei eine Vier-Punkt-Anordnung AB-MN, bei einer Leitfähigkeitsverteilung \\(\\sigma\\) ergibt sich eine Mess-Spannung \\(\\phi_{MN}\\) bei einem Einspeisestrom \\(I_{AB}\\). Frage: Wie wirkt sich eine Änderung der Leitfähigkeit \\(\\delta\\sigma\\) auf den Messwert aus?\nDabei betrachten wir als Messgröße den scheinbaren spezifischen Widerstand \\(\\rho_a\\) und als Variable den spezifischen Widerstand \\(\\rho\\), um eine einheitenlose Größe zu erhalten.\n\\[S(\\vb r)=\\pdv{\\rho_a}{\\rho(\\vb r)}\\]\nDiese wird als Sensitivitätsfunktion bezeichnet.\nWir setzen \\(\\sigma+\\delta\\sigma\\) in die Kontinuitätsgleichung ein:\n\\[\\div((\\sigma+\\delta\\sigma)\\grad (u+\\delta u))=\\]\n\\[\\div(\\sigma\\grad u)+\\div(\\delta\\sigma\\grad u)+\\div(\\sigma\\grad \\delta u)+\\div(\\delta\\sigma\\grad \\delta u)=I\\delta(\\vb r-\\vb r_s)\\]\nGeselowitz (1971):\n\\[\\Rightarrow S(\\vb r)=\\frac{k}{\\rho^2} \\int\\Omega\\frac{\\grad u^{AB}}{I^{AB}} \\frac{\\grad u^{MN}}{I^{MN}}\\dd\\Omega\\]\nIm homogenen Halbraum können wir die Lösung einsetzen und erhalten\n\\[\\Rightarrow S(\\vb r)=\\frac{k}{4\\pi^2} \\int\\Omega\\qty(\\frac{\\vb r_A}{r_A^3}-\\frac{\\vb r_B}{r_B^3})\\qty(\\frac{\\vb r_M}{r_M^3}-\\frac{\\vb r_N}{r_N^3})\\dd\\Omega\\]\nIm Folgenden betrachten wir ausschließlich die Sensitivität des homogenen Halbraums, was für das Verständnis völlig ausreichend ist. Natürlich hängt die Potentialverteilung von der Leitfähigkeit selbst ab. Insbesondere wenn man Logarithmen betrachtet, ist der Grad der Nichtlinearität aber klein, so dass die grundlegenden Bilder bei kleinen Kontrasten sehr ähnlich sind.\nMan beachte außerdem, dass Strom- und Potential-Elektroden austauschbar sind. Wir diskretisieren den Untergrund in ein Dreiecksnetz und integrieren die Funktion über Gauss-Quadratur:\nDie Wenner-Anordnung  zeigt oberflächennah eine Abfolge von positiven und negativen Vorzeichen (Skala ist normiert). Eine Oberflächennahe Erhöhung (bis 1m Tiefe) würde ein zentrales Maximum mit zwei flankierenden Minima (und daran anschließend wieder Maxima) zeigen. Generell ist die Anordnung bis zu einer Tiefe sensitiv, die etwas kleiner als der Elktrodenabstand ist.\nDie Funktion der Schlumberger-Anordnung ist generell ähnlich,\nnur dass der mittlere Bereich schmaler ist. Anordnungen mit Spannungsmessung innerhalb der Stromelektroden werden als \\(\\alpha\\)-Typ bezeichnet (die einfach Wenner-Anordnung auch Wenner-\\(\\alpha\\) genannt). Wenn man Strom- und Spannungselektroden trennt, aber die Abstände gleich behält, erhält man die Wenner-\\(\\beta\\) Anordnung\nBei der Dipol-Dipol-Anordnung werden die Spannungs- und Strom-Strecken nicht mit vergrößert und bleiben daher kleiner als der Dipol-Abstand.",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -267,63 +190,8 @@
     "objectID": "sens_arrays.html#sensitivitäten-erklärt",
     "href": "sens_arrays.html#sensitivitäten-erklärt",
     "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.8 Sensitivitäten erklärt",
-    "text": "4.8 Sensitivitäten erklärt\nDie Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?\nWir betrachten eine Wenner-Messung (A-M-N-B).\n\n\n\nPotential und Strom für homogenen Fall\n\n\nNun erzeugen wir kleine flache Einlagerungen (Kreise), zunächst im Bereich der negativen Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nLeitfähige Einlagerung\n\n\nNun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nResistive Einlagerung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#homogener-untergrund-potentialverteilung",
-    "href": "sens_arrays.html#homogener-untergrund-potentialverteilung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.1 Homogener Untergrund: Potentialverteilung",
-    "text": "5.1 Homogener Untergrund: Potentialverteilung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#homogener-untergrund-stromlinien",
-    "href": "sens_arrays.html#homogener-untergrund-stromlinien",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.2 Homogener Untergrund: Stromlinien",
-    "text": "5.2 Homogener Untergrund: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#stetigkeit-an-grenzflächen",
-    "href": "sens_arrays.html#stetigkeit-an-grenzflächen",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.3 Stetigkeit an Grenzflächen",
-    "text": "5.3 Stetigkeit an Grenzflächen\n\n\n\\[\\Rightarrow \\div(\\sigma\\vb E)=-\\div(\\sigma\\grad U)=0\\]  Brechungsgesetz:\n\nStetigkeit von\n\nPotential \\(u\\)\nTangentialkomponente von E \\(E_1=E_2\\Rightarrow \\rho_1 j_{x1}=\\rho_2 j_{x2}\\)\nNormalkomponente v. \\(j_{z1}=j_{z2}\\) \\[\\Rightarrow \\rho_1\\frac{j_{x1}}{j_{z1}}=\\rho_2\\frac{j_{x2}}{j_{z2}}\\] \\[\\rho_1\\tan\\theta_1=\\rho_2\\tan\\theta_2\\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#schlechter-leiter-stromlinien",
-    "href": "sens_arrays.html#schlechter-leiter-stromlinien",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.4 Schlechter Leiter: Stromlinien",
-    "text": "5.4 Schlechter Leiter: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#guter-leiter-stromlinien",
-    "href": "sens_arrays.html#guter-leiter-stromlinien",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.5 Guter Leiter: Stromlinien",
-    "text": "5.5 Guter Leiter: Stromlinien",
+    "section": "3.2 Sensitivitäten erklärt",
+    "text": "3.2 Sensitivitäten erklärt\nDie Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?\nWir betrachten eine Wenner-Messung (A-M-N-B).\n\n\n\nPotential und Strom für homogenen Fall\n\n\nNun erzeugen wir kleine flache Einlagerungen (Kreise), zunächst im Bereich der negativen Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nLeitfähige Einlagerung\n\n\nNun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nResistive Einlagerung",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -333,19 +201,8 @@
     "objectID": "sens_arrays.html#mess-strategien",
     "href": "sens_arrays.html#mess-strategien",
     "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.6 Mess-Strategien",
-    "text": "5.6 Mess-Strategien\n\n\n\n\n\n\nKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#widerstands-kartierung",
-    "href": "sens_arrays.html#widerstands-kartierung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.7 Widerstands-Kartierung",
-    "text": "5.7 Widerstands-Kartierung",
+    "section": "3.3 Mess-Strategien",
+    "text": "3.3 Mess-Strategien\n\n\n\n\n\n\nKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)\n\n\n\n3.3.1 Widerstands-Kartierung\n\nKartierungen mit festen Anordnungen werden heutzutage nur noch selten eingesetzt (wenn die Teufenlage eines zu suchenden, eher kleineren Objekts gut bekannt ist). Auch Sondierungen, die zur Erkundung von horizontal geschichteten Untergründen eingesetzt werden) treten immer weiter in den Hintergrund. Bei weitem häufigstes Verfahren ist die 2D-Geoelektrik (nur noch selten als Sondierungs-Kartierung bezeichnet). Manchmal werden 3D-Anordnungen oder Anordnungen unter Zuhilfenahme von Bohrlöchern eingesetzt.",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -356,51 +213,18 @@
     "href": "ves.html",
     "title": "4  Widerstands-Tiefensondierung",
     "section": "",
-    "text": "4.1 Tiefensondierung - Schlumberger",
+    "text": "4.0.1 Horizontale Stromdichte",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
-    "objectID": "ves.html#horizontale-stromdichte",
-    "href": "ves.html#horizontale-stromdichte",
+    "objectID": "ves.html#inversion-am-beispiel-tiefensondierung",
+    "href": "ves.html#inversion-am-beispiel-tiefensondierung",
     "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.1 Horizontale Stromdichte",
-    "text": "5.1 Horizontale Stromdichte\n\n\n\\(j_x=\\sigma\\pdv{u}{x}=-\\frac{I}{2\\pi}\\pdv{x} (\\frac{1}{r_A}-\\frac{1}{r_B})\\)\nin der Mitte (\\(r_A=r_B\\), AB=\\(L\\)): \\[j_x=\\frac{I}{2\\pi} \\frac{L}{(z^2+L^2/4)^{3/2}}\\]\n\n\n\nCode anzeigen\nzL = np.arange(0, 3, .01)\njx = 1/(zL**2+0.25)**1.5/2/np.pi\nsumjx = np.cumsum(jx)\nplt.plot(zL, jx/jx[0], label=\"jx\")\nplt.plot(zL, sumjx/sumjx[-1], label=\"sum\")\nplt.legend()\nplt.xlabel(\"z/L\")\nplt.ylabel(r\"$j_x$/$\\Sigma j_x$ (normalized)\")\nplt.grid()",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
-    ]
-  },
-  {
-    "objectID": "ves.html#horizontale-stromdichte-integriert",
-    "href": "ves.html#horizontale-stromdichte-integriert",
-    "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.2 Horizontale Stromdichte integriert",
-    "text": "5.2 Horizontale Stromdichte integriert\n\\[\\frac{I_x}{I}(z)=\\frac{L}{2\\pi}\\int\\limits_{-\\infty}^{\\infty} \\frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\\]\n\n\n\\[\\frac{I_x}{I}(z)=\\frac{2}{\\pi}\\arctan\\frac{2z}{L} \\] - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2\n\n\n\nCode anzeigen\nplt.plot(zL, np.arctan(2*zL)*2/np.pi)\nplt.xlabel(\"z/L\")\nplt.grid()",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
-    ]
-  },
-  {
-    "objectID": "ves.html#d-sensitivitäten",
-    "href": "ves.html#d-sensitivitäten",
-    "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.3 1D-Sensitivitäten",
-    "text": "5.3 1D-Sensitivitäten\n\n\n\n\n\nlogarithmisch äquidistante L (AB)\nSondierungsparameter AB/2\nMaximum bei AB/2/2\n90%-Summe bei AB/2*3",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
-    ]
-  },
-  {
-    "objectID": "ves.html#notebook-mit-sondierung",
-    "href": "ves.html#notebook-mit-sondierung",
-    "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.4 Notebook mit Sondierung",
-    "text": "5.4 Notebook mit Sondierung",
+    "section": "4.1 Inversion am Beispiel Tiefensondierung",
+    "text": "4.1 Inversion am Beispiel Tiefensondierung\n\nfrüher Auswertung mit Kurvenschablonen\nDatenanpassung durch iterative Veränderung des Modells\nZielfunktion: Quadratmittel der Abweichung Daten und Modellantwort \\[ \\Phi=\\sum (d_i-f_i(\\vb m))^2 \\rightarrow \\min \\]\nInversion: Minimierung des Misfits zwischen Daten &\n\nSensitivitäten als wichtigste Zutat (\\(\\delta\\rho\\rightarrow\\delta\\rho_a\\))",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
@@ -410,8 +234,8 @@
     "objectID": "ves.html#zielfunktion-schlechter-leiter",
     "href": "ves.html#zielfunktion-schlechter-leiter",
     "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.5 Zielfunktion schlechter Leiter",
-    "text": "5.5 Zielfunktion schlechter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/10/100 \\(\\Omega\\)m",
+    "section": "4.2 Zielfunktion schlechter Leiter",
+    "text": "4.2 Zielfunktion schlechter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/10/100 \\(\\Omega\\)m",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
@@ -421,8 +245,8 @@
     "objectID": "ves.html#zielfunktion-guter-leiter",
     "href": "ves.html#zielfunktion-guter-leiter",
     "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.6 Zielfunktion guter Leiter",
-    "text": "5.6 Zielfunktion guter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/1000/100 \\(\\Omega\\)m",
+    "section": "4.3 Zielfunktion guter Leiter",
+    "text": "4.3 Zielfunktion guter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/1000/100 \\(\\Omega\\)m",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"

@@ -295,16 +295,12 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#tiefensondierung---schlumberger" id="toc-tiefensondierung---schlumberger" class="nav-link active" data-scroll-target="#tiefensondierung---schlumberger"><span class="header-section-number">4.1</span> Tiefensondierung - Schlumberger</a></li>
-  <li><a href="#inversion-am-beispiel-tiefensondierung" id="toc-inversion-am-beispiel-tiefensondierung" class="nav-link" data-scroll-target="#inversion-am-beispiel-tiefensondierung"><span class="header-section-number">5</span> Inversion am Beispiel Tiefensondierung</a>
-  <ul class="collapse">
-  <li><a href="#horizontale-stromdichte" id="toc-horizontale-stromdichte" class="nav-link" data-scroll-target="#horizontale-stromdichte"><span class="header-section-number">5.1</span> Horizontale Stromdichte</a></li>
-  <li><a href="#horizontale-stromdichte-integriert" id="toc-horizontale-stromdichte-integriert" class="nav-link" data-scroll-target="#horizontale-stromdichte-integriert"><span class="header-section-number">5.2</span> Horizontale Stromdichte integriert</a></li>
-  <li><a href="#d-sensitivitäten" id="toc-d-sensitivitäten" class="nav-link" data-scroll-target="#d-sensitivitäten"><span class="header-section-number">5.3</span> 1D-Sensitivitäten</a></li>
-  <li><a href="#notebook-mit-sondierung" id="toc-notebook-mit-sondierung" class="nav-link" data-scroll-target="#notebook-mit-sondierung"><span class="header-section-number">5.4</span> Notebook mit Sondierung</a></li>
-  <li><a href="#zielfunktion-schlechter-leiter" id="toc-zielfunktion-schlechter-leiter" class="nav-link" data-scroll-target="#zielfunktion-schlechter-leiter"><span class="header-section-number">5.5</span> Zielfunktion schlechter Leiter</a></li>
-  <li><a href="#zielfunktion-guter-leiter" id="toc-zielfunktion-guter-leiter" class="nav-link" data-scroll-target="#zielfunktion-guter-leiter"><span class="header-section-number">5.6</span> Zielfunktion guter Leiter</a></li>
-  </ul></li>
+  <li><a href="#horizontale-stromdichte" id="toc-horizontale-stromdichte" class="nav-link active" data-scroll-target="#horizontale-stromdichte"><span class="header-section-number">4.0.1</span> Horizontale Stromdichte</a></li>
+  <li><a href="#horizontale-stromdichte-integriert" id="toc-horizontale-stromdichte-integriert" class="nav-link" data-scroll-target="#horizontale-stromdichte-integriert"><span class="header-section-number">4.0.2</span> Horizontale Stromdichte integriert</a></li>
+  <li><a href="#d-sensitivitäten" id="toc-d-sensitivitäten" class="nav-link" data-scroll-target="#d-sensitivitäten"><span class="header-section-number">4.0.3</span> 1D-Sensitivitäten</a></li>
+  <li><a href="#inversion-am-beispiel-tiefensondierung" id="toc-inversion-am-beispiel-tiefensondierung" class="nav-link" data-scroll-target="#inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.1</span> Inversion am Beispiel Tiefensondierung</a></li>
+  <li><a href="#zielfunktion-schlechter-leiter" id="toc-zielfunktion-schlechter-leiter" class="nav-link" data-scroll-target="#zielfunktion-schlechter-leiter"><span class="header-section-number">4.2</span> Zielfunktion schlechter Leiter</a></li>
+  <li><a href="#zielfunktion-guter-leiter" id="toc-zielfunktion-guter-leiter" class="nav-link" data-scroll-target="#zielfunktion-guter-leiter"><span class="header-section-number">4.3</span> Zielfunktion guter Leiter</a></li>
   </ul>
 </nav>
     </div>
@@ -330,34 +326,21 @@ window.Quarto = {
 </header>
 
 
-<section id="tiefensondierung---schlumberger" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="tiefensondierung---schlumberger"><span class="header-section-number">4.1</span> Tiefensondierung - Schlumberger</h2>
-<div class="r-stack">
-<p><img src="pics/sens/sens_slm3.svg" class="img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_slm10.svg" class="fragment img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_slm15.svg" class="fragment img-fluid" width="1200"></p>
-<p><img src="pics/sens/sens_slm18.svg" class="fragment img-fluid" width="1200"></p>
+<p>Eine Tiefensondierung erreicht man, indem man am gleichen Mess-Mittelpunkt die Elektrodenabstände (z.T. nur die der Stromelektroden) sukzessive erhöht. Die dafür meist eingesetzte Anordnung ist die Schlumberger-Anordnung. Dabei bleiben die Spannungselektroden konstant und die beiden Stromelektroden entfernen sich vom Mittelpunkt immer weiter.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/sens/ves.gif" class="img-fluid figure-img"></p>
+<figcaption>Sensitivitäten einer Schlumberger-Tiefensondierung</figcaption>
+</figure>
 </div>
-</section>
-<section id="inversion-am-beispiel-tiefensondierung" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Inversion am Beispiel Tiefensondierung</h1>
-<ul>
-<li>früher Auswertung mit Kurvenschablonen</li>
-<li>Datenanpassung durch iterative Veränderung des Modells</li>
-<li>Inversion: Minimierung des Misfits zwischen Daten &amp; Modellantwort
-<ul>
-<li>Sensitivitäten als wichtigste Zutat (<span class="math inline">\(\delta\rho\rightarrow\delta\rho_a\)</span>)</li>
-</ul></li>
-<li>Zielfunktion: Quadratmittel der Abweichung darstellen</li>
-</ul>
-<section id="horizontale-stromdichte" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="horizontale-stromdichte"><span class="header-section-number">5.1</span> Horizontale Stromdichte</h2>
+<section id="horizontale-stromdichte" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="horizontale-stromdichte"><span class="header-section-number">4.0.1</span> Horizontale Stromdichte</h3>
 <div class="columns">
 <div class="column">
 <p><span class="math inline">\(j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})\)</span></p>
 <p>in der Mitte (<span class="math inline">\(r_A=r_B\)</span>, AB=<span class="math inline">\(L\)</span>): <span class="math display">\[j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}\]</span></p>
 </div><div class="column">
-<div id="76b2c912" class="cell" data-execution_count="2">
+<div id="79d518c6" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code anzeigen</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zL <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">3</span>, <span class="fl">.01</span>)</span>
@@ -381,14 +364,14 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="horizontale-stromdichte-integriert" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="horizontale-stromdichte-integriert"><span class="header-section-number">5.2</span> Horizontale Stromdichte integriert</h2>
+<section id="horizontale-stromdichte-integriert" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="horizontale-stromdichte-integriert"><span class="header-section-number">4.0.2</span> Horizontale Stromdichte integriert</h3>
 <p><span class="math display">\[\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\]</span></p>
 <div class="columns">
 <div class="column">
 <p><span class="math display">\[\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} \]</span> - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2</p>
 </div><div class="column">
-<div id="8a85e764" class="cell" data-execution_count="3">
+<div id="e8294601" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code anzeigen</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, np.arctan(<span class="dv">2</span><span class="op">*</span>zL)<span class="op">*</span><span class="dv">2</span><span class="op">/</span>np.pi)</span>
@@ -406,8 +389,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="d-sensitivitäten" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="d-sensitivitäten"><span class="header-section-number">5.3</span> 1D-Sensitivitäten</h2>
+<section id="d-sensitivitäten" class="level3" data-number="4.0.3">
+<h3 data-number="4.0.3" class="anchored" data-anchor-id="d-sensitivitäten"><span class="header-section-number">4.0.3</span> 1D-Sensitivitäten</h3>
 <div class="columns">
 <div class="column">
 <p><img src="pics/ves/ves_sens1d.svg" class="img-fluid" style="width:150.0%"></p>
@@ -421,11 +404,20 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="notebook-mit-sondierung" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="notebook-mit-sondierung"><span class="header-section-number">5.4</span> Notebook mit Sondierung</h2>
+<section id="inversion-am-beispiel-tiefensondierung" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.1</span> Inversion am Beispiel Tiefensondierung</h2>
+<ul>
+<li>früher Auswertung mit Kurvenschablonen</li>
+<li>Datenanpassung durch iterative Veränderung des Modells</li>
+<li>Zielfunktion: Quadratmittel der Abweichung Daten und Modellantwort <span class="math display">\[ \Phi=\sum (d_i-f_i(\vb m))^2 \rightarrow \min \]</span></li>
+<li>Inversion: Minimierung des Misfits zwischen Daten &amp;
+<ul>
+<li>Sensitivitäten als wichtigste Zutat (<span class="math inline">\(\delta\rho\rightarrow\delta\rho_a\)</span>)</li>
+</ul></li>
+</ul>
 </section>
-<section id="zielfunktion-schlechter-leiter" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="zielfunktion-schlechter-leiter"><span class="header-section-number">5.5</span> Zielfunktion schlechter Leiter</h2>
+<section id="zielfunktion-schlechter-leiter" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="zielfunktion-schlechter-leiter"><span class="header-section-number">4.2</span> Zielfunktion schlechter Leiter</h2>
 <div class="columns">
 <div class="column">
 <ul>
@@ -438,8 +430,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="zielfunktion-guter-leiter" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="zielfunktion-guter-leiter"><span class="header-section-number">5.6</span> Zielfunktion guter Leiter</h2>
+<section id="zielfunktion-guter-leiter" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="zielfunktion-guter-leiter"><span class="header-section-number">4.3</span> Zielfunktion guter Leiter</h2>
 <div class="columns">
 <div class="column">
 <ul>
@@ -453,7 +445,6 @@ window.Quarto = {
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
