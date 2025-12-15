@@ -5,14 +5,16 @@
   - bereits durch Gebrüder Schlumberger (1930) & Dachnov (1941)
 * Methode der Induzierten Polarisation (Bleil, 1953)
 
-## Gleichstrom-Äquivalent (Dentith&Mudge)
+## Äquivalente Pumpen-Kreise
+
+### Gleichstrom-Äquivalent
 
 :::: {.columns}
 ::: {.column}
-![](pics/ip/dm_fig53a.png)
+![[@dm2014]](pics/ip/dm_fig53a.png)
 :::
 ::: {.column}
-![](pics/ip/dm_fig53b.png)
+![[@dm2014]](pics/ip/dm_fig53b.png)
 :::
 ::::
 
@@ -20,26 +22,26 @@
 
 :::: {.columns}
 ::: {.column width="40%"}
-![](pics/ip/dm_fig54.png)
+![[@dm2014]](pics/ip/dm_fig54.png)
 :::
 ::: {.column width="55%"}
-![](pics/ip/dm_fig56.png)
+![[@dm2014]](pics/ip/dm_fig56.png)
 :::
 ::::
 
 
 ## Induzierte Polarisation - Zeitbereich
 
-![](pics/ip/ipFD1.png)
+![[@dm2014]](pics/ip/ipFD1.png)
 
 ## Induzierte Polarisation - Frequenzbereich
 :::: {.columns}
 ::: {.column width="53%"}
-![](pics/ert/ipphase.png)
+![[@dm2014]](pics/ert/ipphase.png)
 :::
 ::: {.column width="47%"}
 ### Phasenverschiebung
-![Dentith & Mudge (2014)](pics/ert/ipFD2.png)
+![[@dm2014]](pics/ert/ipFD2.png)
 
 $$ \sigma^* = \sigma' + \imath\sigma'' = |\sigma| e^{\imath\phi} $$
 :::
@@ -47,9 +49,9 @@ $$ \sigma^* = \sigma' + \imath\sigma'' = |\sigma| e^{\imath\phi} $$
 
 ## Induzierte Polarisation
 ::: {.r-stack}
-![Dentith & Mudge (2014)](pics/petro/DentithMudge_fig519ab.png){width="73%"}
+![[@dm2014]](pics/petro/DentithMudge_fig519ab.png){width="73%"}
 
-![](pics/petro/DentithMudge_fig519cd.png){.fragment width="70%" fig-align="center"}
+![[@dm2014]](pics/petro/DentithMudge_fig519cd.png){.fragment width="70%" fig-align="center"}
 :::
 
 ## Leitfähigkeit vs. Permittivität
@@ -66,7 +68,7 @@ $$ \rho^* = (\sigma^*)^{-1} = \frac{\sigma' - \imath\sigma''}{\sigma'^2 + \sigma
 
 :::: {.columns}
 ::: {.column width="45%"}
-![Loewer et al. (2017)](pics/ip/loewer_fig1.png)
+![[@Loewer2017]](pics/ip/loewer_fig1.png)
 :::
 ::: {.column width="55%"}
 ### Debye-Relaxation
@@ -91,11 +93,11 @@ $$ \rho'(\omega) = \rho'(\infty) + \frac{2}{\pi}\int\limits_0^\infty \frac{x \rh
 
 ## Kramers-Kronig Beziehungen
 
-![IP & DK Messung an Loess (Loewer et al. 2017)](pics/ip/loewer_fig4.png)
+![IP & DK Messung an Loess [@Loewer2017]](pics/ip/loewer_fig4.png)
 
 ## Spektrale Induzierte Polarisation (SIP)
 
-![](pics/ert/ipspectra.png)
+![REFERENCE](pics/ert/ipspectra.png)
 
 # Feld-IP
 
@@ -110,57 +112,50 @@ $$ \rho'(\omega) = \rho'(\infty) + \frac{2}{\pi}\int\limits_0^\infty \frac{x \rh
   - Prozessing & Inversion
 :::
 ::: {.column}
-![SIP256C im Gelände (Günther & Martin, 2016)](pics/ip/haldenmessung.jpg)
+![SIP256C im Gelände [@Guenther2016]](pics/ip/haldenmessung.jpg)
 :::
 ::::
 
 ## Vergleich von Geräten (Martin et al., 2020)
 
-![SIP256C, MPT DAS-1, ABEM Terrameter LS2, Syscal Pro Switch 72](pics/ip/4geraete.jpg)
+![SIP256C, MPT DAS-1, ABEM Terrameter LS2, Syscal Pro Switch 72 [@Martin2020]](pics/ip/4geraete.jpg)
 
-## Scheinbare spez. Widerstände
+![Scheinbare spez. Widerstände [@Martin2020]](pics/ip/schleiz-rhoa.png)
 
-![](pics/ip/schleiz-rhoa.png)
+### FDIP
 
-## FDIP - Phasen
+![FDIP - Phasen [@Martin2020]](pics/ip/schleiz-phasen.png)
 
-![](pics/ip/schleiz-phasen.png)
-
-## TDIP - Aufzeichnungen
+### TDIP
 
 :::: {.columns}
 ::: {.column}
 ![](pics/ip/schleiz-timeseries1.png)
 :::
 ::: {.column}
-![](pics/ip/schleiz-timeseries2.png)
+![TDIP-Zeitreihen [@Martin2020]](pics/ip/schleiz-timeseries2.png)
 
 * Filter: Tiefpass, 50Hz, Offset, Drift, Elektrodenpolarisation
 * Gating & Stapelung $\Rightarrow$ Decay
 :::
 ::::
 
-## TDIP - Gates
-
 :::: {.columns}
 ::: {.column}
-![](pics/ip/gating.png)
+![TDIP - Gating [@Martin2020]](pics/ip/gating.png)
 :::
 ::: {.column .fragment}
 ![](pics/ip/schleiz-appcharg.png)
 :::
 ::::
 
-## Inversion
+### Inversion
 
-![](pics/ip/schleiz-inversion.png)
-
-<!-- ## IP Inversion (Martin&Günther, 2013)
-
-![](pics/ert/treetomography.png) -->
+![Inversion [@Martin2020]](pics/ip/schleiz-inversion.png)
 
 ## Umsetzung (Martin et al. 2021)
 
+::: {#fig-subplots}
 :::: {.columns}
 ::: {.column width="68%"}
 ![](pics/ip/martinguentherSlag.png)
@@ -172,3 +167,5 @@ $\Rightarrow$ Mineral-Grad/Typ
 :::
 ::::
 
+Inversionsergebnisse und Ableitung von Mineralgehalt und Typ [@Martin2021]
+:::
