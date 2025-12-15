@@ -4,7 +4,7 @@ Eine Tiefensondierung erreicht man, indem man am gleichen Mess-Mittelpunkt die E
 Die dafür meist eingesetzte Anordnung ist die Schlumberger-Anordnung.
 Dabei bleiben die Spannungselektroden konstant und die beiden Stromelektroden entfernen sich vom Mittelpunkt immer weiter.
 
-![Sensitivitäten einer Schlumberger-Tiefensondierung](pics/sens/ves.gif)
+![Sensitivitäten einer Schlumberger-Tiefensondierung](pics/ert/sens/ves.gif)
 
 ### Horizontale Stromdichte
 :::: {.columns}

@@ -91,7 +91,7 @@ Kombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektro
 
 ### Widerstands-Kartierung
 
-![](pics/sens/wa8.gif)
+![](pics/ert/sens/wa8.gif)
 
 
 Kartierungen mit festen Anordnungen werden heutzutage nur noch selten eingesetzt (wenn die Teufenlage eines zu suchenden, eher kleineren Objekts gut bekannt ist).
