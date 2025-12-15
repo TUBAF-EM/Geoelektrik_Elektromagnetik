@@ -99,7 +99,7 @@ $$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  $$
 
 ![](pics/intro-3)
 
-## Inversion - Methodik
+### Inversion - Methodik
 
 Datenvektor $\vb d=\{d_i\}=\{\rho^a_i\}$,
 Modellvektor $\vb m=\{m_j\}=\{\rho_j\}$
@@ -128,15 +128,15 @@ Das Complete Electrode Model (CEM)
 
 Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\int_{\Gamma_l}\sigma \pdv{u}{n}ds=I$
 
-## Modellierung von langen Elektroden
+### Modellierung von langen Elektroden
 
 ![Stromdichte für Langelektroden [@Ronczka2015]](pics/LE_Stromdichte.png)
 
-## Einfluss der Stecktiefe
+### Einfluss der Stecktiefe
 
 ![Prozentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe [@Ruecker2011]](pics/rueckerguenther2011_tab1.png)
 
-## Langelektroden - Sensitivitäten
+### Langelektroden - Sensitivitäten
 
 :::: {.columns}
 ::: {.column}
@@ -147,7 +147,7 @@ Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\i
 :::
 ::::
 
-## Lang-Elektroden-Geoelektrik (SaMoLEG)
+### Lang-Elektroden-Geoelektrik (SaMoLEG)
 
 :::: {.columns}
 ::: {.column}
@@ -160,7 +160,7 @@ Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\i
 :::
 ::::
 
-## Ringelektroden
+### Ringelektroden
 
 * Beispiel Salzwasser-Monitoring-System [SAMOS](https://www.liag-institut.de/samos.html)
 

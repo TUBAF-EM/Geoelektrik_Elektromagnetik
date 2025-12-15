@@ -312,18 +312,7 @@
     "href": "ert.html#modellierung-inversion",
     "title": "5  Widerstandstomographie",
     "section": "5.4 Modellierung & Inversion",
-    "text": "5.4 Modellierung & Inversion\n\n5.4.1 Vorwärtsrechnung\nLösung der partiellen Differentialgleichung\n\\[ -\\nabla \\cdot \\sigma \\grad u = \\delta(\\vb r - \\vb r_s)  \\]\n\n\n\nDiskretisierung des Untergrunds\n\n\n\n\n5.4.2 Inversion\n\n\n\n\n\nDiskretisierung, z.B. mit Dreiecken\nIterative Verbesserung\nVorwärtsrechnung & Sensitivitäten\nglattes Untergrundmodell\n\n\n\n\n\n5.4.3 Inversion",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
-    ]
-  },
-  {
-    "objectID": "ert.html#inversion---methodik",
-    "href": "ert.html#inversion---methodik",
-    "title": "5  Widerstandstomographie",
-    "section": "5.5 Inversion - Methodik",
-    "text": "5.5 Inversion - Methodik\nDatenvektor \\(\\vb d=\\{d_i\\}=\\{\\rho^a_i\\}\\), Modellvektor \\(\\vb m=\\{m_j\\}=\\{\\rho_j\\}\\)\nDatenmisfit \\(\\vb \\delta \\vb d = \\vb d - \\vb f(\\vb m)\\) soll klein sein (Quadrate)\nModellveränderung \\(\\delta\\vb m\\) über Sensitivitätsmatrix \\(S_{i,j}=\\pdv{f_i(\\vb m)}{m_j}=\\pdv{\\rho_a(\\rho)}{\\rho}\\)\n\\[\\Rightarrow \\vb S \\vb \\delta \\vb m = \\delta \\vb d\\]\nLeast-SquaresLösung \\(\\vb S^T \\vb S \\delta \\vb m=\\vb S^T \\delta \\vb d\\) +Zusatzterme",
+    "text": "5.4 Modellierung & Inversion\n\n5.4.1 Vorwärtsrechnung\nLösung der partiellen Differentialgleichung\n\\[ -\\nabla \\cdot \\sigma \\grad u = \\delta(\\vb r - \\vb r_s)  \\]\n\n\n\nDiskretisierung des Untergrunds\n\n\n\n\n5.4.2 Inversion\n\n\n\n\n\nDiskretisierung, z.B. mit Dreiecken\nIterative Verbesserung\nVorwärtsrechnung & Sensitivitäten\nglattes Untergrundmodell\n\n\n\n\n\n5.4.3 Inversion\n\n\n\n5.4.4 Inversion - Methodik\nDatenvektor \\(\\vb d=\\{d_i\\}=\\{\\rho^a_i\\}\\), Modellvektor \\(\\vb m=\\{m_j\\}=\\{\\rho_j\\}\\)\nDatenmisfit \\(\\vb \\delta \\vb d = \\vb d - \\vb f(\\vb m)\\) soll klein sein (Quadrate)\nModellveränderung \\(\\delta\\vb m\\) über Sensitivitätsmatrix \\(S_{i,j}=\\pdv{f_i(\\vb m)}{m_j}=\\pdv{\\rho_a(\\rho)}{\\rho}\\)\n\\[\\Rightarrow \\vb S \\vb \\delta \\vb m = \\delta \\vb d\\]\nLeast-SquaresLösung \\(\\vb S^T \\vb S \\delta \\vb m=\\vb S^T \\delta \\vb d\\) +Zusatzterme",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
@@ -333,63 +322,8 @@
     "objectID": "ert.html#ausgedehnte-elektroden",
     "href": "ert.html#ausgedehnte-elektroden",
     "title": "5  Widerstandstomographie",
-    "section": "5.6 Ausgedehnte Elektroden",
-    "text": "5.6 Ausgedehnte Elektroden\n\nVereinfachtes Modell: Punktförmige Stromeinspeisung \\(j=I\\frac{\\vb r}{r^3}\\)\nEndliche Elektroden: Verteilung des Stroms auf Fläche\nPlattenelektroden, Linienelektroden, Ringelektroden\n(Halb)Kugel-förmige Elektroden: identische Lösung im Außenraum\n\n\n5.6.1 Nicht-Punkt-Elektroden\nDas Complete Electrode Model (CEM)\n\n\n\nErsatzschaltbild (Rücker und Günther 2011)\n\n\nZusätzliche Gleichungen: \\(z_l\\sigma\\pdv{u}{n} + u = U_l\\) auf \\(\\Gamma_l\\) und \\(\\int_{\\Gamma_l}\\sigma \\pdv{u}{n}ds=I\\)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
-    ]
-  },
-  {
-    "objectID": "ert.html#modellierung-von-langen-elektroden",
-    "href": "ert.html#modellierung-von-langen-elektroden",
-    "title": "5  Widerstandstomographie",
-    "section": "5.7 Modellierung von langen Elektroden",
-    "text": "5.7 Modellierung von langen Elektroden\n\n\n\nStromdichte für Langelektroden (Ronczka, Rücker, und Günther 2015)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
-    ]
-  },
-  {
-    "objectID": "ert.html#einfluss-der-stecktiefe",
-    "href": "ert.html#einfluss-der-stecktiefe",
-    "title": "5  Widerstandstomographie",
-    "section": "5.8 Einfluss der Stecktiefe",
-    "text": "5.8 Einfluss der Stecktiefe\n\n\n\nProzentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe (Rücker und Günther 2011)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
-    ]
-  },
-  {
-    "objectID": "ert.html#langelektroden---sensitivitäten",
-    "href": "ert.html#langelektroden---sensitivitäten",
-    "title": "5  Widerstandstomographie",
-    "section": "5.9 Langelektroden - Sensitivitäten",
-    "text": "5.9 Langelektroden - Sensitivitäten\n\n\n\n\n\n(Ronczka, Rücker, und Günther 2015)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
-    ]
-  },
-  {
-    "objectID": "ert.html#lang-elektroden-geoelektrik-samoleg",
-    "href": "ert.html#lang-elektroden-geoelektrik-samoleg",
-    "title": "5  Widerstandstomographie",
-    "section": "5.10 Lang-Elektroden-Geoelektrik (SaMoLEG)",
-    "text": "5.10 Lang-Elektroden-Geoelektrik (SaMoLEG)\n\n\n\n\n\nstahlverrohrte Bohrlöcher als Elektroden (Günther, Ronczka, und Voß 2015)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
-    ]
-  },
-  {
-    "objectID": "ert.html#ringelektroden",
-    "href": "ert.html#ringelektroden",
-    "title": "5  Widerstandstomographie",
-    "section": "5.11 Ringelektroden",
-    "text": "5.11 Ringelektroden\n\nBeispiel Salzwasser-Monitoring-System SAMOS\n\n\n\n\n\n\nSalzwasser-Monitoring-System\n\n\n\n\n\n\nModellierung Ringelektroden (Ronczka, Rücker, und Günther 2015)",
+    "section": "5.5 Ausgedehnte Elektroden",
+    "text": "5.5 Ausgedehnte Elektroden\n\nVereinfachtes Modell: Punktförmige Stromeinspeisung \\(j=I\\frac{\\vb r}{r^3}\\)\nEndliche Elektroden: Verteilung des Stroms auf Fläche\nPlattenelektroden, Linienelektroden, Ringelektroden\n(Halb)Kugel-förmige Elektroden: identische Lösung im Außenraum\n\n\n5.5.1 Nicht-Punkt-Elektroden\nDas Complete Electrode Model (CEM)\n\n\n\nErsatzschaltbild (Rücker und Günther 2011)\n\n\nZusätzliche Gleichungen: \\(z_l\\sigma\\pdv{u}{n} + u = U_l\\) auf \\(\\Gamma_l\\) und \\(\\int_{\\Gamma_l}\\sigma \\pdv{u}{n}ds=I\\)\n\n\n5.5.2 Modellierung von langen Elektroden\n\n\n\nStromdichte für Langelektroden (Ronczka, Rücker, und Günther 2015)\n\n\n\n\n5.5.3 Einfluss der Stecktiefe\n\n\n\nProzentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe (Rücker und Günther 2011)\n\n\n\n\n5.5.4 Langelektroden - Sensitivitäten\n\n\n\n\n\n(Ronczka, Rücker, und Günther 2015)\n\n\n\n\n\n\n\n\n5.5.5 Lang-Elektroden-Geoelektrik (SaMoLEG)\n\n\n\n\n\nstahlverrohrte Bohrlöcher als Elektroden (Günther, Ronczka, und Voß 2015)\n\n\n\n\n\n\n5.5.6 Ringelektroden\n\nBeispiel Salzwasser-Monitoring-System SAMOS\n\n\n\n\n\n\nSalzwasser-Monitoring-System\n\n\n\n\n\n\nModellierung Ringelektroden (Ronczka, Rücker, und Günther 2015)",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"

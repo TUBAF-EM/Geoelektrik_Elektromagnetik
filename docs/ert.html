@@ -305,17 +305,17 @@ window.Quarto = {
   <li><a href="#vorwärtsrechnung" id="toc-vorwärtsrechnung" class="nav-link" data-scroll-target="#vorwärtsrechnung"><span class="header-section-number">5.4.1</span> Vorwärtsrechnung</a></li>
   <li><a href="#inversion" id="toc-inversion" class="nav-link" data-scroll-target="#inversion"><span class="header-section-number">5.4.2</span> Inversion</a></li>
   <li><a href="#inversion-1" id="toc-inversion-1" class="nav-link" data-scroll-target="#inversion-1"><span class="header-section-number">5.4.3</span> Inversion</a></li>
+  <li><a href="#inversion---methodik" id="toc-inversion---methodik" class="nav-link" data-scroll-target="#inversion---methodik"><span class="header-section-number">5.4.4</span> Inversion - Methodik</a></li>
   </ul></li>
-  <li><a href="#inversion---methodik" id="toc-inversion---methodik" class="nav-link" data-scroll-target="#inversion---methodik"><span class="header-section-number">5.5</span> Inversion - Methodik</a></li>
-  <li><a href="#ausgedehnte-elektroden" id="toc-ausgedehnte-elektroden" class="nav-link" data-scroll-target="#ausgedehnte-elektroden"><span class="header-section-number">5.6</span> Ausgedehnte Elektroden</a>
+  <li><a href="#ausgedehnte-elektroden" id="toc-ausgedehnte-elektroden" class="nav-link" data-scroll-target="#ausgedehnte-elektroden"><span class="header-section-number">5.5</span> Ausgedehnte Elektroden</a>
   <ul class="collapse">
-  <li><a href="#nicht-punkt-elektroden" id="toc-nicht-punkt-elektroden" class="nav-link" data-scroll-target="#nicht-punkt-elektroden"><span class="header-section-number">5.6.1</span> Nicht-Punkt-Elektroden</a></li>
+  <li><a href="#nicht-punkt-elektroden" id="toc-nicht-punkt-elektroden" class="nav-link" data-scroll-target="#nicht-punkt-elektroden"><span class="header-section-number">5.5.1</span> Nicht-Punkt-Elektroden</a></li>
+  <li><a href="#modellierung-von-langen-elektroden" id="toc-modellierung-von-langen-elektroden" class="nav-link" data-scroll-target="#modellierung-von-langen-elektroden"><span class="header-section-number">5.5.2</span> Modellierung von langen Elektroden</a></li>
+  <li><a href="#einfluss-der-stecktiefe" id="toc-einfluss-der-stecktiefe" class="nav-link" data-scroll-target="#einfluss-der-stecktiefe"><span class="header-section-number">5.5.3</span> Einfluss der Stecktiefe</a></li>
+  <li><a href="#langelektroden---sensitivitäten" id="toc-langelektroden---sensitivitäten" class="nav-link" data-scroll-target="#langelektroden---sensitivitäten"><span class="header-section-number">5.5.4</span> Langelektroden - Sensitivitäten</a></li>
+  <li><a href="#lang-elektroden-geoelektrik-samoleg" id="toc-lang-elektroden-geoelektrik-samoleg" class="nav-link" data-scroll-target="#lang-elektroden-geoelektrik-samoleg"><span class="header-section-number">5.5.5</span> Lang-Elektroden-Geoelektrik (SaMoLEG)</a></li>
+  <li><a href="#ringelektroden" id="toc-ringelektroden" class="nav-link" data-scroll-target="#ringelektroden"><span class="header-section-number">5.5.6</span> Ringelektroden</a></li>
   </ul></li>
-  <li><a href="#modellierung-von-langen-elektroden" id="toc-modellierung-von-langen-elektroden" class="nav-link" data-scroll-target="#modellierung-von-langen-elektroden"><span class="header-section-number">5.7</span> Modellierung von langen Elektroden</a></li>
-  <li><a href="#einfluss-der-stecktiefe" id="toc-einfluss-der-stecktiefe" class="nav-link" data-scroll-target="#einfluss-der-stecktiefe"><span class="header-section-number">5.8</span> Einfluss der Stecktiefe</a></li>
-  <li><a href="#langelektroden---sensitivitäten" id="toc-langelektroden---sensitivitäten" class="nav-link" data-scroll-target="#langelektroden---sensitivitäten"><span class="header-section-number">5.9</span> Langelektroden - Sensitivitäten</a></li>
-  <li><a href="#lang-elektroden-geoelektrik-samoleg" id="toc-lang-elektroden-geoelektrik-samoleg" class="nav-link" data-scroll-target="#lang-elektroden-geoelektrik-samoleg"><span class="header-section-number">5.10</span> Lang-Elektroden-Geoelektrik (SaMoLEG)</a></li>
-  <li><a href="#ringelektroden" id="toc-ringelektroden" class="nav-link" data-scroll-target="#ringelektroden"><span class="header-section-number">5.11</span> Ringelektroden</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 </nav>
@@ -468,25 +468,25 @@ window.Quarto = {
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="inversion-1"><span class="header-section-number">5.4.3</span> Inversion</h3>
 <p><img src="pics/intro-3.png" class="img-fluid"></p>
 </section>
-</section>
-<section id="inversion---methodik" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="inversion---methodik"><span class="header-section-number">5.5</span> Inversion - Methodik</h2>
+<section id="inversion---methodik" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="inversion---methodik"><span class="header-section-number">5.4.4</span> Inversion - Methodik</h3>
 <p>Datenvektor <span class="math inline">\(\vb d=\{d_i\}=\{\rho^a_i\}\)</span>, Modellvektor <span class="math inline">\(\vb m=\{m_j\}=\{\rho_j\}\)</span></p>
 <p>Datenmisfit <span class="math inline">\(\vb \delta \vb d = \vb d - \vb f(\vb m)\)</span> soll klein sein (Quadrate)</p>
 <p>Modellveränderung <span class="math inline">\(\delta\vb m\)</span> über Sensitivitätsmatrix <span class="math inline">\(S_{i,j}=\pdv{f_i(\vb m)}{m_j}=\pdv{\rho_a(\rho)}{\rho}\)</span></p>
 <p><span class="math display">\[\Rightarrow \vb S \vb \delta \vb m = \delta \vb d\]</span></p>
 <p>Least-SquaresLösung <span class="math inline">\(\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d\)</span> +Zusatzterme</p>
 </section>
-<section id="ausgedehnte-elektroden" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="ausgedehnte-elektroden"><span class="header-section-number">5.6</span> Ausgedehnte Elektroden</h2>
+</section>
+<section id="ausgedehnte-elektroden" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="ausgedehnte-elektroden"><span class="header-section-number">5.5</span> Ausgedehnte Elektroden</h2>
 <ul>
 <li>Vereinfachtes Modell: Punktförmige Stromeinspeisung <span class="math inline">\(j=I\frac{\vb r}{r^3}\)</span></li>
 <li>Endliche Elektroden: Verteilung des Stroms auf Fläche</li>
 <li>Plattenelektroden, Linienelektroden, Ringelektroden</li>
 <li>(Halb)Kugel-förmige Elektroden: identische Lösung im Außenraum</li>
 </ul>
-<section id="nicht-punkt-elektroden" class="level3" data-number="5.6.1">
-<h3 data-number="5.6.1" class="anchored" data-anchor-id="nicht-punkt-elektroden"><span class="header-section-number">5.6.1</span> Nicht-Punkt-Elektroden</h3>
+<section id="nicht-punkt-elektroden" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="nicht-punkt-elektroden"><span class="header-section-number">5.5.1</span> Nicht-Punkt-Elektroden</h3>
 <p>Das Complete Electrode Model (CEM)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -496,9 +496,8 @@ window.Quarto = {
 </div>
 <p>Zusätzliche Gleichungen: <span class="math inline">\(z_l\sigma\pdv{u}{n} + u = U_l\)</span> auf <span class="math inline">\(\Gamma_l\)</span> und <span class="math inline">\(\int_{\Gamma_l}\sigma \pdv{u}{n}ds=I\)</span></p>
 </section>
-</section>
-<section id="modellierung-von-langen-elektroden" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="modellierung-von-langen-elektroden"><span class="header-section-number">5.7</span> Modellierung von langen Elektroden</h2>
+<section id="modellierung-von-langen-elektroden" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="modellierung-von-langen-elektroden"><span class="header-section-number">5.5.2</span> Modellierung von langen Elektroden</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/LE_Stromdichte.png" class="img-fluid figure-img"></p>
@@ -506,8 +505,8 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="einfluss-der-stecktiefe" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="einfluss-der-stecktiefe"><span class="header-section-number">5.8</span> Einfluss der Stecktiefe</h2>
+<section id="einfluss-der-stecktiefe" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="einfluss-der-stecktiefe"><span class="header-section-number">5.5.3</span> Einfluss der Stecktiefe</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/rueckerguenther2011_tab1.png" class="img-fluid figure-img"></p>
@@ -515,8 +514,8 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="langelektroden---sensitivitäten" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="langelektroden---sensitivitäten"><span class="header-section-number">5.9</span> Langelektroden - Sensitivitäten</h2>
+<section id="langelektroden---sensitivitäten" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="langelektroden---sensitivitäten"><span class="header-section-number">5.5.4</span> Langelektroden - Sensitivitäten</h3>
 <div class="columns">
 <div class="column">
 <div class="quarto-figure quarto-figure-center">
@@ -530,8 +529,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="lang-elektroden-geoelektrik-samoleg" class="level2" data-number="5.10">
-<h2 data-number="5.10" class="anchored" data-anchor-id="lang-elektroden-geoelektrik-samoleg"><span class="header-section-number">5.10</span> Lang-Elektroden-Geoelektrik (SaMoLEG)</h2>
+<section id="lang-elektroden-geoelektrik-samoleg" class="level3" data-number="5.5.5">
+<h3 data-number="5.5.5" class="anchored" data-anchor-id="lang-elektroden-geoelektrik-samoleg"><span class="header-section-number">5.5.5</span> Lang-Elektroden-Geoelektrik (SaMoLEG)</h3>
 <div class="columns">
 <div class="column">
 <p><img src="pics/samoleg.png" class="img-fluid"></p>
@@ -543,8 +542,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="ringelektroden" class="level2" data-number="5.11">
-<h2 data-number="5.11" class="anchored" data-anchor-id="ringelektroden"><span class="header-section-number">5.11</span> Ringelektroden</h2>
+<section id="ringelektroden" class="level3" data-number="5.5.6">
+<h3 data-number="5.5.6" class="anchored" data-anchor-id="ringelektroden"><span class="header-section-number">5.5.6</span> Ringelektroden</h3>
 <ul>
 <li>Beispiel Salzwasser-Monitoring-System <a href="https://www.liag-institut.de/samos.html">SAMOS</a></li>
 </ul>
@@ -565,6 +564,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="literatur" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="literatur">Literatur</h2>
