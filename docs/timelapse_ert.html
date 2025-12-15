@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Geoelektrisches Monitoring – Geoelektrik und Elektromagnetik</title>
+<title>6&nbsp; Geoelektrisches Monitoring – Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./induzierte_polarisation.html" rel="next">
-<link href="./ves.html" rel="prev">
+<link href="./ert.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -91,7 +145,7 @@ window.MathJax = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./timelapse_ert.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./timelapse_ert.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -157,20 +211,26 @@ window.MathJax = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./ert.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./timelapse_ert.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./induzierte_polarisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ert_praxis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></span></a>
   </div>
 </li>
       </ul>
@@ -187,19 +247,19 @@ window.MathJax = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./grundgleichungen_em.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./magnetotellurik.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span></a>
   </div>
 </li>
       </ul>
@@ -207,7 +267,7 @@ window.MathJax = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./zusammenfassung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,7 +279,7 @@ window.MathJax = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./slidedecks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Slide decks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Slide decks</span></span></a>
   </div>
 </li>
     </ul>
@@ -227,15 +287,34 @@ window.MathJax = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#timelapse-ert---geoelektrik-monitoring" id="toc-timelapse-ert---geoelektrik-monitoring" class="nav-link active" data-scroll-target="#timelapse-ert---geoelektrik-monitoring"><span class="header-section-number">7</span> Timelapse ERT - Geoelektrik-Monitoring</a>
+  <ul class="collapse">
+  <li><a href="#salzwasser-monitoring-system-samos" id="toc-salzwasser-monitoring-system-samos" class="nav-link" data-scroll-target="#salzwasser-monitoring-system-samos"><span class="header-section-number">7.0.1</span> Salzwasser-Monitoring-System SAMOS</a></li>
+  <li><a href="#timelapse-ert" id="toc-timelapse-ert" class="nav-link" data-scroll-target="#timelapse-ert"><span class="header-section-number">7.1</span> Timelapse-ERT</a></li>
+  <li><a href="#stofftransport-in-der-ungesättigten-zone" id="toc-stofftransport-in-der-ungesättigten-zone" class="nav-link" data-scroll-target="#stofftransport-in-der-ungesättigten-zone"><span class="header-section-number">7.2</span> Stofftransport in der ungesättigten Zone</a></li>
+  <li><a href="#transport-ungesättigt-persson2015" id="toc-transport-ungesättigt-persson2015" class="nav-link" data-scroll-target="#transport-ungesättigt-persson2015"><span class="header-section-number">7.3</span> Transport ungesättigt <span class="citation" data-cites="Persson2015">(Persson, Dahlin, und Günther 2015)</span></a></li>
+  <li><a href="#d-crosshole-ert-monitoring" id="toc-d-crosshole-ert-monitoring" class="nav-link" data-scroll-target="#d-crosshole-ert-monitoring"><span class="header-section-number">7.4</span> 3D-Crosshole ERT-Monitoring</a>
+  <ul class="collapse">
+  <li><a href="#data-timeline" id="toc-data-timeline" class="nav-link" data-scroll-target="#data-timeline"><span class="header-section-number">7.4.1</span> Data Timeline</a></li>
+  <li><a href="#d-inversion-of-selected-time-steps" id="toc-d-inversion-of-selected-time-steps" class="nav-link" data-scroll-target="#d-inversion-of-selected-time-steps"><span class="header-section-number">7.4.2</span> 2D Inversion of selected time steps</a></li>
+  <li><a href="#transformation-of-ratio-into-temperature" id="toc-transformation-of-ratio-into-temperature" class="nav-link" data-scroll-target="#transformation-of-ratio-into-temperature"><span class="header-section-number">7.4.3</span> Transformation of ratio into temperature</a></li>
+  </ul></li>
+  <li><a href="#d-inversion-result" id="toc-d-inversion-result" class="nav-link" data-scroll-target="#d-inversion-result"><span class="header-section-number">7.5</span> 3D inversion result</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./timelapse_ert.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./timelapse_ert.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></h1>
 </div>
 
 
@@ -252,8 +331,206 @@ window.MathJax = {
 </header>
 
 
+<section id="timelapse-ert---geoelektrik-monitoring" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Timelapse ERT - Geoelektrik-Monitoring</h1>
+<ul>
+<li>Ziel: Verfolgung von ablaufenden Prozessen</li>
+<li>meist mit fest verbauten Elektroden(ketten)</li>
+<li>günstiges und schnelles Verfahren, automatisierbar</li>
+<li>Ziele: Infiltration, Schadstoffausbreitung, Wärmespeicher, …</li>
+<li>Fokus auf Veränderungen (Fluid-LF, Sättigung, )</li>
+</ul>
+<section id="salzwasser-monitoring-system-samos" class="level3" data-number="7.0.1">
+<h3 data-number="7.0.1" class="anchored" data-anchor-id="salzwasser-monitoring-system-samos"><span class="header-section-number">7.0.1</span> Salzwasser-Monitoring-System <a href="https://www.liag-institut.de/samos.html">SAMOS</a></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/SAMOS_Ostland.png" class="img-fluid figure-img"></p>
+<figcaption>Tiefenverteilung, Lithologie &amp; zeitliche Verläufe in versch. Tiefen der Station Ostland in Borkum <span class="citation" data-cites="Ronczka2025">(<a href="#ref-Ronczka2025" role="doc-biblioref">Ronczka u.&nbsp;a. 2025</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="timelapse-ert" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="timelapse-ert"><span class="header-section-number">7.1</span> Timelapse-ERT</h2>
+<ul>
+<li>Synthetisches Experiment: Example</li>
+<li>Auswertestrategien: Example</li>
+</ul>
+</section>
+<section id="stofftransport-in-der-ungesättigten-zone" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="stofftransport-in-der-ungesättigten-zone"><span class="header-section-number">7.2</span> Stofftransport in der ungesättigten Zone</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/persson-foto.jpg" class="img-fluid figure-img"></p>
+<figcaption>Messaufbau <span class="citation" data-cites="Persson2015">(<a href="#ref-Persson2015" role="doc-biblioref">Persson, Dahlin, und Günther 2015</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="transport-ungesättigt-persson2015" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="transport-ungesättigt-persson2015"><span class="header-section-number">7.3</span> Transport ungesättigt <span class="citation" data-cites="Persson2015">(<a href="#ref-Persson2015" role="doc-biblioref">Persson, Dahlin, und Günther 2015</a>)</span></h2>
+<div class="columns">
+<div class="column">
+<p><img src="pics/persson-optical1.png" class="img-fluid"> <img src="pics/persson-hydrus1.png" class="fragment img-fluid"> <img src="pics/persson-ert2.png" class="fragment img-fluid"></p>
+</div><div class="column">
+<p><img src="pics/persson-optical4.png" class="fragment img-fluid"> <img src="pics/persson-hydrus5.png" class="fragment img-fluid"> <img src="pics/persson-ert3.png" class="fragment img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="d-crosshole-ert-monitoring" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="d-crosshole-ert-monitoring"><span class="header-section-number">7.4</span> 3D-Crosshole ERT-Monitoring</h2>
+<p><img src="pics/heat/heatInjectionScheme.png" class="img-fluid"></p>
+<section id="data-timeline" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="data-timeline"><span class="header-section-number">7.4.1</span> Data Timeline</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>xh <span class="op">=</span> ert.CrossholeERT(<span class="st">'heat-data.shm'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">self</span>.<span class="bu">filter</span>(tmax<span class="op">=</span><span class="dv">80</span>)  <span class="co"># cut late frames</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">self</span>.<span class="bu">filter</span>(t<span class="op">=</span><span class="dv">4</span>) <span class="co"># remove single frame</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">self</span>.mask(rmin<span class="op">=</span><span class="dv">10</span>, rmax<span class="op">=</span><span class="dv">1000</span>, emax<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>c04 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">1</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>d01 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">5</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d06 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">6</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>d09 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">7</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># plotting</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> c04.showTimeline(a<span class="op">=</span><span class="dv">14</span>, m<span class="op">=</span><span class="dv">13</span>, n<span class="op">=</span><span class="dv">12</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                      b<span class="op">=</span><span class="dv">11</span>, label<span class="op">=</span><span class="st">"C04"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>d01.showTimeline(ax<span class="op">=</span>ax, a<span class="op">=</span><span class="dv">14</span>, m<span class="op">=</span><span class="dv">12</span>, n<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                 b<span class="op">=</span><span class="dv">8</span>, label<span class="op">=</span><span class="st">"D01"</span>)<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>d06.showTimeline(ax<span class="op">=</span>ax, a<span class="op">=</span><span class="dv">8</span>, m<span class="op">=</span><span class="dv">7</span>, n<span class="op">=</span><span class="dv">6</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                 b<span class="op">=</span><span class="dv">5</span>, label<span class="op">=</span><span class="st">"D06"</span>)<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>d09.showTimeline(ax<span class="op">=</span>ax, a<span class="op">=</span><span class="dv">3</span>, m<span class="op">=</span><span class="dv">2</span>, n<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                 b<span class="op">=</span><span class="dv">0</span>, label<span class="op">=</span><span class="st">"D09"</span>)<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/data-timeline.svg" class="img-fluid figure-img"></p>
+<figcaption>Temporal inhole apparent resistivity</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="d-inversion-of-selected-time-steps" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="d-inversion-of-selected-time-steps"><span class="header-section-number">7.4.2</span> 2D Inversion of selected time steps</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>xh.<span class="bu">filter</span>(select<span class="op">=</span>[<span class="st">'2021-08-10'</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2021-08-20'</span>, <span class="st">'2021-08-27'</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2021-09-09'</span>, <span class="st">'2021-09-21'</span>])</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x15 <span class="op">=</span> xh.extractSubset([<span class="dv">1</span>, <span class="dv">5</span>])</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>x15.mask(rmin<span class="op">=</span><span class="dv">10</span>, rmax<span class="op">=</span><span class="dv">1000</span>, emax<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> {<span class="st">"correlationLengths"</span>: [<span class="dv">3</span>, <span class="dv">2</span>],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>       limits<span class="op">=</span>[<span class="dv">20</span>, <span class="dv">500</span>]}</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>x15.invert(t<span class="op">=</span><span class="dv">3</span>, reg<span class="op">=</span>reg)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>x15.fullInversion(reg<span class="op">=</span>reg)  <span class="co"># 4D inv</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Geostatistical regularization (Jordi et al.&nbsp;2018)</p>
+</div><div class="column fragment" style="width:50%;">
+<p><img src="pics/heat/BLERT1_5cb.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="transformation-of-ratio-into-temperature" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="transformation-of-ratio-into-temperature"><span class="header-section-number">7.4.3</span> Transformation of ratio into temperature</h3>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/rt1-5_001.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/rt1-5_002.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/rt1-5_003.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/rt1-5_004.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/rt1-5_005.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/rt1-5_006.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/rt1-5_007.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</section>
+</section>
+<section id="d-inversion-result" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="d-inversion-result"><span class="header-section-number">7.5</span> 3D inversion result</h2>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-2.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-3.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-4.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-5.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-6.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-7.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/heat/3d-8.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Persson2015" class="csl-entry" role="listitem">
+Persson, Magnus, Torleif Dahlin, und Thomas Günther. 2015. <span>„<span>O</span>bserving <span>S</span>olute <span>T</span>ransport in the <span>C</span>apillary <span>F</span>ringe <span>U</span>sing <span>I</span>mage <span>A</span>nalysis and <span>E</span>lectrical <span>R</span>esistivity <span>T</span>omography in <span>L</span>aboratory <span>E</span>xperiments“</span>. <em>Vadose Zone Journal</em> 14 (5): 11p. <a href="https://doi.org/10.2136/vzj2014.07.0085">https://doi.org/10.2136/vzj2014.07.0085</a>.
+</div>
+<div id="ref-Ronczka2025" class="csl-entry" role="listitem">
+Ronczka, Mathias, Thomas Günther, Michael Grinat, Bernhard Siemon, Konstantin Scheihing, und Mike Müller‐Petke. 2025. <span>„Multi‐scale electrical resistivity imaging and long‐term monitoring as a tool for groundwater management“</span>. <em>Near Surface Geophysics</em>. <a href="https://doi.org/10.1002/nsg.70006">https://doi.org/10.1002/nsg.70006</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -678,13 +955,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ves.html" class="pagination-link" aria-label="Widerstands-Tiefensondierung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span>
+      <a href="./ert.html" class="pagination-link" aria-label="Widerstandstomographie">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./induzierte_polarisation.html" class="pagination-link" aria-label="Induzierte Polarisation">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

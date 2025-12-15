@@ -1,0 +1,176 @@
+# Widerstandstomographie
+
+## Oberflächenmessungen
+### Klassische Mess-Abfolgen
+
+![Sensitivitäten einer Wenner-Abfolge](pics/ert/sens/wa.gif)
+
+![Sensitivitäten einer Schlumberger-Abfolge](pics/ert/sens/slm.gif)
+
+![Sensitivitäten einer Dipol-Dipol-Abfolge](pics/ert/sens/dd.gif)
+
+
+## Bohrlochgeoelektrik
+
+### Verhalten an Grenzflächen
+
+:::: {.columns}
+::: {.column}
+![Übergang guter-schlechter Leiter](pics/gut-schlecht.png)
+:::
+::: {.column}
+![Übergang schlechter-guter Leiter](pics/schlecht-gut.png)
+:::
+::::
+
+### Vergrabene Elektroden
+
+Elektrode im Vollraum: $u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}$ $\Rightarrow$ Geometriefaktor $k=\frac{1}{4\pi |\vb r-\vb r_A|}$
+
+Stetigkeit an Erdoberfläche durch Spiegelelektrode in $\vb r_A'$
+
+Überlagerung $u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}$ $\Rightarrow$ $k=\frac{1}{4\pi |\vb r-\vb r_A|}+\frac{1}{4\pi |\vb r-\vb r_A'|}$
+
+Allgemeine Formel: $k = \frac{4\pi}{\frac{1}{\overline{AM}}+\frac{1}{\overline{A'M}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{A'N}}-\frac{1}{\overline{BM}}-\frac{1}{\overline{B'M}}+\frac{1}{\overline{BN}}+\frac{1}{\overline{B'N}}}$
+
+### Vergrabene Elektroden - Modellierung
+
+:::: {.columns}
+::: {.column}
+![](pics/spiegelpunkt-modell.png)
+:::
+::: {.column}
+* Stetigkeit an Erdoberfläche erreicht durch Spiegelelektrode in $\vb r_A'$
+
+* Überlagerung $u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}$
+
+* $\Rightarrow$ $k=\frac{1}{4\pi |\vb r-\vb r_A|}+\frac{1}{4\pi |\vb r-\vb r_A'|}$
+:::
+::::
+
+
+### Bohrloch-Geoelektrik
+
+* Elektroden-Anordnung in einem Bohrloch
+
+![Sensitivität verschiedener Bohrlochanordnungen](pics/ert/inhole.png)
+
+### Crosshole-Geoelektrik
+
+* Verteilung von Strom und Spannungselektroden auf 2 Bohrlöcher
+
+::: {.r-stack}
+![](pics/ert/crosshole1.png)
+
+![](pics/ert/crosshole2.png){.fragment}
+
+![](pics/ert/crosshole3.png){.fragment}
+:::
+
+
+
+## 3D-Geoelektrik
+
+## Modellierung & Inversion
+
+### Vorwärtsrechnung
+
+Lösung der partiellen Differentialgleichung
+
+$$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  $$
+
+![Diskretisierung des Untergrunds](pics/gridS.png)
+
+### Inversion
+
+:::: {.columns}
+::: {.column width="60%"}
+![](pics/intro-3)
+:::
+::: {.column width="40%"}
+* Diskretisierung, z.B. mit Dreiecken
+* Iterative Verbesserung
+* Vorwärtsrechnung & Sensitivitäten
+* glattes Untergrundmodell
+:::
+::::
+
+### Inversion
+
+![](pics/intro-3)
+
+## Inversion - Methodik
+
+Datenvektor $\vb d=\{d_i\}=\{\rho^a_i\}$,
+Modellvektor $\vb m=\{m_j\}=\{\rho_j\}$
+
+Datenmisfit $\vb \delta \vb d = \vb d - \vb f(\vb m)$ soll klein sein (Quadrate)
+
+Modellveränderung $\delta\vb m$ über Sensitivitätsmatrix $S_{i,j}=\pdv{f_i(\vb m)}{m_j}=\pdv{\rho_a(\rho)}{\rho}$
+
+$$\Rightarrow \vb S \vb \delta \vb m = \delta \vb d$$
+
+Least-SquaresLösung $\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d$ +Zusatzterme
+
+
+## Ausgedehnte Elektroden
+
+* Vereinfachtes Modell: Punktförmige Stromeinspeisung $j=I\frac{\vb r}{r^3}$
+* Endliche Elektroden: Verteilung des Stroms auf Fläche
+* Plattenelektroden, Linienelektroden, Ringelektroden
+* (Halb)Kugel-förmige Elektroden: identische Lösung im Außenraum
+
+### Nicht-Punkt-Elektroden
+
+Das Complete Electrode Model (CEM)
+
+![Ersatzschaltbild [@Ruecker2011]](pics/rueckerguenther2011_fig1.png)
+
+Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\int_{\Gamma_l}\sigma \pdv{u}{n}ds=I$
+
+## Modellierung von langen Elektroden
+
+![Stromdichte für Langelektroden [@Ronczka2015]](pics/LE_Stromdichte.png)
+
+## Einfluss der Stecktiefe
+
+![Prozentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe [@Ruecker2011]](pics/rueckerguenther2011_tab1.png)
+
+## Langelektroden - Sensitivitäten
+
+:::: {.columns}
+::: {.column}
+![[@Ronczka2015]](pics/LE_sens1.png)
+:::
+::: {.column}
+![](pics/LE_sens2.png){.fragment}
+:::
+::::
+
+## Lang-Elektroden-Geoelektrik (SaMoLEG)
+
+:::: {.columns}
+::: {.column}
+![](pics/samoleg.png)
+:::
+::: {.column}
+* stahlverrohrte Bohrlöcher als Elektroden [@Guenther2015]
+
+![](pics/briesen.png){.fragment}
+:::
+::::
+
+## Ringelektroden
+
+* Beispiel Salzwasser-Monitoring-System [SAMOS](https://www.liag-institut.de/samos.html)
+
+:::: {.columns}
+::: {.column width="46%"}
+![Salzwasser-Monitoring-System](pics/samos-aufbau.jpg)
+:::
+::: {.column width="53%" .fragment}
+![Modellierung Ringelektroden [@Ronczka2015]](pics/SAMOS-Ringelektroden.png)
+:::
+::::
+
+## Literatur {.unnumbered}

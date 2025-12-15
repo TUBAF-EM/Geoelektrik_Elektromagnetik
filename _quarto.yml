@@ -21,6 +21,7 @@ book:
         - grundgleichungen_dc.qmd
         - sens_arrays.qmd
         - ves.qmd
+        - ert.qmd
         - timelapse_ert.qmd
         - induzierte_polarisation.qmd
         - ert_praxis.qmd

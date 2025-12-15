@@ -163,6 +163,17 @@ $j_{z1}=j_{z2}$
 :::
 ::::
 
+### Verhalten an Grenzflächen
+
+:::: {.columns}
+::: {.column}
+![Übergang guter-schlechter Leiter](pics/gut-schlecht.png)
+:::
+::: {.column}
+![Übergang schlechter-guter Leiter](pics/schlecht-gut.png)
+:::
+::::
+
 ## ERT Feldausbreitung
 
 ### Homogener Untergrund: Potentialverteilung
@@ -214,6 +225,7 @@ $$U(r)=r E=r \rho j=\rho I / (2\pi r)$$
 Berechnung des (scheinbaren) spezifischen Widerstands aus $U$ und $I$
 
 $$\Rightarrow \rho = \frac{U}{I} 2\pi r=R\cdot k \quad\mbox{mit}\quad k=2\pi r$$
+
 
 ### Zwei Strom-Elektroden
 

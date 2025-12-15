@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Magnetotellurik – Geoelektrik und Elektromagnetik</title>
+<title>5&nbsp; Widerstandstomographie – Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./zusammenfassung.html" rel="next">
-<link href="./grundgleichungen_em.html" rel="prev">
+<link href="./timelapse_ert.html" rel="next">
+<link href="./ves.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -79,6 +99,35 @@ window.MathJax = {
 };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -91,7 +140,7 @@ window.MathJax = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./magnetotellurik.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ert.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -157,7 +206,7 @@ window.MathJax = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ert.html" class="sidebar-item-text sidebar-link">
+  <a href="./ert.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></span></a>
   </div>
 </li>
@@ -204,7 +253,7 @@ window.MathJax = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./magnetotellurik.html" class="sidebar-item-text sidebar-link active">
+  <a href="./magnetotellurik.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span></a>
   </div>
 </li>
@@ -233,15 +282,50 @@ window.MathJax = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#oberflächenmessungen" id="toc-oberflächenmessungen" class="nav-link active" data-scroll-target="#oberflächenmessungen"><span class="header-section-number">5.1</span> Oberflächenmessungen</a>
+  <ul class="collapse">
+  <li><a href="#klassische-mess-abfolgen" id="toc-klassische-mess-abfolgen" class="nav-link" data-scroll-target="#klassische-mess-abfolgen"><span class="header-section-number">5.1.1</span> Klassische Mess-Abfolgen</a></li>
+  </ul></li>
+  <li><a href="#bohrlochgeoelektrik" id="toc-bohrlochgeoelektrik" class="nav-link" data-scroll-target="#bohrlochgeoelektrik"><span class="header-section-number">5.2</span> Bohrlochgeoelektrik</a>
+  <ul class="collapse">
+  <li><a href="#verhalten-an-grenzflächen" id="toc-verhalten-an-grenzflächen" class="nav-link" data-scroll-target="#verhalten-an-grenzflächen"><span class="header-section-number">5.2.1</span> Verhalten an Grenzflächen</a></li>
+  <li><a href="#vergrabene-elektroden" id="toc-vergrabene-elektroden" class="nav-link" data-scroll-target="#vergrabene-elektroden"><span class="header-section-number">5.2.2</span> Vergrabene Elektroden</a></li>
+  <li><a href="#vergrabene-elektroden---modellierung" id="toc-vergrabene-elektroden---modellierung" class="nav-link" data-scroll-target="#vergrabene-elektroden---modellierung"><span class="header-section-number">5.2.3</span> Vergrabene Elektroden - Modellierung</a></li>
+  <li><a href="#bohrloch-geoelektrik" id="toc-bohrloch-geoelektrik" class="nav-link" data-scroll-target="#bohrloch-geoelektrik"><span class="header-section-number">5.2.4</span> Bohrloch-Geoelektrik</a></li>
+  <li><a href="#crosshole-geoelektrik" id="toc-crosshole-geoelektrik" class="nav-link" data-scroll-target="#crosshole-geoelektrik"><span class="header-section-number">5.2.5</span> Crosshole-Geoelektrik</a></li>
+  </ul></li>
+  <li><a href="#d-geoelektrik" id="toc-d-geoelektrik" class="nav-link" data-scroll-target="#d-geoelektrik"><span class="header-section-number">5.3</span> 3D-Geoelektrik</a></li>
+  <li><a href="#modellierung-inversion" id="toc-modellierung-inversion" class="nav-link" data-scroll-target="#modellierung-inversion"><span class="header-section-number">5.4</span> Modellierung &amp; Inversion</a>
+  <ul class="collapse">
+  <li><a href="#vorwärtsrechnung" id="toc-vorwärtsrechnung" class="nav-link" data-scroll-target="#vorwärtsrechnung"><span class="header-section-number">5.4.1</span> Vorwärtsrechnung</a></li>
+  <li><a href="#inversion" id="toc-inversion" class="nav-link" data-scroll-target="#inversion"><span class="header-section-number">5.4.2</span> Inversion</a></li>
+  <li><a href="#inversion-1" id="toc-inversion-1" class="nav-link" data-scroll-target="#inversion-1"><span class="header-section-number">5.4.3</span> Inversion</a></li>
+  </ul></li>
+  <li><a href="#inversion---methodik" id="toc-inversion---methodik" class="nav-link" data-scroll-target="#inversion---methodik"><span class="header-section-number">5.5</span> Inversion - Methodik</a></li>
+  <li><a href="#ausgedehnte-elektroden" id="toc-ausgedehnte-elektroden" class="nav-link" data-scroll-target="#ausgedehnte-elektroden"><span class="header-section-number">5.6</span> Ausgedehnte Elektroden</a>
+  <ul class="collapse">
+  <li><a href="#nicht-punkt-elektroden" id="toc-nicht-punkt-elektroden" class="nav-link" data-scroll-target="#nicht-punkt-elektroden"><span class="header-section-number">5.6.1</span> Nicht-Punkt-Elektroden</a></li>
+  </ul></li>
+  <li><a href="#modellierung-von-langen-elektroden" id="toc-modellierung-von-langen-elektroden" class="nav-link" data-scroll-target="#modellierung-von-langen-elektroden"><span class="header-section-number">5.7</span> Modellierung von langen Elektroden</a></li>
+  <li><a href="#einfluss-der-stecktiefe" id="toc-einfluss-der-stecktiefe" class="nav-link" data-scroll-target="#einfluss-der-stecktiefe"><span class="header-section-number">5.8</span> Einfluss der Stecktiefe</a></li>
+  <li><a href="#langelektroden---sensitivitäten" id="toc-langelektroden---sensitivitäten" class="nav-link" data-scroll-target="#langelektroden---sensitivitäten"><span class="header-section-number">5.9</span> Langelektroden - Sensitivitäten</a></li>
+  <li><a href="#lang-elektroden-geoelektrik-samoleg" id="toc-lang-elektroden-geoelektrik-samoleg" class="nav-link" data-scroll-target="#lang-elektroden-geoelektrik-samoleg"><span class="header-section-number">5.10</span> Lang-Elektroden-Geoelektrik (SaMoLEG)</a></li>
+  <li><a href="#ringelektroden" id="toc-ringelektroden" class="nav-link" data-scroll-target="#ringelektroden"><span class="header-section-number">5.11</span> Ringelektroden</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./magnetotellurik.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ert.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></h1>
 </div>
 
 
@@ -258,9 +342,246 @@ window.MathJax = {
 </header>
 
 
-<p>Ipsum lorum darum</p>
+<section id="oberflächenmessungen" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="oberflächenmessungen"><span class="header-section-number">5.1</span> Oberflächenmessungen</h2>
+<section id="klassische-mess-abfolgen" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="klassische-mess-abfolgen"><span class="header-section-number">5.1.1</span> Klassische Mess-Abfolgen</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/sens/wa.gif" class="img-fluid figure-img"></p>
+<figcaption>Sensitivitäten einer Wenner-Abfolge</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/sens/slm.gif" class="img-fluid figure-img"></p>
+<figcaption>Sensitivitäten einer Schlumberger-Abfolge</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/sens/dd.gif" class="img-fluid figure-img"></p>
+<figcaption>Sensitivitäten einer Dipol-Dipol-Abfolge</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="bohrlochgeoelektrik" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="bohrlochgeoelektrik"><span class="header-section-number">5.2</span> Bohrlochgeoelektrik</h2>
+<section id="verhalten-an-grenzflächen" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="verhalten-an-grenzflächen"><span class="header-section-number">5.2.1</span> Verhalten an Grenzflächen</h3>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/gut-schlecht.png" class="img-fluid figure-img"></p>
+<figcaption>Übergang guter-schlechter Leiter</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/schlecht-gut.png" class="img-fluid figure-img"></p>
+<figcaption>Übergang schlechter-guter Leiter</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="vergrabene-elektroden" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="vergrabene-elektroden"><span class="header-section-number">5.2.2</span> Vergrabene Elektroden</h3>
+<p>Elektrode im Vollraum: <span class="math inline">\(u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}\)</span> <span class="math inline">\(\Rightarrow\)</span> Geometriefaktor <span class="math inline">\(k=\frac{1}{4\pi |\vb r-\vb r_A|}\)</span></p>
+<p>Stetigkeit an Erdoberfläche durch Spiegelelektrode in <span class="math inline">\(\vb r_A'\)</span></p>
+<p>Überlagerung <span class="math inline">\(u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(k=\frac{1}{4\pi |\vb r-\vb r_A|}+\frac{1}{4\pi |\vb r-\vb r_A'|}\)</span></p>
+<p>Allgemeine Formel: <span class="math inline">\(k = \frac{4\pi}{\frac{1}{\overline{AM}}+\frac{1}{\overline{A'M}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{A'N}}-\frac{1}{\overline{BM}}-\frac{1}{\overline{B'M}}+\frac{1}{\overline{BN}}+\frac{1}{\overline{B'N}}}\)</span></p>
+</section>
+<section id="vergrabene-elektroden---modellierung" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="vergrabene-elektroden---modellierung"><span class="header-section-number">5.2.3</span> Vergrabene Elektroden - Modellierung</h3>
+<div class="columns">
+<div class="column">
+<p><img src="pics/spiegelpunkt-modell.png" class="img-fluid"></p>
+</div><div class="column">
+<ul>
+<li><p>Stetigkeit an Erdoberfläche erreicht durch Spiegelelektrode in <span class="math inline">\(\vb r_A'\)</span></p></li>
+<li><p>Überlagerung <span class="math inline">\(u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}\)</span></p></li>
+<li><p><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(k=\frac{1}{4\pi |\vb r-\vb r_A|}+\frac{1}{4\pi |\vb r-\vb r_A'|}\)</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="bohrloch-geoelektrik" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="bohrloch-geoelektrik"><span class="header-section-number">5.2.4</span> Bohrloch-Geoelektrik</h3>
+<ul>
+<li>Elektroden-Anordnung in einem Bohrloch</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/inhole.png" class="img-fluid figure-img"></p>
+<figcaption>Sensitivität verschiedener Bohrlochanordnungen</figcaption>
+</figure>
+</div>
+</section>
+<section id="crosshole-geoelektrik" class="level3" data-number="5.2.5">
+<h3 data-number="5.2.5" class="anchored" data-anchor-id="crosshole-geoelektrik"><span class="header-section-number">5.2.5</span> Crosshole-Geoelektrik</h3>
+<ul>
+<li>Verteilung von Strom und Spannungselektroden auf 2 Bohrlöcher</li>
+</ul>
+<div class="r-stack">
+<p><img src="pics/ert/crosshole1.png" class="img-fluid"></p>
+<p><img src="pics/ert/crosshole2.png" class="fragment img-fluid"></p>
+<p><img src="pics/ert/crosshole3.png" class="fragment img-fluid"></p>
+</div>
+</section>
+</section>
+<section id="d-geoelektrik" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="d-geoelektrik"><span class="header-section-number">5.3</span> 3D-Geoelektrik</h2>
+</section>
+<section id="modellierung-inversion" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="modellierung-inversion"><span class="header-section-number">5.4</span> Modellierung &amp; Inversion</h2>
+<section id="vorwärtsrechnung" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="vorwärtsrechnung"><span class="header-section-number">5.4.1</span> Vorwärtsrechnung</h3>
+<p>Lösung der partiellen Differentialgleichung</p>
+<p><span class="math display">\[ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  \]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/gridS.png" class="img-fluid figure-img"></p>
+<figcaption>Diskretisierung des Untergrunds</figcaption>
+</figure>
+</div>
+</section>
+<section id="inversion" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="inversion"><span class="header-section-number">5.4.2</span> Inversion</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img src="pics/intro-3.png" class="img-fluid"></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>Diskretisierung, z.B. mit Dreiecken</li>
+<li>Iterative Verbesserung</li>
+<li>Vorwärtsrechnung &amp; Sensitivitäten</li>
+<li>glattes Untergrundmodell</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="inversion-1" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="inversion-1"><span class="header-section-number">5.4.3</span> Inversion</h3>
+<p><img src="pics/intro-3.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="inversion---methodik" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="inversion---methodik"><span class="header-section-number">5.5</span> Inversion - Methodik</h2>
+<p>Datenvektor <span class="math inline">\(\vb d=\{d_i\}=\{\rho^a_i\}\)</span>, Modellvektor <span class="math inline">\(\vb m=\{m_j\}=\{\rho_j\}\)</span></p>
+<p>Datenmisfit <span class="math inline">\(\vb \delta \vb d = \vb d - \vb f(\vb m)\)</span> soll klein sein (Quadrate)</p>
+<p>Modellveränderung <span class="math inline">\(\delta\vb m\)</span> über Sensitivitätsmatrix <span class="math inline">\(S_{i,j}=\pdv{f_i(\vb m)}{m_j}=\pdv{\rho_a(\rho)}{\rho}\)</span></p>
+<p><span class="math display">\[\Rightarrow \vb S \vb \delta \vb m = \delta \vb d\]</span></p>
+<p>Least-SquaresLösung <span class="math inline">\(\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d\)</span> +Zusatzterme</p>
+</section>
+<section id="ausgedehnte-elektroden" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="ausgedehnte-elektroden"><span class="header-section-number">5.6</span> Ausgedehnte Elektroden</h2>
+<ul>
+<li>Vereinfachtes Modell: Punktförmige Stromeinspeisung <span class="math inline">\(j=I\frac{\vb r}{r^3}\)</span></li>
+<li>Endliche Elektroden: Verteilung des Stroms auf Fläche</li>
+<li>Plattenelektroden, Linienelektroden, Ringelektroden</li>
+<li>(Halb)Kugel-förmige Elektroden: identische Lösung im Außenraum</li>
+</ul>
+<section id="nicht-punkt-elektroden" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="nicht-punkt-elektroden"><span class="header-section-number">5.6.1</span> Nicht-Punkt-Elektroden</h3>
+<p>Das Complete Electrode Model (CEM)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/rueckerguenther2011_fig1.png" class="img-fluid figure-img"></p>
+<figcaption>Ersatzschaltbild <span class="citation" data-cites="Ruecker2011">(<a href="#ref-Ruecker2011" role="doc-biblioref">Rücker und Günther 2011</a>)</span></figcaption>
+</figure>
+</div>
+<p>Zusätzliche Gleichungen: <span class="math inline">\(z_l\sigma\pdv{u}{n} + u = U_l\)</span> auf <span class="math inline">\(\Gamma_l\)</span> und <span class="math inline">\(\int_{\Gamma_l}\sigma \pdv{u}{n}ds=I\)</span></p>
+</section>
+</section>
+<section id="modellierung-von-langen-elektroden" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="modellierung-von-langen-elektroden"><span class="header-section-number">5.7</span> Modellierung von langen Elektroden</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/LE_Stromdichte.png" class="img-fluid figure-img"></p>
+<figcaption>Stromdichte für Langelektroden <span class="citation" data-cites="Ronczka2015">(<a href="#ref-Ronczka2015" role="doc-biblioref">Ronczka, Rücker, und Günther 2015</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="einfluss-der-stecktiefe" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="einfluss-der-stecktiefe"><span class="header-section-number">5.8</span> Einfluss der Stecktiefe</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/rueckerguenther2011_tab1.png" class="img-fluid figure-img"></p>
+<figcaption>Prozentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe <span class="citation" data-cites="Ruecker2011">(<a href="#ref-Ruecker2011" role="doc-biblioref">Rücker und Günther 2011</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="langelektroden---sensitivitäten" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="langelektroden---sensitivitäten"><span class="header-section-number">5.9</span> Langelektroden - Sensitivitäten</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/LE_sens1.png" class="img-fluid figure-img"></p>
+<figcaption><span class="citation" data-cites="Ronczka2015">(<a href="#ref-Ronczka2015" role="doc-biblioref">Ronczka, Rücker, und Günther 2015</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column">
+<p><img src="pics/LE_sens2.png" class="fragment img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="lang-elektroden-geoelektrik-samoleg" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="lang-elektroden-geoelektrik-samoleg"><span class="header-section-number">5.10</span> Lang-Elektroden-Geoelektrik (SaMoLEG)</h2>
+<div class="columns">
+<div class="column">
+<p><img src="pics/samoleg.png" class="img-fluid"></p>
+</div><div class="column">
+<ul>
+<li>stahlverrohrte Bohrlöcher als Elektroden <span class="citation" data-cites="Guenther2015">(<a href="#ref-Guenther2015" role="doc-biblioref">Günther, Ronczka, und Voß 2015</a>)</span></li>
+</ul>
+<p><img src="pics/briesen.png" class="fragment img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="ringelektroden" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="ringelektroden"><span class="header-section-number">5.11</span> Ringelektroden</h2>
+<ul>
+<li>Beispiel Salzwasser-Monitoring-System <a href="https://www.liag-institut.de/samos.html">SAMOS</a></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:46%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/samos-aufbau.jpg" class="img-fluid figure-img"></p>
+<figcaption>Salzwasser-Monitoring-System</figcaption>
+</figure>
+</div>
+</div><div class="column fragment" style="width:53%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/SAMOS-Ringelektroden.png" class="img-fluid figure-img"></p>
+<figcaption>Modellierung Ringelektroden <span class="citation" data-cites="Ronczka2015">(<a href="#ref-Ronczka2015" role="doc-biblioref">Ronczka, Rücker, und Günther 2015</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="literatur" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="literatur">Literatur</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Guenther2015" class="csl-entry" role="listitem">
+Günther, Thomas, Mathias Ronczka, und Thomas Voß. 2015. <span>„<span>S</span>altwater <span>M</span>onitoring <span>U</span>sing <span>L</span>ong-<span>E</span>lectrode <span>ERT</span>“</span>. In <em>Geological Storage of CO2 – Long Term Security Aspects</em>, herausgegeben von Axel Liebscher und Ute Münch, 167–82. Advanced Technologies in Earth Sciences. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-13930-2_8">https://doi.org/10.1007/978-3-319-13930-2_8</a>.
+</div>
+<div id="ref-Ronczka2015" class="csl-entry" role="listitem">
+Ronczka, Mathias, Carsten Rücker, und Thomas Günther. 2015. <span>„<span>N</span>umerical study of long-electrode electric resistivity tomography <span></span> <span>A</span>ccuracy, sensitivity, and resolution“</span>. <em>Geophysics</em> 80 (6): E317–28. <a href="https://doi.org/10.1190/geo2014-0551.1">https://doi.org/10.1190/geo2014-0551.1</a>.
+</div>
+<div id="ref-Ruecker2011" class="csl-entry" role="listitem">
+Rücker, Carsten, und Thomas Günther. 2011. <span>„<span>T</span>he simulation of finite <span>ERT</span> electrodes using the complete electrode model“</span>. <em>Geophysics</em> 76: F227. <a href="https://doi.org/10.1190/1.3581356">https://doi.org/10.1190/1.3581356</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -685,13 +1006,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./grundgleichungen_em.html" class="pagination-link" aria-label="Grundgleichungen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span>
+      <a href="./ves.html" class="pagination-link" aria-label="Widerstands-Tiefensondierung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./zusammenfassung.html" class="pagination-link" aria-label="Zusammenfassung">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./timelapse_ert.html" class="pagination-link" aria-label="Geoelektrisches Monitoring">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
