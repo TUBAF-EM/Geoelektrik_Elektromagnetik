@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Zusammenfassung – Geoelektrik und Elektromagnetik</title>
+<title>7&nbsp; Geoelektrik in der Praxis – Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./literatur.html" rel="next">
-<link href="./magnetotellurik.html" rel="prev">
+<link href="./einfuehrung_em.html" rel="next">
+<link href="./induzierte_polarisation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -91,7 +91,7 @@ window.MathJax = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./zusammenfassung.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ert_praxis.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -169,7 +169,7 @@ window.MathJax = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ert_praxis.html" class="sidebar-item-text sidebar-link">
+  <a href="./ert_praxis.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></span></a>
   </div>
 </li>
@@ -206,7 +206,7 @@ window.MathJax = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./zusammenfassung.html" class="sidebar-item-text sidebar-link active">
+  <a href="./zusammenfassung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
   </div>
 </li>
@@ -227,15 +227,30 @@ window.MathJax = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung"><span class="header-section-number">7.1</span> Aufgabenstellung</a></li>
+  <li><a href="#eindrücke" id="toc-eindrücke" class="nav-link" data-scroll-target="#eindrücke"><span class="header-section-number">7.2</span> Eindrücke</a></li>
+  <li><a href="#daten-profil-4" id="toc-daten-profil-4" class="nav-link" data-scroll-target="#daten-profil-4"><span class="header-section-number">7.3</span> Daten Profil 4</a></li>
+  <li><a href="#inversion-ohne-topographie" id="toc-inversion-ohne-topographie" class="nav-link" data-scroll-target="#inversion-ohne-topographie"><span class="header-section-number">7.4</span> Inversion ohne Topographie</a></li>
+  <li><a href="#inversion-mit-topographie" id="toc-inversion-mit-topographie" class="nav-link" data-scroll-target="#inversion-mit-topographie"><span class="header-section-number">7.5</span> Inversion mit Topographie</a></li>
+  <li><a href="#inversion-ohne-topographie-2" id="toc-inversion-ohne-topographie-2" class="nav-link" data-scroll-target="#inversion-ohne-topographie-2"><span class="header-section-number">7.6</span> Inversion ohne Topographie: 2</a></li>
+  <li><a href="#inversion-mit-topographie-2" id="toc-inversion-mit-topographie-2" class="nav-link" data-scroll-target="#inversion-mit-topographie-2"><span class="header-section-number">7.7</span> Inversion mit Topographie: 2</a></li>
+  <li><a href="#abgleich-mit-bohrungen" id="toc-abgleich-mit-bohrungen" class="nav-link" data-scroll-target="#abgleich-mit-bohrungen"><span class="header-section-number">7.8</span> Abgleich mit Bohrungen</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">7.9</span> Interpretation</a></li>
+  <li><a href="#d-modell" id="toc-d-modell" class="nav-link" data-scroll-target="#d-modell"><span class="header-section-number">7.10</span> 3D-Modell</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ert_praxis.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></h1>
 </div>
 
 
@@ -252,9 +267,81 @@ window.MathJax = {
 </header>
 
 
-<p>Ipsum lorum</p>
+<ul>
+<li>Konzeptualisierung und Experimentaldesign</li>
+<li>Zugänglichkeit, Genehmigungen und Organisation</li>
+<li>Durchführung der Messungen, Quality Check und Dokumentation</li>
+<li>Datenanalyse (Filterung, Inversion) und Interpretation</li>
+<li>Dissemination der Ergebnisse (Bericht, Vortrag, Geodaten-Upload)</li>
+</ul>
+<p>Beispiel: Festgesteinserkundung mit BEAK</p>
+<section id="aufgabenstellung" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="aufgabenstellung"><span class="header-section-number">7.1</span> Aufgabenstellung</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/schwerz/lage_geologie.png" class="img-fluid figure-img"></p>
+<figcaption>Lage und Geologie</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/schwerz/luftbild.jpg" class="img-fluid figure-img"></p>
+<figcaption>Luftbild und Profilanlage</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="eindrücke" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="eindrücke"><span class="header-section-number">7.2</span> Eindrücke</h2>
+<p><img src="pics/schwerz/foto.jpg" class="img-fluid"></p>
+</section>
+<section id="daten-profil-4" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="daten-profil-4"><span class="header-section-number">7.3</span> Daten Profil 4</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img src="pics/schwerz/profil4daten.png" class="img-fluid"></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>4 Ketten a 21 El. a=5m</li>
+<li>multi-gradient array (Dahlin &amp; Zhou, 2004)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="inversion-ohne-topographie" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="inversion-ohne-topographie"><span class="header-section-number">7.4</span> Inversion ohne Topographie</h2>
+<p><img src="pics/schwerz/profil4notopo.png" class="img-fluid"></p>
+</section>
+<section id="inversion-mit-topographie" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="inversion-mit-topographie"><span class="header-section-number">7.5</span> Inversion mit Topographie</h2>
+<p><img src="pics/schwerz/profil4topo.png" class="img-fluid"></p>
+</section>
+<section id="inversion-ohne-topographie-2" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="inversion-ohne-topographie-2"><span class="header-section-number">7.6</span> Inversion ohne Topographie: 2</h2>
+<p><img src="pics/schwerz/profil2notopo.png" class="img-fluid"></p>
+</section>
+<section id="inversion-mit-topographie-2" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="inversion-mit-topographie-2"><span class="header-section-number">7.7</span> Inversion mit Topographie: 2</h2>
+<p><img src="pics/schwerz/profil2topo.png" class="img-fluid"></p>
+</section>
+<section id="abgleich-mit-bohrungen" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="abgleich-mit-bohrungen"><span class="header-section-number">7.8</span> Abgleich mit Bohrungen</h2>
+<p><img src="pics/schwerz/drillings.jpg" class="img-fluid"></p>
+</section>
+<section id="interpretation" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">7.9</span> Interpretation</h2>
+<p><img src="pics/schwerz/profil2interpretation.png" class="img-fluid"></p>
+</section>
+<section id="d-modell" class="level2" data-number="7.10">
+<h2 data-number="7.10" class="anchored" data-anchor-id="d-modell"><span class="header-section-number">7.10</span> 3D-Modell</h2>
+<p><img src="pics/schwerz/3dmodell.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -679,13 +766,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./magnetotellurik.html" class="pagination-link" aria-label="Magnetotellurik">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span>
+      <a href="./induzierte_polarisation.html" class="pagination-link" aria-label="Induzierte Polarisation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./literatur.html" class="pagination-link" aria-label="Literatur">
-        <span class="nav-page-text">Literatur</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./einfuehrung_em.html" class="pagination-link" aria-label="Einführung">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Einführung</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
