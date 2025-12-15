@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -295,12 +315,13 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#horizontale-stromdichte" id="toc-horizontale-stromdichte" class="nav-link active" data-scroll-target="#horizontale-stromdichte"><span class="header-section-number">4.0.1</span> Horizontale Stromdichte</a></li>
-  <li><a href="#horizontale-stromdichte-integriert" id="toc-horizontale-stromdichte-integriert" class="nav-link" data-scroll-target="#horizontale-stromdichte-integriert"><span class="header-section-number">4.0.2</span> Horizontale Stromdichte integriert</a></li>
-  <li><a href="#d-sensitivitäten" id="toc-d-sensitivitäten" class="nav-link" data-scroll-target="#d-sensitivitäten"><span class="header-section-number">4.0.3</span> 1D-Sensitivitäten</a></li>
-  <li><a href="#inversion-am-beispiel-tiefensondierung" id="toc-inversion-am-beispiel-tiefensondierung" class="nav-link" data-scroll-target="#inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.1</span> Inversion am Beispiel Tiefensondierung</a></li>
-  <li><a href="#zielfunktion-schlechter-leiter" id="toc-zielfunktion-schlechter-leiter" class="nav-link" data-scroll-target="#zielfunktion-schlechter-leiter"><span class="header-section-number">4.2</span> Zielfunktion schlechter Leiter</a></li>
-  <li><a href="#zielfunktion-guter-leiter" id="toc-zielfunktion-guter-leiter" class="nav-link" data-scroll-target="#zielfunktion-guter-leiter"><span class="header-section-number">4.3</span> Zielfunktion guter Leiter</a></li>
+  <li><a href="#d-sensitivitäten" id="toc-d-sensitivitäten" class="nav-link active" data-scroll-target="#d-sensitivitäten"><span class="header-section-number">4.1</span> 1D-Sensitivitäten</a>
+  <ul class="collapse">
+  <li><a href="#horizontale-stromdichte" id="toc-horizontale-stromdichte" class="nav-link" data-scroll-target="#horizontale-stromdichte"><span class="header-section-number">4.1.1</span> Horizontale Stromdichte</a></li>
+  </ul></li>
+  <li><a href="#inversion-am-beispiel-tiefensondierung" id="toc-inversion-am-beispiel-tiefensondierung" class="nav-link" data-scroll-target="#inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.2</span> Inversion am Beispiel Tiefensondierung</a></li>
+  <li><a href="#zielfunktion-schlechter-leiter" id="toc-zielfunktion-schlechter-leiter" class="nav-link" data-scroll-target="#zielfunktion-schlechter-leiter"><span class="header-section-number">4.3</span> Zielfunktion schlechter Leiter</a></li>
+  <li><a href="#zielfunktion-guter-leiter" id="toc-zielfunktion-guter-leiter" class="nav-link" data-scroll-target="#zielfunktion-guter-leiter"><span class="header-section-number">4.4</span> Zielfunktion guter Leiter</a></li>
   </ul>
 </nav>
     </div>
@@ -333,14 +354,16 @@ window.Quarto = {
 <figcaption>Sensitivitäten einer Schlumberger-Tiefensondierung</figcaption>
 </figure>
 </div>
-<section id="horizontale-stromdichte" class="level3" data-number="4.0.1">
-<h3 data-number="4.0.1" class="anchored" data-anchor-id="horizontale-stromdichte"><span class="header-section-number">4.0.1</span> Horizontale Stromdichte</h3>
+<section id="d-sensitivitäten" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="d-sensitivitäten"><span class="header-section-number">4.1</span> 1D-Sensitivitäten</h2>
+<section id="horizontale-stromdichte" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="horizontale-stromdichte"><span class="header-section-number">4.1.1</span> Horizontale Stromdichte</h3>
 <div class="columns">
 <div class="column">
 <p><span class="math inline">\(j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})\)</span></p>
 <p>in der Mitte (<span class="math inline">\(r_A=r_B\)</span>, AB=<span class="math inline">\(L\)</span>): <span class="math display">\[j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}\]</span></p>
 </div><div class="column">
-<div id="39039e99" class="cell" data-execution_count="2">
+<div id="f7d7071a" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code anzeigen</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zL <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">3</span>, <span class="fl">.01</span>)</span>
@@ -363,15 +386,12 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section>
-<section id="horizontale-stromdichte-integriert" class="level3" data-number="4.0.2">
-<h3 data-number="4.0.2" class="anchored" data-anchor-id="horizontale-stromdichte-integriert"><span class="header-section-number">4.0.2</span> Horizontale Stromdichte integriert</h3>
-<p><span class="math display">\[\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\]</span></p>
+<p>Wenn wir nun die horizontale Stromdichte über die y-Achse (in die Tafelebene hinein) aufintegrieren, erhalten wir <span class="math display">\[\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\]</span></p>
 <div class="columns">
 <div class="column">
 <p><span class="math display">\[\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} \]</span> - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2</p>
 </div><div class="column">
-<div id="56b7ea7e" class="cell" data-execution_count="3">
+<div id="7cb5d6d5" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code anzeigen</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, np.arctan(<span class="dv">2</span><span class="op">*</span>zL)<span class="op">*</span><span class="dv">2</span><span class="op">/</span>np.pi)</span>
@@ -388,9 +408,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section>
-<section id="d-sensitivitäten" class="level3" data-number="4.0.3">
-<h3 data-number="4.0.3" class="anchored" data-anchor-id="d-sensitivitäten"><span class="header-section-number">4.0.3</span> 1D-Sensitivitäten</h3>
+<p>Die 1D Sensitivitätsfunktion für eine Pol-Pol-Messung <span class="citation" data-cites="Guenther2004">(<a href="#ref-Guenther2004" role="doc-biblioref">Günther 2004</a>)</span> <span class="math display">\[ s(z) = \frac{z}{\sqrt{a^2+z^2}^3} \]</span> und damit für eine Vier-Punkt-Messung <span class="math display">\[ s(z) = \frac{z}{\sqrt{AM^2+z^2}^3} - \frac{z}{\sqrt{BM^2+z^2}^3} - \frac{z}{\sqrt{AN^2+z^2}^3} + \frac{z}{\sqrt{BN^2+z^2}^3} \]</span></p>
+<p>Für eine Schlumberger-Sondierung gilt <span class="math inline">\(AM=BN=AB/2-MN/2\)</span> und <span class="math inline">\(AN=BM=AB/2+MN/2\)</span> <span class="math display">\[ s(z) = 2\frac{z}{\sqrt{(AB/2-MN/2)^2+z^2}^3} - 2\frac{z}{\sqrt{(AB/2+MN/2)^2+z^2}^3} \]</span></p>
 <div class="columns">
 <div class="column">
 <p><img src="pics/ves/ves_sens1d.svg" class="img-fluid" style="width:150.0%"></p>
@@ -404,8 +423,9 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="inversion-am-beispiel-tiefensondierung" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.1</span> Inversion am Beispiel Tiefensondierung</h2>
+</section>
+<section id="inversion-am-beispiel-tiefensondierung" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.2</span> Inversion am Beispiel Tiefensondierung</h2>
 <ul>
 <li>früher Auswertung mit Kurvenschablonen</li>
 <li>Datenanpassung durch iterative Veränderung des Modells</li>
@@ -416,8 +436,8 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="zielfunktion-schlechter-leiter" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="zielfunktion-schlechter-leiter"><span class="header-section-number">4.2</span> Zielfunktion schlechter Leiter</h2>
+<section id="zielfunktion-schlechter-leiter" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="zielfunktion-schlechter-leiter"><span class="header-section-number">4.3</span> Zielfunktion schlechter Leiter</h2>
 <div class="columns">
 <div class="column">
 <ul>
@@ -430,8 +450,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="zielfunktion-guter-leiter" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="zielfunktion-guter-leiter"><span class="header-section-number">4.3</span> Zielfunktion guter Leiter</h2>
+<section id="zielfunktion-guter-leiter" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="zielfunktion-guter-leiter"><span class="header-section-number">4.4</span> Zielfunktion guter Leiter</h2>
 <div class="columns">
 <div class="column">
 <ul>
@@ -445,6 +465,11 @@ window.Quarto = {
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Guenther2004" class="csl-entry" role="listitem">
+Günther, T. 2004. <span>„<span>I</span>nversion <span>M</span>ethods and <span>R</span>esolution <span>A</span>nalysis for the 2<span>D</span>/3<span>D</span> <span>R</span>econstruction of <span>R</span>esistivity <span>S</span>tructures from <span>DC</span> <span>M</span>easurements“</span>. Phdthesis, University of Mining; Technology Freiberg.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
