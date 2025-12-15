@@ -4,18 +4,67 @@ editor: source
 
 # Vorwort {.unnumbered}
 
+Geoelektrische und Elektromagnetische Verfahren gehören zu den am häufigsten eingesetzten geophysikalischen Erkundungsverfahren.
+Dies liegt zum einen an der recht einfachen und günstigen Umsetzung mit verbreiteten Geräten und Auswertealgorithmen, zum anderen aber am zugrunde liegenden Parameter der elektrischen Leitfähigkeit, die zumeist starke Kontraste aufweist, da sie von vielen Faktoren abhängig ist.
+Im Folgenden werden die Verfahren mit ihrer Anwendung im Feld, der Auswertung und Beispielen aus der Praxis vorgestellt. Dabei ist das Modul in einen Teil Geoelektrik (einschließlich Induzierte Polarisation) und in einen Teil Elektromagnetik (zumeist induktive Verfahren) unterteilt.
 
-## Geoelektrik
-Die Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds.
+### Gliederung Teil Geoelektrik
 
-Die Anwendungsgebiete sind entsprechend vielfältig:
+1. Grundgleichungen und elektrische Felder
+1. Petrophysikalische Grundlagen
+1. Anordnungen, Profilmessungen und Sensitivitäten
+1. Widerstandstiefensondierung
+1. 2D-Geoelektrik, Modellierung und Inversion
+1. 3D-Geoelektrik und crosshole-ERT
+1. Prozessmonitoring und Timelapse-Verfahren
+1. Induzierte Polarisation im Zeit- und Frequenzbereich
 
-* Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)
-* Hydrogeologie (Aquifer-Architektur, Kontaminationen)
-* Salzwasser-Intrusion in Grundwasser-Aquifere
-* Geologisch/tektonische Untersuchungen (Störungen)
-* Archäologie (Fundamente, Hütten und Schlacken)
-* Landwirtschaft (Feuchtigkeit und Tonanteil)
-* Georisiken (Hangrutschungen, Verkarstung)
-* Prozessmonitoring (Wasser- und Stoff-Transport)
+### Gliederung Teil Elektromagnetik
 
+1. Grundlagen der Geoelektromagnetik
+1. Magnetotellurik
+1. CSEM-Methoden im Frequenzbereich
+1. Transientelektromagnetik
+1. Gemeinsame Inversion
+1. Nuklearmagnetische Resonanz
+
+## Literatur
+### Empfohlene Lehrbücher
+
+:::::: columns
+:::  {.column width="32%"}
+![Telford, Geldart, Sherriff (1990): Cambridge ](pics/telford_cover.png)
+:::
+
+:::  {.column width="28.5%"}
+![Knoedel, Krummel, Lange (2005): Springer](pics/knoedel-cover.png)
+:::
+
+:::  {.column width="34%"}
+![Everett (2013): Cambridge](pics/everett-cover.png)
+:::
+::::::
+
+
+- Knödel/Krummel/Lange.: Geophysik, Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten, Springer [frei über UB](https://link.springer.com/book/10.1007/b137869)
+- Everett (2013): [Near Surface Applied Geophysics](https://doi.org/10.1017/CBO9781139088435), Cambridge
+- Binley (2015): Tools and Techniques: Electrical Methods, in *Treatise on Geophysics*, vol 11, 2nd ed., Elsevier, doi:[10.1016/B978-0-444-53802-4.00192-5](http://dx.doi.org/10.1016/B978-0-444-53802-4.00192-5)
+- Burger et al. (2023): [Introduction to Applied Geophysics - Exploring the Shallow Subsurface](https://www.cambridge.org/de/academic/subjects/earth-and-environmental-science/solid-earth-geophysics/introduction-applied-geophysics-exploring-shallow-subsurface), Cambridge
+
+## Lernpyramide
+
+::: {.columns}
+::: {.column width="60%"}
+![](pics/Lernpyramide-NTL.png)
+:::
+::: {.column width="40%"}
+* Vorlesung und Scripte
+* Notebooks zum Spielen
+* Übungen
+* praktische Messungen
+* gemeinsame Auswertung
+:::
+::::
+
+Nach der Lernpyramide wird nur ein kleiner Teil durch Zuhören und Lesen aufgenommen. Daher wird der passive Teil angereichert durch zahlreiche Notebooks, die nicht nur die Physik demonstrieren, sondern zum eigenen Erfahren genutzt werden sollen.
+Die praktische Anwendung in Form von Feld- und Labormessungen sowie deren gemeinsame Auswertung und kritische Diskussion der Ergebnisse führt erst zum umfassenden Verständnis.

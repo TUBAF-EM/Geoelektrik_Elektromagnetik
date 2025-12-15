@@ -1,7 +1,50 @@
 ---
-title: "Grundgleichungen"
 editor: source
 ---
+
+# Gleichstromgeoelektrik
+
+![](pics/ert/ohm.png){fig-align="center"}
+
+
+## Geoelektrik
+Die Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds.
+
+Die Anwendungsgebiete sind entsprechend vielfältig:
+
+* Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)
+* Hydrogeologie (Aquifer-Architektur, Kontaminationen)
+* Salzwasser-Intrusion in Grundwasser-Aquifere
+* Geologisch/tektonische Untersuchungen (Störungen)
+* Archäologie (Fundamente, Hütten und Schlacken)
+* Landwirtschaft (Feuchtigkeit und Tonanteil)
+* Georisiken (Hangrutschungen, Verkarstung)
+* Prozessmonitoring (Wasser- und Stoff-Transport)
+
+### Kleinskalig (Martin&Günther, 2013)
+
+![](pics/ert/treetomography.png)
+
+### Mittelskalig: Geologie
+
+![Tanner et al. (2019): Störungszone Irland](pics/ert/kilmore.png)
+
+### Großskalig: Geologie
+
+![Nickschick et al. (2017): CO2-Aufstieg an Störung im Egergraben](pics/ert/nickschick.png)
+
+### Salzwasser-Intrusion von Süßwasseraquiferen
+
+![](pics/ert/spiekeroog1.png)
+![](pics/ert/spiekeroog2.png){.fragment}
+
+### Hydrogeologie (Hübner et al., 2015)
+
+![Wasserspeicher in Hangdellen am Teststandort Mulda](pics/ert/mulda3d1.png)
+
+### Untersuchung von Halden (Günther et al., 2006)
+
+![](pics/ert/haldeModel.png)
 
 # Grundgleichungen
 ![](pics/halfspace.png)

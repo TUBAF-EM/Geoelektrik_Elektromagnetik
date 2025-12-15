@@ -1,72 +1,5 @@
----
-title: "Einführung"
-editor: source
----
 
-## Gliederung Teil Geoelektrik
-
-1. Grundgleichungen und elektrische Felder
-1. Petrophysikalische Grundlagen
-1. Anordnungen, Profilmessungen und Sensitivitäten
-1. Widerstandstiefensondierung
-1. 2D-Geoelektrik, Modellierung und Inversion
-1. 3D-Geoelektrik und crosshole-ERT
-1. Prozessmonitoring und Timelapse-Verfahren
-1. Induzierte Polarisation im Zeit- und Frequenzbereich
-
-## Gliederung Teil Elektromagnetik
-
-1. Grundlagen der Geoelektromagnetik
-1. Magnetotellurik
-1. CSEM-Methoden im Frequenzbereich
-1. Transientelektromagnetik
-1. Gemeinsame Inversion
-1. Nuklearmagnetische Resonanz
-
-## Empfohlene Lehrbücher
-:::::: columns
-:::  {.column width="32%"}
-![Telford, Geldart, Sherriff (1990): Cambridge ](pics/telford_cover.png)
-:::
-
-:::  {.column width="28.5%"}
-![Knoedel, Krummel, Lange (2005): Springer](pics/knoedel-cover.png)
-:::
-
-:::  {.column width="34%"}
-![Everett (2013): Cambridge](pics/everett-cover.png)
-:::
-::::::
-
-## Literatur
-
-- Knödel/Krummel/Lange.: Geophysik, Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten, Springer [frei über UB](https://link.springer.com/book/10.1007/b137869)
-- Everett (2013): [Near Surface Applied Geophysics](https://doi.org/10.1017/CBO9781139088435), Cambridge
-- Binley (2015): Tools and Techniques: Electrical Methods, in *Treatise on Geophysics*, vol 11, 2nd ed., Elsevier, doi:[10.1016/B978-0-444-53802-4.00192-5](http://dx.doi.org/10.1016/B978-0-444-53802-4.00192-5)
-- Burger et al. (2023): [Introduction to Applied Geophysics - Exploring the Shallow Subsurface](https://www.cambridge.org/de/academic/subjects/earth-and-environmental-science/solid-earth-geophysics/introduction-applied-geophysics-exploring-shallow-subsurface), Cambridge
-
-## Lernpyramide
-
-::: {.columns}
-::: {.column width="60%"}
-![](pics/Lernpyramide-NTL.png)
-:::
-::: {.column width="40%"}
-* Vorlesung und Scripte
-* Notebooks zum Spielen
-* Übungen
-* praktische Messungen
-* gemeinsame Auswertung
-:::
-::::
-
-
-
-# Einführung
-
-![](pics/ert/ohm.png){fig-align="center"}
-
-## Elektromagnetische Größen
+### Elektromagnetische Größen
 
 ::::{.columns}
 :::{.column}
@@ -91,18 +24,25 @@ editor: source
 :::
 ::::
 
-## Maxwell-Gleichungen
+## Die Maxwell-Gleichungen
+
+
 ::::{.columns}
 :::{.column}
+**Faradaysches Induktionsgesetz**
+
 $$ \curl\vb E = -\pdv{\vb B}{t} $$
 :::
 :::{.column}
+**Ampèresches Durchflutungsgesetz**
+
 $$ \curl \vb H = \pdv{\vb D}{t} + \vb j $$
 :::
 ::::
 ![](pics/curlEB.png)
 
-## Maxwell - Quellen und Material
+**Die Quellen der Felder**
+
 Ladungsträger erzeugen eine elektrische Verschiebung
 $$\div \vb D = \varrho$$
 
@@ -111,7 +51,7 @@ $$\div \vb B = 0$$
 
 Materialgleichungen: $\vb B=\mu\vb H$, $\vb D=\epsilon\vb E$, $\vb j=\sigma\vb E$
 
-## Amperesches Gesetz in der Geophysik
+### Amperesches Gesetz in der Geophysik
 $$ \curl \vb H = \pdv{\vb D}{t} + \vb j $$
 
 * Wellenausbreitung $\curl\vb H=\pdv*{\vb D}{t}$: Georadar
@@ -119,7 +59,7 @@ $$ \curl \vb H = \pdv{\vb D}{t} + \vb j $$
   Magnetotellurik, EMI in Zeit- und Frequenzbereich
 * Magnetostatik $\curl\vb H=\vb j$, $\curl\vb E=0$
 
-## Näherung und Methoden
+### Näherungen und Methoden
 
 $$ \curl \vb H = \pdv{\vb D}{t} + \vb j \qquad
  \curl\vb E = -\pdv{\vb B}{t} $$
@@ -130,7 +70,7 @@ Stationär       | $\vb j$                 | 0                  | Geoelektrik |
 Quasistationär  | $\vb j$                 | $-\pdv*{\vb B}{t}$ | Induktion   |
 Wellenvorgänge  | $\pdv*{\vb D}{t}+\vb j$ | $-\pdv*{\vb B}{t}$ | Georadar    |
 
-## Elektrische Leitfähigkeit
+## Die Elektrische Leitfähigkeit
 
 :::: {.columns}
 ::: {.column width="53%"}
@@ -178,42 +118,6 @@ abhängig von:
 ![](pics/ert/resistivity2.png){fig-align="center"}
 :::
 ::::
-
-# Anwendung
-
-* Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)
-* Hydrogeologie (Aquifer-Architektur, Kontaminationen)
-* Salzwasser-Intrusion in Grundwasser-Aquifere
-* Geologisch/tektonische Untersuchungen (Störungen)
-* Archäologie (Fundamente, Hütten und Schlacken)
-* Landwirtschaft (Feuchtigkeit und Tonanteil)
-* Georisiken (Hangrutschungen, Verkarstung)
-* Prozessmonitoring (Wasser- und Stoff-Transport)
-
-## Kleinskalig (Martin&Günther, 2013)
-
-![](pics/ert/treetomography.png)
-
-## Mittelskalig: Geologie
-
-![Tanner et al. (2019): Störungszone Irland](pics/ert/kilmore.png)
-
-## Großskalig: Geologie
-
-![Nickschick et al. (2017): CO2-Aufstieg an Störung im Egergraben](pics/ert/nickschick.png)
-
-## Salzwasser-Intrusion von Süßwasseraquiferen
-
-![](pics/ert/spiekeroog1.png)
-![](pics/ert/spiekeroog2.png){.fragment}
-
-## Hydrogeologie (Hübner et al., 2015)
-
-![Wasserspeicher in Hangdellen am Teststandort Mulda](pics/ert/mulda3d1.png)
-
-## Untersuchung von Halden (Günther et al., 2006)
-
-![](pics/ert/haldeModel.png)
 
 
 <!--
