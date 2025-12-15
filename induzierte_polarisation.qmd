@@ -11,21 +11,21 @@
 
 :::: {.columns}
 ::: {.column}
-![[@dm2014]](pics/ip/dm_fig53a.png)
+![Pumpenkreislauf [@dm2014, Fig. 5.3]](pics/ip/dm_fig53a.png)
 :::
 ::: {.column}
-![[@dm2014]](pics/ip/dm_fig53b.png)
+![Stromkreislauf [@dm2014], Fig. 5.3](pics/ip/dm_fig53b.png)
 :::
 ::::
 
-## Wechselstrom-Äquivalent (Dentith&Mudge)
+### Wechselstrom-Äquivalent (Dentith&Mudge)
 
 :::: {.columns}
 ::: {.column width="40%"}
-![[@dm2014]](pics/ip/dm_fig54.png)
+![Resistor im Wechselstrom-Kreislauf [@dm2014, Fig. 5.4]](pics/ip/dm_fig54.png)
 :::
 ::: {.column width="55%"}
-![[@dm2014]](pics/ip/dm_fig56.png)
+![Kapazität im Wechselstrom-Kreislauf [@dm2014, Fig. 5.4]](pics/ip/dm_fig56.png)
 :::
 ::::
 
@@ -49,9 +49,9 @@ $$ \sigma^* = \sigma' + \imath\sigma'' = |\sigma| e^{\imath\phi} $$
 
 ## Induzierte Polarisation
 ::: {.r-stack}
-![[@dm2014]](pics/petro/DentithMudge_fig519ab.png){width="73%"}
+![](pics/petro/DentithMudge_fig519ab.png){width="73%"}
 
-![[@dm2014]](pics/petro/DentithMudge_fig519cd.png){.fragment width="70%" fig-align="center"}
+![Polarisationsmechanismen [@dm2014, Fig. 5.19]](pics/petro/DentithMudge_fig519cd.png){.fragment width="70%" fig-align="center"}
 :::
 
 ## Leitfähigkeit vs. Permittivität
@@ -68,7 +68,7 @@ $$ \rho^* = (\sigma^*)^{-1} = \frac{\sigma' - \imath\sigma''}{\sigma'^2 + \sigma
 
 :::: {.columns}
 ::: {.column width="45%"}
-![[@Loewer2017]](pics/ip/loewer_fig1.png)
+![Relaxationen [@Loewer2017]](pics/ip/loewer_fig1.png)
 :::
 ::: {.column width="55%"}
 ### Debye-Relaxation
@@ -169,3 +169,5 @@ $\Rightarrow$ Mineral-Grad/Typ
 
 Inversionsergebnisse und Ableitung von Mineralgehalt und Typ [@Martin2021]
 :::
+
+## Literatur {.unnumbered}

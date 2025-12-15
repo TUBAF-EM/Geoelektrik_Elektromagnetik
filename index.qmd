@@ -45,19 +45,21 @@ Im Folgenden werden die Verfahren mit ihrer Anwendung im Feld, der Auswertung un
 :::
 ::::::
 
-
-- Knödel/Krummel/Lange.: Geophysik, Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten, Springer [frei über UB](https://link.springer.com/book/10.1007/b137869)
+- Knödel, K., Krummel, H. & Lange, G. (2005): [Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten - Band 3: Geophysik](https://link.springer.com/book/10.1007/b137869), Springer.
 - Everett (2013): [Near Surface Applied Geophysics](https://doi.org/10.1017/CBO9781139088435), Cambridge
-- Binley (2015): Tools and Techniques: Electrical Methods, in *Treatise on Geophysics*, vol 11, 2nd ed., Elsevier, doi:[10.1016/B978-0-444-53802-4.00192-5](http://dx.doi.org/10.1016/B978-0-444-53802-4.00192-5)
-- Burger et al. (2023): [Introduction to Applied Geophysics - Exploring the Shallow Subsurface](https://www.cambridge.org/de/academic/subjects/earth-and-environmental-science/solid-earth-geophysics/introduction-applied-geophysics-exploring-shallow-subsurface), Cambridge
+- Binley, A. (2015): Tools and Techniques: Electrical Methods, in *Treatise on Geophysics*, vol 11, 2nd ed., Elsevier, doi:[10.1016/B978-0-444-53802-4.00192-5](http://dx.doi.org/10.1016/B978-0-444-53802-4.00192-5)
+- Burger, H.R., Sheehan, A.F. & Jones, C.H. (2023): [Introduction to Applied Geophysics - Exploring the Shallow Subsurface](https://www.cambridge.org/de/academic/subjects/earth-and-environmental-science/solid-earth-geophysics/introduction-applied-geophysics-exploring-shallow-subsurface), Cambridge
+- Dentith, Michael, und Stephen T. Mudge (2014): [Geophysics for the Mineral Exploration Geoscientist](https://doi.org/10.1017/cbo9781139024358). Cambridge University Press.
 
 ## Lernpyramide
 
 ::: {.columns}
 ::: {.column width="60%"}
-![](pics/Lernpyramide-NTL.png)
+![Retention Rate in der Lernpyramide (National Training Laboritories Institut, Bethel (Maine))](pics/Lernpyramide-NTL.png)
 :::
 ::: {.column width="40%"}
+**Umsetzung im Modul**
+
 * Vorlesung und Scripte
 * Notebooks zum Spielen
 * Übungen

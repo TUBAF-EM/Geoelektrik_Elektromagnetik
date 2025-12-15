@@ -14,7 +14,7 @@
     "href": "index.html#literatur",
     "title": "Geoelektrik und Elektromagnetik",
     "section": "Literatur",
-    "text": "Literatur\n\nEmpfohlene Lehrbücher\n\n\n\n\n\nTelford, Geldart, Sherriff (1990): Cambridge\n\n\n\n\n\n\nKnoedel, Krummel, Lange (2005): Springer\n\n\n\n\n\n\nEverett (2013): Cambridge\n\n\n\n\n\nKnödel/Krummel/Lange.: Geophysik, Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten, Springer frei über UB\nEverett (2013): Near Surface Applied Geophysics, Cambridge\nBinley (2015): Tools and Techniques: Electrical Methods, in Treatise on Geophysics, vol 11, 2nd ed., Elsevier, doi:10.1016/B978-0-444-53802-4.00192-5\nBurger et al. (2023): Introduction to Applied Geophysics - Exploring the Shallow Subsurface, Cambridge",
+    "text": "Literatur\n\nEmpfohlene Lehrbücher\n\n\n\n\n\nTelford, Geldart, Sherriff (1990): Cambridge\n\n\n\n\n\n\nKnoedel, Krummel, Lange (2005): Springer\n\n\n\n\n\n\nEverett (2013): Cambridge\n\n\n\n\n\nKnödel, K., Krummel, H. & Lange, G. (2005): Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten - Band 3: Geophysik, Springer.\nEverett (2013): Near Surface Applied Geophysics, Cambridge\nBinley, A. (2015): Tools and Techniques: Electrical Methods, in Treatise on Geophysics, vol 11, 2nd ed., Elsevier, doi:10.1016/B978-0-444-53802-4.00192-5\nBurger, H.R., Sheehan, A.F. & Jones, C.H. (2023): Introduction to Applied Geophysics - Exploring the Shallow Subsurface, Cambridge\nDentith, Michael, und Stephen T. Mudge (2014): Geophysics for the Mineral Exploration Geoscientist. Cambridge University Press.",
     "crumbs": [
       "Vorwort"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#lernpyramide",
     "title": "Geoelektrik und Elektromagnetik",
     "section": "Lernpyramide",
-    "text": "Lernpyramide\n\n\n\n\n\nVorlesung und Scripte\nNotebooks zum Spielen\nÜbungen\npraktische Messungen\ngemeinsame Auswertung\n\n\n\nNach der Lernpyramide wird nur ein kleiner Teil durch Zuhören und Lesen aufgenommen. Daher wird der passive Teil angereichert durch zahlreiche Notebooks, die nicht nur die Physik demonstrieren, sondern zum eigenen Erfahren genutzt werden sollen. Die praktische Anwendung in Form von Feld- und Labormessungen sowie deren gemeinsame Auswertung und kritische Diskussion der Ergebnisse führt erst zum umfassenden Verständnis.",
+    "text": "Lernpyramide\n\n\n\n\n\nRetention Rate in der Lernpyramide (National Training Laboritories Institut, Bethel (Maine))\n\n\n\nUmsetzung im Modul\n\nVorlesung und Scripte\nNotebooks zum Spielen\nÜbungen\npraktische Messungen\ngemeinsame Auswertung\n\n\n\nNach der Lernpyramide wird nur ein kleiner Teil durch Zuhören und Lesen aufgenommen. Daher wird der passive Teil angereichert durch zahlreiche Notebooks, die nicht nur die Physik demonstrieren, sondern zum eigenen Erfahren genutzt werden sollen. Die praktische Anwendung in Form von Feld- und Labormessungen sowie deren gemeinsame Auswertung und kritische Diskussion der Ergebnisse führt erst zum umfassenden Verständnis.",
     "crumbs": [
       "Vorwort"
     ]
@@ -433,18 +433,18 @@
     "href": "induzierte_polarisation.html",
     "title": "6  Induzierte Polarisation",
     "section": "",
-    "text": "6.1 Gleichstrom-Äquivalent (Dentith&Mudge)",
+    "text": "6.1 Äquivalente Pumpen-Kreise",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
     ]
   },
   {
-    "objectID": "induzierte_polarisation.html#wechselstrom-äquivalent-dentithmudge",
-    "href": "induzierte_polarisation.html#wechselstrom-äquivalent-dentithmudge",
+    "objectID": "induzierte_polarisation.html#äquivalente-pumpen-kreise",
+    "href": "induzierte_polarisation.html#äquivalente-pumpen-kreise",
     "title": "6  Induzierte Polarisation",
-    "section": "6.2 Wechselstrom-Äquivalent (Dentith&Mudge)",
-    "text": "6.2 Wechselstrom-Äquivalent (Dentith&Mudge)",
+    "section": "",
+    "text": "6.1.1 Gleichstrom-Äquivalent\n\n\n\n\n\nPumpenkreislauf (Dentith und Mudge 2014, Fig. 5.3)\n\n\n\n\n\n\nStromkreislauf (Dentith und Mudge 2014), Fig. 5.3\n\n\n\n\n\n\n6.1.2 Wechselstrom-Äquivalent (Dentith&Mudge)\n\n\n\n\n\nResistor im Wechselstrom-Kreislauf (Dentith und Mudge 2014, Fig. 5.4)\n\n\n\n\n\n\nKapazität im Wechselstrom-Kreislauf (Dentith und Mudge 2014, Fig. 5.4)",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -454,8 +454,8 @@
     "objectID": "induzierte_polarisation.html#induzierte-polarisation---zeitbereich",
     "href": "induzierte_polarisation.html#induzierte-polarisation---zeitbereich",
     "title": "6  Induzierte Polarisation",
-    "section": "6.3 Induzierte Polarisation - Zeitbereich",
-    "text": "6.3 Induzierte Polarisation - Zeitbereich",
+    "section": "6.2 Induzierte Polarisation - Zeitbereich",
+    "text": "6.2 Induzierte Polarisation - Zeitbereich\n\n\n\n(Dentith und Mudge 2014)",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -465,8 +465,8 @@
     "objectID": "induzierte_polarisation.html#induzierte-polarisation---frequenzbereich",
     "href": "induzierte_polarisation.html#induzierte-polarisation---frequenzbereich",
     "title": "6  Induzierte Polarisation",
-    "section": "6.4 Induzierte Polarisation - Frequenzbereich",
-    "text": "6.4 Induzierte Polarisation - Frequenzbereich\n\n\n\n\n\n6.4.1 Phasenverschiebung\n\n\n\nDentith & Mudge (2014)\n\n\n\\[ \\sigma^* = \\sigma' + \\imath\\sigma'' = |\\sigma| e^{\\imath\\phi} \\]",
+    "section": "6.3 Induzierte Polarisation - Frequenzbereich",
+    "text": "6.3 Induzierte Polarisation - Frequenzbereich\n\n\n\n\n\n(Dentith und Mudge 2014)\n\n\n\n\n6.3.1 Phasenverschiebung\n\n\n\n(Dentith und Mudge 2014)\n\n\n\\[ \\sigma^* = \\sigma' + \\imath\\sigma'' = |\\sigma| e^{\\imath\\phi} \\]",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -476,8 +476,8 @@
     "objectID": "induzierte_polarisation.html#induzierte-polarisation",
     "href": "induzierte_polarisation.html#induzierte-polarisation",
     "title": "6  Induzierte Polarisation",
-    "section": "6.5 Induzierte Polarisation",
-    "text": "6.5 Induzierte Polarisation\n\n\n\n\nDentith & Mudge (2014)",
+    "section": "6.4 Induzierte Polarisation",
+    "text": "6.4 Induzierte Polarisation\n\n\n\n\n\nPolarisationsmechanismen (Dentith und Mudge 2014, Fig. 5.19)",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -487,8 +487,8 @@
     "objectID": "induzierte_polarisation.html#leitfähigkeit-vs.-permittivität",
     "href": "induzierte_polarisation.html#leitfähigkeit-vs.-permittivität",
     "title": "6  Induzierte Polarisation",
-    "section": "6.6 Leitfähigkeit vs. Permittivität",
-    "text": "6.6 Leitfähigkeit vs. Permittivität\n\\[ \\vb j = \\curl\\vb H=\\sigma\\vb E+\\epsilon\\dot{\\vb E}=\\sigma\\vb E + \\imath\\omega\\vb E = (\\sigma+\\imath\\omega)\\vb E\n= (\\frac{\\sigma}{\\imath\\omega}+\\epsilon)\\dot{\\vb E} \\]\n\\[ \\sigma^* = \\sigma' + \\imath\\sigma'' = \\sigma + \\imath\\omega\\epsilon \\]\n\\[ \\rho^* = (\\sigma^*)^{-1} = \\frac{\\sigma' - \\imath\\sigma''}{\\sigma'^2 + \\sigma''^2} =\n\\frac{\\sigma' - \\imath\\sigma''}{|\\sigma^*|^2} = \\rho' - \\imath\\rho'' = |\\rho^*|e^{-\\imath\\phi} \\]",
+    "section": "6.5 Leitfähigkeit vs. Permittivität",
+    "text": "6.5 Leitfähigkeit vs. Permittivität\n\\[ \\vb j = \\curl\\vb H=\\sigma\\vb E+\\epsilon\\dot{\\vb E}=\\sigma\\vb E + \\imath\\omega\\vb E = (\\sigma+\\imath\\omega)\\vb E\n= (\\frac{\\sigma}{\\imath\\omega}+\\epsilon)\\dot{\\vb E} \\]\n\\[ \\sigma^* = \\sigma' + \\imath\\sigma'' = \\sigma + \\imath\\omega\\epsilon \\]\n\\[ \\rho^* = (\\sigma^*)^{-1} = \\frac{\\sigma' - \\imath\\sigma''}{\\sigma'^2 + \\sigma''^2} =\n\\frac{\\sigma' - \\imath\\sigma''}{|\\sigma^*|^2} = \\rho' - \\imath\\rho'' = |\\rho^*|e^{-\\imath\\phi} \\]",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -498,8 +498,8 @@
     "objectID": "induzierte_polarisation.html#relaxationen",
     "href": "induzierte_polarisation.html#relaxationen",
     "title": "6  Induzierte Polarisation",
-    "section": "6.7 Relaxationen",
-    "text": "6.7 Relaxationen\n\n\n\n\n\nLoewer et al. (2017)\n\n\n\n\n6.7.1 Debye-Relaxation\n\nfundamentale Polarisation\n\n\\[ \\sigma(\\omega)=\\sigma_\\infty + (\\sigma_0-\\sigma_\\infty)\\frac{m}{\\imath\\omega\\tau} \\]\n\nexponentielles Abklingen\n\n\\[ U(t) = U_0 m e^{-t/\\tau} \\]",
+    "section": "6.6 Relaxationen",
+    "text": "6.6 Relaxationen\n\n\n\n\n\nRelaxationen (Loewer u. a. 2017)\n\n\n\n\n6.6.1 Debye-Relaxation\n\nfundamentale Polarisation\n\n\\[ \\sigma(\\omega)=\\sigma_\\infty + (\\sigma_0-\\sigma_\\infty)\\frac{m}{\\imath\\omega\\tau} \\]\n\nexponentielles Abklingen\n\n\\[ U(t) = U_0 m e^{-t/\\tau} \\]",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -509,8 +509,8 @@
     "objectID": "induzierte_polarisation.html#kramers-kronig-beziehungen",
     "href": "induzierte_polarisation.html#kramers-kronig-beziehungen",
     "title": "6  Induzierte Polarisation",
-    "section": "6.8 Kramers-Kronig Beziehungen",
-    "text": "6.8 Kramers-Kronig Beziehungen\nZusammenhang Real- und Imaginärteil analytischer Funktionen\n\\[ \\rho''(\\omega) = \\frac{2\\omega}{\\pi}\\int\\limits_0^\\infty \\frac{\\rho'(x)-\\rho'(\\omega)}{x^2-\\omega^2}\\dd x \\]\n\\[ \\rho'(\\omega) = \\rho'(\\infty) + \\frac{2}{\\pi}\\int\\limits_0^\\infty \\frac{x \\rho''(x)-\\omega\\rho''(\\omega)}{x^2-\\omega^2}\\dd x \\]",
+    "section": "6.7 Kramers-Kronig Beziehungen",
+    "text": "6.7 Kramers-Kronig Beziehungen\nZusammenhang Real- und Imaginärteil analytischer Funktionen\n\\[ \\rho''(\\omega) = \\frac{2\\omega}{\\pi}\\int\\limits_0^\\infty \\frac{\\rho'(x)-\\rho'(\\omega)}{x^2-\\omega^2}\\dd x \\]\n\\[ \\rho'(\\omega) = \\rho'(\\infty) + \\frac{2}{\\pi}\\int\\limits_0^\\infty \\frac{x \\rho''(x)-\\omega\\rho''(\\omega)}{x^2-\\omega^2}\\dd x \\]",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -520,8 +520,8 @@
     "objectID": "induzierte_polarisation.html#kramers-kronig-beziehungen-1",
     "href": "induzierte_polarisation.html#kramers-kronig-beziehungen-1",
     "title": "6  Induzierte Polarisation",
-    "section": "6.9 Kramers-Kronig Beziehungen",
-    "text": "6.9 Kramers-Kronig Beziehungen\n\n\n\nIP & DK Messung an Loess (Loewer et al. 2017)",
+    "section": "6.8 Kramers-Kronig Beziehungen",
+    "text": "6.8 Kramers-Kronig Beziehungen\n\n\n\nIP & DK Messung an Loess (Loewer u. a. 2017)",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -531,8 +531,8 @@
     "objectID": "induzierte_polarisation.html#spektrale-induzierte-polarisation-sip",
     "href": "induzierte_polarisation.html#spektrale-induzierte-polarisation-sip",
     "title": "6  Induzierte Polarisation",
-    "section": "6.10 Spektrale Induzierte Polarisation (SIP)",
-    "text": "6.10 Spektrale Induzierte Polarisation (SIP)",
+    "section": "6.9 Spektrale Induzierte Polarisation (SIP)",
+    "text": "6.9 Spektrale Induzierte Polarisation (SIP)\n\n\n\nREFERENCE",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -543,62 +543,7 @@
     "href": "induzierte_polarisation.html#vergleich-von-geräten-martin-et-al.-2020",
     "title": "6  Induzierte Polarisation",
     "section": "7.1 Vergleich von Geräten (Martin et al., 2020)",
-    "text": "7.1 Vergleich von Geräten (Martin et al., 2020)\n\n\n\nSIP256C, MPT DAS-1, ABEM Terrameter LS2, Syscal Pro Switch 72",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
-    ]
-  },
-  {
-    "objectID": "induzierte_polarisation.html#scheinbare-spez.-widerstände",
-    "href": "induzierte_polarisation.html#scheinbare-spez.-widerstände",
-    "title": "6  Induzierte Polarisation",
-    "section": "7.2 Scheinbare spez. Widerstände",
-    "text": "7.2 Scheinbare spez. Widerstände",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
-    ]
-  },
-  {
-    "objectID": "induzierte_polarisation.html#fdip---phasen",
-    "href": "induzierte_polarisation.html#fdip---phasen",
-    "title": "6  Induzierte Polarisation",
-    "section": "7.3 FDIP - Phasen",
-    "text": "7.3 FDIP - Phasen",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
-    ]
-  },
-  {
-    "objectID": "induzierte_polarisation.html#tdip---aufzeichnungen",
-    "href": "induzierte_polarisation.html#tdip---aufzeichnungen",
-    "title": "6  Induzierte Polarisation",
-    "section": "7.4 TDIP - Aufzeichnungen",
-    "text": "7.4 TDIP - Aufzeichnungen\n\n\n\n\n\n\nFilter: Tiefpass, 50Hz, Offset, Drift, Elektrodenpolarisation\nGating & Stapelung \\(\\Rightarrow\\) Decay",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
-    ]
-  },
-  {
-    "objectID": "induzierte_polarisation.html#tdip---gates",
-    "href": "induzierte_polarisation.html#tdip---gates",
-    "title": "6  Induzierte Polarisation",
-    "section": "7.5 TDIP - Gates",
-    "text": "7.5 TDIP - Gates",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
-    ]
-  },
-  {
-    "objectID": "induzierte_polarisation.html#inversion",
-    "href": "induzierte_polarisation.html#inversion",
-    "title": "6  Induzierte Polarisation",
-    "section": "7.6 Inversion",
-    "text": "7.6 Inversion",
+    "text": "7.1 Vergleich von Geräten (Martin et al., 2020)\n\n\n\nSIP256C, MPT DAS-1, ABEM Terrameter LS2, Syscal Pro Switch 72 (Martin u. a. 2020)\n\n\n\n\n\nScheinbare spez. Widerstände (Martin u. a. 2020)\n\n\n\n7.1.1 FDIP\n\n\n\nFDIP - Phasen (Martin u. a. 2020)\n\n\n\n\n7.1.2 TDIP\n\n\n\n\n\n\n\nTDIP-Zeitreihen (Martin u. a. 2020)\n\n\n\nFilter: Tiefpass, 50Hz, Offset, Drift, Elektrodenpolarisation\nGating & Stapelung \\(\\Rightarrow\\) Decay\n\n\n\n\n\n\n\n\nTDIP - Gating (Martin u. a. 2020)\n\n\n\n\n\n\n\n\n7.1.3 Inversion\n\n\n\nInversion (Martin u. a. 2020)",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
@@ -608,8 +553,19 @@
     "objectID": "induzierte_polarisation.html#umsetzung-martin-et-al.-2021",
     "href": "induzierte_polarisation.html#umsetzung-martin-et-al.-2021",
     "title": "6  Induzierte Polarisation",
-    "section": "7.7 Umsetzung (Martin et al. 2021)",
-    "text": "7.7 Umsetzung (Martin et al. 2021)\n\n\n\n\n\\(\\Rightarrow\\) Mineral-Grad/Typ",
+    "section": "7.2 Umsetzung (Martin et al. 2021)",
+    "text": "7.2 Umsetzung (Martin et al. 2021)\n\n\n\n\n\n\n\n\\(\\Rightarrow\\) Mineral-Grad/Typ  \n\n\n\n\nAbbildung 7.1: Inversionsergebnisse und Ableitung von Mineralgehalt und Typ (Martin u. a. 2021)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#literatur",
+    "href": "induzierte_polarisation.html#literatur",
+    "title": "6  Induzierte Polarisation",
+    "section": "Literatur",
+    "text": "Literatur\n\n\n\n\nDentith, Michael, und Stephen T. Mudge. 2014. Geophysics for the Mineral Exploration Geoscientist. Cambridge University Press. https://doi.org/10.1017/cbo9781139024358.\n\n\nGünther, Thomas, und Tina Martin. 2016. „Spectral two-dimensional inversion of frequency-domain induced polarisation data from a mining slag heap“. Journal of Applied Geophysics 135: 436–48. https://doi.org/10.1016/j.jappgeo.2016.01.008.\n\n\nLoewer, M., T. Günther, J. Igel, S. Kruschwitz, T. Martin, und N. Wagner. 2017. „Ultra-broad-band electrical spectroscopy of soils and sedimentsa combined permittivity and conductivity model“. Geophysical Journal International 210 (3): 1360–73. https://doi.org/10.1093/gji/ggx242.\n\n\nMartin, Tina, Thomas Günther, Adrian Flores Orozco, und Torleif Dahlin. 2020. „Evaluation of spectral induced polarization field measurements in time and frequency domain“. Journal of Applied Geophysics 180 (September): 104141. https://doi.org/10.1016/j.jappgeo.2020.104141.\n\n\nMartin, Tina, Thomas Günther, Andreas Weller, und Kerstin Kuhn. 2021. „Classification of slag material by spectral induced polarization laboratory and field measurements“. Journal of Applied Geophysics 194 (November): 104439. https://doi.org/10.1016/j.jappgeo.2021.104439.",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
