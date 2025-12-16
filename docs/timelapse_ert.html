@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -293,17 +259,10 @@ window.MathJax = {
   <ul>
   <li><a href="#timelapse-ert---geoelektrik-monitoring" id="toc-timelapse-ert---geoelektrik-monitoring" class="nav-link active" data-scroll-target="#timelapse-ert---geoelektrik-monitoring"><span class="header-section-number">7</span> Timelapse ERT - Geoelektrik-Monitoring</a>
   <ul class="collapse">
-  <li><a href="#salzwasser-monitoring-system-samos" id="toc-salzwasser-monitoring-system-samos" class="nav-link" data-scroll-target="#salzwasser-monitoring-system-samos"><span class="header-section-number">7.0.1</span> Salzwasser-Monitoring-System SAMOS</a></li>
+  <li><a href="#salzwasser-monitoring-system-samos" id="toc-salzwasser-monitoring-system-samos" class="nav-link" data-scroll-target="#salzwasser-monitoring-system-samos">Salzwasser-Monitoring-System SAMOS</a></li>
   <li><a href="#timelapse-ert" id="toc-timelapse-ert" class="nav-link" data-scroll-target="#timelapse-ert"><span class="header-section-number">7.1</span> Timelapse-ERT</a></li>
   <li><a href="#stofftransport-in-der-ungesättigten-zone" id="toc-stofftransport-in-der-ungesättigten-zone" class="nav-link" data-scroll-target="#stofftransport-in-der-ungesättigten-zone"><span class="header-section-number">7.2</span> Stofftransport in der ungesättigten Zone</a></li>
   <li><a href="#transport-ungesättigt-persson2015" id="toc-transport-ungesättigt-persson2015" class="nav-link" data-scroll-target="#transport-ungesättigt-persson2015"><span class="header-section-number">7.3</span> Transport ungesättigt <span class="citation" data-cites="Persson2015">(Persson <em>u.&nbsp;a.</em> 2015)</span></a></li>
-  <li><a href="#d-crosshole-ert-monitoring" id="toc-d-crosshole-ert-monitoring" class="nav-link" data-scroll-target="#d-crosshole-ert-monitoring"><span class="header-section-number">7.4</span> 3D-Crosshole ERT-Monitoring</a>
-  <ul class="collapse">
-  <li><a href="#data-timeline" id="toc-data-timeline" class="nav-link" data-scroll-target="#data-timeline"><span class="header-section-number">7.4.1</span> Data Timeline</a></li>
-  <li><a href="#d-inversion-of-selected-time-steps" id="toc-d-inversion-of-selected-time-steps" class="nav-link" data-scroll-target="#d-inversion-of-selected-time-steps"><span class="header-section-number">7.4.2</span> 2D Inversion of selected time steps</a></li>
-  <li><a href="#transformation-of-ratio-into-temperature" id="toc-transformation-of-ratio-into-temperature" class="nav-link" data-scroll-target="#transformation-of-ratio-into-temperature"><span class="header-section-number">7.4.3</span> Transformation of ratio into temperature</a></li>
-  </ul></li>
-  <li><a href="#d-inversion-result" id="toc-d-inversion-result" class="nav-link" data-scroll-target="#d-inversion-result"><span class="header-section-number">7.5</span> 3D inversion result</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -339,8 +298,8 @@ window.MathJax = {
 <li>Ziele: Infiltration, Schadstoffausbreitung, Wärmespeicher, …</li>
 <li>Fokus auf Veränderungen (Fluid-LF, Sättigung, )</li>
 </ul>
-<section id="salzwasser-monitoring-system-samos" class="level3" data-number="7.0.1">
-<h3 data-number="7.0.1" class="anchored" data-anchor-id="salzwasser-monitoring-system-samos"><span class="header-section-number">7.0.1</span> Salzwasser-Monitoring-System <a href="https://www.liag-institut.de/samos.html">SAMOS</a></h3>
+<section id="salzwasser-monitoring-system-samos" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="salzwasser-monitoring-system-samos">Salzwasser-Monitoring-System <a href="https://www.liag-institut.de/samos.html">SAMOS</a></h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/SAMOS_Ostland.png" class="img-fluid figure-img"></p>
@@ -373,151 +332,98 @@ window.MathJax = {
 <p><img src="pics/persson-optical4.png" class="fragment img-fluid"> <img src="pics/persson-hydrus5.png" class="fragment img-fluid"> <img src="pics/persson-ert3.png" class="fragment img-fluid"></p>
 </div>
 </div>
-</section>
-<section id="d-crosshole-ert-monitoring" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="d-crosshole-ert-monitoring"><span class="header-section-number">7.4</span> 3D-Crosshole ERT-Monitoring</h2>
-<p><img src="pics/heat/heatInjectionScheme.png" class="img-fluid"></p>
-<section id="data-timeline" class="level3" data-number="7.4.1">
-<h3 data-number="7.4.1" class="anchored" data-anchor-id="data-timeline"><span class="header-section-number">7.4.1</span> Data Timeline</h3>
-<div>
+<!--
+## 3D-Crosshole ERT-Monitoring
 
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>xh <span class="op">=</span> ert.CrossholeERT(<span class="st">'heat-data.shm'</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">self</span>.<span class="bu">filter</span>(tmax<span class="op">=</span><span class="dv">80</span>)  <span class="co"># cut late frames</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">self</span>.<span class="bu">filter</span>(t<span class="op">=</span><span class="dv">4</span>) <span class="co"># remove single frame</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">self</span>.mask(rmin<span class="op">=</span><span class="dv">10</span>, rmax<span class="op">=</span><span class="dv">1000</span>, emax<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>c04 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">1</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>d01 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">5</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d06 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">6</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>d09 <span class="op">=</span> <span class="va">self</span>.extractSubset(<span class="dv">7</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># plotting</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> c04.showTimeline(a<span class="op">=</span><span class="dv">14</span>, m<span class="op">=</span><span class="dv">13</span>, n<span class="op">=</span><span class="dv">12</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                      b<span class="op">=</span><span class="dv">11</span>, label<span class="op">=</span><span class="st">"C04"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>d01.showTimeline(ax<span class="op">=</span>ax, a<span class="op">=</span><span class="dv">14</span>, m<span class="op">=</span><span class="dv">12</span>, n<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                 b<span class="op">=</span><span class="dv">8</span>, label<span class="op">=</span><span class="st">"D01"</span>)<span class="op">;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>d06.showTimeline(ax<span class="op">=</span>ax, a<span class="op">=</span><span class="dv">8</span>, m<span class="op">=</span><span class="dv">7</span>, n<span class="op">=</span><span class="dv">6</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                 b<span class="op">=</span><span class="dv">5</span>, label<span class="op">=</span><span class="st">"D06"</span>)<span class="op">;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>d09.showTimeline(ax<span class="op">=</span>ax, a<span class="op">=</span><span class="dv">3</span>, m<span class="op">=</span><span class="dv">2</span>, n<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                 b<span class="op">=</span><span class="dv">0</span>, label<span class="op">=</span><span class="st">"D09"</span>)<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/data-timeline.svg" class="img-fluid figure-img"></p>
-<figcaption>Temporal inhole apparent resistivity</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="d-inversion-of-selected-time-steps" class="level3" data-number="7.4.2">
-<h3 data-number="7.4.2" class="anchored" data-anchor-id="d-inversion-of-selected-time-steps"><span class="header-section-number">7.4.2</span> 2D Inversion of selected time steps</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>xh.<span class="bu">filter</span>(select<span class="op">=</span>[<span class="st">'2021-08-10'</span>,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2021-08-20'</span>, <span class="st">'2021-08-27'</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2021-09-09'</span>, <span class="st">'2021-09-21'</span>])</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x15 <span class="op">=</span> xh.extractSubset([<span class="dv">1</span>, <span class="dv">5</span>])</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>x15.mask(rmin<span class="op">=</span><span class="dv">10</span>, rmax<span class="op">=</span><span class="dv">1000</span>, emax<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> {<span class="st">"correlationLengths"</span>: [<span class="dv">3</span>, <span class="dv">2</span>],</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>       limits<span class="op">=</span>[<span class="dv">20</span>, <span class="dv">500</span>]}</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>x15.invert(t<span class="op">=</span><span class="dv">3</span>, reg<span class="op">=</span>reg)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>x15.fullInversion(reg<span class="op">=</span>reg)  <span class="co"># 4D inv</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Geostatistical regularization (Jordi et al.&nbsp;2018)</p>
-</div><div class="column fragment" style="width:50%;">
-<p><img src="pics/heat/BLERT1_5cb.png" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="transformation-of-ratio-into-temperature" class="level3" data-number="7.4.3">
-<h3 data-number="7.4.3" class="anchored" data-anchor-id="transformation-of-ratio-into-temperature"><span class="header-section-number">7.4.3</span> Transformation of ratio into temperature</h3>
-<div class="r-stack">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/rt1-5_001.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/rt1-5_002.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/rt1-5_003.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/rt1-5_004.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/rt1-5_005.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/rt1-5_006.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/rt1-5_007.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-</section>
-</section>
-<section id="d-inversion-result" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="d-inversion-result"><span class="header-section-number">7.5</span> 3D inversion result</h2>
-<div class="r-stack">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-2.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-3.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-4.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-5.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-6.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-7.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/heat/3d-8.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
+![](pics/heat/heatInjectionScheme.png)
+
+### Data Timeline
+
+::: {layout-ncol=2}
+```python
+xh = ert.CrossholeERT('heat-data.shm')
+self.filter(tmax=80)  # cut late frames
+self.filter(t=4) # remove single frame
+self.mask(rmin=10, rmax=1000, emax=0.2)
+c04 = self.extractSubset(1)
+d01 = self.extractSubset(5)
+d06 = self.extractSubset(6)
+d09 = self.extractSubset(7)
+# plotting
+ax = c04.showTimeline(a=14, m=13, n=12,
+                      b=11, label="C04")
+d01.showTimeline(ax=ax, a=14, m=12, n=10,
+                 b=8, label="D01");
+d06.showTimeline(ax=ax, a=8, m=7, n=6,
+                 b=5, label="D06");
+d09.showTimeline(ax=ax, a=3, m=2, n=1,
+                 b=0, label="D09");
+```
+
+![Temporal inhole apparent resistivity](pics/heat/data-timeline.svg)
+:::
+### 2D Inversion of selected time steps
+
+:::: {.columns}
+::: {.column width="50%"}
+```python
+xh.filter(select=['2021-08-10',
+    '2021-08-20', '2021-08-27',
+    '2021-09-09', '2021-09-21'])
+x15 = xh.extractSubset([1, 5])
+x15.mask(rmin=10, rmax=1000, emax=0.2)
+reg = {"correlationLengths": [3, 2],
+       limits=[20, 500]}
+x15.invert(t=3, reg=reg)
+x15.fullInversion(reg=reg)  # 4D inv
+```
+Geostatistical regularization (Jordi et al. 2018)
+
+:::
+::: {.column width="50%" .fragment}
+![](pics/heat/BLERT1_5cb.png)
+:::
+::::
+
+
+
+### Transformation of ratio into temperature
+::: {.r-stack}
+![](pics/heat/rt1-5_001.png){fig-align="center"}
+
+![](pics/heat/rt1-5_002.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_003.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_004.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_005.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_006.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_007.png){.fragment fig-align="center"}
+:::
+
+## 3D inversion result
+::: {.r-stack}
+![](pics/heat/3d-1.png){fig-align="center"}
+
+![](pics/heat/3d-2.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-3.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-4.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-5.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-6.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-7.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-8.png){.fragment fig-align="center"}
+:::
+
+ -->
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">

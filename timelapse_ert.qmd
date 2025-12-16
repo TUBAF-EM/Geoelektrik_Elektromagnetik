@@ -8,7 +8,7 @@
 * Ziele: Infiltration, Schadstoffausbreitung, Wärmespeicher, ...
 * Fokus auf Veränderungen (Fluid-LF, Sättigung, )
 
-### Salzwasser-Monitoring-System [SAMOS](https://www.liag-institut.de/samos.html)
+### Salzwasser-Monitoring-System [SAMOS](https://www.liag-institut.de/samos.html) {.unnumbered}
 
 ![Tiefenverteilung, Lithologie & zeitliche Verläufe in versch. Tiefen der Station Ostland in Borkum [@Ronczka2025]](pics/SAMOS_Ostland.png)
 
@@ -36,7 +36,7 @@
 :::
 ::::
 
-
+<!--
 ## 3D-Crosshole ERT-Monitoring
 
 ![](pics/heat/heatInjectionScheme.png)
@@ -127,4 +127,4 @@ Geostatistical regularization (Jordi et al. 2018)
 ![](pics/heat/3d-8.png){.fragment fig-align="center"}
 :::
 
-
+ -->

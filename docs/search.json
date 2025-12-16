@@ -357,29 +357,7 @@
     "href": "timelapse_ert.html#transport-ungesättigt-persson2015",
     "title": "6  Geoelektrisches Monitoring",
     "section": "7.3 Transport ungesättigt (Persson u. a. 2015)",
-    "text": "7.3 Transport ungesättigt (Persson u. a. 2015)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Geoelektrisches Monitoring</span>"
-    ]
-  },
-  {
-    "objectID": "timelapse_ert.html#d-crosshole-ert-monitoring",
-    "href": "timelapse_ert.html#d-crosshole-ert-monitoring",
-    "title": "6  Geoelektrisches Monitoring",
-    "section": "7.4 3D-Crosshole ERT-Monitoring",
-    "text": "7.4 3D-Crosshole ERT-Monitoring\n\n\n7.4.1 Data Timeline\n\n\n\n\n\n\nxh = ert.CrossholeERT('heat-data.shm')\nself.filter(tmax=80)  # cut late frames\nself.filter(t=4) # remove single frame\nself.mask(rmin=10, rmax=1000, emax=0.2)\nc04 = self.extractSubset(1)\nd01 = self.extractSubset(5)\nd06 = self.extractSubset(6)\nd09 = self.extractSubset(7)\n# plotting\nax = c04.showTimeline(a=14, m=13, n=12,\n                      b=11, label=\"C04\")\nd01.showTimeline(ax=ax, a=14, m=12, n=10,\n                 b=8, label=\"D01\");\nd06.showTimeline(ax=ax, a=8, m=7, n=6,\n                 b=5, label=\"D06\");\nd09.showTimeline(ax=ax, a=3, m=2, n=1,\n                 b=0, label=\"D09\");\n\n\n\n\n\nTemporal inhole apparent resistivity\n\n\n\n\n\n\n\n7.4.2 2D Inversion of selected time steps\n\n\nxh.filter(select=['2021-08-10',\n    '2021-08-20', '2021-08-27',\n    '2021-09-09', '2021-09-21'])\nx15 = xh.extractSubset([1, 5])\nx15.mask(rmin=10, rmax=1000, emax=0.2)\nreg = {\"correlationLengths\": [3, 2],\n       limits=[20, 500]}\nx15.invert(t=3, reg=reg)\nx15.fullInversion(reg=reg)  # 4D inv\nGeostatistical regularization (Jordi et al. 2018)\n\n\n\n\n\n\n7.4.3 Transformation of ratio into temperature",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Geoelektrisches Monitoring</span>"
-    ]
-  },
-  {
-    "objectID": "timelapse_ert.html#d-inversion-result",
-    "href": "timelapse_ert.html#d-inversion-result",
-    "title": "6  Geoelektrisches Monitoring",
-    "section": "7.5 3D inversion result",
-    "text": "7.5 3D inversion result\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPersson M, Dahlin T und Günther T. 2015. Observing Solute Transport in the Capillary Fringe Using Image Analysis and Electrical Resistivity Tomography in Laboratory Experiments. Vadose Zone Journal. 14. 11p.\n\n\nRonczka M, Günther T, Grinat M, Siemon B, Scheihing K und Müller‐Petke M. 2025. Multi‐scale electrical resistivity imaging and long‐term monitoring as a tool for groundwater management. Near Surface Geophysics",
+    "text": "7.3 Transport ungesättigt (Persson u. a. 2015)\n\n\n  \n\n  \n\n\n\n\n\n\n\nPersson M, Dahlin T und Günther T. 2015. Observing Solute Transport in the Capillary Fringe Using Image Analysis and Electrical Resistivity Tomography in Laboratory Experiments. Vadose Zone Journal. 14. 11p.\n\n\nRonczka M, Günther T, Grinat M, Siemon B, Scheihing K und Müller‐Petke M. 2025. Multi‐scale electrical resistivity imaging and long‐term monitoring as a tool for groundwater management. Near Surface Geophysics",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Geoelektrisches Monitoring</span>"
