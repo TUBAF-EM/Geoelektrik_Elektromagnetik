@@ -383,5 +383,3 @@ $$\Rightarrow \vb S \vb \delta \vb m = \delta \vb d$$
 
 Least-SquaresLösung $\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d$ +Zusatzterme
 -->
-
-## Literatur {.unnumbered}

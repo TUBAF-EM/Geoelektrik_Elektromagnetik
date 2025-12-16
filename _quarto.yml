@@ -6,7 +6,6 @@ profile:
   default: book
   group:
     - [book, slides]
-bibliography: geoelem.bib
 
 book:
   title: "Geoelektrik und Elektromagnetik"
@@ -33,6 +32,9 @@ book:
     - zusammenfassung.qmd
     - literatur.qmd
     - slidedecks.qmd
+
+bibliography: geoelem.bib
+csl: harvard.csl
 
 format:
   html:

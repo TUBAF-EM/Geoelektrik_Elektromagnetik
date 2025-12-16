@@ -59,13 +59,11 @@ Allgemeine Formel: $k = \frac{4\pi}{\frac{1}{\overline{AM}}+\frac{1}{\overline{A
 
 * Verteilung von Strom und Spannungselektroden auf 2 Bohrlöcher
 
-::: {.r-stack}
-![](pics/ert/crosshole1.png)
+![Crosshole-Arrays vom Typ AB-MN](pics/ert/crossholeAB-MN.png)
 
-![](pics/ert/crosshole2.png){.fragment}
+![Crosshole-Arrays vom Typ AM-BN](pics/ert/crossholeAM-BN.png)
 
-![](pics/ert/crosshole3.png){.fragment}
-:::
+![Crosshole-Arrays vom Typ AMN-B](pics/ert/crossholeAMN-B.png)
 
 
 
@@ -172,5 +170,3 @@ Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\i
 ![Modellierung Ringelektroden [@Ronczka2015]](pics/SAMOS-Ringelektroden.png)
 :::
 ::::
-
-## Literatur {.unnumbered}

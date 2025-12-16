@@ -49,7 +49,7 @@ Im Folgenden werden die Verfahren mit ihrer Anwendung im Feld, der Auswertung un
 - Everett (2013): [Near Surface Applied Geophysics](https://doi.org/10.1017/CBO9781139088435), Cambridge
 - Binley, A. (2015): Tools and Techniques: Electrical Methods, in *Treatise on Geophysics*, vol 11, 2nd ed., Elsevier, doi:[10.1016/B978-0-444-53802-4.00192-5](http://dx.doi.org/10.1016/B978-0-444-53802-4.00192-5)
 - Burger, H.R., Sheehan, A.F. & Jones, C.H. (2023): [Introduction to Applied Geophysics - Exploring the Shallow Subsurface](https://www.cambridge.org/de/academic/subjects/earth-and-environmental-science/solid-earth-geophysics/introduction-applied-geophysics-exploring-shallow-subsurface), Cambridge
-- Dentith, Michael, und Stephen T. Mudge (2014): [Geophysics for the Mineral Exploration Geoscientist](https://doi.org/10.1017/cbo9781139024358). Cambridge University Press.
+- Dentith, M., und Mudge, S.T. (2014): [Geophysics for the Mineral Exploration Geoscientist](https://doi.org/10.1017/cbo9781139024358). Cambridge University Press.
 
 ## Lernpyramide
 

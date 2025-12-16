@@ -169,5 +169,3 @@ $\Rightarrow$ Mineral-Grad/Typ
 
 Inversionsergebnisse und Ableitung von Mineralgehalt und Typ [@Martin2021]
 :::
-
-## Literatur {.unnumbered}

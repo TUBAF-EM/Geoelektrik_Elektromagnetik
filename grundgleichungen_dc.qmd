@@ -265,5 +265,3 @@ $$ \Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) $$
 $$ \Delta U = \frac{\rho I}{2\pi} \big( \frac{1}{\overline{AM}} - \frac{1}{\overline{AN}} - \frac{1}{\overline{BM}} + \frac{1}{\overline{BN}}\big)$$
 
 $$ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{mit}\quad k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} $$
-
-### Literatur {.unnumbered}
