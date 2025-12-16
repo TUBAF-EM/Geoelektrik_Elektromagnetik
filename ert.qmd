@@ -77,13 +77,13 @@ Lösung der partiellen Differentialgleichung
 
 $$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  $$
 
-![Diskretisierung des Untergrunds](pics/gridS.png)
+![Diskretisierung des Untergrunds](pics/ert/ert-grid.png)
 
 ### Inversion
 
 :::: {.columns}
 ::: {.column width="60%"}
-![](pics/intro-3)
+![](pics/ert/ert_inv.png)
 :::
 ::: {.column width="40%"}
 * Diskretisierung, z.B. mit Dreiecken
@@ -92,10 +92,6 @@ $$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  $$
 * glattes Untergrundmodell
 :::
 ::::
-
-### Inversion
-
-![](pics/intro-3)
 
 ### Inversion - Methodik
 
@@ -134,6 +130,10 @@ Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\i
 
 ![Prozentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe [@Ruecker2011]](pics/rueckerguenther2011_tab1.png)
 
+### Langelektroden - Stromdichte
+
+![[@Ronczka2015]](pics/LE_Stromdichte.png)
+
 ### Langelektroden - Sensitivitäten
 
 :::: {.columns}
@@ -141,7 +141,7 @@ Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\i
 ![[@Ronczka2015]](pics/LE_sens1.png)
 :::
 ::: {.column}
-![](pics/LE_sens2.png){.fragment}
+![](pics/LE_sens2.png)
 :::
 ::::
 
