@@ -8,9 +8,10 @@ profile:
     - [book, slides]
 
 book:
-  title: "Modul Geoelektrik und Elektromagnetik"
+  title: "Geoelektrik und Elektromagnetik"
   author: "Thomas Günther und Ralph-Uwe Börner"
   date: today
+  # csl: harvard.csl
   chapters:
     - index.qmd
     - einfuehrung.qmd
@@ -19,13 +20,21 @@ book:
         - grundgleichungen_dc.qmd
         - sens_arrays.qmd
         - ves.qmd
+        - ert.qmd
+        - timelapse_ert.qmd
+        - induzierte_polarisation.qmd
+        - ert_praxis.qmd
     - part: "Elektromagnetik"
       chapters:
         - einfuehrung_em.qmd
         - grundgleichungen_em.qmd
         - magnetotellurik.qmd
     - zusammenfassung.qmd
+    - literatur.qmd
     - slidedecks.qmd
+
+bibliography: geoelem.bib
+csl: harvard.csl
 
 format:
   html:

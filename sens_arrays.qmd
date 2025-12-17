@@ -3,38 +3,57 @@ title: "Sensitivitäten und Messanordnungen"
 editor: source
 ---
 
-# Sensitivitäten
+## Herleitung
+Gegeben sei eine Vier-Punkt-Anordnung AB-MN, bei einer Leitfähigkeitsverteilung $\sigma$ ergibt sich eine Mess-Spannung $\phi_{MN}$ bei einem Einspeisestrom $I_{AB}$.
+Frage: Wie wirkt sich eine Änderung der Leitfähigkeit $\delta\sigma$ auf den Messwert aus?
+
 ![](pics/sens_scheme.png)
 
-## Herleitung
-Wie wirkt sich eine Änderung der Leitfähigkeit auf den Messwert aus?
+Dabei betrachten wir als Messgröße den scheinbaren spezifischen Widerstand $\rho_a$ und als Variable den spezifischen Widerstand $\rho$, um eine einheitenlose Größe zu erhalten.
+
 $$S(\vb r)=\pdv{\rho_a}{\rho(\vb r)}$$
 
-$$\div((\sigma+\delta\sigma)\grad (u+\delta u))=0$$
+Diese wird als **Sensitivitätsfunktion** bezeichnet.
 
-$$\div(\sigma\grad u)+\div(\delta\sigma\grad u)+\div(\sigma\grad \delta u)+\div(\delta\sigma\grad \delta u)=0$$
+Wir setzen $\sigma+\delta\sigma$ in die Kontinuitätsgleichung ein:
 
-$$\Rightarrow S(\vb r)=\frac{k}{\rho^2} \frac{\grad u^{AB}}{I^{AB}} \frac{\grad u^{MN}}{I^{MN}}=
-\frac{k}{4\pi^2} \qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})$$
+$$\div((\sigma+\delta\sigma)\grad (u+\delta u))=$$
 
+$$\div(\sigma\grad u)+\div(\delta\sigma\grad u)+\div(\sigma\grad \delta u)+\div(\delta\sigma\grad \delta u)=I\delta(\vb r-\vb r_s)$$
 
-## Wenner-Anordnung
+Geselowitz (1971):
+
+$$\Rightarrow S(\vb r)=\frac{k}{\rho^2} \int\Omega\frac{\grad u^{AB}}{I^{AB}} \frac{\grad u^{MN}}{I^{MN}}\dd\Omega$$
+
+Im homogenen Halbraum können wir die Lösung einsetzen und erhalten
+
+$$\Rightarrow S(\vb r)=\frac{k}{4\pi^2} \int\Omega\qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})\dd\Omega$$
+
+Im Folgenden betrachten wir ausschließlich die Sensitivität des homogenen Halbraums, was für das Verständnis völlig ausreichend ist.
+Natürlich hängt die Potentialverteilung von der Leitfähigkeit selbst ab.
+Insbesondere wenn man Logarithmen betrachtet, ist der Grad der Nichtlinearität aber klein, so dass die grundlegenden Bilder bei kleinen Kontrasten sehr ähnlich sind.
+
+Man beachte außerdem, dass Strom- und Potential-Elektroden austauschbar sind.
+Wir diskretisieren den Untergrund in ein Dreiecksnetz und integrieren die Funktion über Gauss-Quadratur:
+
 ![](pics/sens/wa-empty.svg)
 
-## Wenner-Anordnung - Sensitivität
-![](pics/sens/sens_wa13.svg)
+Die Wenner-Anordnung
+![Sensitivität der Wenner-Anordnung](pics/sens/sens_wa13.svg)
+zeigt oberflächennah eine Abfolge von positiven und negativen Vorzeichen (Skala ist normiert).
+Eine Oberflächennahe Erhöhung (bis 1m Tiefe) würde ein zentrales Maximum mit zwei flankierenden Minima (und daran anschließend wieder Maxima) zeigen.
+Generell ist die Anordnung bis zu einer Tiefe sensitiv, die etwas kleiner als der Elktrodenabstand ist.
 
-## Schlumberger-Anordnung - Sensitivität
-![](pics/sens/sens_slm18.svg)
+Die Funktion der Schlumberger-Anordnung ist generell ähnlich,
+![Sensitivität der Schlumberger-Anordnung](pics/sens/sens_slm18.svg)
 
-## Wenner-$\alpha$ Anordnung - Sensitivität
-![](pics/sens/sens_wa13.svg)
+nur dass der mittlere Bereich schmaler ist.
+Anordnungen mit Spannungsmessung innerhalb der Stromelektroden werden als $\alpha$-Typ bezeichnet (die einfach Wenner-Anordnung auch Wenner-$\alpha$ genannt).
+Wenn man Strom- und Spannungselektroden trennt, aber die Abstände gleich behält, erhält man die Wenner-$\beta$ Anordnung
+![Sensitivität der Wenna-$\beta$-Anordnung](pics/sens/sens_wb13.svg)
 
-## Wenner-$\beta$ Anordnung - Sensitivität
-![](pics/sens/sens_wb13.svg)
-
-## Dipol-Dipol-Anordnung - Sensitivität
-![](pics/sens/sens_dd27.svg)
+Bei der Dipol-Dipol-Anordnung werden die Spannungs- und Strom-Strecken nicht mit vergrößert und bleiben daher kleiner als der Dipol-Abstand.
+![Sensitivität der Dipol-Dipol-Anordnung](pics/sens/sens_dd27.svg)
 
 ## Sensitivitäten erklärt
 
@@ -56,42 +75,6 @@ Nun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sens
 
 ![Resistive Einlagerung](pics/ert/sens/sens_con2.svg)
 
-# ERT Feldausbreitung
-
-Einstieg siehe Notebook
-
-## Homogener Untergrund: Potentialverteilung
-![](pics/ert/sens/pot-hom.svg)
-
-## Homogener Untergrund: Stromlinien
-![](pics/ert/sens/pot-hom-stream.svg)
-
-## Stetigkeit an Grenzflächen
-
-:::: {.columns}
-::: {.column}
-$$\Rightarrow \div(\sigma\vb E)=-\div(\sigma\grad U)=0$$
-![](pics/ert/currentdensity.png)
-**Brechungsgesetz**:
-:::
-::: {.column}
-**Stetigkeit von**
-
-* Potential $u$
-* Tangentialkomponente von E
-$E_1=E_2\Rightarrow \rho_1 j_{x1}=\rho_2 j_{x2}$
-* Normalkomponente v. $j_{z1}=j_{z2}$
-$$\Rightarrow \rho_1\frac{j_{x1}}{j_{z1}}=\rho_2\frac{j_{x2}}{j_{z2}}$$
-$$\rho_1\tan\theta_1=\rho_2\tan\theta_2$$
-:::
-::::
-
-## Schlechter Leiter: Stromlinien
-![](pics/ert/badconductor.svg)
-
-## Guter Leiter: Stromlinien
-![](pics/ert/goodconductor.svg)
-
 ## Mess-Strategien
 
 ::: {.callout-note title="Kartierung"}
@@ -106,21 +89,11 @@ Vergrößerung der Auslage bei festem Mittelpunkt
 Kombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)
 :::
 
-## Widerstands-Kartierung
+### Widerstands-Kartierung
 
-::: {.r-stack}
-![](pics/sens/sens_wa1.svg){width=1200}
+![](pics/ert/sens/wa8.gif)
 
-![](pics/sens/sens_wa2.svg){.fragment width=1200}
 
-![](pics/sens/sens_wa3.svg){.fragment width=1200}
-
-![](pics/sens/sens_wa4.svg){.fragment width=1200}
-
-![](pics/sens/sens_wa5.svg){.fragment width=1200}
-
-![](pics/sens/sens_wa6.svg){.fragment width=1200}
-
-![](pics/sens/sens_wa7.svg){.fragment width=1200}
-:::
-
+Kartierungen mit festen Anordnungen werden heutzutage nur noch selten eingesetzt (wenn die Teufenlage eines zu suchenden, eher kleineren Objekts gut bekannt ist).
+Auch Sondierungen, die zur Erkundung von horizontal geschichteten Untergründen eingesetzt werden) treten immer weiter in den Hintergrund.
+Bei weitem häufigstes Verfahren ist die 2D-Geoelektrik (nur noch selten als Sondierungs-Kartierung bezeichnet). Manchmal werden 3D-Anordnungen oder Anordnungen unter Zuhilfenahme von Bohrlöchern eingesetzt.

@@ -2,19 +2,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Modul Geoelektrik und Elektromagnetik",
+    "title": "Geoelektrik und Elektromagnetik",
     "section": "",
-    "text": "Vorwort",
+    "text": "Vorwort\nGeoelektrische und Elektromagnetische Verfahren gehören zu den am häufigsten eingesetzten geophysikalischen Erkundungsverfahren. Dies liegt zum einen an der recht einfachen und günstigen Umsetzung mit verbreiteten Geräten und Auswertealgorithmen, zum anderen aber am zugrunde liegenden Parameter der elektrischen Leitfähigkeit, die zumeist starke Kontraste aufweist, da sie von vielen Faktoren abhängig ist. Im Folgenden werden die Verfahren mit ihrer Anwendung im Feld, der Auswertung und Beispielen aus der Praxis vorgestellt. Dabei ist das Modul in einen Teil Geoelektrik (einschließlich Induzierte Polarisation) und in einen Teil Elektromagnetik (zumeist induktive Verfahren) unterteilt.",
     "crumbs": [
       "Vorwort"
     ]
   },
   {
-    "objectID": "index.html#geoelektrik",
-    "href": "index.html#geoelektrik",
-    "title": "Modul Geoelektrik und Elektromagnetik",
-    "section": "Geoelektrik",
-    "text": "Geoelektrik\nDie Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds.\nDie Anwendungsgebiete sind entsprechend vielfältig:\n\nIngenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)\nHydrogeologie (Aquifer-Architektur, Kontaminationen)\nSalzwasser-Intrusion in Grundwasser-Aquifere\nGeologisch/tektonische Untersuchungen (Störungen)\nArchäologie (Fundamente, Hütten und Schlacken)\nLandwirtschaft (Feuchtigkeit und Tonanteil)\nGeorisiken (Hangrutschungen, Verkarstung)\nProzessmonitoring (Wasser- und Stoff-Transport)",
+    "objectID": "index.html#literatur",
+    "href": "index.html#literatur",
+    "title": "Geoelektrik und Elektromagnetik",
+    "section": "Literatur",
+    "text": "Literatur\n\nEmpfohlene Lehrbücher\n\n\n\n\n\nTelford, Geldart, Sherriff (1990): Cambridge\n\n\n\n\n\n\nKnoedel, Krummel, Lange (2005): Springer\n\n\n\n\n\n\nEverett (2013): Cambridge\n\n\n\n\n\nKnödel, K., Krummel, H. & Lange, G. (2005): Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten - Band 3: Geophysik, Springer.\nEverett (2013): Near Surface Applied Geophysics, Cambridge\nBinley, A. (2015): Tools and Techniques: Electrical Methods, in Treatise on Geophysics, vol 11, 2nd ed., Elsevier, doi:10.1016/B978-0-444-53802-4.00192-5\nBurger, H.R., Sheehan, A.F. & Jones, C.H. (2023): Introduction to Applied Geophysics - Exploring the Shallow Subsurface, Cambridge\nDentith, M., und Mudge, S.T. (2014): Geophysics for the Mineral Exploration Geoscientist. Cambridge University Press.",
+    "crumbs": [
+      "Vorwort"
+    ]
+  },
+  {
+    "objectID": "index.html#lernpyramide",
+    "href": "index.html#lernpyramide",
+    "title": "Geoelektrik und Elektromagnetik",
+    "section": "Lernpyramide",
+    "text": "Lernpyramide\n\n\n\n\n\nRetention Rate in der Lernpyramide (National Training Laboritories Institut, Bethel (Maine))\n\n\n\nUmsetzung im Modul\n\nVorlesung und Scripte\nNotebooks zum Spielen\nÜbungen\npraktische Messungen\ngemeinsame Auswertung\n\n\n\nNach der Lernpyramide wird nur ein kleiner Teil durch Zuhören und Lesen aufgenommen. Daher wird der passive Teil angereichert durch zahlreiche Notebooks, die nicht nur die Physik demonstrieren, sondern zum eigenen Erfahren genutzt werden sollen. Die praktische Anwendung in Form von Feld- und Labormessungen sowie deren gemeinsame Auswertung und kritische Diskussion der Ergebnisse führt erst zum umfassenden Verständnis.",
     "crumbs": [
       "Vorwort"
     ]
@@ -22,635 +32,137 @@
   {
     "objectID": "einfuehrung.html",
     "href": "einfuehrung.html",
-    "title": "1  Einführung",
+    "title": "1  Elektromagnetische Größen",
     "section": "",
-    "text": "1.1 Gliederung Teil Geoelektrik",
+    "text": "1.1 Die Maxwell-Gleichungen\nDie Quellen der Felder\nLadungsträger erzeugen eine elektrische Verschiebung \\[\\div \\vb D = \\varrho\\]\nDas Magnetfeld ist frei von Quellen und Senken \\[\\div \\vb B = 0\\]\nMaterialgleichungen: \\(\\vb B=\\mu\\vb H\\), \\(\\vb D=\\epsilon\\vb E\\), \\(\\vb j=\\sigma\\vb E\\)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Elektromagnetische Größen</span>"
     ]
   },
   {
-    "objectID": "einfuehrung.html#gliederung-teil-geoelektrik",
-    "href": "einfuehrung.html#gliederung-teil-geoelektrik",
-    "title": "1  Einführung",
+    "objectID": "einfuehrung.html#die-maxwell-gleichungen",
+    "href": "einfuehrung.html#die-maxwell-gleichungen",
+    "title": "1  Elektromagnetische Größen",
     "section": "",
-    "text": "Grundgleichungen und elektrische Felder\nPetrophysikalische Grundlagen\nAnordnungen, Profilmessungen und Sensitivitäten\nWiderstandstiefensondierung\n2D-Geoelektrik, Modellierung und Inversion\n3D-Geoelektrik und crosshole-ERT\nProzessmonitoring und Timelapse-Verfahren\nInduzierte Polarisation im Zeit- und Frequenzbereich",
+    "text": "Faradaysches Induktionsgesetz\n\\[ \\curl\\vb E = -\\pdv{\\vb B}{t} \\]\n\nAmpèresches Durchflutungsgesetz\n\\[ \\curl \\vb H = \\pdv{\\vb D}{t} + \\vb j \\]\n\n\n\n\n\n\n\n\n1.1.1 Amperesches Gesetz in der Geophysik\n\\[ \\curl \\vb H = \\pdv{\\vb D}{t} + \\vb j \\]\n\nWellenausbreitung \\(\\curl\\vb H=\\pdv*{\\vb D}{t}\\): Georadar\nInduktion \\(\\curl\\vb H=\\vb j\\), \\(\\curl\\vb E=-\\pdv*{\\vb B}{t}\\)  Magnetotellurik, EMI in Zeit- und Frequenzbereich\nMagnetostatik \\(\\curl\\vb H=\\vb j\\), \\(\\curl\\vb E=0\\)\n\n\n\n1.1.2 Näherungen und Methoden\n\\[ \\curl \\vb H = \\pdv{\\vb D}{t} + \\vb j \\qquad\n\\curl\\vb E = -\\pdv{\\vb B}{t} \\]\n\n\n\n\n\n\n\n\n\nVorgänge/Felder\n\\(\\curl\\vb H\\)\n\\(\\curl\\vb E\\)\nMethoden\n\n\n\n\nStationär\n\\(\\vb j\\)\n0\nGeoelektrik\n\n\nQuasistationär\n\\(\\vb j\\)\n\\(-\\pdv*{\\vb B}{t}\\)\nInduktion\n\n\nWellenvorgänge\n\\(\\pdv*{\\vb D}{t}+\\vb j\\)\n\\(-\\pdv*{\\vb B}{t}\\)\nGeoradar",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Elektromagnetische Größen</span>"
     ]
   },
   {
-    "objectID": "einfuehrung.html#gliederung-teil-elektromagnetik",
-    "href": "einfuehrung.html#gliederung-teil-elektromagnetik",
-    "title": "1  Einführung",
-    "section": "1.2 Gliederung Teil Elektromagnetik",
-    "text": "1.2 Gliederung Teil Elektromagnetik\n\nGrundlagen der Geoelektromagnetik\nMagnetotellurik\nCSEM-Methoden im Frequenzbereich\nTransientelektromagnetik\nGemeinsame Inversion\nNuklearmagnetische Resonanz",
+    "objectID": "einfuehrung.html#die-elektrische-leitfähigkeit",
+    "href": "einfuehrung.html#die-elektrische-leitfähigkeit",
+    "title": "1  Elektromagnetische Größen",
+    "section": "1.2 Die Elektrische Leitfähigkeit",
+    "text": "1.2 Die Elektrische Leitfähigkeit\n\n\n\n\n\nElektrischer Widerstand\n\n\n\nLänge \\(L\\), Querschnitt \\(A\\)\nSpannung \\(U\\) [V], Stromstärke \\(I\\) [A]\nOhmscher Widerstand \\(R\\)=\\(U\\)/\\(I\\) [\\(\\Omega\\)]\n\n\n\n\nStromdichte \\(j\\)=\\(I\\)/\\(A\\) [A/m²]\nElektr. Feld \\(E\\)=\\(U\\)/\\(L\\) [V/m]\n\n\n\n\nOhmsches Gesetz \\(j=\\sigma E\\) (Leitfähigkeit \\(\\sigma\\) [A/Vm]) \\(\\Rightarrow \\rho=1/\\sigma=E/j\\) [\\(\\Omega\\)m] spezifischer Widerstand\n\n\n\n\\(\\Rightarrow \\rho = \\frac{U/L}{I/A}=\\frac{U}{I}\\frac{A}{L}=R\\cdot k\\) Konfigurations-Faktor \\(k\\) [m]",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#empfohlene-lehrbücher",
-    "href": "einfuehrung.html#empfohlene-lehrbücher",
-    "title": "1  Einführung",
-    "section": "1.3 Empfohlene Lehrbücher",
-    "text": "1.3 Empfohlene Lehrbücher\n\n\n\n\n\nTelford, Geldart, Sherriff (1990): Cambridge\n\n\n\n\n\n\nKnoedel, Krummel, Lange (2005): Springer\n\n\n\n\n\n\nEverett (2013): Cambridge",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#literatur",
-    "href": "einfuehrung.html#literatur",
-    "title": "1  Einführung",
-    "section": "1.4 Literatur",
-    "text": "1.4 Literatur\n\nKnödel/Krummel/Lange.: Geophysik, Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten, Springer frei über UB\nEverett (2013): Near Surface Applied Geophysics, Cambridge\nBinley (2015): Tools and Techniques: Electrical Methods, in Treatise on Geophysics, vol 11, 2nd ed., Elsevier, doi:10.1016/B978-0-444-53802-4.00192-5\nBurger et al. (2023): Introduction to Applied Geophysics - Exploring the Shallow Subsurface, Cambridge",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#lernpyramide",
-    "href": "einfuehrung.html#lernpyramide",
-    "title": "1  Einführung",
-    "section": "1.5 Lernpyramide",
-    "text": "1.5 Lernpyramide\n\n\n\n\n\nVorlesung und Scripte\nNotebooks zum Spielen\nÜbungen\npraktische Messungen\ngemeinsame Auswertung",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#elektromagnetische-größen",
-    "href": "einfuehrung.html#elektromagnetische-größen",
-    "title": "1  Einführung",
-    "section": "2.1 Elektromagnetische Größen",
-    "text": "2.1 Elektromagnetische Größen\n\n\n\nmagn. Feldstärke \\(H\\) [A/m]\nmagn. Flussdichte \\(B\\) [Vs/m²] \\(B=\\mu H\\) (oft “Magnetfeld”)\nmagn. Permeabilität \\(\\mu\\) [Vs/Am] \\(\\mu=\\mu_0\\mu_r\\) , \\(\\mu_0\\)=4\\(\\pi\\) 1e-7Vs/Am\nmag. Suszeptibilität \\(\\chi_m=\\mu_r\\)-1\nmagn. Fluss \\(\\Phi\\) [Vs]\nspez. el. Widerstand \\(\\rho\\) [\\(\\Omega\\)m]\n\n\n\nelektr. Feldstärke \\(E\\) [V/m]\ndielektr. Verschiebung \\(D\\) [As/m²] \\(D=\\epsilon E\\) (Hilfsfeld)\nelektr. Permittivität \\(\\epsilon\\) [As/Vm] \\(\\epsilon=\\epsilon_0\\epsilon_r\\) , \\(\\epsilon_0\\)=8.854e-12As/Vm\nel. Suszeptibilität \\(\\chi_e=\\epsilon_r\\)-1\nelektr. Stromdichte \\(j\\) [A/m²]\nel. Leitfähigkeit \\(\\sigma\\) [S/m]",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#maxwell-gleichungen",
-    "href": "einfuehrung.html#maxwell-gleichungen",
-    "title": "1  Einführung",
-    "section": "2.2 Maxwell-Gleichungen",
-    "text": "2.2 Maxwell-Gleichungen\n\n\n\\[ \\curl\\vb E = -\\pdv{\\vb B}{t} \\]\n\n\\[ \\curl \\vb H = \\pdv{\\vb D}{t} + \\vb j \\]",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#maxwell---quellen-und-material",
-    "href": "einfuehrung.html#maxwell---quellen-und-material",
-    "title": "1  Einführung",
-    "section": "2.3 Maxwell - Quellen und Material",
-    "text": "2.3 Maxwell - Quellen und Material\nLadungsträger erzeugen eine elektrische Verschiebung \\[\\div \\vb D = \\varrho\\]\nDas Magnetfeld ist frei von Quellen und Senken \\[\\div \\vb B = 0\\]\nMaterialgleichungen: \\(\\vb B=\\mu\\vb H\\), \\(\\vb D=\\epsilon\\vb E\\), \\(\\vb j=\\sigma\\vb E\\)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#amperesches-gesetz-in-der-geophysik",
-    "href": "einfuehrung.html#amperesches-gesetz-in-der-geophysik",
-    "title": "1  Einführung",
-    "section": "2.4 Amperesches Gesetz in der Geophysik",
-    "text": "2.4 Amperesches Gesetz in der Geophysik\n\\[ \\curl \\vb H = \\pdv{\\vb D}{t} + \\vb j \\]\n\nWellenausbreitung \\(\\curl\\vb H=\\pdv*{\\vb D}{t}\\): Georadar\nInduktion \\(\\curl\\vb H=\\vb j\\), \\(\\curl\\vb E=-\\pdv*{\\vb B}{t}\\)  Magnetotellurik, EMI in Zeit- und Frequenzbereich\nMagnetostatik \\(\\curl\\vb H=\\vb j\\), \\(\\curl\\vb E=0\\)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#näherung-und-methoden",
-    "href": "einfuehrung.html#näherung-und-methoden",
-    "title": "1  Einführung",
-    "section": "2.5 Näherung und Methoden",
-    "text": "2.5 Näherung und Methoden\n\\[ \\curl \\vb H = \\pdv{\\vb D}{t} + \\vb j \\qquad\n\\curl\\vb E = -\\pdv{\\vb B}{t} \\]\n\n\n\n\n\n\n\n\n\nVorgänge/Felder\n\\(\\curl\\vb H\\)\n\\(\\curl\\vb E\\)\nMethoden\n\n\n\n\nStationär\n\\(\\vb j\\)\n0\nGeoelektrik\n\n\nQuasistationär\n\\(\\vb j\\)\n\\(-\\pdv*{\\vb B}{t}\\)\nInduktion\n\n\nWellenvorgänge\n\\(\\pdv*{\\vb D}{t}+\\vb j\\)\n\\(-\\pdv*{\\vb B}{t}\\)\nGeoradar",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#elektrische-leitfähigkeit",
-    "href": "einfuehrung.html#elektrische-leitfähigkeit",
-    "title": "1  Einführung",
-    "section": "2.6 Elektrische Leitfähigkeit",
-    "text": "2.6 Elektrische Leitfähigkeit\n\n\n\n\n\nElektrischer Widerstand\n\n\n\nLänge \\(L\\), Querschnitt \\(A\\)\nSpannung \\(U\\) [V], Stromstärke \\(I\\) [A]\nOhmscher Widerstand \\(R\\)=\\(U\\)/\\(I\\) [\\(\\Omega\\)]\n\n\n\n\nStromdichte \\(j\\)=\\(I\\)/\\(A\\) [A/m²]\nElektr. Feld \\(E\\)=\\(U\\)/\\(L\\) [V/m]\n\n\n\n\nOhmsches Gesetz \\(j=\\sigma E\\) (Leitfähigkeit \\(\\sigma\\) [A/Vm]) \\(\\Rightarrow \\rho=1/\\sigma=E/j\\) [\\(\\Omega\\)m] spezifischer Widerstand\n\n\n\n\\(\\Rightarrow \\rho = \\frac{U/L}{I/A}=\\frac{U}{I}\\frac{A}{L}=R\\cdot k\\) Konfigurations-Faktor \\(k\\) [m]",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Elektromagnetische Größen</span>"
     ]
   },
   {
     "objectID": "einfuehrung.html#spezifischer-widerstand-knödel-2005",
     "href": "einfuehrung.html#spezifischer-widerstand-knödel-2005",
-    "title": "1  Einführung",
-    "section": "2.7 Spezifischer Widerstand (Knödel, 2005)",
-    "text": "2.7 Spezifischer Widerstand (Knödel, 2005)\n\n\n25 Dekaden:\n\nDiamant: 1e18 \\(\\Omega\\)m\nKupfer: 1e-7 \\(\\Omega\\)m\n\nabhängig von:\n\nWassergehalt\nFluidleitfähigkeit\nTonanteil",
+    "title": "1  Elektromagnetische Größen",
+    "section": "1.3 Spezifischer Widerstand (Knödel, 2005)",
+    "text": "1.3 Spezifischer Widerstand (Knödel, 2005)\n\n\n25 Dekaden:\n\nDiamant: 1e18 \\(\\Omega\\)m\nKupfer: 1e-7 \\(\\Omega\\)m\n\nabhängig von:\n\nWassergehalt\nFluidleitfähigkeit\nTonanteil",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Elektromagnetische Größen</span>"
     ]
   },
   {
-    "objectID": "einfuehrung.html#kleinskalig-martingünther-2013",
-    "href": "einfuehrung.html#kleinskalig-martingünther-2013",
-    "title": "1  Einführung",
-    "section": "3.1 Kleinskalig (Martin&Günther, 2013)",
-    "text": "3.1 Kleinskalig (Martin&Günther, 2013)",
+    "objectID": "einfuehrung.html#archies-gesetz",
+    "href": "einfuehrung.html#archies-gesetz",
+    "title": "1  Elektromagnetische Größen",
+    "section": "1.4 Archies Gesetz",
+    "text": "1.4 Archies Gesetz\n\n\n\n\n\n\n\n\nArchies Gesetz\n\n\n\nDer Formationsfaktor ist (bei tonfreien, gesättigten Sedimenten) exponentiell von der Porosität \\(\\phi\\) abhängig. Der Exponent \\(m\\) heißt Zementationsexponent.\n\n\n\\[ F = \\frac{\\sigma_f}{\\sigma}=\\frac{\\rho}{\\rho_f} = \\frac{a}{\\phi^m} \\]\n\nnegativer Anstieg im log-log-Plot\n\n\n\n\n\n(Dentith und Mudge 2014)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Elektromagnetische Größen</span>"
     ]
   },
   {
-    "objectID": "einfuehrung.html#mittelskalig-geologie",
-    "href": "einfuehrung.html#mittelskalig-geologie",
-    "title": "1  Einführung",
-    "section": "3.2 Mittelskalig: Geologie",
-    "text": "3.2 Mittelskalig: Geologie\n\n\n\nTanner et al. (2019): Störungszone Irland",
+    "objectID": "einfuehrung.html#archies-gesetz-ii",
+    "href": "einfuehrung.html#archies-gesetz-ii",
+    "title": "1  Elektromagnetische Größen",
+    "section": "1.5 Archies Gesetz II",
+    "text": "1.5 Archies Gesetz II\nElektrische Leitfähigkeit des gesättigten (tonfreien) Porenraums:\n\\[ \\sigma = \\sigma_f / F = \\sigma \\phi^m S^n \\quad \\rho=\\rho_f \\phi^{-m} S^{-n}\\]\n\n\n\n\\(\\phi\\)-Porosität\n\\(m\\)-Zementationsexponent\n\\(S\\)-Sättigung\n\\(n\\)-Sättigungsexponent\n\n\nWerte für \\(m\\):\n\nunverfestigte Sedimente: 1.3\nverfestigte Sedimente: 1.5-1.6\nSandsteine: 2.0",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Elektromagnetische Größen</span>"
     ]
   },
   {
-    "objectID": "einfuehrung.html#großskalig-geologie",
-    "href": "einfuehrung.html#großskalig-geologie",
-    "title": "1  Einführung",
-    "section": "3.3 Großskalig: Geologie",
-    "text": "3.3 Großskalig: Geologie\n\n\n\nNickschick et al. (2017): CO2-Aufstieg an Störung im Egergraben",
+    "objectID": "einfuehrung.html#grenzflächenleitfähigkeit",
+    "href": "einfuehrung.html#grenzflächenleitfähigkeit",
+    "title": "1  Elektromagnetische Größen",
+    "section": "1.6 Grenzflächenleitfähigkeit",
+    "text": "1.6 Grenzflächenleitfähigkeit\n\n\n\n\n\n\n\n\nBei kleinen Leitfähigkeiten\n\n\n\nstrebt die Leitfähigkeit gegen einen Grenzwert, die Grenzflächenleitfähigkeit\n\n\n\\[ \\sigma = \\sigma_f/F + \\sigma_s \\]\n\nkleine Wasserleitfähigkeit\ngeringe Porosität\nTonminerale (Ton, Schluff)\nmetallische Partikel (Fe2/3)\n\n\n\n\n\n\n1.6.1 Temperatur-Abhängigkeit\nkomplexe Abhängigkeit, aber Linearisierung um Temperatur \\(T_0\\) (meist 25°C)\n\\[ \\sigma = \\sigma_0 (1 + \\alpha (T-T_0)) \\]\n\\(\\alpha\\) - meist 0.02 (2% pro K)\n\n\n\n\n\nDentith M und Mudge S T. 2014. Geophysics for the Mineral Exploration Geoscientist (Cambridge University Press)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#salzwasser-intrusion-von-süßwasseraquiferen",
-    "href": "einfuehrung.html#salzwasser-intrusion-von-süßwasseraquiferen",
-    "title": "1  Einführung",
-    "section": "3.4 Salzwasser-Intrusion von Süßwasseraquiferen",
-    "text": "3.4 Salzwasser-Intrusion von Süßwasseraquiferen",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#hydrogeologie-hübner-et-al.-2015",
-    "href": "einfuehrung.html#hydrogeologie-hübner-et-al.-2015",
-    "title": "1  Einführung",
-    "section": "3.5 Hydrogeologie (Hübner et al., 2015)",
-    "text": "3.5 Hydrogeologie (Hübner et al., 2015)\n\n\n\nWasserspeicher in Hangdellen am Teststandort Mulda",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#untersuchung-von-halden-günther-et-al.-2006",
-    "href": "einfuehrung.html#untersuchung-von-halden-günther-et-al.-2006",
-    "title": "1  Einführung",
-    "section": "3.6 Untersuchung von Halden (Günther et al., 2006)",
-    "text": "3.6 Untersuchung von Halden (Günther et al., 2006)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#praktische-realisierung",
-    "href": "einfuehrung.html#praktische-realisierung",
-    "title": "1  Einführung",
-    "section": "4.1 Praktische Realisierung",
-    "text": "4.1 Praktische Realisierung\n\nKombination aus positiver & negativer Phase mit Ausschaltpausen\n\n\n\n\nStromsignal (square wave with 50% duty cycle)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#d-geoelektrik-schlumberger",
-    "href": "einfuehrung.html#d-geoelektrik-schlumberger",
-    "title": "1  Einführung",
-    "section": "4.2 2D-Geoelektrik (Schlumberger)",
-    "text": "4.2 2D-Geoelektrik (Schlumberger)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#d-geoelektrik-wenner-beta",
-    "href": "einfuehrung.html#d-geoelektrik-wenner-beta",
-    "title": "1  Einführung",
-    "section": "4.3 2D-Geoelektrik (Wenner-\\(\\beta\\))",
-    "text": "4.3 2D-Geoelektrik (Wenner-\\(\\beta\\))",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#beispiel-modell",
-    "href": "einfuehrung.html#beispiel-modell",
-    "title": "1  Einführung",
-    "section": "4.4 Beispiel: Modell",
-    "text": "4.4 Beispiel: Modell",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#stromverteilung-homogener-fall",
-    "href": "einfuehrung.html#stromverteilung-homogener-fall",
-    "title": "1  Einführung",
-    "section": "4.5 Stromverteilung homogener Fall",
-    "text": "4.5 Stromverteilung homogener Fall",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#beispiel-strom-potential",
-    "href": "einfuehrung.html#beispiel-strom-potential",
-    "title": "1  Einführung",
-    "section": "4.6 Beispiel: Strom & Potential",
-    "text": "4.6 Beispiel: Strom & Potential",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#beispiel-pseudosektion",
-    "href": "einfuehrung.html#beispiel-pseudosektion",
-    "title": "1  Einführung",
-    "section": "4.7 Beispiel: Pseudosektion",
-    "text": "4.7 Beispiel: Pseudosektion",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#beispiel-untergrundmodell",
-    "href": "einfuehrung.html#beispiel-untergrundmodell",
-    "title": "1  Einführung",
-    "section": "4.8 Beispiel: Untergrundmodell",
-    "text": "4.8 Beispiel: Untergrundmodell",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#pseudosektion-wenner-array",
-    "href": "einfuehrung.html#pseudosektion-wenner-array",
-    "title": "1  Einführung",
-    "section": "4.9 Pseudosektion Wenner-Array",
-    "text": "4.9 Pseudosektion Wenner-Array",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#pseudosektion-schlumberger-array",
-    "href": "einfuehrung.html#pseudosektion-schlumberger-array",
-    "title": "1  Einführung",
-    "section": "4.10 Pseudosektion Schlumberger-Array",
-    "text": "4.10 Pseudosektion Schlumberger-Array",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#dipol-dipol-mit-leitfähiger-einlagerung",
-    "href": "einfuehrung.html#dipol-dipol-mit-leitfähiger-einlagerung",
-    "title": "1  Einführung",
-    "section": "4.11 Dipol-Dipol mit leitfähiger Einlagerung",
-    "text": "4.11 Dipol-Dipol mit leitfähiger Einlagerung",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#dipol-dipol-mit-resistiver-einlagerung",
-    "href": "einfuehrung.html#dipol-dipol-mit-resistiver-einlagerung",
-    "title": "1  Einführung",
-    "section": "4.12 Dipol-Dipol mit resistiver Einlagerung",
-    "text": "4.12 Dipol-Dipol mit resistiver Einlagerung",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#vergleich-von-elektrodenanordnungen",
-    "href": "einfuehrung.html#vergleich-von-elektrodenanordnungen",
-    "title": "1  Einführung",
-    "section": "6.1 Vergleich von Elektrodenanordnungen",
-    "text": "6.1 Vergleich von Elektrodenanordnungen\n\n\n\n\nWA\nWB\nSL\nDD\nMG\n\n\n\n\nSignalstärke\nH\nM\nM\nL\nH\n\n\nHorizontale Auflösung\nM\nM\nM\nH\nM\n\n\nVertikale Auflösung\nL\nL\nM\nL\nM\n\n\nErkundungstiefe\nH\nH\nM\nL\nL\n\n\nVertikale Sondierung\nL\nL\nH\nM\nM\n\n\nKartierung\nH\nH\nL\nH\nM\n\n\n\n(Wenner-\\(\\alpha\\)/\\(\\beta\\), Schlumberger, Dipol-dipol, Multi-gradient)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#beispiel-modell-1",
-    "href": "einfuehrung.html#beispiel-modell-1",
-    "title": "1  Einführung",
-    "section": "6.2 Beispiel: Modell",
-    "text": "6.2 Beispiel: Modell",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#beispiel-pseudosektion-1",
-    "href": "einfuehrung.html#beispiel-pseudosektion-1",
-    "title": "1  Einführung",
-    "section": "6.3 Beispiel: Pseudosektion",
-    "text": "6.3 Beispiel: Pseudosektion",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#beispiel-untergrundmodell-1",
-    "href": "einfuehrung.html#beispiel-untergrundmodell-1",
-    "title": "1  Einführung",
-    "section": "6.4 Beispiel: Untergrundmodell",
-    "text": "6.4 Beispiel: Untergrundmodell",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#inversion",
-    "href": "einfuehrung.html#inversion",
-    "title": "1  Einführung",
-    "section": "6.5 Inversion",
-    "text": "6.5 Inversion",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
-    ]
-  },
-  {
-    "objectID": "einfuehrung.html#inversion---methodik",
-    "href": "einfuehrung.html#inversion---methodik",
-    "title": "1  Einführung",
-    "section": "6.6 Inversion - Methodik",
-    "text": "6.6 Inversion - Methodik\nDatenvektor \\(\\vb d=\\{d_i\\}=\\{\\rho^a_i\\}\\), Modellvektor \\(\\vb m=\\{m_j\\}=\\{\\rho_j\\}\\)\nDatenmisfit \\(\\vb \\delta \\vb d = \\vb d - \\vb f(\\vb m)\\) soll klein sein (Quadrate)\nModellveränderung \\(\\delta\\vb m\\) über Sensitivitätsmatrix \\(S_{i,j}=\\pdv{f_i(\\vb m)}{m_j}=\\pdv{\\rho_a(\\rho)}{\\rho}\\)\n\\[\\Rightarrow \\vb S \\vb \\delta \\vb m = \\delta \\vb d\\]\nLeast-SquaresLösung \\(\\vb S^T \\vb S \\delta \\vb m=\\vb S^T \\delta \\vb d\\) +Zusatzterme –&gt;",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Elektromagnetische Größen</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_dc.html",
     "href": "grundgleichungen_dc.html",
-    "title": "2  Grundgleichungen",
+    "title": "2  Gleichstromgeoelektrik",
     "section": "",
-    "text": "3 Grundgleichungen",
+    "text": "2.1 Anwendung\nDie Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds.\nDie Anwendungsgebiete sind entsprechend vielfältig:",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Gleichstromgeoelektrik</span>"
     ]
   },
   {
-    "objectID": "grundgleichungen_dc.html#kontinuitäts-gleichung",
-    "href": "grundgleichungen_dc.html#kontinuitäts-gleichung",
-    "title": "2  Grundgleichungen",
-    "section": "3.1 Kontinuitäts-Gleichung",
-    "text": "3.1 Kontinuitäts-Gleichung\n\nMaxwell-Gleichungen stationär \\[\\curl \\vb H = \\vb j = \\sigma \\vb E + \\vb j_s\\]\n\\[\\div \\curl\\vb H = \\div\\vb j=\\div(\\sigma\\vb E) + \\div\\vb j_s=0\\]\n\\[\\Rightarrow -\\div(\\sigma\\vb E)=-\\div(\\sigma\\grad U)=\\div\\vb j_s\\]\nDiese partielle Differential-Gleichung (PDE) ist eine Poisson-Gleichung & beschreibt die Potentialverteilung für beliebige Leitfähigkeiten. Im Allgemeinen lösen wir sie numerisch, für einfache Fälle analytisch.",
+    "objectID": "grundgleichungen_dc.html#anwendung",
+    "href": "grundgleichungen_dc.html#anwendung",
+    "title": "2  Gleichstromgeoelektrik",
+    "section": "",
+    "text": "Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)\nHydrogeologie (Aquifer-Architektur, Kontaminationen)\nSalzwasser-Intrusion in Grundwasser-Aquifere\nGeologisch/tektonische Untersuchungen (Störungen)\nArchäologie (Fundamente, Hütten und Schlacken)\nLandwirtschaft (Feuchtigkeit und Tonanteil)\nGeorisiken (Hangrutschungen, Verkarstung)\nProzessmonitoring (Wasser- und Stoff-Transport)\n\n\n2.1.1 Anwendungs-Skalen\n\n2.1.1.1 Kleinskalig: Bäume, Böden\n\n\n\nBaumtomographie (Martin und Günther 2013)\n\n\n\n\n2.1.1.2 Mittelskalig: Geologie\n\n\n\nStörungszone Irland (Tanner u. a. 2020)\n\n\n\n\n\n2.1.2 Großskalig: Geologie\n\n\n\nCO2-Aufstieg an Störung im Egergraben (Nickschick u. a. 2019)\n\n\n\n\n2.1.3 Skalenübergreifend\n\n\n\n\n\n\nAbbildung 2.1: Salz-Süßwasser-Interaktion im DynaDeep-Projekt (Skibbe u. a. 2024)\n\n\n\n\n\n2.1.4 Hydrogeologie\n\n\n\nWasserspeicher in Hangdellen am Teststandort Mulda (Hübner u. a. 2015)\n\n\n\n\n2.1.5 3D-Geoelektrik\n\n\n\nUntersuchung von Halden (Günther u. a. 2006)",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Gleichstromgeoelektrik</span>"
     ]
   },
   {
-    "objectID": "grundgleichungen_dc.html#das-konzept-der-punktquelle",
-    "href": "grundgleichungen_dc.html#das-konzept-der-punktquelle",
-    "title": "2  Grundgleichungen",
-    "section": "3.2 Das Konzept der Punktquelle",
-    "text": "3.2 Das Konzept der Punktquelle\nElektroden sind “klein” (gegenüber Abstand zu Potentialmessung), der Strom wird an einem “Punkt” eingespeist (Integral \\(I\\)):\n\n\n\\[\\div\\vb j = I \\delta(\\vb r - \\vb r_s)\\]\n\nunendliche Stromdichte bei \\(\\vb r_s\\)\n\nIn Wirklichkeit\n\nElektroden sind ausgedehnt und haben endliche Fläche \\(\\Rightarrow\\) endliche Stromdichte\n\n\n\n\n\nElektrode (Rücker & Günther, 2011)",
+    "objectID": "grundgleichungen_dc.html#grundgleichungen",
+    "href": "grundgleichungen_dc.html#grundgleichungen",
+    "title": "2  Gleichstromgeoelektrik",
+    "section": "2.2 Grundgleichungen",
+    "text": "2.2 Grundgleichungen\n\n\n2.2.1 Kontinuitäts-Gleichung\nMaxwell-Gleichungen stationär \\[\\curl \\vb H = \\vb j = \\sigma \\vb E + \\vb j_s\\]\n\\[\\div \\curl\\vb H = \\div\\vb j=\\div(\\sigma\\vb E) + \\div\\vb j_s=0\\]\n\\[\\Rightarrow -\\div(\\sigma\\vb E)=-\\div(\\sigma\\grad U)=\\div\\vb j_s\\]\nDiese partielle Differential-Gleichung (PDE) ist eine Poisson-Gleichung & beschreibt die Potentialverteilung für beliebige Leitfähigkeiten. Im Allgemeinen lösen wir sie numerisch, für einfache Fälle analytisch.\n\n\n2.2.2 Das Konzept der Punktquelle\nElektroden sind “klein” (gegenüber Abstand zu Potentialmessung), der Strom wird an einem “Punkt” eingespeist (Integral \\(I\\)):\n\n\n\\[\\div\\vb j = I \\delta(\\vb r - \\vb r_s)\\]\n\nunendliche Stromdichte bei \\(\\vb r_s\\)\n\nIn Wirklichkeit\n\nElektroden sind ausgedehnt und haben endliche Fläche \\(\\Rightarrow\\) endliche Stromdichte\n\n\n\n\n\nElektrode (Rücker und Günther 2011)\n\n\n\n\n\n\n\n2.2.3 Lösung für homogenen Vollraum\n\\[-\\div(\\sigma\\grad U)=\\div \\vb j_s\\]\nStrom verteilt sich radial über Kugel-Oberfläche\n\\[j=I/A=I/(4\\pi r^2)\\]\n\\[U(r)=r E=r \\rho j=\\rho I / (4\\pi r)\\]\nBerechnung des (scheinbaren) spezifischen Widerstands aus \\(U\\) und \\(I\\)\n\\[\\Rightarrow \\rho_a = \\frac{U}{I} 4\\pi r=R\\cdot k \\quad\\mbox{mit}\\quad k=4\\pi r\\]\n\n\n2.2.4 Lösung für homogenen Halbraum\n\\[-\\div(\\sigma\\grad U)=\\div \\vb j_s\\]\nStrom verteilt sich radial über Halbkugel-Oberfläche\n\\[j=I/A=I/(2\\pi r^2)\\]\n\\[U(r)=r E=r \\rho j=\\rho I / (2\\pi r)\\]\nBerechnung des (scheinbaren) spezifischen Widerstands aus \\(U\\) und \\(I\\)\n\\[\\Rightarrow \\rho = \\frac{U}{I} 2\\pi r=R\\cdot k \\quad\\mbox{mit}\\quad k=2\\pi r\\]\n\n\n2.2.5 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\n\nPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]\n \n\n\n\n\n\n4-Punktmessung (Knödel u. a. 2005)\n\n\n\n\n2.2.6 Konfigurations/Geometrie-Faktor\n\\(U_{AM} = \\rho I \\frac{1}{2\\pi \\overline{AM}}\\), \\(U_{AN} = \\rho I \\frac{1}{2\\pi \\overline{AN}}\\) etc.\n\\[ \\Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) \\]\n\\[ \\Delta U = \\rho I \\big( \\frac{1}{2\\pi \\overline{AM}} - \\frac{1}{2\\pi \\overline{AN}} - \\frac{1}{2\\pi \\overline{BM}} + \\frac{1}{2\\pi \\overline{BN}}\\big)\\]\n\\[ \\Rightarrow \\rho = \\frac{\\Delta U}{I} k \\quad\\mbox{mit}\\quad k = \\frac{2\\pi}{\\frac{1}{\\overline{AM}}-\\frac{1}{\\overline{AN}}-\\frac{1}{\\overline{BM}}+\\frac{1}{\\overline{BN}}} \\]\n\n\n2.2.7 Stetigkeit an Grenzflächen\n\n\n\n\n\\[\\Rightarrow \\div(\\sigma\\vb E)=-\\div(\\sigma\\grad U)=0\\]\n\\(E_1=E_2\\Rightarrow \\rho_1 j_{x1}=\\rho_2 j_{x2}\\) \\(j_{z1}=j_{z2}\\)\n\n\n\n\n2.2.8 Verhalten an Grenzflächen\n\n\n\n\n\nÜbergang guter-schlechter Leiter\n\n\n\n\n\n\nÜbergang schlechter-guter Leiter",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Gleichstromgeoelektrik</span>"
     ]
   },
   {
-    "objectID": "grundgleichungen_dc.html#lösung-für-homogenen-vollraum",
-    "href": "grundgleichungen_dc.html#lösung-für-homogenen-vollraum",
-    "title": "2  Grundgleichungen",
-    "section": "3.3 Lösung für homogenen Vollraum",
-    "text": "3.3 Lösung für homogenen Vollraum\n\\[-\\div(\\sigma\\grad U)=\\div \\vb j_s\\]\nStrom verteilt sich radial über Kugel-Oberfläche\n\\[j=I/A=I/(4\\pi r^2)\\]\n\\[U(r)=r E=r \\rho j=\\rho I / (4\\pi r)\\]\nBerechnung des (scheinbaren) spezifischen Widerstands aus \\(U\\) und \\(I\\)\n\\[\\Rightarrow \\rho_a = \\frac{U}{I} 4\\pi r=R\\cdot k \\quad\\mbox{mit}\\quad k=4\\pi r\\]",
+    "objectID": "grundgleichungen_dc.html#ert-feldausbreitung",
+    "href": "grundgleichungen_dc.html#ert-feldausbreitung",
+    "title": "2  Gleichstromgeoelektrik",
+    "section": "2.3 ERT Feldausbreitung",
+    "text": "2.3 ERT Feldausbreitung\n\n2.3.1 Homogener Untergrund: Potentialverteilung\n\n\n\n2.3.2 Homogener Untergrund: Stromlinien\n\n\n\n2.3.3 Schlechter Leiter: Stromlinien\n\n\n\n2.3.4 Guter Leiter: Stromlinien\n\n\n\n2.3.5 Inhomogener Untergrund\n\n\n\n2.3.6 Inhomogener Untergrund: Stromlinien\n\n\n\n2.3.7 Inhomogener Untergrund: Potentialverteilung\n\n\n\n2.3.8 Homogener Untergrund: Potentialverteilung\n\n\n\n2.3.9 Laplace-Gleichung\nin einem kugelsymmetrischen Koordinatensystem\n\\[\\laplacian u = \\pdv[2]{u}{r} + \\frac{2}{r}\\pdv{u}{r}=0\\]\nIntegration liefert \\(\\pdv{u}{r}=\\frac{C_1}{r^2}\\) und dann \\(u=-\\frac{C_1}{r} + C_2\\)\nWegen \\(u(r\\rightarrow\\infty)=0\\) gilt \\(C_2\\)=0\n\\(I=4\\pi r^2 j=-4\\pi r^2 \\sigma\\pdv{u}{r}=-4\\pi\\sigma C_1 \\quad\\Rightarrow\\quad u=\\frac{I\\rho}{4\\pi r}\\)",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#lösung-für-homogenen-halbraum",
-    "href": "grundgleichungen_dc.html#lösung-für-homogenen-halbraum",
-    "title": "2  Grundgleichungen",
-    "section": "3.4 Lösung für homogenen Halbraum",
-    "text": "3.4 Lösung für homogenen Halbraum\n\\[-\\div(\\sigma\\grad U)=\\div \\vb j_s\\]\nStrom verteilt sich radial über Halbkugel-Oberfläche\n\\[j=I/A=I/(2\\pi r^2)\\]\n\\[U(r)=r E=r \\rho j=\\rho I / (2\\pi r)\\]\nBerechnung des (scheinbaren) spezifischen Widerstands aus \\(U\\) und \\(I\\)\n\\[\\Rightarrow \\rho = \\frac{U}{I} 2\\pi r=R\\cdot k \\quad\\mbox{mit}\\quad k=2\\pi r\\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#zwei-strom-elektroden",
-    "href": "grundgleichungen_dc.html#zwei-strom-elektroden",
-    "title": "2  Grundgleichungen",
-    "section": "3.5 Zwei Strom-Elektroden",
-    "text": "3.5 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\n\nHinweisPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#punktmessung-knödel-2005",
-    "href": "grundgleichungen_dc.html#punktmessung-knödel-2005",
-    "title": "2  Grundgleichungen",
-    "section": "3.6 4-Punktmessung (Knödel, 2005)",
-    "text": "3.6 4-Punktmessung (Knödel, 2005)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#konfigurationsgeometrie-faktor",
-    "href": "grundgleichungen_dc.html#konfigurationsgeometrie-faktor",
-    "title": "2  Grundgleichungen",
-    "section": "3.7 Konfigurations/Geometrie-Faktor",
-    "text": "3.7 Konfigurations/Geometrie-Faktor\n\\(U_{AM} = \\rho I \\frac{1}{2\\pi \\overline{AM}}\\), \\(U_{AN} = \\rho I \\frac{1}{2\\pi \\overline{AN}}\\) etc.\n\\[ \\Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) \\]\n\\[ \\Delta U = \\rho I \\big( \\frac{1}{2\\pi \\overline{AM}} - \\frac{1}{2\\pi \\overline{AN}} - \\frac{1}{2\\pi \\overline{BM}} + \\frac{1}{2\\pi \\overline{BN}}\\big)\\]\n\\[ \\Rightarrow \\rho = \\frac{\\Delta U}{I} k \\quad\\mbox{mit}\\quad k = \\frac{2\\pi}{\\frac{1}{\\overline{AM}}-\\frac{1}{\\overline{AN}}-\\frac{1}{\\overline{BM}}+\\frac{1}{\\overline{BN}}} \\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#stetigkeit-an-grenzflächen",
-    "href": "grundgleichungen_dc.html#stetigkeit-an-grenzflächen",
-    "title": "2  Grundgleichungen",
-    "section": "3.8 Stetigkeit an Grenzflächen",
-    "text": "3.8 Stetigkeit an Grenzflächen\n\n\n\n\n\\[\\Rightarrow \\div(\\sigma\\vb E)=-\\div(\\sigma\\grad U)=0\\]\n\\(E_1=E_2\\Rightarrow \\rho_1 j_{x1}=\\rho_2 j_{x2}\\) \\(j_{z1}=j_{z2}\\)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#homogener-untergrund-potentialverteilung",
-    "href": "grundgleichungen_dc.html#homogener-untergrund-potentialverteilung",
-    "title": "2  Grundgleichungen",
-    "section": "4.1 Homogener Untergrund: Potentialverteilung",
-    "text": "4.1 Homogener Untergrund: Potentialverteilung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#homogener-untergrund-stromlinien",
-    "href": "grundgleichungen_dc.html#homogener-untergrund-stromlinien",
-    "title": "2  Grundgleichungen",
-    "section": "4.2 Homogener Untergrund: Stromlinien",
-    "text": "4.2 Homogener Untergrund: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#schlechter-leiter-stromlinien",
-    "href": "grundgleichungen_dc.html#schlechter-leiter-stromlinien",
-    "title": "2  Grundgleichungen",
-    "section": "4.3 Schlechter Leiter: Stromlinien",
-    "text": "4.3 Schlechter Leiter: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#guter-leiter-stromlinien",
-    "href": "grundgleichungen_dc.html#guter-leiter-stromlinien",
-    "title": "2  Grundgleichungen",
-    "section": "4.4 Guter Leiter: Stromlinien",
-    "text": "4.4 Guter Leiter: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#inhomogener-untergrund",
-    "href": "grundgleichungen_dc.html#inhomogener-untergrund",
-    "title": "2  Grundgleichungen",
-    "section": "4.5 Inhomogener Untergrund",
-    "text": "4.5 Inhomogener Untergrund",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#inhomogener-untergrund-stromlinien",
-    "href": "grundgleichungen_dc.html#inhomogener-untergrund-stromlinien",
-    "title": "2  Grundgleichungen",
-    "section": "4.6 Inhomogener Untergrund: Stromlinien",
-    "text": "4.6 Inhomogener Untergrund: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#inhomogener-untergrund-potentialverteilung",
-    "href": "grundgleichungen_dc.html#inhomogener-untergrund-potentialverteilung",
-    "title": "2  Grundgleichungen",
-    "section": "4.7 Inhomogener Untergrund: Potentialverteilung",
-    "text": "4.7 Inhomogener Untergrund: Potentialverteilung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#homogener-untergrund-potentialverteilung-1",
-    "href": "grundgleichungen_dc.html#homogener-untergrund-potentialverteilung-1",
-    "title": "2  Grundgleichungen",
-    "section": "4.8 Homogener Untergrund: Potentialverteilung",
-    "text": "4.8 Homogener Untergrund: Potentialverteilung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#laplace-gleichung",
-    "href": "grundgleichungen_dc.html#laplace-gleichung",
-    "title": "2  Grundgleichungen",
-    "section": "4.9 Laplace-Gleichung",
-    "text": "4.9 Laplace-Gleichung\nin einem kugelsymmetrischen Koordinatensystem\n\\[\\laplacian u = \\pdv[2]{u}{r} + \\frac{2}{r}\\pdv{u}{r}=0\\]\nIntegration liefert \\(\\pdv{u}{r}=\\frac{C_1}{r^2}\\) und dann \\(u=-\\frac{C_1}{r} + C_2\\)\nWegen \\(u(r\\rightarrow\\infty)=0\\) gilt \\(C_2\\)=0\n\\(I=4\\pi r^2 j=-4\\pi r^2 \\sigma\\pdv{u}{r}=-4\\pi\\sigma C_1 \\quad\\Rightarrow\\quad u=\\frac{I\\rho}{4\\pi r}\\)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Gleichstromgeoelektrik</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_dc.html#lösung-für-homogenen-halbraum-1",
     "href": "grundgleichungen_dc.html#lösung-für-homogenen-halbraum-1",
-    "title": "2  Grundgleichungen",
-    "section": "4.10 Lösung für homogenen Halbraum",
-    "text": "4.10 Lösung für homogenen Halbraum\n\\[-\\div(\\sigma\\grad U)=\\div \\vb j_s\\]\nStrom verteilt sich radial über Halbkugel-Oberfläche\n\\[j=I/A=I/(2\\pi r^2)\\]\n\\[U(r)=r E=r \\rho j=\\rho I / (2\\pi r)\\]\nBerechnung des (scheinbaren) spezifischen Widerstands aus \\(U\\) und \\(I\\)\n\\[\\Rightarrow \\rho = \\frac{U}{I} 2\\pi r=R\\cdot k \\quad\\mbox{mit}\\quad k=2\\pi r\\]",
+    "title": "2  Gleichstromgeoelektrik",
+    "section": "2.4 Lösung für homogenen Halbraum",
+    "text": "2.4 Lösung für homogenen Halbraum\n\\[-\\div(\\sigma\\grad U)=\\div \\vb j_s\\]\nStrom verteilt sich radial über Halbkugel-Oberfläche\n\\[j=I/A=I/(2\\pi r^2)\\]\n\\[U(r)=r E=r \\rho j=\\rho I / (2\\pi r)\\]\nBerechnung des (scheinbaren) spezifischen Widerstands aus \\(U\\) und \\(I\\)\n\\[\\Rightarrow \\rho = \\frac{U}{I} 2\\pi r=R\\cdot k \\quad\\mbox{mit}\\quad k=2\\pi r\\]\n\n2.4.1 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\nPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]\n \n\n\n\n\n2.4.2 Potentialverteilung\n\n\n\n2.4.3 Stromlinien",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#zwei-strom-elektroden-1",
-    "href": "grundgleichungen_dc.html#zwei-strom-elektroden-1",
-    "title": "2  Grundgleichungen",
-    "section": "4.11 Zwei Strom-Elektroden",
-    "text": "4.11 Zwei Strom-Elektroden\n\n\n\n\n\n\n\n\nHinweisPol-Messungen\n\n\n\nwerden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.\n\n\n\n\n\nÜberlagerung der Potentiale \\[u(\\vb r) = \\frac{I\\rho}{2\\pi} \\Big(\\frac{1}{|\\vb r - \\vb r_A|}-\\frac{1}{|\\vb r - \\vb r_B|} \\Big)\\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#potentialverteilung",
-    "href": "grundgleichungen_dc.html#potentialverteilung",
-    "title": "2  Grundgleichungen",
-    "section": "4.12 Potentialverteilung",
-    "text": "4.12 Potentialverteilung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#stromlinien",
-    "href": "grundgleichungen_dc.html#stromlinien",
-    "title": "2  Grundgleichungen",
-    "section": "4.13 Stromlinien",
-    "text": "4.13 Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
-    ]
-  },
-  {
-    "objectID": "grundgleichungen_dc.html#punktmessung-knödel-2005-1",
-    "href": "grundgleichungen_dc.html#punktmessung-knödel-2005-1",
-    "title": "2  Grundgleichungen",
-    "section": "4.14 4-Punktmessung (Knödel, 2005)",
-    "text": "4.14 4-Punktmessung (Knödel, 2005)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Gleichstromgeoelektrik</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_dc.html#konfigurationsgeometrie-faktor-1",
     "href": "grundgleichungen_dc.html#konfigurationsgeometrie-faktor-1",
-    "title": "2  Grundgleichungen",
-    "section": "4.15 Konfigurations/Geometrie-Faktor",
-    "text": "4.15 Konfigurations/Geometrie-Faktor\n\n\\(U_{AM} = \\frac{\\rho I}{2\\pi} \\frac{1}{\\overline{AM}}\\), \\(U_{AN} = \\frac{\\rho I}{2\\pi}  \\frac{1}{\\overline{AN}}\\), \\(U_{BM} = \\frac{\\rho I}{2\\pi}  \\frac{1}{\\overline{BM}}\\), \\(U_{BN} = \\frac{\\rho I}{2\\pi}  \\frac{1}{\\overline{BN}}\\)\n\\[ \\Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) \\]\n\\[ \\Delta U = \\frac{\\rho I}{2\\pi} \\big( \\frac{1}{\\overline{AM}} - \\frac{1}{\\overline{AN}} - \\frac{1}{\\overline{BM}} + \\frac{1}{\\overline{BN}}\\big)\\]\n\\[ \\Rightarrow \\rho = \\frac{\\Delta U}{I} k \\quad\\mbox{mit}\\quad k = \\frac{2\\pi}{\\frac{1}{\\overline{AM}}-\\frac{1}{\\overline{AN}}-\\frac{1}{\\overline{BM}}+\\frac{1}{\\overline{BN}}} \\]",
+    "title": "2  Gleichstromgeoelektrik",
+    "section": "2.5 Konfigurations/Geometrie-Faktor",
+    "text": "2.5 Konfigurations/Geometrie-Faktor\n\n\\(U_{AM} = \\frac{\\rho I}{2\\pi} \\frac{1}{\\overline{AM}}\\), \\(U_{AN} = \\frac{\\rho I}{2\\pi}  \\frac{1}{\\overline{AN}}\\), \\(U_{BM} = \\frac{\\rho I}{2\\pi}  \\frac{1}{\\overline{BM}}\\), \\(U_{BN} = \\frac{\\rho I}{2\\pi}  \\frac{1}{\\overline{BN}}\\)\n\\[ \\Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) \\]\n\\[ \\Delta U = \\frac{\\rho I}{2\\pi} \\big( \\frac{1}{\\overline{AM}} - \\frac{1}{\\overline{AN}} - \\frac{1}{\\overline{BM}} + \\frac{1}{\\overline{BN}}\\big)\\]\n\\[ \\Rightarrow \\rho = \\frac{\\Delta U}{I} k \\quad\\mbox{mit}\\quad k = \\frac{2\\pi}{\\frac{1}{\\overline{AM}}-\\frac{1}{\\overline{AN}}-\\frac{1}{\\overline{BM}}+\\frac{1}{\\overline{BN}}} \\]\n\n\n\n\nGünther T, Rücker C und Spitzer K. 2006. Three-dimensional modeling and inversion of dc resistivity data incorporating topography - II: Inversion. Geophys. J. Int. 166. 506–17\n\n\nHübner R, Heller K, Günther T und Kleber A. 2015. Monitoring hillslope moisture dynamics with surface ERT for enhancing spatial significance of hydrometric point measurements. Hydrology and Earth System Sciences. 19. 225–40 Online: http://www.hydrol-earth-syst-sci.net/19/225/2015/\n\n\nKnödel K, Krummel H und Lange G. 2005. Handbuch zur Erkundung des Untergrundes von Deponien und Altlasten - Band 3: Geophysik (Springer-Verlag)\n\n\nMartin T und Günther T. 2013. Complex resistivity tomography (CRT) for fungus detection on standing oak trees. European Journal of Forest Research. 132. 765–76 Online: http://dx.doi.org/10.1007/s10342-013-0711-4\n\n\nNickschick T, Flechsig C, Mrlina J, Oppermann F, Löbig F und Günther T. 2019. Large-scale electrical resistivity tomography in the Cheb Basin (Eger Rift) at an International Continental Drilling Program (ICDP) monitoring site to image fluid-related structures. Solid Earth. 10. 1951–69 Online: https://www.solid-earth.net/10/1951/2019/\n\n\nRücker C und Günther T. 2011. The simulation of finite ERT electrodes using the complete electrode model. Geophysics. 76. F227\n\n\nSkibbe N, Günther T, Schwalfenberg K, Meyer R, Reckhardt A, Greskowiak J, Massmann G und Müller-Petke M. 2024. Comparison of methods measuring electrical conductivity in coastal aquifers. Journal of Hydrology. 643. 131905\n\n\nTanner D C, Buness H, Igel J, Günther T, Gabriel G, Skiba P, Plenefisch T, Gestermann N und Walter T R. 2020. Chapter 3 - Fault detection. Understanding Faults Hrsg D Tanner und C Brandes (Elsevier) S 81–146 Online: http://www.sciencedirect.com/science/article/pii/B9780128159859000035",
     "crumbs": [
       "Geoelektrik",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Gleichstromgeoelektrik</span>"
     ]
   },
   {
@@ -658,84 +170,7 @@
     "href": "sens_arrays.html",
     "title": "3  Sensitivitäten und Messanordnungen",
     "section": "",
-    "text": "4 Sensitivitäten",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#herleitung",
-    "href": "sens_arrays.html#herleitung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.1 Herleitung",
-    "text": "4.1 Herleitung\nWie wirkt sich eine Änderung der Leitfähigkeit auf den Messwert aus? \\[S(\\vb r)=\\pdv{\\rho_a}{\\rho(\\vb r)}\\]\n\\[\\div((\\sigma+\\delta\\sigma)\\grad (u+\\delta u))=0\\]\n\\[\\div(\\sigma\\grad u)+\\div(\\delta\\sigma\\grad u)+\\div(\\sigma\\grad \\delta u)+\\div(\\delta\\sigma\\grad \\delta u)=0\\]\n\\[\\Rightarrow S(\\vb r)=\\frac{k}{\\rho^2} \\frac{\\grad u^{AB}}{I^{AB}} \\frac{\\grad u^{MN}}{I^{MN}}=\n\\frac{k}{4\\pi^2} \\qty(\\frac{\\vb r_A}{r_A^3}-\\frac{\\vb r_B}{r_B^3})\\qty(\\frac{\\vb r_M}{r_M^3}-\\frac{\\vb r_N}{r_N^3})\\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-anordnung",
-    "href": "sens_arrays.html#wenner-anordnung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.2 Wenner-Anordnung",
-    "text": "4.2 Wenner-Anordnung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-anordnung---sensitivität",
-    "href": "sens_arrays.html#wenner-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.3 Wenner-Anordnung - Sensitivität",
-    "text": "4.3 Wenner-Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#schlumberger-anordnung---sensitivität",
-    "href": "sens_arrays.html#schlumberger-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.4 Schlumberger-Anordnung - Sensitivität",
-    "text": "4.4 Schlumberger-Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-alpha-anordnung---sensitivität",
-    "href": "sens_arrays.html#wenner-alpha-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.5 Wenner-\\(\\alpha\\) Anordnung - Sensitivität",
-    "text": "4.5 Wenner-\\(\\alpha\\) Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#wenner-beta-anordnung---sensitivität",
-    "href": "sens_arrays.html#wenner-beta-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.6 Wenner-\\(\\beta\\) Anordnung - Sensitivität",
-    "text": "4.6 Wenner-\\(\\beta\\) Anordnung - Sensitivität",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#dipol-dipol-anordnung---sensitivität",
-    "href": "sens_arrays.html#dipol-dipol-anordnung---sensitivität",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.7 Dipol-Dipol-Anordnung - Sensitivität",
-    "text": "4.7 Dipol-Dipol-Anordnung - Sensitivität",
+    "text": "3.1 Herleitung\nGegeben sei eine Vier-Punkt-Anordnung AB-MN, bei einer Leitfähigkeitsverteilung \\(\\sigma\\) ergibt sich eine Mess-Spannung \\(\\phi_{MN}\\) bei einem Einspeisestrom \\(I_{AB}\\). Frage: Wie wirkt sich eine Änderung der Leitfähigkeit \\(\\delta\\sigma\\) auf den Messwert aus?\nDabei betrachten wir als Messgröße den scheinbaren spezifischen Widerstand \\(\\rho_a\\) und als Variable den spezifischen Widerstand \\(\\rho\\), um eine einheitenlose Größe zu erhalten.\n\\[S(\\vb r)=\\pdv{\\rho_a}{\\rho(\\vb r)}\\]\nDiese wird als Sensitivitätsfunktion bezeichnet.\nWir setzen \\(\\sigma+\\delta\\sigma\\) in die Kontinuitätsgleichung ein:\n\\[\\div((\\sigma+\\delta\\sigma)\\grad (u+\\delta u))=\\]\n\\[\\div(\\sigma\\grad u)+\\div(\\delta\\sigma\\grad u)+\\div(\\sigma\\grad \\delta u)+\\div(\\delta\\sigma\\grad \\delta u)=I\\delta(\\vb r-\\vb r_s)\\]\nGeselowitz (1971):\n\\[\\Rightarrow S(\\vb r)=\\frac{k}{\\rho^2} \\int\\Omega\\frac{\\grad u^{AB}}{I^{AB}} \\frac{\\grad u^{MN}}{I^{MN}}\\dd\\Omega\\]\nIm homogenen Halbraum können wir die Lösung einsetzen und erhalten\n\\[\\Rightarrow S(\\vb r)=\\frac{k}{4\\pi^2} \\int\\Omega\\qty(\\frac{\\vb r_A}{r_A^3}-\\frac{\\vb r_B}{r_B^3})\\qty(\\frac{\\vb r_M}{r_M^3}-\\frac{\\vb r_N}{r_N^3})\\dd\\Omega\\]\nIm Folgenden betrachten wir ausschließlich die Sensitivität des homogenen Halbraums, was für das Verständnis völlig ausreichend ist. Natürlich hängt die Potentialverteilung von der Leitfähigkeit selbst ab. Insbesondere wenn man Logarithmen betrachtet, ist der Grad der Nichtlinearität aber klein, so dass die grundlegenden Bilder bei kleinen Kontrasten sehr ähnlich sind.\nMan beachte außerdem, dass Strom- und Potential-Elektroden austauschbar sind. Wir diskretisieren den Untergrund in ein Dreiecksnetz und integrieren die Funktion über Gauss-Quadratur:\nDie Wenner-Anordnung  zeigt oberflächennah eine Abfolge von positiven und negativen Vorzeichen (Skala ist normiert). Eine Oberflächennahe Erhöhung (bis 1m Tiefe) würde ein zentrales Maximum mit zwei flankierenden Minima (und daran anschließend wieder Maxima) zeigen. Generell ist die Anordnung bis zu einer Tiefe sensitiv, die etwas kleiner als der Elktrodenabstand ist.\nDie Funktion der Schlumberger-Anordnung ist generell ähnlich,\nnur dass der mittlere Bereich schmaler ist. Anordnungen mit Spannungsmessung innerhalb der Stromelektroden werden als \\(\\alpha\\)-Typ bezeichnet (die einfach Wenner-Anordnung auch Wenner-\\(\\alpha\\) genannt). Wenn man Strom- und Spannungselektroden trennt, aber die Abstände gleich behält, erhält man die Wenner-\\(\\beta\\) Anordnung\nBei der Dipol-Dipol-Anordnung werden die Spannungs- und Strom-Strecken nicht mit vergrößert und bleiben daher kleiner als der Dipol-Abstand.",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -745,63 +180,8 @@
     "objectID": "sens_arrays.html#sensitivitäten-erklärt",
     "href": "sens_arrays.html#sensitivitäten-erklärt",
     "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "4.8 Sensitivitäten erklärt",
-    "text": "4.8 Sensitivitäten erklärt\nDie Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?\nWir betrachten eine Wenner-Messung (A-M-N-B).\n\n\n\nPotential und Strom für homogenen Fall\n\n\nNun erzeugen wir kleine flache Einlagerungen (Kreise), zunächst im Bereich der negativen Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nLeitfähige Einlagerung\n\n\nNun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nResistive Einlagerung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#homogener-untergrund-potentialverteilung",
-    "href": "sens_arrays.html#homogener-untergrund-potentialverteilung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.1 Homogener Untergrund: Potentialverteilung",
-    "text": "5.1 Homogener Untergrund: Potentialverteilung",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#homogener-untergrund-stromlinien",
-    "href": "sens_arrays.html#homogener-untergrund-stromlinien",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.2 Homogener Untergrund: Stromlinien",
-    "text": "5.2 Homogener Untergrund: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#stetigkeit-an-grenzflächen",
-    "href": "sens_arrays.html#stetigkeit-an-grenzflächen",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.3 Stetigkeit an Grenzflächen",
-    "text": "5.3 Stetigkeit an Grenzflächen\n\n\n\\[\\Rightarrow \\div(\\sigma\\vb E)=-\\div(\\sigma\\grad U)=0\\]  Brechungsgesetz:\n\nStetigkeit von\n\nPotential \\(u\\)\nTangentialkomponente von E \\(E_1=E_2\\Rightarrow \\rho_1 j_{x1}=\\rho_2 j_{x2}\\)\nNormalkomponente v. \\(j_{z1}=j_{z2}\\) \\[\\Rightarrow \\rho_1\\frac{j_{x1}}{j_{z1}}=\\rho_2\\frac{j_{x2}}{j_{z2}}\\] \\[\\rho_1\\tan\\theta_1=\\rho_2\\tan\\theta_2\\]",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#schlechter-leiter-stromlinien",
-    "href": "sens_arrays.html#schlechter-leiter-stromlinien",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.4 Schlechter Leiter: Stromlinien",
-    "text": "5.4 Schlechter Leiter: Stromlinien",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#guter-leiter-stromlinien",
-    "href": "sens_arrays.html#guter-leiter-stromlinien",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.5 Guter Leiter: Stromlinien",
-    "text": "5.5 Guter Leiter: Stromlinien",
+    "section": "3.2 Sensitivitäten erklärt",
+    "text": "3.2 Sensitivitäten erklärt\nDie Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?\nWir betrachten eine Wenner-Messung (A-M-N-B).\n\n\n\nPotential und Strom für homogenen Fall\n\n\nNun erzeugen wir kleine flache Einlagerungen (Kreise), zunächst im Bereich der negativen Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nLeitfähige Einlagerung\n\n\nNun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.\n\n\n\nResistive Einlagerung\n\n\n\n\n\nResistive Einlagerung",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -811,19 +191,8 @@
     "objectID": "sens_arrays.html#mess-strategien",
     "href": "sens_arrays.html#mess-strategien",
     "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.6 Mess-Strategien",
-    "text": "5.6 Mess-Strategien\n\n\n\n\n\n\nHinweisKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nHinweisSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nHinweisSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
-    ]
-  },
-  {
-    "objectID": "sens_arrays.html#widerstands-kartierung",
-    "href": "sens_arrays.html#widerstands-kartierung",
-    "title": "3  Sensitivitäten und Messanordnungen",
-    "section": "5.7 Widerstands-Kartierung",
-    "text": "5.7 Widerstands-Kartierung",
+    "section": "3.3 Mess-Strategien",
+    "text": "3.3 Mess-Strategien\n\n\n\n\n\n\nKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)\n\n\n\n3.3.1 Widerstands-Kartierung\n\nKartierungen mit festen Anordnungen werden heutzutage nur noch selten eingesetzt (wenn die Teufenlage eines zu suchenden, eher kleineren Objekts gut bekannt ist). Auch Sondierungen, die zur Erkundung von horizontal geschichteten Untergründen eingesetzt werden) treten immer weiter in den Hintergrund. Bei weitem häufigstes Verfahren ist die 2D-Geoelektrik (nur noch selten als Sondierungs-Kartierung bezeichnet). Manchmal werden 3D-Anordnungen oder Anordnungen unter Zuhilfenahme von Bohrlöchern eingesetzt.",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -834,29 +203,7 @@
     "href": "ves.html",
     "title": "4  Widerstands-Tiefensondierung",
     "section": "",
-    "text": "4.1 Tiefensondierung - Schlumberger",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
-    ]
-  },
-  {
-    "objectID": "ves.html#horizontale-stromdichte",
-    "href": "ves.html#horizontale-stromdichte",
-    "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.1 Horizontale Stromdichte",
-    "text": "5.1 Horizontale Stromdichte\n\n\n\\(j_x=\\sigma\\pdv{u}{x}=-\\frac{I}{2\\pi}\\pdv{x} (\\frac{1}{r_A}-\\frac{1}{r_B})\\)\nin der Mitte (\\(r_A=r_B\\), AB=\\(L\\)): \\[j_x=\\frac{I}{2\\pi} \\frac{L}{(z^2+L^2/4)^{3/2}}\\]\n\n\n\nCode anzeigen\nzL = np.arange(0, 3, .01)\njx = 1/(zL**2+0.25)**1.5/2/np.pi\nsumjx = np.cumsum(jx)\nplt.plot(zL, jx/jx[0], label=\"jx\")\nplt.plot(zL, sumjx/sumjx[-1], label=\"sum\")\nplt.legend()\nplt.xlabel(\"z/L\")\nplt.ylabel(r\"$j_x$/$\\Sigma j_x$ (normalized)\")\nplt.grid()",
-    "crumbs": [
-      "Geoelektrik",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
-    ]
-  },
-  {
-    "objectID": "ves.html#horizontale-stromdichte-integriert",
-    "href": "ves.html#horizontale-stromdichte-integriert",
-    "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.2 Horizontale Stromdichte integriert",
-    "text": "5.2 Horizontale Stromdichte integriert\n\\[\\frac{I_x}{I}(z)=\\frac{L}{2\\pi}\\int\\limits_{-\\infty}^{\\infty} \\frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\\]\n\n\n\\[\\frac{I_x}{I}(z)=\\frac{2}{\\pi}\\arctan\\frac{2z}{L} \\] - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2\n\n\n\nCode anzeigen\nplt.plot(zL, np.arctan(2*zL)*2/np.pi)\nplt.xlabel(\"z/L\")\nplt.grid()",
+    "text": "4.1 1D-Sensitivitäten",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
@@ -866,19 +213,19 @@
     "objectID": "ves.html#d-sensitivitäten",
     "href": "ves.html#d-sensitivitäten",
     "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.3 1D-Sensitivitäten",
-    "text": "5.3 1D-Sensitivitäten\n\n\n\n\n\nlogarithmisch äquidistante L (AB)\nSondierungsparameter AB/2\nMaximum bei AB/2/2\n90%-Summe bei AB/2*3",
+    "section": "",
+    "text": "4.1.1 Horizontale Stromdichte\n\n\n\\(j_x=\\sigma\\pdv{u}{x}=-\\frac{I}{2\\pi}\\pdv{x} (\\frac{1}{r_A}-\\frac{1}{r_B})\\)\nin der Mitte (\\(r_A=r_B\\), AB=\\(L\\)): \\[j_x=\\frac{I}{2\\pi} \\frac{L}{(z^2+L^2/4)^{3/2}}\\]\n\n\n\nCode anzeigen\nzL = np.arange(0, 3, .01)\njx = 1/(zL**2+0.25)**1.5/2/np.pi\nsumjx = np.cumsum(jx)\nplt.plot(zL, jx/jx[0], label=\"jx\")\nplt.plot(zL, sumjx/sumjx[-1], label=\"sum\")\nplt.legend()\nplt.xlabel(\"z/L\")\nplt.ylabel(r\"$j_x$/$\\Sigma j_x$ (normalized)\")\nplt.grid()\n\n\n\n\n\n\n\n\n\n\n\nWenn wir nun die horizontale Stromdichte über die y-Achse (in die Tafelebene hinein) aufintegrieren, erhalten wir \\[\\frac{I_x}{I}(z)=\\frac{L}{2\\pi}\\int\\limits_{-\\infty}^{\\infty} \\frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\\]\n\n\n\\[\\frac{I_x}{I}(z)=\\frac{2}{\\pi}\\arctan\\frac{2z}{L} \\] - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2\n\n\n\nCode anzeigen\nplt.plot(zL, np.arctan(2*zL)*2/np.pi)\nplt.xlabel(\"z/L\")\nplt.grid()\n\n\n\n\n\n\n\n\n\n\n\nDie 1D Sensitivitätsfunktion für eine Pol-Pol-Messung (Günther 2004) \\[ s(z) = \\frac{z}{\\sqrt{a^2+z^2}^3} \\] und damit für eine Vier-Punkt-Messung \\[ s(z) = \\frac{z}{\\sqrt{AM^2+z^2}^3} - \\frac{z}{\\sqrt{BM^2+z^2}^3} - \\frac{z}{\\sqrt{AN^2+z^2}^3} + \\frac{z}{\\sqrt{BN^2+z^2}^3} \\]\nFür eine Schlumberger-Sondierung gilt \\(AM=BN=AB/2-MN/2\\) und \\(AN=BM=AB/2+MN/2\\) \\[ s(z) = 2\\frac{z}{\\sqrt{(AB/2-MN/2)^2+z^2}^3} - 2\\frac{z}{\\sqrt{(AB/2+MN/2)^2+z^2}^3} \\]\n\n\n\n\n\nlogarithmisch äquidistante L (AB)\nSondierungsparameter AB/2\nMaximum bei AB/2/2\n90%-Summe bei AB/2*3",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
-    "objectID": "ves.html#notebook-mit-sondierung",
-    "href": "ves.html#notebook-mit-sondierung",
+    "objectID": "ves.html#inversion-am-beispiel-tiefensondierung",
+    "href": "ves.html#inversion-am-beispiel-tiefensondierung",
     "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.4 Notebook mit Sondierung",
-    "text": "5.4 Notebook mit Sondierung",
+    "section": "4.2 Inversion am Beispiel Tiefensondierung",
+    "text": "4.2 Inversion am Beispiel Tiefensondierung\n\nfrüher Auswertung mit Kurvenschablonen\nDatenanpassung durch iterative Veränderung des Modells\nZielfunktion: Quadratmittel der Abweichung Daten und Modellantwort \\[ \\Phi=\\sum (d_i-f_i(\\vb m))^2 \\rightarrow \\min \\]\nInversion: Minimierung des Misfits zwischen Daten &\n\nSensitivitäten als wichtigste Zutat (\\(\\delta\\rho\\rightarrow\\delta\\rho_a\\))",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
@@ -888,8 +235,8 @@
     "objectID": "ves.html#zielfunktion-schlechter-leiter",
     "href": "ves.html#zielfunktion-schlechter-leiter",
     "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.5 Zielfunktion schlechter Leiter",
-    "text": "5.5 Zielfunktion schlechter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/10/100 \\(\\Omega\\)m",
+    "section": "4.3 Zielfunktion schlechter Leiter",
+    "text": "4.3 Zielfunktion schlechter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/10/100 \\(\\Omega\\)m",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
@@ -899,18 +246,382 @@
     "objectID": "ves.html#zielfunktion-guter-leiter",
     "href": "ves.html#zielfunktion-guter-leiter",
     "title": "4  Widerstands-Tiefensondierung",
-    "section": "5.6 Zielfunktion guter Leiter",
-    "text": "5.6 Zielfunktion guter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/1000/100 \\(\\Omega\\)m",
+    "section": "4.4 Zielfunktion guter Leiter",
+    "text": "4.4 Zielfunktion guter Leiter\n\n\n\n3-Schicht-Fall\nMächtigkeiten 20m\nspez. Widerstände 100/1000/100 \\(\\Omega\\)m\n\n\n\n\n\n\n\n\n\nGünther T. 2004. Inversion Methods and Resolution Analysis for the 2D/3D Reconstruction of Resistivity Structures from DC Measurements phdthesis (University of Mining; Technology Freiberg)",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Widerstands-Tiefensondierung</span>"
     ]
   },
   {
+    "objectID": "ert.html",
+    "href": "ert.html",
+    "title": "5  Widerstandstomographie",
+    "section": "",
+    "text": "5.1 Oberflächenmessungen",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
+    ]
+  },
+  {
+    "objectID": "ert.html#oberflächenmessungen",
+    "href": "ert.html#oberflächenmessungen",
+    "title": "5  Widerstandstomographie",
+    "section": "",
+    "text": "5.1.1 Klassische Mess-Abfolgen\n\n\n\nSensitivitäten einer Wenner-Abfolge\n\n\n\n\n\nSensitivitäten einer Schlumberger-Abfolge\n\n\n\n\n\nSensitivitäten einer Dipol-Dipol-Abfolge",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
+    ]
+  },
+  {
+    "objectID": "ert.html#bohrlochgeoelektrik",
+    "href": "ert.html#bohrlochgeoelektrik",
+    "title": "5  Widerstandstomographie",
+    "section": "5.2 Bohrlochgeoelektrik",
+    "text": "5.2 Bohrlochgeoelektrik\n\n5.2.1 Verhalten an Grenzflächen\n\n\n\n\n\nÜbergang guter-schlechter Leiter\n\n\n\n\n\n\nÜbergang schlechter-guter Leiter\n\n\n\n\n\n\n5.2.2 Vergrabene Elektroden\nElektrode im Vollraum: \\(u=\\frac{\\rho I}{4\\pi |\\vb r-\\vb r_A|}\\) \\(\\Rightarrow\\) Geometriefaktor \\(k=\\frac{1}{4\\pi |\\vb r-\\vb r_A|}\\)\nStetigkeit an Erdoberfläche durch Spiegelelektrode in \\(\\vb r_A'\\)\nÜberlagerung \\(u=\\frac{\\rho I}{4\\pi |\\vb r-\\vb r_A|}+\\frac{\\rho I}{4\\pi |\\vb r-\\vb r_A'|}\\) \\(\\Rightarrow\\) \\(k=\\frac{1}{4\\pi |\\vb r-\\vb r_A|}+\\frac{1}{4\\pi |\\vb r-\\vb r_A'|}\\)\nAllgemeine Formel: \\(k = \\frac{4\\pi}{\\frac{1}{\\overline{AM}}+\\frac{1}{\\overline{A'M}}-\\frac{1}{\\overline{AN}}-\\frac{1}{\\overline{A'N}}-\\frac{1}{\\overline{BM}}-\\frac{1}{\\overline{B'M}}+\\frac{1}{\\overline{BN}}+\\frac{1}{\\overline{B'N}}}\\)\n\n\n5.2.3 Vergrabene Elektroden - Modellierung\n\n\n\n\n\nStetigkeit an Erdoberfläche erreicht durch Spiegelelektrode in \\(\\vb r_A'\\)\nÜberlagerung \\(u=\\frac{\\rho I}{4\\pi |\\vb r-\\vb r_A|}+\\frac{\\rho I}{4\\pi |\\vb r-\\vb r_A'|}\\)\n\\(\\Rightarrow\\) \\(k=\\frac{1}{4\\pi |\\vb r-\\vb r_A|}+\\frac{1}{4\\pi |\\vb r-\\vb r_A'|}\\)\n\n\n\n\n\n5.2.4 Bohrloch-Geoelektrik\n\nElektroden-Anordnung in einem Bohrloch\n\n\n\n\nSensitivität verschiedener Bohrlochanordnungen\n\n\n\n\n5.2.5 Crosshole-Geoelektrik\n\nVerteilung von Strom und Spannungselektroden auf 2 Bohrlöcher\n\n\n\n\nCrosshole-Arrays vom Typ AB-MN\n\n\n\n\n\nCrosshole-Arrays vom Typ AM-BN\n\n\n\n\n\nCrosshole-Arrays vom Typ AMN-B",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
+    ]
+  },
+  {
+    "objectID": "ert.html#d-geoelektrik",
+    "href": "ert.html#d-geoelektrik",
+    "title": "5  Widerstandstomographie",
+    "section": "5.3 3D-Geoelektrik",
+    "text": "5.3 3D-Geoelektrik",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
+    ]
+  },
+  {
+    "objectID": "ert.html#modellierung-inversion",
+    "href": "ert.html#modellierung-inversion",
+    "title": "5  Widerstandstomographie",
+    "section": "5.4 Modellierung & Inversion",
+    "text": "5.4 Modellierung & Inversion\n\n5.4.1 Vorwärtsrechnung\nLösung der partiellen Differentialgleichung\n\\[ -\\nabla \\cdot \\sigma \\grad u = \\delta(\\vb r - \\vb r_s)  \\]\n\n\n\nDiskretisierung des Untergrunds\n\n\n\n\n5.4.2 Inversion\n\n\n\n\n\nDiskretisierung, z.B. mit Dreiecken\nIterative Verbesserung\nVorwärtsrechnung & Sensitivitäten\nglattes Untergrundmodell\n\n\n\n\n\n5.4.3 Inversion - Methodik\nDatenvektor \\(\\vb d=\\{d_i\\}=\\{\\rho^a_i\\}\\), Modellvektor \\(\\vb m=\\{m_j\\}=\\{\\rho_j\\}\\)\nDatenmisfit \\(\\vb \\delta \\vb d = \\vb d - \\vb f(\\vb m)\\) soll klein sein (Quadrate)\nModellveränderung \\(\\delta\\vb m\\) über Sensitivitätsmatrix \\(S_{i,j}=\\pdv{f_i(\\vb m)}{m_j}=\\pdv{\\rho_a(\\rho)}{\\rho}\\)\n\\[\\Rightarrow \\vb S \\vb \\delta \\vb m = \\delta \\vb d\\]\nLeast-SquaresLösung \\(\\vb S^T \\vb S \\delta \\vb m=\\vb S^T \\delta \\vb d\\) +Zusatzterme",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
+    ]
+  },
+  {
+    "objectID": "ert.html#ausgedehnte-elektroden",
+    "href": "ert.html#ausgedehnte-elektroden",
+    "title": "5  Widerstandstomographie",
+    "section": "5.5 Ausgedehnte Elektroden",
+    "text": "5.5 Ausgedehnte Elektroden\n\nVereinfachtes Modell: Punktförmige Stromeinspeisung \\(j=I\\frac{\\vb r}{r^3}\\)\nEndliche Elektroden: Verteilung des Stroms auf Fläche\nPlattenelektroden, Linienelektroden, Ringelektroden\n(Halb)Kugel-förmige Elektroden: identische Lösung im Außenraum\n\n\n5.5.1 Nicht-Punkt-Elektroden\nDas Complete Electrode Model (CEM)\n\n\n\nErsatzschaltbild (Rücker und Günther 2011)\n\n\nZusätzliche Gleichungen: \\(z_l\\sigma\\pdv{u}{n} + u = U_l\\) auf \\(\\Gamma_l\\) und \\(\\int_{\\Gamma_l}\\sigma \\pdv{u}{n}ds=I\\)\n\n\n5.5.2 Modellierung von langen Elektroden\n\n\n\nStromdichte für Langelektroden (Ronczka u. a. 2015)\n\n\n\n\n5.5.3 Einfluss der Stecktiefe\n\n\n\nProzentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe (Rücker und Günther 2011)\n\n\n\n\n5.5.4 Langelektroden - Stromdichte\n\n\n\n(Ronczka u. a. 2015)\n\n\n\n\n5.5.5 Langelektroden - Sensitivitäten\n\n\n\n\n\n(Ronczka u. a. 2015)\n\n\n\n\n\n\n\n\n5.5.6 Lang-Elektroden-Geoelektrik (SaMoLEG)\n\n\n\n\n\nstahlverrohrte Bohrlöcher als Elektroden (Günther u. a. 2015)\n\n\n\n\n\n\n5.5.7 Ringelektroden\n\nBeispiel Salzwasser-Monitoring-System SAMOS\n\n\n\n\n\n\nSalzwasser-Monitoring-System\n\n\n\n\n\n\nModellierung Ringelektroden (Ronczka u. a. 2015)\n\n\n\n\n\n\n\n\nGünther T, Ronczka M und Voß T. 2015. Saltwater Monitoring Using Long-Electrode ERT. Geological Storage of CO2 – Long Term Security Aspects Advanced Technologies in Earth Sciences Hrsg A Liebscher und U Münch (Springer International Publishing) S 167–82\n\n\nRonczka M, Rücker C und Günther T. 2015. Numerical study of long-electrode electric resistivity tomography  Accuracy, sensitivity, and resolution. Geophysics. 80. E317–28\n\n\nRücker C und Günther T. 2011. The simulation of finite ERT electrodes using the complete electrode model. Geophysics. 76. F227",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Widerstandstomographie</span>"
+    ]
+  },
+  {
+    "objectID": "timelapse_ert.html",
+    "href": "timelapse_ert.html",
+    "title": "6  Geoelektrisches Monitoring",
+    "section": "",
+    "text": "7 Timelapse ERT - Geoelektrik-Monitoring",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Geoelektrisches Monitoring</span>"
+    ]
+  },
+  {
+    "objectID": "timelapse_ert.html#timelapse-ert",
+    "href": "timelapse_ert.html#timelapse-ert",
+    "title": "6  Geoelektrisches Monitoring",
+    "section": "7.1 Timelapse-ERT",
+    "text": "7.1 Timelapse-ERT\n\nSynthetisches Experiment: Example\nAuswertestrategien: Example",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Geoelektrisches Monitoring</span>"
+    ]
+  },
+  {
+    "objectID": "timelapse_ert.html#stofftransport-in-der-ungesättigten-zone",
+    "href": "timelapse_ert.html#stofftransport-in-der-ungesättigten-zone",
+    "title": "6  Geoelektrisches Monitoring",
+    "section": "7.2 Stofftransport in der ungesättigten Zone",
+    "text": "7.2 Stofftransport in der ungesättigten Zone\n\n\n\nMessaufbau (Persson u. a. 2015)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Geoelektrisches Monitoring</span>"
+    ]
+  },
+  {
+    "objectID": "timelapse_ert.html#transport-ungesättigt-persson2015",
+    "href": "timelapse_ert.html#transport-ungesättigt-persson2015",
+    "title": "6  Geoelektrisches Monitoring",
+    "section": "7.3 Transport ungesättigt (Persson u. a. 2015)",
+    "text": "7.3 Transport ungesättigt (Persson u. a. 2015)\n\n\n  \n\n  \n\n\n\n\n\n\n\nPersson M, Dahlin T und Günther T. 2015. Observing Solute Transport in the Capillary Fringe Using Image Analysis and Electrical Resistivity Tomography in Laboratory Experiments. Vadose Zone Journal. 14. 11p.\n\n\nRonczka M, Günther T, Grinat M, Siemon B, Scheihing K und Müller‐Petke M. 2025. Multi‐scale electrical resistivity imaging and long‐term monitoring as a tool for groundwater management. Near Surface Geophysics",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Geoelektrisches Monitoring</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html",
+    "href": "induzierte_polarisation.html",
+    "title": "7  Induzierte Polarisation",
+    "section": "",
+    "text": "7.1 Äquivalente Pumpen-Kreise",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#äquivalente-pumpen-kreise",
+    "href": "induzierte_polarisation.html#äquivalente-pumpen-kreise",
+    "title": "7  Induzierte Polarisation",
+    "section": "",
+    "text": "7.1.1 Gleichstrom-Äquivalent\n\n\n\n\n\nPumpenkreislauf (Dentith und Mudge 2014, Fig. 5.3)\n\n\n\n\n\n\nStromkreislauf (Dentith und Mudge 2014), Fig. 5.3\n\n\n\n\n\n\n7.1.2 Wechselstrom-Äquivalent (Dentith&Mudge)\n\n\n\n\n\nResistor im Wechselstrom-Kreislauf (Dentith und Mudge 2014, Fig. 5.4)\n\n\n\n\n\n\nKapazität im Wechselstrom-Kreislauf (Dentith und Mudge 2014, Fig. 5.4)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#induzierte-polarisation---zeitbereich",
+    "href": "induzierte_polarisation.html#induzierte-polarisation---zeitbereich",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.2 Induzierte Polarisation - Zeitbereich",
+    "text": "7.2 Induzierte Polarisation - Zeitbereich\n\n\n\n(Dentith und Mudge 2014)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#induzierte-polarisation---frequenzbereich",
+    "href": "induzierte_polarisation.html#induzierte-polarisation---frequenzbereich",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.3 Induzierte Polarisation - Frequenzbereich",
+    "text": "7.3 Induzierte Polarisation - Frequenzbereich\n\n\n\n\n\n(Dentith und Mudge 2014)\n\n\n\n\n7.3.1 Phasenverschiebung\n\n\n\n(Dentith und Mudge 2014)\n\n\n\\[ \\sigma^* = \\sigma' + \\imath\\sigma'' = |\\sigma| e^{\\imath\\phi} \\]",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#induzierte-polarisation",
+    "href": "induzierte_polarisation.html#induzierte-polarisation",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.4 Induzierte Polarisation",
+    "text": "7.4 Induzierte Polarisation\n\n\n\n\n\nPolarisationsmechanismen (Dentith und Mudge 2014, Fig. 5.19)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#leitfähigkeit-vs.-permittivität",
+    "href": "induzierte_polarisation.html#leitfähigkeit-vs.-permittivität",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.5 Leitfähigkeit vs. Permittivität",
+    "text": "7.5 Leitfähigkeit vs. Permittivität\n\\[ \\vb j = \\curl\\vb H=\\sigma\\vb E+\\epsilon\\dot{\\vb E}=\\sigma\\vb E + \\imath\\omega\\vb E = (\\sigma+\\imath\\omega)\\vb E\n= (\\frac{\\sigma}{\\imath\\omega}+\\epsilon)\\dot{\\vb E} \\]\n\\[ \\sigma^* = \\sigma' + \\imath\\sigma'' = \\sigma + \\imath\\omega\\epsilon \\]\n\\[ \\rho^* = (\\sigma^*)^{-1} = \\frac{\\sigma' - \\imath\\sigma''}{\\sigma'^2 + \\sigma''^2} =\n\\frac{\\sigma' - \\imath\\sigma''}{|\\sigma^*|^2} = \\rho' - \\imath\\rho'' = |\\rho^*|e^{-\\imath\\phi} \\]",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#relaxationen",
+    "href": "induzierte_polarisation.html#relaxationen",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.6 Relaxationen",
+    "text": "7.6 Relaxationen\n\n\n\n\n\nRelaxationen (Loewer u. a. 2017)\n\n\n\n\n7.6.1 Debye-Relaxation\n\nfundamentale Polarisation\n\n\\[ \\sigma(\\omega)=\\sigma_\\infty + (\\sigma_0-\\sigma_\\infty)\\frac{m}{\\imath\\omega\\tau} \\]\n\nexponentielles Abklingen\n\n\\[ U(t) = U_0 m e^{-t/\\tau} \\]",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#kramers-kronig-beziehungen",
+    "href": "induzierte_polarisation.html#kramers-kronig-beziehungen",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.7 Kramers-Kronig Beziehungen",
+    "text": "7.7 Kramers-Kronig Beziehungen\nZusammenhang Real- und Imaginärteil analytischer Funktionen\n\\[ \\rho''(\\omega) = \\frac{2\\omega}{\\pi}\\int\\limits_0^\\infty \\frac{\\rho'(x)-\\rho'(\\omega)}{x^2-\\omega^2}\\dd x \\]\n\\[ \\rho'(\\omega) = \\rho'(\\infty) + \\frac{2}{\\pi}\\int\\limits_0^\\infty \\frac{x \\rho''(x)-\\omega\\rho''(\\omega)}{x^2-\\omega^2}\\dd x \\]",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#kramers-kronig-beziehungen-1",
+    "href": "induzierte_polarisation.html#kramers-kronig-beziehungen-1",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.8 Kramers-Kronig Beziehungen",
+    "text": "7.8 Kramers-Kronig Beziehungen\n\n\n\nIP & DK Messung an Loess (Loewer u. a. 2017)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#spektrale-induzierte-polarisation-sip",
+    "href": "induzierte_polarisation.html#spektrale-induzierte-polarisation-sip",
+    "title": "7  Induzierte Polarisation",
+    "section": "7.9 Spektrale Induzierte Polarisation (SIP)",
+    "text": "7.9 Spektrale Induzierte Polarisation (SIP)\n\n\n\nREFERENCE",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#vergleich-von-geräten-martin-et-al.-2020",
+    "href": "induzierte_polarisation.html#vergleich-von-geräten-martin-et-al.-2020",
+    "title": "7  Induzierte Polarisation",
+    "section": "8.1 Vergleich von Geräten (Martin et al., 2020)",
+    "text": "8.1 Vergleich von Geräten (Martin et al., 2020)\n\n\n\nSIP256C, MPT DAS-1, ABEM Terrameter LS2, Syscal Pro Switch 72 (Martin u. a. 2020)\n\n\n\n\n\nScheinbare spez. Widerstände (Martin u. a. 2020)\n\n\n\n8.1.1 FDIP\n\n\n\nFDIP - Phasen (Martin u. a. 2020)\n\n\n\n\n8.1.2 TDIP\n\n\n\n\n\n\n\nTDIP-Zeitreihen (Martin u. a. 2020)\n\n\n\nFilter: Tiefpass, 50Hz, Offset, Drift, Elektrodenpolarisation\nGating & Stapelung \\(\\Rightarrow\\) Decay\n\n\n\n\n\n\n\n\nTDIP - Gating (Martin u. a. 2020)\n\n\n\n\n\n\n\n\n8.1.3 Inversion\n\n\n\nInversion (Martin u. a. 2020)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "induzierte_polarisation.html#umsetzung-martin-et-al.-2021",
+    "href": "induzierte_polarisation.html#umsetzung-martin-et-al.-2021",
+    "title": "7  Induzierte Polarisation",
+    "section": "8.2 Umsetzung (Martin et al. 2021)",
+    "text": "8.2 Umsetzung (Martin et al. 2021)\n\n\n\n\n\n\n\n\\(\\Rightarrow\\) Mineral-Grad/Typ  \n\n\n\n\nAbbildung 8.1: Inversionsergebnisse und Ableitung von Mineralgehalt und Typ (Martin u. a. 2021)\n\n\n\n\n\n\n\nDentith M und Mudge S T. 2014. Geophysics for the Mineral Exploration Geoscientist (Cambridge University Press)\n\n\nGünther T und Martin T. 2016. Spectral two-dimensional inversion of frequency-domain induced polarisation data from a mining slag heap. Journal of Applied Geophysics. 135. 436–48\n\n\nLoewer M, Günther T, Igel J, Kruschwitz S, Martin T und Wagner N. 2017. Ultra-broad-band electrical spectroscopy of soils and sedimentsa combined permittivity and conductivity model. Geophysical Journal International. 210. 1360–73 Online: https://doi.org/10.1093/gji/ggx242\n\n\nMartin T, Günther T, Orozco A F und Dahlin T. 2020. Evaluation of spectral induced polarization field measurements in time and frequency domain. Journal of Applied Geophysics. 180. 104141\n\n\nMartin T, Günther T, Weller A und Kuhn K. 2021. Classification of slag material by spectral induced polarization laboratory and field measurements. Journal of Applied Geophysics. 194. 104439 Online: https://doi.org/10.1016/j.jappgeo.2021.104439",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Induzierte Polarisation</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html",
+    "href": "ert_praxis.html",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "",
+    "text": "8.1 Aufgabenstellung",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#aufgabenstellung",
+    "href": "ert_praxis.html#aufgabenstellung",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "",
+    "text": "Lage und Geologie\n\n\n\n\n\n\nLuftbild und Profilanlage",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#eindrücke",
+    "href": "ert_praxis.html#eindrücke",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.2 Eindrücke",
+    "text": "8.2 Eindrücke",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#daten-profil-4",
+    "href": "ert_praxis.html#daten-profil-4",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.3 Daten Profil 4",
+    "text": "8.3 Daten Profil 4\n\n\n\n\n\n4 Ketten a 21 El. a=5m\nmulti-gradient array (Dahlin & Zhou, 2004)",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#inversion-ohne-topographie",
+    "href": "ert_praxis.html#inversion-ohne-topographie",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.4 Inversion ohne Topographie",
+    "text": "8.4 Inversion ohne Topographie",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#inversion-mit-topographie",
+    "href": "ert_praxis.html#inversion-mit-topographie",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.5 Inversion mit Topographie",
+    "text": "8.5 Inversion mit Topographie",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#inversion-ohne-topographie-2",
+    "href": "ert_praxis.html#inversion-ohne-topographie-2",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.6 Inversion ohne Topographie: 2",
+    "text": "8.6 Inversion ohne Topographie: 2",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#inversion-mit-topographie-2",
+    "href": "ert_praxis.html#inversion-mit-topographie-2",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.7 Inversion mit Topographie: 2",
+    "text": "8.7 Inversion mit Topographie: 2",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#abgleich-mit-bohrungen",
+    "href": "ert_praxis.html#abgleich-mit-bohrungen",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.8 Abgleich mit Bohrungen",
+    "text": "8.8 Abgleich mit Bohrungen",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#interpretation",
+    "href": "ert_praxis.html#interpretation",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.9 Interpretation",
+    "text": "8.9 Interpretation",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
+    "objectID": "ert_praxis.html#d-modell",
+    "href": "ert_praxis.html#d-modell",
+    "title": "8  Geoelektrik in der Praxis",
+    "section": "8.10 3D-Modell",
+    "text": "8.10 3D-Modell",
+    "crumbs": [
+      "Geoelektrik",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Geoelektrik in der Praxis</span>"
+    ]
+  },
+  {
     "objectID": "einfuehrung_em.html",
     "href": "einfuehrung_em.html",
-    "title": "5  Einführung",
+    "title": "9  Einführung",
     "section": "",
+<<<<<<< HEAD
     "text": "5.1 Prinzip\nDie elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.\nWir werden folgende wichtige Messverfahren kennenlernen:\nDas grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:\nDiesem Grundprinzip folgen alle EM-Verfahren.\nUnterschiede bestehen hinsichtlich",
     "crumbs": [
       "Elektromagnetik",
@@ -923,14 +634,18 @@
     "title": "5  Einführung",
     "section": "",
     "text": "Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld\nIm leitenden Störkörper werden elektrische Wechselfelder (Wirbelströme) induziert\nDie Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird\n\n\n\n\n\n\n\n\nder verwendeten Sender (induktiv oder galvanisch angekoppelt)\nder Stromfunktion im Sender (sinus- oder rechteckförmig)\nder gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)\nder Position der Quelle (marin, luftgestützt, bodengestützt)\nder Natur der Quelle (technisch oder natürlich)",
+=======
+    "text": "9.1 Motivation",
+>>>>>>> origin/main
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Einführung</span>"
     ]
   },
   {
     "objectID": "einfuehrung_em.html#beispiele",
     "href": "einfuehrung_em.html#beispiele",
+<<<<<<< HEAD
     "title": "5  Einführung",
     "section": "5.2 Beispiele",
     "text": "5.2 Beispiele\n\n5.2.1 Marine CSEM\nEine leistungsstarke Stromquelle wird als elektrischer Dipol über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.\nZusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der Magnetotellurik mit größerer Eindringtiefe genutzt werden.\nDas Bild zeigt schematisch das CSEM-Messkonzept des Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US.\n\n\n\nQuelle: Scripps\n\n\nDer Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.\n\n\n5.2.2 Airborne EM\nDie Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.\n\n\n\nQuelle: BGR\n\n\nDie luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:\n\nBestimmung von Salz-/Süßwassergrenzen\nGrundwassersuche\nGeologische Kartierung\nKartierung von Störungszonen\nSuche nach Altlasten\nKartierung leitfähiger Sickerwässer\nArchäologische Vermessungen\nIngenieurgeologische Messungen\nLagerstättenexploration\n\nSemi-airborne-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden.\nDas Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des DESMEX-Projektes.\n\n\n\nRochlitz et al. (2023)\n\n\n\n\n5.2.3 Magnetotellurik\nDie Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.\n\n\n\nQuelle: FU Berlin\n\n\n\n\n\nQuelle: BGR",
@@ -945,53 +660,58 @@
     "title": "5  Einführung",
     "section": "5.3 Einteilung",
     "text": "5.3 Einteilung\nEs existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.\nMöglich ist eine Unterscheidung\n\nhinsichtlich der eingesetzten Sender und Empfänger oder\nnach den Merkmalen der Felder.\n\n\nZweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung\n\n\n\n\n\n\n\n\n\nSender\nElektroden\nElektroden und Spulen\nSpulen (Erdoberfläche)\nSpulen (Luft)\n\n\n\n\nGeerdetes Kabel (galvanisch)\nWiderstandsgeoelektrik, IP\n\nMMR\n\n\n\nGeerdetes Kabel (induktiv)\n\nCSAMT\nLOTEM\n\n\n\nSpule\n\n\nSlingram, TEM, Bohrloch-EM\nAero-EM\n\n\nLanges Kabel, große Spule\n\n\nTURAM, TEM, Bohrloch-EM\nSemi-Airborne\n\n\nEbene Wellen: Vertikale Antenne\n\nVLF-R\nVLF\nVLF\n\n\nNatürliche elektromagnetische Felder\nTellurik\nMT\n\n\n\n\n\nWir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:\n\nzeitharmonisch: \\(\\mathbf{j}(\\mathbf{r}) e^{ i \\omega t }\\)\n\nmonofrequent\nKontinuum (Frequenzgemisch)\n\nZeitbereich: \\(\\mathbf{j}(\\mathbf{r}, t)\\)\n\nImpulsfolgen\nRechteckimpulsfolgen",
+=======
+    "title": "9  Einführung",
+    "section": "9.2 Beispiele",
+    "text": "9.2 Beispiele\n\n9.2.1 Marine CSEM\n\n\n\n9.2.2 Airborne EM\n\n\n\n9.2.3 Magnetotellurik",
+>>>>>>> origin/main
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Einführung</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_em.html",
     "href": "grundgleichungen_em.html",
-    "title": "6  Grundgleichungen",
+    "title": "10  Grundgleichungen",
     "section": "",
-    "text": "6.1 Maxwell-Gleichungen\nFeldgrößen werden im Zeitbereich als Funktion des Ortes und der Zeit gemessen, z.B.\n\\[\n\\mathbf{e} = \\mathbf{e}(\\mathbf{r}, t).\n\\]\nBei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.",
+    "text": "10.1 Maxwell-Gleichungen",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_em.html#maxwell-gleichungen",
     "href": "grundgleichungen_em.html#maxwell-gleichungen",
-    "title": "6  Grundgleichungen",
+    "title": "10  Grundgleichungen",
     "section": "",
-    "text": "6.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\qq{Ampere} \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\qq{Faraday} \\\\\n\\div \\mathbf{b} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n6.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\qq{Ampere} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\qq{Faraday} \\\\\n\\div \\mathbf{B} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
+    "text": "10.1.1 Zeitbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{h} & = \\mathbf{j} + \\frac{ \\partial \\mathbf{d} }{ \\partial t } \\qq{Ampere} \\\\\n\\curl \\mathbf{e} & = -\\frac{ \\partial \\mathbf{b} }{ \\partial t } \\qq{Faraday} \\\\\n\\div \\mathbf{b} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{d} & = \\rho_{E}\n\\end{align}\n\\]\n\n\n10.1.2 Frequenzbereich\n\\[\n\\begin{align}\n\\curl \\mathbf{H} & = \\mathbf{J} + i \\omega \\mathbf{D} \\qq{Ampere} \\\\\n\\curl \\mathbf{E} & = -i \\omega \\mathbf{B} \\qq{Faraday} \\\\\n\\div \\mathbf{B} & = 0 \\qq{Gauß} \\\\\n\\div \\mathbf{D} & = \\rho_{E}\n\\end{align}\n\\]",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_em.html#materialgleichungen",
     "href": "grundgleichungen_em.html#materialgleichungen",
-    "title": "6  Grundgleichungen",
-    "section": "6.2 Materialgleichungen",
-    "text": "6.2 Materialgleichungen\n\\[\n\\begin{align}\n\\mathbf{b} & = \\mu \\mathbf{h} \\\\\n\\mathbf{d} & = \\varepsilon \\mathbf{e}\n\\end{align}\n\\]\nbzw. \\[\n\\begin{align}\n\\mathbf{B} & = \\mu \\mathbf{H} \\\\\n\\mathbf{E} & = \\varepsilon \\mathbf{E}\n\\end{align}\n\\]",
+    "title": "10  Grundgleichungen",
+    "section": "10.2 Materialgleichungen",
+    "text": "10.2 Materialgleichungen\n\\[\n\\begin{align}\n\\mathbf{b} & = \\mu \\mathbf{h} \\\\\n\\mathbf{d} & = \\varepsilon \\mathbf{e}\n\\end{align}\n\\]\nbzw. \\[\n\\begin{align}\n\\mathbf{B} & = \\mu \\mathbf{H} \\\\\n\\mathbf{E} & = \\varepsilon \\mathbf{E}\n\\end{align}\n\\]",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
     "objectID": "grundgleichungen_em.html#ohmsches-gesetz",
     "href": "grundgleichungen_em.html#ohmsches-gesetz",
-    "title": "6  Grundgleichungen",
-    "section": "6.3 Ohmsches Gesetz",
-    "text": "6.3 Ohmsches Gesetz\n\\[\n\\mathbf{j} = \\sigma \\mathbf{e} \\quad\\text{  bzw.  }\\quad \\mathbf{J} = \\sigma \\mathbf{E}.\n\\]",
+    "title": "10  Grundgleichungen",
+    "section": "10.3 Ohmsches Gesetz",
+    "text": "10.3 Ohmsches Gesetz\n\\[\n\\mathbf{j} = \\sigma \\mathbf{e} \\quad\\text{  bzw.  }\\quad \\mathbf{J} = \\sigma \\mathbf{E}.\n\\]",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grundgleichungen</span>"
     ]
   },
   {
@@ -1030,7 +750,7 @@
   {
     "objectID": "magnetotellurik.html",
     "href": "magnetotellurik.html",
-    "title": "7  Magnetotellurik",
+    "title": "11  Magnetotellurik",
     "section": "",
     "text": "7.1 Theoretische Grundlagen\nAus dem System der Maxwellgleichungen erhalten wir die Helmholtz-Gleichung.\nQuellen der MT sind Magnetfelder von Strömen in der Ionosphäre und Magnetosphäre. Wegen der großen Entfernung zur Quelle können diese Felder an der Erdoberfläche als ebene Welle mit vertikaler Ausbreitungsrichtung angenommen werden.\nWir nehmen o.B.d.A. weiterhin an, dass das magnetische Quellenfeld außerhalb der Erde ein in \\(y\\)-Richtung linear polarisiertes homogenes Feld ist: \\[\n\\vb{H} = \\begin{pmatrix}\n0 \\\\ H_{y} \\\\ 0\n\\end{pmatrix}\n\\] Das anregende Feld ist eine Transversalwelle mit \\(\\vb{H} \\perp \\vb{E} \\perp \\vb{k}\\). Die Größe \\(\\vb{k}\\) bezeichnet den Wellenvektor, welcher in Ausbreitungsrichtung zeigt. Zum anregenden Magnetfeld passt also \\[\n\\vb{E} = \\begin{pmatrix}\nE_{x} \\\\ 0 \\\\ 0\n\\end{pmatrix}\n\\] Wie breiten sich die Felder \\(\\vb{E}\\) und \\(\\vb{H}\\) innerhalb der Erde aus? Da die anregenden Felder horizontal homogen sind, muss das auch für die Felder innerhalb der Erde (für \\(z\\geq 0\\)) gelten.\nWir fragen also nach \\(E_{x}(z)\\).\nDie Gleichung \\[\n\\frac{ \\partial^{2} E_{x} }{ \\partial z^{2} } + k^{2} E_{x} = 0\n\\] hat in \\(z\\geq 0\\) folgende Lösung: \\[\nE_{x}(z) = E_{x}(0) e^{ - i k z }\n\\] Unter Beachtung des Vorzeichens von \\(k = \\pm \\sqrt{ k^{2} }\\) ergibt sich eine in pos. \\(z\\)-Richtung gedämpfte Welle.\nFolgender Zusammenhang besteht zwischen elektromagnetischer Eindringtiefe und der Wellenlänge:\n\\[\n\\tau = \\frac{\\lambda}{2 \\pi}\n\\]",
     "crumbs": [
@@ -1068,27 +788,37 @@
     "text": "7.3 Datenprocessing\nDie Messwerte der MT liegen als Zeitreihen \\(\\mathbf{e}(t)\\) und \\(\\mathbf{b}(t)\\) vor.\nDie MT-Station registriert\n\nKomponenten des E-Feldes \\(E_x(t), E_y(t)\\)\nKomponenten des H-Feldes \\(H_x(t), H_y(t), H_{z}(t)\\)\n\nDie fundamentale Annahme der MT besteht darin, dass es einen linearen Zusammenhang zwischen den Horizontalkomponenten des E- und H-Feldes gibt.\nDas Ziel des MT-Datenprocessings besteht in der Berechnung (genauer: Schätzung) des Impedanztensors \\(\\mathbf{Z}(\\omega)\\).\n\\[\n\\begin{pmatrix}\nE_x(\\omega) \\\\\nE_y(\\omega)\n\\end{pmatrix}\n=\n\\begin{pmatrix}\nZ_{xx}(\\omega) & Z_{xy}(\\omega) \\\\\nZ_{yx}(\\omega) & Z_{yy}(\\omega)\n\\end{pmatrix}\n\\begin{pmatrix}\nH_x(\\omega) \\\\\nH_y(\\omega)\n\\end{pmatrix}.\n\\]\nDas Processing der MT-Zeitreihen besteht grob aus folgenden Schritten:\n\nInstrumentenkorrekturen\n\nBerücksichtigung von Dipolauslage und Messkoordinatensystem\nKenntnis des Frequenzganges der Sensorik\n\nQualitätskontrolle: Sichtung und Rauschunterdrückung\n\nEntfernen von Spikes, Dropouts\nBeseitigen von gestörten Zeitreihenintervallen\n\nAufteilen in Fenster\n\nüberlappende Segmente der Länge \\(T\\)\nTaperung\n\nFouriertransformation\n\n\\(\\hat{E}_i^{(k)}(\\omega), \\quad \\hat{H}_j^{(k)}(\\omega)\\), \\(i,j \\in {x,y}\\)\nkomplexwertige Fourierkoeffizienten für diskrete Frequenzen\n\nSpektrale Schätzung\n\nBerechnung von Kreuz- und Autospektren für jede Frequenz\n\nRobuste lineare Regression für \\(\\mathbf{Z}\\)\nFehleranalyse\nBerechnung der Darstellungsgrößen\n\nDas MT-Datenprocessing ist ein multivariates lineares Ausgleichsproblem im Frequenzbereich.",
     "crumbs": [
       "Elektromagnetik",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Magnetotellurik</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Magnetotellurik</span>"
     ]
   },
   {
     "objectID": "zusammenfassung.html",
     "href": "zusammenfassung.html",
-    "title": "8  Zusammenfassung",
+    "title": "12  Zusammenfassung",
     "section": "",
     "text": "Ipsum lorum",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Zusammenfassung</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Zusammenfassung</span>"
+    ]
+  },
+  {
+    "objectID": "literatur.html",
+    "href": "literatur.html",
+    "title": "Literaturverzeichnis",
+    "section": "",
+    "text": "Dentith M and Mudge S T. 2014. Geophysics for the\nmineral exploration geoscientist (Cambridge University Press)\n\n\nGünther T. 2004. Inversion Methods and\nResolution Analysis for the\n2D/3D Reconstruction of\nResistivity Structures from DC\nMeasurements PhD thesis (University of Mining;\nTechnology Freiberg)\n\n\nGünther T and Martin T. 2016. Spectral\ntwo-dimensional inversion of frequency-domain induced polarisation data\nfrom a mining slag heap. Journal of Applied Geophysics.\n135. 436–48\n\n\nGünther T, Ronczka M and Voß T. 2015. Saltwater\nMonitoring Using\nLong-Electrode ERT.\nGeological storage of CO2 – long term security aspects Advanced\ntechnologies in earth sciences ed A Liebscher and U Münch (Springer\nInternational Publishing) pp 167–82\n\n\nGünther T, Rücker C and Spitzer K. 2006. Three-dimensional\nmodeling and inversion of dc resistivity data incorporating topography -\nII: inversion. Geophys. J. Int.\n166. 506–17\n\n\nHübner R, Heller K, Günther T and Kleber A. 2015.\nMonitoring hillslope moisture dynamics with surface\nERT for enhancing spatial significance of hydrometric point\nmeasurements. Hydrology and Earth System Sciences.\n19. 225–40 Online: http://www.hydrol-earth-syst-sci.net/19/225/2015/\n\n\nKnödel K, Krummel H and Lange G. 2005. Handbuch zur erkundung des\nuntergrundes von deponien und altlasten - band 3: geophysik\n(Springer-Verlag)\n\n\nLoewer M, Günther T, Igel J, Kruschwitz S, Martin T and Wagner N. 2017.\nUltra-broad-band electrical spectroscopy of soils and\nsedimentsa combined permittivity and conductivity model.\nGeophysical Journal International. 210.\n1360–73 Online: https://doi.org/10.1093/gji/ggx242\n\n\nMartin T and Günther T. 2013. Complex resistivity\ntomography (CRT) for fungus detection on standing oak\ntrees. European Journal of Forest Research.\n132. 765–76 Online: http://dx.doi.org/10.1007/s10342-013-0711-4\n\n\nMartin T, Günther T, Orozco A F and Dahlin T. 2020. Evaluation of\nspectral induced polarization field measurements in time and frequency\ndomain. Journal of Applied Geophysics.\n180. 104141\n\n\nMartin T, Günther T, Weller A and Kuhn K. 2021. Classification of slag\nmaterial by spectral induced polarization laboratory and field\nmeasurements. Journal of Applied Geophysics.\n194. 104439 Online: https://doi.org/10.1016/j.jappgeo.2021.104439\n\n\nNickschick T, Flechsig C, Mrlina J, Oppermann F, Löbig F and Günther T.\n2019. Large-scale electrical resistivity tomography in the Cheb\nBasin (Eger Rift) at an International\nContinental Drilling Program\n(ICDP) monitoring site to image fluid-related structures.\nSolid Earth. 10. 1951–69 Online: https://www.solid-earth.net/10/1951/2019/\n\n\nPersson M, Dahlin T and Günther T. 2015. Observing\nSolute Transport in the Capillary\nFringe Using Image\nAnalysis and Electrical\nResistivity Tomography in\nLaboratory Experiments. Vadose Zone\nJournal. 14. 11p.\n\n\nRonczka M, Günther T, Grinat M, Siemon B, Scheihing K and Müller‐Petke\nM. 2025. Multi‐scale\nelectrical resistivity imaging and long‐term monitoring as a tool for\ngroundwater management. Near Surface Geophysics\n\n\nRonczka M, Rücker C and Günther T. 2015. Numerical\nstudy of long-electrode electric resistivity tomography \nAccuracy, sensitivity, and resolution.\nGeophysics. 80. E317–28\n\n\nRücker C and Günther T. 2011. The simulation of\nfinite ERT electrodes using the complete electrode\nmodel. Geophysics. 76. F227\n\n\nSkibbe N, Günther T, Schwalfenberg K, Meyer R, Reckhardt A, Greskowiak\nJ, Massmann G and Müller-Petke M. 2024. Comparison of\nmethods measuring electrical conductivity in coastal aquifers.\nJournal of Hydrology. 643. 131905\n\n\nTanner D C, Buness H, Igel J, Günther T, Gabriel G, Skiba P, Plenefisch\nT, Gestermann N and Walter T R. 2020. Chapter 3 - fault detection.\nUnderstanding faults ed D Tanner and C Brandes (Elsevier) pp\n81–146 Online: http://www.sciencedirect.com/science/article/pii/B9780128159859000035",
+    "crumbs": [
+      "Literaturverzeichnis"
     ]
   },
   {
     "objectID": "slidedecks.html",
     "href": "slidedecks.html",
-    "title": "9  Slide decks",
+    "title": "13  Slide decks",
     "section": "",
     "text": "Here are the slide decks:\n\n👉 Methods — Slides\n\n\n\n\n👉 History — Slides",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Slide decks</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Slide decks</span>"
     ]
   },
   {

@@ -1,0 +1,130 @@
+# Geoelektrisches Monitoring
+
+# Timelapse ERT - Geoelektrik-Monitoring
+
+* Ziel: Verfolgung von ablaufenden Prozessen
+* meist mit fest verbauten Elektroden(ketten)
+* günstiges und schnelles Verfahren, automatisierbar
+* Ziele: Infiltration, Schadstoffausbreitung, Wärmespeicher, ...
+* Fokus auf Veränderungen (Fluid-LF, Sättigung, )
+
+### Salzwasser-Monitoring-System [SAMOS](https://www.liag-institut.de/samos.html) {.unnumbered}
+
+![Tiefenverteilung, Lithologie & zeitliche Verläufe in versch. Tiefen der Station Ostland in Borkum [@Ronczka2025]](pics/SAMOS_Ostland.png)
+
+## Timelapse-ERT
+
+* Synthetisches Experiment: Example
+* Auswertestrategien: Example
+
+
+## Stofftransport in der ungesättigten Zone
+
+![Messaufbau [@Persson2015]](pics/persson-foto.jpg)
+
+## Transport ungesättigt [@Persson2015]
+:::: {.columns}
+::: {.column}
+![](pics/persson-optical1.png)
+![](pics/persson-hydrus1.png){.fragment}
+![](pics/persson-ert2.png){.fragment}
+:::
+::: {.column}
+![](pics/persson-optical4.png){.fragment}
+![](pics/persson-hydrus5.png){.fragment}
+![](pics/persson-ert3.png){.fragment}
+:::
+::::
+
+<!--
+## 3D-Crosshole ERT-Monitoring
+
+![](pics/heat/heatInjectionScheme.png)
+
+### Data Timeline
+
+::: {layout-ncol=2}
+```python
+xh = ert.CrossholeERT('heat-data.shm')
+self.filter(tmax=80)  # cut late frames
+self.filter(t=4) # remove single frame
+self.mask(rmin=10, rmax=1000, emax=0.2)
+c04 = self.extractSubset(1)
+d01 = self.extractSubset(5)
+d06 = self.extractSubset(6)
+d09 = self.extractSubset(7)
+# plotting
+ax = c04.showTimeline(a=14, m=13, n=12,
+                      b=11, label="C04")
+d01.showTimeline(ax=ax, a=14, m=12, n=10,
+                 b=8, label="D01");
+d06.showTimeline(ax=ax, a=8, m=7, n=6,
+                 b=5, label="D06");
+d09.showTimeline(ax=ax, a=3, m=2, n=1,
+                 b=0, label="D09");
+```
+
+![Temporal inhole apparent resistivity](pics/heat/data-timeline.svg)
+:::
+### 2D Inversion of selected time steps
+
+:::: {.columns}
+::: {.column width="50%"}
+```python
+xh.filter(select=['2021-08-10',
+    '2021-08-20', '2021-08-27',
+    '2021-09-09', '2021-09-21'])
+x15 = xh.extractSubset([1, 5])
+x15.mask(rmin=10, rmax=1000, emax=0.2)
+reg = {"correlationLengths": [3, 2],
+       limits=[20, 500]}
+x15.invert(t=3, reg=reg)
+x15.fullInversion(reg=reg)  # 4D inv
+```
+Geostatistical regularization (Jordi et al. 2018)
+
+:::
+::: {.column width="50%" .fragment}
+![](pics/heat/BLERT1_5cb.png)
+:::
+::::
+
+
+
+### Transformation of ratio into temperature
+::: {.r-stack}
+![](pics/heat/rt1-5_001.png){fig-align="center"}
+
+![](pics/heat/rt1-5_002.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_003.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_004.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_005.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_006.png){.fragment fig-align="center"}
+
+![](pics/heat/rt1-5_007.png){.fragment fig-align="center"}
+:::
+
+## 3D inversion result
+::: {.r-stack}
+![](pics/heat/3d-1.png){fig-align="center"}
+
+![](pics/heat/3d-2.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-3.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-4.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-5.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-6.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-7.png){.fragment fig-align="center"}
+
+![](pics/heat/3d-8.png){.fragment fig-align="center"}
+:::
+
+ -->

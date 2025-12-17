@@ -1,0 +1,65 @@
+# Geoelektrik in der Praxis
+
+* Konzeptualisierung und Experimentaldesign
+* Zugänglichkeit, Genehmigungen und Organisation
+* Durchführung der Messungen, Quality Check und Dokumentation
+* Datenanalyse (Filterung, Inversion) und Interpretation
+* Dissemination der Ergebnisse (Bericht, Vortrag, Geodaten-Upload)
+
+Beispiel: Festgesteinserkundung mit BEAK
+
+## Aufgabenstellung
+
+:::: {.columns}
+::: {.column}
+![Lage und Geologie](pics/schwerz/lage_geologie.png)
+:::
+::: {.column}
+![Luftbild und Profilanlage](pics/schwerz/luftbild.jpg)
+:::
+::::
+
+## Eindrücke
+
+![](pics/schwerz/foto.jpg)
+
+## Daten Profil 4
+
+:::: {.columns}
+::: {.column width="60%"}
+![](pics/schwerz/profil4daten.png)
+:::
+::: {.column width="40%"}
+* 4 Ketten a 21 El. a=5m
+* multi-gradient array (Dahlin & Zhou, 2004)
+:::
+::::
+
+## Inversion ohne Topographie
+
+![](pics/schwerz/profil4notopo.png)
+
+## Inversion mit Topographie
+
+![](pics/schwerz/profil4topo.png)
+
+## Inversion ohne Topographie: 2
+
+![](pics/schwerz/profil2notopo.png)
+
+## Inversion mit Topographie: 2
+
+![](pics/schwerz/profil2topo.png)
+
+## Abgleich mit Bohrungen
+
+![](pics/schwerz/drillings.jpg)
+
+## Interpretation
+
+![](pics/schwerz/profil2interpretation.png)
+
+## 3D-Modell
+
+![](pics/schwerz/3dmodell.png)
+
