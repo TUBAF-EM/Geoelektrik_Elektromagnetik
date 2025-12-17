@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Einführung – Modul Geoelektrik und Elektromagnetik</title>
+<title>7&nbsp; Magnetotellurik – Modul Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./grundgleichungen_em.html" rel="next">
-<link href="./ves.html" rel="prev">
+<link href="./zusammenfassung.html" rel="next">
+<link href="./grundgleichungen_em.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -122,7 +122,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./magnetotellurik.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -199,7 +199,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link active">
+  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
@@ -211,7 +211,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./magnetotellurik.html" class="sidebar-item-text sidebar-link">
+  <a href="./magnetotellurik.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span></a>
   </div>
 </li>
@@ -239,26 +239,18 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#prinzip" id="toc-prinzip" class="nav-link active" data-scroll-target="#prinzip"><span class="header-section-number">5.1</span> Prinzip</a></li>
-  <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">5.2</span> Beispiele</a>
-  <ul class="collapse">
-  <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</a></li>
-  <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</a></li>
-  <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</a></li>
-  </ul></li>
-  <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">5.3</span> Einteilung</a></li>
-  <li><a href="#frequenzen-und-targets" id="toc-frequenzen-und-targets" class="nav-link" data-scroll-target="#frequenzen-und-targets"><span class="header-section-number">5.4</span> Frequenzen und Targets</a></li>
-  <li><a href="#erkundungsmethoden" id="toc-erkundungsmethoden" class="nav-link" data-scroll-target="#erkundungsmethoden"><span class="header-section-number">5.5</span> Erkundungsmethoden</a></li>
-  <li><a href="#beispiele-für-em-messgeräte" id="toc-beispiele-für-em-messgeräte" class="nav-link" data-scroll-target="#beispiele-für-em-messgeräte"><span class="header-section-number">5.6</span> Beispiele für EM-Messgeräte</a></li>
+  <li><a href="#theoretische-grundlagen" id="toc-theoretische-grundlagen" class="nav-link active" data-scroll-target="#theoretische-grundlagen"><span class="header-section-number">7.1</span> Theoretische Grundlagen</a></li>
+  <li><a href="#impedanz" id="toc-impedanz" class="nav-link" data-scroll-target="#impedanz"><span class="header-section-number">7.2</span> Impedanz</a></li>
+  <li><a href="#datenprocessing" id="toc-datenprocessing" class="nav-link" data-scroll-target="#datenprocessing"><span class="header-section-number">7.3</span> Datenprocessing</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./magnetotellurik.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></h1>
 </div>
 
 
@@ -275,206 +267,218 @@ window.Quarto = {
 </header>
 
 
-<p>Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.</p>
-<p>Wir werden folgende wichtige Messverfahren kennenlernen:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lernziele">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tipp</span>Lernziele
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>Magnetotellurik</li>
-<li>CSEM</li>
-<li>Transient-Elektromagnetik</li>
+<li>Natürliche Variationen des Magnetfeldes</li>
+<li>Messgrößen</li>
+<li>Aufbau einer MT-Station</li>
+<li>Daten-Processing</li>
+<li>Darstellungsgrößen</li>
+<li>Interpretation</li>
+<li>Grenzen</li>
 </ul>
-<section id="prinzip" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="prinzip"><span class="header-section-number">5.1</span> Prinzip</h2>
-<p>Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:</p>
-<div class="columns">
-<div class="column">
-<ul>
-<li>Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld</li>
-<li>Im leitenden Störkörper werden elektrische Wechselfelder (<strong>Wirbelströme</strong>) induziert</li>
-<li>Die Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird</li>
-</ul>
-</div><div class="column">
-<p><img src="pics/em/prinzip.png" class="img-fluid"></p>
 </div>
 </div>
-<p>Diesem Grundprinzip folgen alle EM-Verfahren.</p>
-<p>Unterschiede bestehen hinsichtlich</p>
-<ul>
-<li>der verwendeten Sender (induktiv oder galvanisch angekoppelt)</li>
-<li>der Stromfunktion im Sender (sinus- oder rechteckförmig)</li>
-<li>der gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)</li>
-<li>der Position der Quelle (marin, luftgestützt, bodengestützt)</li>
-<li>der Natur der Quelle (technisch oder natürlich)</li>
-</ul>
-<p><img src="pics/em/CSEM-Maxwell.excalidraw.svg" class="img-fluid"></p>
-</section>
-<section id="beispiele" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">5.2</span> Beispiele</h2>
-<section id="marine-csem" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</h3>
-<p>Eine leistungsstarke Stromquelle wird als <em>elektrischer Dipol</em> über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.</p>
-<p>Zusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der <em>Magnetotellurik</em> mit größerer Eindringtiefe genutzt werden.</p>
-<p>Das Bild zeigt schematisch das CSEM-Messkonzept des <em>Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US</em>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/CSEM_MTconcepts.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: Scripps</figcaption>
-</figure>
+<section id="theoretische-grundlagen" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="theoretische-grundlagen"><span class="header-section-number">7.1</span> Theoretische Grundlagen</h2>
+<p>Aus dem System der Maxwellgleichungen erhalten wir die <em>Helmholtz-Gleichung</em>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Helmholtz-Gleichung der MT">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Der Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.</p>
-</section>
-<section id="airborne-em" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</h3>
-<p>Die Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/hubschrauber_namibia.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: BGR</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Helmholtz-Gleichung der MT
 </div>
-<p>Die luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:</p>
-<ul>
-<li>Bestimmung von Salz-/Süßwassergrenzen</li>
-<li>Grundwassersuche</li>
-<li>Geologische Kartierung</li>
-<li>Kartierung von Störungszonen</li>
-<li>Suche nach Altlasten</li>
-<li>Kartierung leitfähiger Sickerwässer</li>
-<li>Archäologische Vermessungen</li>
-<li>Ingenieurgeologische Messungen</li>
-<li>Lagerstättenexploration</li>
-</ul>
-<p><em>Semi-airborne</em>-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden.</p>
-<p>Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des <a href="https://www.uni-muenster.de/DESMEX/startseite.html">DESMEX</a>-Projektes.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://gitlab.com/Rochlitz.R/custem-examples/-/raw/main/supplementsGJI/03_schleiz_example/results_2022_10/final_res_model_3D_view_p2.png?ref_type=heads" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Rochlitz <em>et al.</em> (2023)</figcaption>
-</figure>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-</section>
-<section id="magnetotellurik" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</h3>
-<p>Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/mtexamplepic.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: FU Berlin</figcaption>
-</figure>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Eliminieren einer Feldgröße liefert PDE zweiter Ordnung <span class="math display">\[
+\curl \curl \vb{E} + i \omega \mu \sigma \vb{E} + \omega^{2} \mu  \varepsilon \vb{E} = \vb{0}
+\]</span> Bei niedrigen Frequenzen kann Verschiebungsstromdichte vernachlässigt werden: <span class="math display">\[
+\curl \curl \vb{E} + i \omega \mu \sigma \vb{E} = \vb{0}
+\]</span> Mit Vektorindentität <span class="math display">\[
+\curl \curl \vb{f} = -\grad^{2} \vb{f} + \grad \divergence \vb{f}
+\]</span> folgt Helmholtzgleichung <span class="math display">\[
+-\grad^{2}\vb{E} + i \omega \mu \sigma \vb{E} = \vb{0}
+\]</span> oder, mit komplexer Ausbreitungskonstante <span class="math inline">\(k^{2}=-i \omega \mu_{0} \sigma\)</span>, <span class="math display">\[
+\grad^{2}\vb{E} + k^{2} \vb{E} = \vb{0}.
+\]</span></p>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.bgr.bund.de/DE/BGR/Wissenschaftliche-Infrastruktur/Geophysik/Bodengeophysik/Bilder/B_Magnetotellurik/mt_messung_im_gelaende_de.jpg?__blob=poster&amp;v=2" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: BGR</figcaption>
-</figure>
 </div>
-</section>
-</section>
-<section id="einteilung" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="einteilung"><span class="header-section-number">5.3</span> Einteilung</h2>
-<p>Es existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.</p>
-<p>Möglich ist eine Unterscheidung</p>
-<ul>
-<li>hinsichtlich der eingesetzten Sender und Empfänger oder</li>
-<li>nach den Merkmalen der Felder.</li>
-</ul>
-<table class="table-striped table-hover caption-top table">
-<caption>Zweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung</caption>
+</div>
+<p>Quellen der MT sind Magnetfelder von Strömen in der Ionosphäre und Magnetosphäre. Wegen der großen Entfernung zur Quelle können diese Felder an der Erdoberfläche als <strong>ebene Welle</strong> mit vertikaler Ausbreitungsrichtung angenommen werden.</p>
+<p>Wir nehmen o.B.d.A. weiterhin an, dass das magnetische Quellenfeld außerhalb der Erde ein in <span class="math inline">\(y\)</span>-Richtung linear polarisiertes homogenes Feld ist: <span class="math display">\[
+\vb{H} = \begin{pmatrix}
+0 \\ H_{y} \\ 0
+\end{pmatrix}
+\]</span> Das anregende Feld ist eine Transversalwelle mit <span class="math inline">\(\vb{H} \perp \vb{E} \perp \vb{k}\)</span>. Die Größe <span class="math inline">\(\vb{k}\)</span> bezeichnet den Wellenvektor, welcher in Ausbreitungsrichtung zeigt. Zum anregenden Magnetfeld passt also <span class="math display">\[
+\vb{E} = \begin{pmatrix}
+E_{x} \\ 0 \\ 0
+\end{pmatrix}
+\]</span> Wie breiten sich die Felder <span class="math inline">\(\vb{E}\)</span> und <span class="math inline">\(\vb{H}\)</span> innerhalb der Erde aus? Da die anregenden Felder horizontal homogen sind, muss das auch für die Felder innerhalb der Erde (für <span class="math inline">\(z\geq 0\)</span>) gelten.</p>
+<p>Wir fragen also nach <span class="math inline">\(E_{x}(z)\)</span>.</p>
+<p>Die Gleichung <span class="math display">\[
+\frac{ \partial^{2} E_{x} }{ \partial z^{2} } + k^{2} E_{x} = 0
+\]</span> hat in <span class="math inline">\(z\geq 0\)</span> folgende Lösung: <span class="math display">\[
+E_{x}(z) = E_{x}(0) e^{ - i k z }
+\]</span> Unter Beachtung des Vorzeichens von <span class="math inline">\(k = \pm \sqrt{ k^{2} }\)</span> ergibt sich eine in pos. <span class="math inline">\(z\)</span>-Richtung gedämpfte Welle.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Dämpfung im Erdinnern">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Dämpfung im Erdinnern
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Welches Vorzeichen muss für <span class="math inline">\(k\)</span> gewählt werden?</p>
+<p>Ansatz <span class="math inline">\(k^{2}= (\alpha - i \beta)^{2}\)</span>, daraus <span class="math display">\[
+k^{2} = \alpha^{2} - 2 i \alpha \beta - \beta^{2} = -i \omega \mu \sigma
+\]</span> und <span class="math display">\[
+\alpha^{2} = \beta^{2}
+\]</span> sowie <span class="math display">\[
+2 \alpha \beta = \omega \mu \sigma
+\]</span></p>
+<p>Schließlich <span class="math display">\[
+\alpha = \beta = \pm \sqrt{ \frac{\omega \mu \sigma}{2} }
+\]</span> Damit <span class="math inline">\(E_{x}(z) \to 0\)</span> für <span class="math inline">\(z \to \infty\)</span>, muss <span class="math inline">\(\beta &gt; 0\)</span> sein.</p>
+<p>Wir zerlegen den Exponenten: <span class="math display">\[
+e^{ - i k z } = e^{ -i (\alpha - i \beta) z} = \underbrace{ e^{ - i \alpha z } }_{ \text{Welle} } \cdot\underbrace{ e^{ - \beta z } }_{ \text{Dämpfung} }
+\]</span> Die Tiefe, in der die Amplitude der Welle auf den <span class="math inline">\(e\)</span>-ten Teil der Oberflächenamplitude abgeklungen ist, wird Skintiefe oder elektromagnetische Eindringtiefe <span class="math inline">\(\tau\)</span> genannt.</p>
+<p><span class="math display">\[
+\left|\frac{E_{x}(\tau)}{E_{x}(0)}\right| = e^{ -1 } = e^{ -\beta \tau }
+\]</span> <span class="math display">\[
+\tau = \sqrt{ \frac{2}{\omega \mu \sigma} }
+\]</span> Vereinfacht für Periodendauer <span class="math inline">\(T\)</span> und spezifischen Widerstand <span class="math inline">\(\rho\)</span> <span class="math display">\[
+\tau \approx 503 \sqrt{ \rho T }
+\]</span> liefert Skintiefe in Metern.</p>
+</div>
+</div>
+</div>
+<p>Folgender Zusammenhang besteht zwischen elektromagnetischer Eindringtiefe und der Wellenlänge:</p>
+<p><span class="math display">\[
+\tau = \frac{\lambda}{2 \pi}
+\]</span></p>
+<table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 21%">
-<col style="width: 17%">
-<col style="width: 21%">
-<col style="width: 10%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Sender</th>
-<th>Elektroden</th>
-<th>Elektroden und Spulen</th>
-<th>Spulen (Erdoberfläche)</th>
-<th>Spulen (Luft)</th>
+<th>Tiefe <span class="math inline">\(z=\)</span></th>
+<th>Amplitude</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Geerdetes Kabel (galvanisch)</td>
-<td>Widerstandsgeoelektrik, IP</td>
-<td></td>
-<td>MMR</td>
-<td></td>
+<td><span class="math inline">\(\tau = \frac{\lambda}{2 \pi}\)</span></td>
+<td><span class="math inline">\(\| E_{x}(0)e^{ -1 }\| \approx 0.368 \| E_{x}(0)\|\)</span></td>
 </tr>
 <tr class="even">
-<td>Geerdetes Kabel (induktiv)</td>
-<td></td>
-<td>CSAMT</td>
-<td>LOTEM</td>
-<td></td>
+<td><span class="math inline">\(\pi \tau = \frac{\lambda}{2}\)</span></td>
+<td><span class="math inline">\(\| E_{x}(0)e^{ -\pi }\| \approx 0.043 \|E_{x}(0)\|\)</span></td>
 </tr>
 <tr class="odd">
-<td>Spule</td>
-<td></td>
-<td></td>
-<td>Slingram, TEM, Bohrloch-EM</td>
-<td>Aero-EM</td>
-</tr>
-<tr class="even">
-<td>Langes Kabel, große Spule</td>
-<td></td>
-<td></td>
-<td>TURAM, TEM, Bohrloch-EM</td>
-<td>Semi-Airborne</td>
-</tr>
-<tr class="odd">
-<td>Ebene Wellen: Vertikale Antenne</td>
-<td></td>
-<td>VLF-R</td>
-<td>VLF</td>
-<td>VLF</td>
-</tr>
-<tr class="even">
-<td>Natürliche elektromagnetische Felder</td>
-<td>Tellurik</td>
-<td>MT</td>
-<td></td>
-<td></td>
+<td><span class="math inline">\(2 \pi \tau = \lambda\)</span></td>
+<td><span class="math inline">\(\| E_{x}(0)e^{ -2\pi }\| \approx 0.002 \|E_{x}(0)\|\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>Wir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:</p>
+</section>
+<section id="impedanz" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="impedanz"><span class="header-section-number">7.2</span> Impedanz</h2>
+<p>Impedanz: Frequenzabhängiger Wellenwiderstand, <span class="math inline">\(Z(\omega)\)</span>.</p>
+<p>Messgrößen: <span class="math inline">\(\vb{E}(\omega, \vb{r})\)</span> und <span class="math inline">\(\vb{B}(\omega, \vb{r})\)</span>.</p>
+<p><span class="math display">\[
+Z(\omega) = \frac{\vb{e}_{h}\cdot \vb{E}}{(\vb{e}_{h} \times \vb{e}_{z})\cdot\vb{B}}
+\]</span></p>
+<p>mit <span class="math inline">\(\vb{e}_{h}\)</span>: horizontaler kartesischer Einheitsvektor</p>
+<p>Wir bezeichnen <span class="math display">\[
+Z_{s}(\omega) = \frac{E_{x}}{B_{y}} = -\frac{E_{y}}{B_{x}}
+\]</span> als <em>Oberflächenimpedanz</em>. <!-- ![[MT-Drehung-EH.excalidraw|50%]] --></p>
+<p>Wie bekommen wir aus den Messgrößen <span class="math inline">\(\mathbf{E}\)</span> und <span class="math inline">\(\mathbf{B}\)</span> Informationen über die Leitfähigkeit des Untergrundes?</p>
+<p>Beide Feldgrößen sind über die Maxwellgleichungen verknüpft. <span class="math display">\[
+\nabla \times \vb{E} = -i \omega \vb{B}
+\]</span> Das Magnetfeld besitzt nur eine <span class="math inline">\(y\)</span>-Komponente, also muss gelten <span class="math display">\[
+\frac{ \partial E_{x} }{ \partial z } - \underbrace{ \frac{ \partial E_{z} }{ \partial x } }_{ =0 } = -i \omega B_{y}
+\]</span> woraus folgt: <span class="math display">\[
+B_{y}(z) = -\frac{1}{i \omega } \frac{ \partial E_{y}(z) }{ \partial z } = -\frac{1}{i \omega } \frac{ \partial  }{ \partial z } E_{x}(0) e^{ - i k z } = \frac{k}{\omega } E_{x}(z)
+\]</span></p>
+<p>In <span class="math inline">\(z=0\)</span> <span class="math display">\[
+Z_{s} = \frac{E_{x}(0)}{B_{y}(0)} = \frac{\omega}{k} = Z_{1}
+\]</span> Die Oberflächenimpedanz des homogenen Halbraums <span class="math inline">\(Z_{s}\)</span> stimmt mit der intrinsischen Impedanz des homogenen Halbraums <span class="math inline">\(Z_{1}\)</span> überein.</p>
+</section>
+<section id="datenprocessing" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="datenprocessing"><span class="header-section-number">7.3</span> Datenprocessing</h2>
+<p>Die Messwerte der MT liegen als Zeitreihen <span class="math inline">\(\mathbf{e}(t)\)</span> und <span class="math inline">\(\mathbf{b}(t)\)</span> vor.</p>
+<p>Die MT-Station registriert</p>
 <ul>
-<li><strong>zeitharmonisch</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}) e^{ i \omega t }\)</span>
+<li>Komponenten des E-Feldes <span class="math inline">\(E_x(t), E_y(t)\)</span></li>
+<li>Komponenten des H-Feldes <span class="math inline">\(H_x(t), H_y(t), H_{z}(t)\)</span></li>
+</ul>
+<p>Die fundamentale Annahme der MT besteht darin, dass es einen linearen Zusammenhang zwischen den Horizontalkomponenten des E- und H-Feldes gibt.</p>
+<p>Das Ziel des MT-Datenprocessings besteht in der Berechnung (genauer: Schätzung) des Impedanztensors <span class="math inline">\(\mathbf{Z}(\omega)\)</span>.</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+E_x(\omega) \\
+E_y(\omega)
+\end{pmatrix}
+=
+\begin{pmatrix}
+Z_{xx}(\omega) &amp; Z_{xy}(\omega) \\
+Z_{yx}(\omega) &amp; Z_{yy}(\omega)
+\end{pmatrix}
+\begin{pmatrix}
+H_x(\omega) \\
+H_y(\omega)
+\end{pmatrix}.
+\]</span></p>
+<p>Das Processing der MT-Zeitreihen besteht grob aus folgenden Schritten:</p>
 <ul>
-<li>monofrequent</li>
-<li>Kontinuum (Frequenzgemisch)</li>
+<li>Instrumentenkorrekturen
+<ul>
+<li>Berücksichtigung von Dipolauslage und Messkoordinatensystem</li>
+<li>Kenntnis des Frequenzganges der Sensorik</li>
 </ul></li>
-<li><strong>Zeitbereich</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}, t)\)</span>
+<li>Qualitätskontrolle: Sichtung und Rauschunterdrückung
 <ul>
-<li>Impulsfolgen</li>
-<li>Rechteckimpulsfolgen</li>
+<li>Entfernen von Spikes, Dropouts</li>
+<li>Beseitigen von gestörten Zeitreihenintervallen</li>
 </ul></li>
-</ul>
-</section>
-<section id="frequenzen-und-targets" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="frequenzen-und-targets"><span class="header-section-number">5.4</span> Frequenzen und Targets</h2>
-<p><img src="pics/em/EM-Target-Frequenz.excalidraw.svg" class="img-fluid"></p>
-</section>
-<section id="erkundungsmethoden" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="erkundungsmethoden"><span class="header-section-number">5.5</span> Erkundungsmethoden</h2>
-<p>Wir unterscheiden drei unterschiedliche Methoden der Untersuchug des Untergrundes:</p>
+<li>Aufteilen in Fenster
 <ul>
-<li>Die <strong>Kartierung</strong>, bei welcher mit gleichbleibender Frequenz und Abstand zwischen Sender und Empfänger <em>laterale Leitfähigkeitsinhomogenitäten</em> durch Messungen entlang von Profilen erfasst werden</li>
-<li>Die <strong>Sondierung</strong>, bei welcher an einem festen Standort entweder die Frequenz oder der Abstand zwischen Sender und Empfänger verändert wird, um auf diese Weise die Eindringtiefe zu variieren. Die Information kommt dann aus <em>unterschiedlichen Tiefenbereichen</em>.</li>
-<li>Eine <strong>Kombination aus beiden Methoden</strong> liefert Messwerte, aus denen sich die Verteilung der elektrischen Leitfähigkeit <em>im gesamten Raum</em> rekonstruieren lässt.</li>
-</ul>
-</section>
-<section id="beispiele-für-em-messgeräte" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="beispiele-für-em-messgeräte"><span class="header-section-number">5.6</span> Beispiele für EM-Messgeräte</h2>
+<li>überlappende Segmente der Länge <span class="math inline">\(T\)</span></li>
+<li>Taperung</li>
+</ul></li>
+<li>Fouriertransformation
 <ul>
-<li>Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern <em>scheinbare Leitfähigkeit</em></li>
-<li>TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient <span class="math inline">\(\frac{ \partial B_{z}(t) }{ \partial t }\)</span></li>
-<li>MT-Apparatur, z.B. Metronix ADU-08e, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte</li>
-<li>Airborne-EM-System, z.B. Fugro, liefert Magnetfeldverhältnis <span class="math inline">\(B_{z}/B_{z}^{0}\)</span> oder sekundäres Magnetfeld <span class="math inline">\(B_{z}^{s}=B_{z}-B_{z}^{0}\)</span></li>
+<li><span class="math inline">\(\hat{E}_i^{(k)}(\omega), \quad \hat{H}_j^{(k)}(\omega)\)</span>, <span class="math inline">\(i,j \in {x,y}\)</span></li>
+<li>komplexwertige Fourierkoeffizienten für diskrete Frequenzen</li>
+</ul></li>
+<li>Spektrale Schätzung
+<ul>
+<li>Berechnung von Kreuz- und Autospektren für jede Frequenz</li>
+</ul></li>
+<li>Robuste lineare Regression für <span class="math inline">\(\mathbf{Z}\)</span></li>
+<li>Fehleranalyse</li>
+<li>Berechnung der Darstellungsgrößen</li>
 </ul>
+<p>Das MT-Datenprocessing ist ein <strong>multivariates lineares Ausgleichsproblem im Frequenzbereich</strong>.</p>
 
 
 </section>
@@ -882,13 +886,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ves.html" class="pagination-link" aria-label="Widerstands-Tiefensondierung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span>
+      <a href="./grundgleichungen_em.html" class="pagination-link" aria-label="Grundgleichungen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./grundgleichungen_em.html" class="pagination-link" aria-label="Grundgleichungen">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./zusammenfassung.html" class="pagination-link" aria-label="Zusammenfassung">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

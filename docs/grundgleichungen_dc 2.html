@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Einführung – Modul Geoelektrik und Elektromagnetik</title>
+<title>2&nbsp; Grundgleichungen – Modul Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./grundgleichungen_em.html" rel="next">
-<link href="./ves.html" rel="prev">
+<link href="./sens_arrays.html" rel="next">
+<link href="./einfuehrung.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -122,7 +122,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -170,7 +170,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grundgleichungen_dc.html" class="sidebar-item-text sidebar-link">
+  <a href="./grundgleichungen_dc.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span></a>
   </div>
 </li>
@@ -199,7 +199,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link active">
+  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
@@ -239,26 +239,44 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#prinzip" id="toc-prinzip" class="nav-link active" data-scroll-target="#prinzip"><span class="header-section-number">5.1</span> Prinzip</a></li>
-  <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">5.2</span> Beispiele</a>
+  <li><a href="#grundgleichungen" id="toc-grundgleichungen" class="nav-link active" data-scroll-target="#grundgleichungen"><span class="header-section-number">3</span> Grundgleichungen</a>
   <ul class="collapse">
-  <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</a></li>
-  <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</a></li>
-  <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</a></li>
+  <li><a href="#kontinuitäts-gleichung" id="toc-kontinuitäts-gleichung" class="nav-link" data-scroll-target="#kontinuitäts-gleichung"><span class="header-section-number">3.1</span> Kontinuitäts-Gleichung</a></li>
+  <li><a href="#das-konzept-der-punktquelle" id="toc-das-konzept-der-punktquelle" class="nav-link" data-scroll-target="#das-konzept-der-punktquelle"><span class="header-section-number">3.2</span> Das Konzept der Punktquelle</a></li>
+  <li><a href="#lösung-für-homogenen-vollraum" id="toc-lösung-für-homogenen-vollraum" class="nav-link" data-scroll-target="#lösung-für-homogenen-vollraum"><span class="header-section-number">3.3</span> Lösung für homogenen Vollraum</a></li>
+  <li><a href="#lösung-für-homogenen-halbraum" id="toc-lösung-für-homogenen-halbraum" class="nav-link" data-scroll-target="#lösung-für-homogenen-halbraum"><span class="header-section-number">3.4</span> Lösung für homogenen Halbraum</a></li>
+  <li><a href="#zwei-strom-elektroden" id="toc-zwei-strom-elektroden" class="nav-link" data-scroll-target="#zwei-strom-elektroden"><span class="header-section-number">3.5</span> Zwei Strom-Elektroden</a></li>
+  <li><a href="#punktmessung-knödel-2005" id="toc-punktmessung-knödel-2005" class="nav-link" data-scroll-target="#punktmessung-knödel-2005"><span class="header-section-number">3.6</span> 4-Punktmessung (Knödel, 2005)</a></li>
+  <li><a href="#konfigurationsgeometrie-faktor" id="toc-konfigurationsgeometrie-faktor" class="nav-link" data-scroll-target="#konfigurationsgeometrie-faktor"><span class="header-section-number">3.7</span> Konfigurations/Geometrie-Faktor</a></li>
+  <li><a href="#stetigkeit-an-grenzflächen" id="toc-stetigkeit-an-grenzflächen" class="nav-link" data-scroll-target="#stetigkeit-an-grenzflächen"><span class="header-section-number">3.8</span> Stetigkeit an Grenzflächen</a></li>
   </ul></li>
-  <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">5.3</span> Einteilung</a></li>
-  <li><a href="#frequenzen-und-targets" id="toc-frequenzen-und-targets" class="nav-link" data-scroll-target="#frequenzen-und-targets"><span class="header-section-number">5.4</span> Frequenzen und Targets</a></li>
-  <li><a href="#erkundungsmethoden" id="toc-erkundungsmethoden" class="nav-link" data-scroll-target="#erkundungsmethoden"><span class="header-section-number">5.5</span> Erkundungsmethoden</a></li>
-  <li><a href="#beispiele-für-em-messgeräte" id="toc-beispiele-für-em-messgeräte" class="nav-link" data-scroll-target="#beispiele-für-em-messgeräte"><span class="header-section-number">5.6</span> Beispiele für EM-Messgeräte</a></li>
+  <li><a href="#ert-feldausbreitung" id="toc-ert-feldausbreitung" class="nav-link" data-scroll-target="#ert-feldausbreitung"><span class="header-section-number">4</span> ERT Feldausbreitung</a>
+  <ul class="collapse">
+  <li><a href="#homogener-untergrund-potentialverteilung" id="toc-homogener-untergrund-potentialverteilung" class="nav-link" data-scroll-target="#homogener-untergrund-potentialverteilung"><span class="header-section-number">4.1</span> Homogener Untergrund: Potentialverteilung</a></li>
+  <li><a href="#homogener-untergrund-stromlinien" id="toc-homogener-untergrund-stromlinien" class="nav-link" data-scroll-target="#homogener-untergrund-stromlinien"><span class="header-section-number">4.2</span> Homogener Untergrund: Stromlinien</a></li>
+  <li><a href="#schlechter-leiter-stromlinien" id="toc-schlechter-leiter-stromlinien" class="nav-link" data-scroll-target="#schlechter-leiter-stromlinien"><span class="header-section-number">4.3</span> Schlechter Leiter: Stromlinien</a></li>
+  <li><a href="#guter-leiter-stromlinien" id="toc-guter-leiter-stromlinien" class="nav-link" data-scroll-target="#guter-leiter-stromlinien"><span class="header-section-number">4.4</span> Guter Leiter: Stromlinien</a></li>
+  <li><a href="#inhomogener-untergrund" id="toc-inhomogener-untergrund" class="nav-link" data-scroll-target="#inhomogener-untergrund"><span class="header-section-number">4.5</span> Inhomogener Untergrund</a></li>
+  <li><a href="#inhomogener-untergrund-stromlinien" id="toc-inhomogener-untergrund-stromlinien" class="nav-link" data-scroll-target="#inhomogener-untergrund-stromlinien"><span class="header-section-number">4.6</span> Inhomogener Untergrund: Stromlinien</a></li>
+  <li><a href="#inhomogener-untergrund-potentialverteilung" id="toc-inhomogener-untergrund-potentialverteilung" class="nav-link" data-scroll-target="#inhomogener-untergrund-potentialverteilung"><span class="header-section-number">4.7</span> Inhomogener Untergrund: Potentialverteilung</a></li>
+  <li><a href="#homogener-untergrund-potentialverteilung-1" id="toc-homogener-untergrund-potentialverteilung-1" class="nav-link" data-scroll-target="#homogener-untergrund-potentialverteilung-1"><span class="header-section-number">4.8</span> Homogener Untergrund: Potentialverteilung</a></li>
+  <li><a href="#laplace-gleichung" id="toc-laplace-gleichung" class="nav-link" data-scroll-target="#laplace-gleichung"><span class="header-section-number">4.9</span> Laplace-Gleichung</a></li>
+  <li><a href="#lösung-für-homogenen-halbraum-1" id="toc-lösung-für-homogenen-halbraum-1" class="nav-link" data-scroll-target="#lösung-für-homogenen-halbraum-1"><span class="header-section-number">4.10</span> Lösung für homogenen Halbraum</a></li>
+  <li><a href="#zwei-strom-elektroden-1" id="toc-zwei-strom-elektroden-1" class="nav-link" data-scroll-target="#zwei-strom-elektroden-1"><span class="header-section-number">4.11</span> Zwei Strom-Elektroden</a></li>
+  <li><a href="#potentialverteilung" id="toc-potentialverteilung" class="nav-link" data-scroll-target="#potentialverteilung"><span class="header-section-number">4.12</span> Potentialverteilung</a></li>
+  <li><a href="#stromlinien" id="toc-stromlinien" class="nav-link" data-scroll-target="#stromlinien"><span class="header-section-number">4.13</span> Stromlinien</a></li>
+  <li><a href="#punktmessung-knödel-2005-1" id="toc-punktmessung-knödel-2005-1" class="nav-link" data-scroll-target="#punktmessung-knödel-2005-1"><span class="header-section-number">4.14</span> 4-Punktmessung (Knödel, 2005)</a></li>
+  <li><a href="#konfigurationsgeometrie-faktor-1" id="toc-konfigurationsgeometrie-faktor-1" class="nav-link" data-scroll-target="#konfigurationsgeometrie-faktor-1"><span class="header-section-number">4.15</span> Konfigurations/Geometrie-Faktor</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></h1>
 </div>
 
 
@@ -275,208 +293,215 @@ window.Quarto = {
 </header>
 
 
-<p>Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.</p>
-<p>Wir werden folgende wichtige Messverfahren kennenlernen:</p>
+<section id="grundgleichungen" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Grundgleichungen</h1>
+<p><img src="pics/halfspace.png" class="img-fluid"></p>
+<section id="kontinuitäts-gleichung" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="kontinuitäts-gleichung"><span class="header-section-number">3.1</span> Kontinuitäts-Gleichung</h2>
+<!-- :::: {.columns}
+::: {.column} -->
+<p>Maxwell-Gleichungen stationär <span class="math display">\[\curl \vb H = \vb j = \sigma \vb E + \vb j_s\]</span></p>
+<p><span class="math display">\[\div \curl\vb H = \div\vb j=\div(\sigma\vb E) + \div\vb j_s=0\]</span></p>
+<p><span class="math display">\[\Rightarrow -\div(\sigma\vb E)=-\div(\sigma\grad U)=\div\vb j_s\]</span></p>
+<p>Diese partielle Differential-Gleichung (PDE) ist eine Poisson-Gleichung &amp; beschreibt die Potentialverteilung für beliebige Leitfähigkeiten. Im Allgemeinen lösen wir sie numerisch, für einfache Fälle analytisch.</p>
+</section>
+<section id="das-konzept-der-punktquelle" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="das-konzept-der-punktquelle"><span class="header-section-number">3.2</span> Das Konzept der Punktquelle</h2>
+<p>Elektroden sind “klein” (gegenüber Abstand zu Potentialmessung), der Strom wird an einem “Punkt” eingespeist (Integral <span class="math inline">\(I\)</span>):</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><span class="math display">\[\div\vb j = I \delta(\vb r - \vb r_s)\]</span></p>
 <ul>
-<li>Magnetotellurik</li>
-<li>CSEM</li>
-<li>Transient-Elektromagnetik</li>
+<li>unendliche Stromdichte bei <span class="math inline">\(\vb r_s\)</span></li>
 </ul>
-<section id="prinzip" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="prinzip"><span class="header-section-number">5.1</span> Prinzip</h2>
-<p>Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:</p>
+<p><strong>In Wirklichkeit</strong></p>
+<ul>
+<li>Elektroden sind ausgedehnt und haben endliche Fläche <span class="math inline">\(\Rightarrow\)</span> endliche Stromdichte</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ellipse_electrode.png" class="img-fluid figure-img"></p>
+<figcaption>Elektrode (Rücker &amp; Günther, 2011)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<!-- (Halb-)Kugelförmige Quelle: gleiche Verteilung der Stromdichte ab $r\ge R$ -->
+</section>
+<section id="lösung-für-homogenen-vollraum" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="lösung-für-homogenen-vollraum"><span class="header-section-number">3.3</span> Lösung für homogenen Vollraum</h2>
+<p><span class="math display">\[-\div(\sigma\grad U)=\div \vb j_s\]</span></p>
+<p>Strom verteilt sich radial über Kugel-Oberfläche</p>
+<p><span class="math display">\[j=I/A=I/(4\pi r^2)\]</span></p>
+<p><span class="math display">\[U(r)=r E=r \rho j=\rho I / (4\pi r)\]</span></p>
+<p>Berechnung des (scheinbaren) spezifischen Widerstands aus <span class="math inline">\(U\)</span> und <span class="math inline">\(I\)</span></p>
+<p><span class="math display">\[\Rightarrow \rho_a = \frac{U}{I} 4\pi r=R\cdot k \quad\mbox{mit}\quad k=4\pi r\]</span></p>
+</section>
+<section id="lösung-für-homogenen-halbraum" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="lösung-für-homogenen-halbraum"><span class="header-section-number">3.4</span> Lösung für homogenen Halbraum</h2>
+<p><span class="math display">\[-\div(\sigma\grad U)=\div \vb j_s\]</span></p>
+<p>Strom verteilt sich radial über Halbkugel-Oberfläche</p>
+<p><span class="math display">\[j=I/A=I/(2\pi r^2)\]</span></p>
+<p><span class="math display">\[U(r)=r E=r \rho j=\rho I / (2\pi r)\]</span></p>
+<p>Berechnung des (scheinbaren) spezifischen Widerstands aus <span class="math inline">\(U\)</span> und <span class="math inline">\(I\)</span></p>
+<p><span class="math display">\[\Rightarrow \rho = \frac{U}{I} 2\pi r=R\cdot k \quad\mbox{mit}\quad k=2\pi r\]</span></p>
+</section>
+<section id="zwei-strom-elektroden" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="zwei-strom-elektroden"><span class="header-section-number">3.5</span> Zwei Strom-Elektroden</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="pics/halfspace.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Pol-Messungen">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Pol-Messungen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>werden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.</p>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<!-- Wenn die negative Elektrode B nicht "weit weg" ist, überlagern sich die Potentiale -->
+<p>Überlagerung der Potentiale <span class="math display">\[u(\vb r) = \frac{I\rho}{2\pi} \Big(\frac{1}{|\vb r - \vb r_A|}-\frac{1}{|\vb r - \vb r_B|} \Big)\]</span></p>
+<p><img src="pics/2punktmessung.png" class="img-fluid"> <!-- Theoretisch könnte man zwischen A und B Strom und Spannung messen und $\rho$ bestimmen. --></p>
+</div>
+</div>
+</section>
+<section id="punktmessung-knödel-2005" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="punktmessung-knödel-2005"><span class="header-section-number">3.6</span> 4-Punktmessung (Knödel, 2005)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/knoedelDE.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="konfigurationsgeometrie-faktor" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="konfigurationsgeometrie-faktor"><span class="header-section-number">3.7</span> Konfigurations/Geometrie-Faktor</h2>
+<p><span class="math inline">\(U_{AM} = \rho I \frac{1}{2\pi \overline{AM}}\)</span>, <span class="math inline">\(U_{AN} = \rho I \frac{1}{2\pi \overline{AN}}\)</span> etc.</p>
+<p><span class="math display">\[ \Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) \]</span></p>
+<p><span class="math display">\[ \Delta U = \rho I \big( \frac{1}{2\pi \overline{AM}} - \frac{1}{2\pi \overline{AN}} - \frac{1}{2\pi \overline{BM}} + \frac{1}{2\pi \overline{BN}}\big)\]</span></p>
+<p><span class="math display">\[ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{mit}\quad k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} \]</span></p>
+</section>
+<section id="stetigkeit-an-grenzflächen" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="stetigkeit-an-grenzflächen"><span class="header-section-number">3.8</span> Stetigkeit an Grenzflächen</h2>
 <div class="columns">
 <div class="column">
-<ul>
-<li>Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld</li>
-<li>Im leitenden Störkörper werden elektrische Wechselfelder (<strong>Wirbelströme</strong>) induziert</li>
-<li>Die Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird</li>
-</ul>
+<p><img src="pics/ert/currentdensity.png" class="img-fluid"></p>
 </div><div class="column">
-<p><img src="pics/em/prinzip.png" class="img-fluid"></p>
+<p><span class="math display">\[\Rightarrow \div(\sigma\vb E)=-\div(\sigma\grad U)=0\]</span></p>
+<p><span class="math inline">\(E_1=E_2\Rightarrow \rho_1 j_{x1}=\rho_2 j_{x2}\)</span> <span class="math inline">\(j_{z1}=j_{z2}\)</span></p>
 </div>
 </div>
-<p>Diesem Grundprinzip folgen alle EM-Verfahren.</p>
-<p>Unterschiede bestehen hinsichtlich</p>
-<ul>
-<li>der verwendeten Sender (induktiv oder galvanisch angekoppelt)</li>
-<li>der Stromfunktion im Sender (sinus- oder rechteckförmig)</li>
-<li>der gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)</li>
-<li>der Position der Quelle (marin, luftgestützt, bodengestützt)</li>
-<li>der Natur der Quelle (technisch oder natürlich)</li>
-</ul>
-<p><img src="pics/em/CSEM-Maxwell.excalidraw.svg" class="img-fluid"></p>
 </section>
-<section id="beispiele" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">5.2</span> Beispiele</h2>
-<section id="marine-csem" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</h3>
-<p>Eine leistungsstarke Stromquelle wird als <em>elektrischer Dipol</em> über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.</p>
-<p>Zusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der <em>Magnetotellurik</em> mit größerer Eindringtiefe genutzt werden.</p>
-<p>Das Bild zeigt schematisch das CSEM-Messkonzept des <em>Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US</em>.</p>
+</section>
+<section id="ert-feldausbreitung" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> ERT Feldausbreitung</h1>
+<p>Einstieg siehe Notebook</p>
+<section id="homogener-untergrund-potentialverteilung" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="homogener-untergrund-potentialverteilung"><span class="header-section-number">4.1</span> Homogener Untergrund: Potentialverteilung</h2>
+<p><img src="pics/ert/sens/pot-hom.svg" class="img-fluid"></p>
+</section>
+<section id="homogener-untergrund-stromlinien" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="homogener-untergrund-stromlinien"><span class="header-section-number">4.2</span> Homogener Untergrund: Stromlinien</h2>
+<p><img src="pics/ert/sens/pot-hom-stream.svg" class="img-fluid"></p>
+</section>
+<section id="schlechter-leiter-stromlinien" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="schlechter-leiter-stromlinien"><span class="header-section-number">4.3</span> Schlechter Leiter: Stromlinien</h2>
+<p><img src="pics/ert/badconductor.svg" class="img-fluid"></p>
+</section>
+<section id="guter-leiter-stromlinien" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="guter-leiter-stromlinien"><span class="header-section-number">4.4</span> Guter Leiter: Stromlinien</h2>
+<p><img src="pics/ert/goodconductor.svg" class="img-fluid"></p>
+</section>
+<section id="inhomogener-untergrund" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="inhomogener-untergrund"><span class="header-section-number">4.5</span> Inhomogener Untergrund</h2>
+<p><img src="pics/ert/sens/inhom.svg" class="img-fluid"></p>
+</section>
+<section id="inhomogener-untergrund-stromlinien" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="inhomogener-untergrund-stromlinien"><span class="header-section-number">4.6</span> Inhomogener Untergrund: Stromlinien</h2>
+<p><img src="pics/ert/sens/pot-inhom-stream.svg" class="img-fluid"></p>
+</section>
+<section id="inhomogener-untergrund-potentialverteilung" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="inhomogener-untergrund-potentialverteilung"><span class="header-section-number">4.7</span> Inhomogener Untergrund: Potentialverteilung</h2>
+<p><img src="pics/ert/sens/pot-inhom.svg" class="img-fluid"></p>
+</section>
+<section id="homogener-untergrund-potentialverteilung-1" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="homogener-untergrund-potentialverteilung-1"><span class="header-section-number">4.8</span> Homogener Untergrund: Potentialverteilung</h2>
+<p><img src="pics/ert/sens/pot-hom.svg" class="img-fluid"></p>
+</section>
+<section id="laplace-gleichung" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="laplace-gleichung"><span class="header-section-number">4.9</span> Laplace-Gleichung</h2>
+<p>in einem kugelsymmetrischen Koordinatensystem</p>
+<p><span class="math display">\[\laplacian u = \pdv[2]{u}{r} + \frac{2}{r}\pdv{u}{r}=0\]</span></p>
+<p>Integration liefert <span class="math inline">\(\pdv{u}{r}=\frac{C_1}{r^2}\)</span> und dann <span class="math inline">\(u=-\frac{C_1}{r} + C_2\)</span></p>
+<p>Wegen <span class="math inline">\(u(r\rightarrow\infty)=0\)</span> gilt <span class="math inline">\(C_2\)</span>=0</p>
+<p><span class="math inline">\(I=4\pi r^2 j=-4\pi r^2 \sigma\pdv{u}{r}=-4\pi\sigma C_1 \quad\Rightarrow\quad u=\frac{I\rho}{4\pi r}\)</span></p>
+</section>
+<section id="lösung-für-homogenen-halbraum-1" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="lösung-für-homogenen-halbraum-1"><span class="header-section-number">4.10</span> Lösung für homogenen Halbraum</h2>
+<p><span class="math display">\[-\div(\sigma\grad U)=\div \vb j_s\]</span></p>
+<p>Strom verteilt sich radial über Halbkugel-Oberfläche</p>
+<p><span class="math display">\[j=I/A=I/(2\pi r^2)\]</span></p>
+<p><span class="math display">\[U(r)=r E=r \rho j=\rho I / (2\pi r)\]</span></p>
+<p>Berechnung des (scheinbaren) spezifischen Widerstands aus <span class="math inline">\(U\)</span> und <span class="math inline">\(I\)</span></p>
+<p><span class="math display">\[\Rightarrow \rho = \frac{U}{I} 2\pi r=R\cdot k \quad\mbox{mit}\quad k=2\pi r\]</span></p>
+</section>
+<section id="zwei-strom-elektroden-1" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="zwei-strom-elektroden-1"><span class="header-section-number">4.11</span> Zwei Strom-Elektroden</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="callout callout-style-default callout-note callout-titled" title="Pol-Messungen">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Pol-Messungen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>werden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.</p>
+</div>
+</div>
+<p><img src="pics/halfspace.png" class="img-fluid"></p>
+</div><div class="column" style="width:55%;">
+<!-- Wenn die negative Elektrode B nicht "weit weg" ist, überlagern sich die Potentiale -->
+<p>Überlagerung der Potentiale <span class="math display">\[u(\vb r) = \frac{I\rho}{2\pi} \Big(\frac{1}{|\vb r - \vb r_A|}-\frac{1}{|\vb r - \vb r_B|} \Big)\]</span></p>
+<p><img src="pics/2punktmessung.png" class="img-fluid"> <!-- Theoretisch könnte man zwischen A und B Strom und Spannung messen und $\rho$ bestimmen. --></p>
+</div>
+</div>
+</section>
+<section id="potentialverteilung" class="level2" data-number="4.12">
+<h2 data-number="4.12" class="anchored" data-anchor-id="potentialverteilung"><span class="header-section-number">4.12</span> Potentialverteilung</h2>
+<p><img src="pics/ert/sens/pot-hom.svg" class="img-fluid"></p>
+</section>
+<section id="stromlinien" class="level2" data-number="4.13">
+<h2 data-number="4.13" class="anchored" data-anchor-id="stromlinien"><span class="header-section-number">4.13</span> Stromlinien</h2>
+<p><img src="pics/ert/sens/pot-hom-stream.svg" class="img-fluid"></p>
+</section>
+<section id="punktmessung-knödel-2005-1" class="level2" data-number="4.14">
+<h2 data-number="4.14" class="anchored" data-anchor-id="punktmessung-knödel-2005-1"><span class="header-section-number">4.14</span> 4-Punktmessung (Knödel, 2005)</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/em/CSEM_MTconcepts.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: Scripps</figcaption>
-</figure>
-</div>
-<p>Der Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.</p>
-</section>
-<section id="airborne-em" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</h3>
-<p>Die Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/hubschrauber_namibia.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: BGR</figcaption>
-</figure>
-</div>
-<p>Die luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:</p>
-<ul>
-<li>Bestimmung von Salz-/Süßwassergrenzen</li>
-<li>Grundwassersuche</li>
-<li>Geologische Kartierung</li>
-<li>Kartierung von Störungszonen</li>
-<li>Suche nach Altlasten</li>
-<li>Kartierung leitfähiger Sickerwässer</li>
-<li>Archäologische Vermessungen</li>
-<li>Ingenieurgeologische Messungen</li>
-<li>Lagerstättenexploration</li>
-</ul>
-<p><em>Semi-airborne</em>-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden.</p>
-<p>Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des <a href="https://www.uni-muenster.de/DESMEX/startseite.html">DESMEX</a>-Projektes.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://gitlab.com/Rochlitz.R/custem-examples/-/raw/main/supplementsGJI/03_schleiz_example/results_2022_10/final_res_model_3D_view_p2.png?ref_type=heads" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Rochlitz <em>et al.</em> (2023)</figcaption>
+<p><img src="pics/ert/knoedelDE.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </section>
-<section id="magnetotellurik" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</h3>
-<p>Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/mtexamplepic.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: FU Berlin</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.bgr.bund.de/DE/BGR/Wissenschaftliche-Infrastruktur/Geophysik/Bodengeophysik/Bilder/B_Magnetotellurik/mt_messung_im_gelaende_de.jpg?__blob=poster&amp;v=2" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: BGR</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="einteilung" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="einteilung"><span class="header-section-number">5.3</span> Einteilung</h2>
-<p>Es existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.</p>
-<p>Möglich ist eine Unterscheidung</p>
-<ul>
-<li>hinsichtlich der eingesetzten Sender und Empfänger oder</li>
-<li>nach den Merkmalen der Felder.</li>
-</ul>
-<table class="table-striped table-hover caption-top table">
-<caption>Zweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung</caption>
-<colgroup>
-<col style="width: 29%">
-<col style="width: 21%">
-<col style="width: 17%">
-<col style="width: 21%">
-<col style="width: 10%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Sender</th>
-<th>Elektroden</th>
-<th>Elektroden und Spulen</th>
-<th>Spulen (Erdoberfläche)</th>
-<th>Spulen (Luft)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Geerdetes Kabel (galvanisch)</td>
-<td>Widerstandsgeoelektrik, IP</td>
-<td></td>
-<td>MMR</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Geerdetes Kabel (induktiv)</td>
-<td></td>
-<td>CSAMT</td>
-<td>LOTEM</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Spule</td>
-<td></td>
-<td></td>
-<td>Slingram, TEM, Bohrloch-EM</td>
-<td>Aero-EM</td>
-</tr>
-<tr class="even">
-<td>Langes Kabel, große Spule</td>
-<td></td>
-<td></td>
-<td>TURAM, TEM, Bohrloch-EM</td>
-<td>Semi-Airborne</td>
-</tr>
-<tr class="odd">
-<td>Ebene Wellen: Vertikale Antenne</td>
-<td></td>
-<td>VLF-R</td>
-<td>VLF</td>
-<td>VLF</td>
-</tr>
-<tr class="even">
-<td>Natürliche elektromagnetische Felder</td>
-<td>Tellurik</td>
-<td>MT</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Wir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:</p>
-<ul>
-<li><strong>zeitharmonisch</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}) e^{ i \omega t }\)</span>
-<ul>
-<li>monofrequent</li>
-<li>Kontinuum (Frequenzgemisch)</li>
-</ul></li>
-<li><strong>Zeitbereich</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}, t)\)</span>
-<ul>
-<li>Impulsfolgen</li>
-<li>Rechteckimpulsfolgen</li>
-</ul></li>
-</ul>
-</section>
-<section id="frequenzen-und-targets" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="frequenzen-und-targets"><span class="header-section-number">5.4</span> Frequenzen und Targets</h2>
-<p><img src="pics/em/EM-Target-Frequenz.excalidraw.svg" class="img-fluid"></p>
-</section>
-<section id="erkundungsmethoden" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="erkundungsmethoden"><span class="header-section-number">5.5</span> Erkundungsmethoden</h2>
-<p>Wir unterscheiden drei unterschiedliche Methoden der Untersuchug des Untergrundes:</p>
-<ul>
-<li>Die <strong>Kartierung</strong>, bei welcher mit gleichbleibender Frequenz und Abstand zwischen Sender und Empfänger <em>laterale Leitfähigkeitsinhomogenitäten</em> durch Messungen entlang von Profilen erfasst werden</li>
-<li>Die <strong>Sondierung</strong>, bei welcher an einem festen Standort entweder die Frequenz oder der Abstand zwischen Sender und Empfänger verändert wird, um auf diese Weise die Eindringtiefe zu variieren. Die Information kommt dann aus <em>unterschiedlichen Tiefenbereichen</em>.</li>
-<li>Eine <strong>Kombination aus beiden Methoden</strong> liefert Messwerte, aus denen sich die Verteilung der elektrischen Leitfähigkeit <em>im gesamten Raum</em> rekonstruieren lässt.</li>
-</ul>
-</section>
-<section id="beispiele-für-em-messgeräte" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="beispiele-für-em-messgeräte"><span class="header-section-number">5.6</span> Beispiele für EM-Messgeräte</h2>
-<ul>
-<li>Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern <em>scheinbare Leitfähigkeit</em></li>
-<li>TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient <span class="math inline">\(\frac{ \partial B_{z}(t) }{ \partial t }\)</span></li>
-<li>MT-Apparatur, z.B. Metronix ADU-08e, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte</li>
-<li>Airborne-EM-System, z.B. Fugro, liefert Magnetfeldverhältnis <span class="math inline">\(B_{z}/B_{z}^{0}\)</span> oder sekundäres Magnetfeld <span class="math inline">\(B_{z}^{s}=B_{z}-B_{z}^{0}\)</span></li>
-</ul>
+<section id="konfigurationsgeometrie-faktor-1" class="level2" data-number="4.15">
+<h2 data-number="4.15" class="anchored" data-anchor-id="konfigurationsgeometrie-faktor-1"><span class="header-section-number">4.15</span> Konfigurations/Geometrie-Faktor</h2>
+<!-- $U_{AM} = \frac{\rho I}{2\pi \overline{AM}}=\frac{\rho I}{2\pi} \frac{1}{\overline{AM}}$, -->
+<p><span class="math inline">\(U_{AM} = \frac{\rho I}{2\pi} \frac{1}{\overline{AM}}\)</span>, <span class="math inline">\(U_{AN} = \frac{\rho I}{2\pi}  \frac{1}{\overline{AN}}\)</span>, <span class="math inline">\(U_{BM} = \frac{\rho I}{2\pi}  \frac{1}{\overline{BM}}\)</span>, <span class="math inline">\(U_{BN} = \frac{\rho I}{2\pi}  \frac{1}{\overline{BN}}\)</span></p>
+<p><span class="math display">\[ \Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) \]</span></p>
+<p><span class="math display">\[ \Delta U = \frac{\rho I}{2\pi} \big( \frac{1}{\overline{AM}} - \frac{1}{\overline{AN}} - \frac{1}{\overline{BM}} + \frac{1}{\overline{BN}}\big)\]</span></p>
+<p><span class="math display">\[ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{mit}\quad k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} \]</span></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -882,13 +907,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ves.html" class="pagination-link" aria-label="Widerstands-Tiefensondierung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span>
+      <a href="./einfuehrung.html" class="pagination-link" aria-label="Einführung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./grundgleichungen_em.html" class="pagination-link" aria-label="Grundgleichungen">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./sens_arrays.html" class="pagination-link" aria-label="Sensitivitäten und Messanordnungen">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -104,6 +104,34 @@ Das sekundäre Magnetfeld ist gegenüber dem primären Magnetfeld _phasenverscho
 
 Über Amplitude und Phasenverschiebung lassen sich die Leitfähigkeit und die Geometrie des Störkörpers unter Beachtung des Äquivalenzprinzips rekonstruieren.
 
+
+## Felder und Einheiten
+
+| Name | Symbol | Einheit |
+|-------------|---|-------|
+| Magnetfeld | $\mathbf{H}$ | A/m |
+| Elektrisches Feld | $\mathbf{E}$ | V/m |
+| Magnetische Flussdichte | $\mathbf{B}$ | Vs/Am$^{2}$ (T) |
+| Dielektrische Verschiebung | $\mathbf{D}$ | As/m$^{2}$ |
+| Elektrische Stromdichte | $\mathbf{j}$ | A/m$^{2}$ |
+| Spannung | $U$ | V |
+: Feldgrößen und ihre Einheiten {.striped .hover}
+
+## Messgrößen
+
+| Name | Symbol | Messgerät |
+|-------------|---|-------|
+| Elektrisches Feld | $\mathbf{E}$ | Elektroden |
+| Magnetische Flussdichte | $\mathbf{B}$ | Magnetometer |
+| Zeitliche Änderung der Flussdichte | $\frac{ \partial \mathbf{B} }{ \partial t }$ | Induktionsspulen |
+
+Mit Induktionsspulen kann nur die zeitliche Änderung der magnetischen Flussdichte als _induzierte Spannung_ gemessen werden:
+$$
+U_{ind} \sim \frac{ \partial \mathbf{B} }{ \partial t }
+$$
+
+
+
 ## Einteilung der Methoden nach Merkmalen der Felder
 
 |       | $\nabla \times \mathbf{H}=$ | $\nabla \times \mathbf{E}=$ |  |  |

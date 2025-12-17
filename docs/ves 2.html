@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Einführung – Modul Geoelektrik und Elektromagnetik</title>
+<title>4&nbsp; Widerstands-Tiefensondierung – Modul Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./grundgleichungen_em.html" rel="next">
-<link href="./ves.html" rel="prev">
+<link href="./einfuehrung_em.html" rel="next">
+<link href="./sens_arrays.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -122,7 +157,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ves.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -182,7 +217,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ves.html" class="sidebar-item-text sidebar-link">
+  <a href="./ves.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span></a>
   </div>
 </li>
@@ -199,7 +234,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link active">
+  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
@@ -239,26 +274,25 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#prinzip" id="toc-prinzip" class="nav-link active" data-scroll-target="#prinzip"><span class="header-section-number">5.1</span> Prinzip</a></li>
-  <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">5.2</span> Beispiele</a>
+  <li><a href="#tiefensondierung---schlumberger" id="toc-tiefensondierung---schlumberger" class="nav-link active" data-scroll-target="#tiefensondierung---schlumberger"><span class="header-section-number">4.1</span> Tiefensondierung - Schlumberger</a></li>
+  <li><a href="#inversion-am-beispiel-tiefensondierung" id="toc-inversion-am-beispiel-tiefensondierung" class="nav-link" data-scroll-target="#inversion-am-beispiel-tiefensondierung"><span class="header-section-number">5</span> Inversion am Beispiel Tiefensondierung</a>
   <ul class="collapse">
-  <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</a></li>
-  <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</a></li>
-  <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</a></li>
+  <li><a href="#horizontale-stromdichte" id="toc-horizontale-stromdichte" class="nav-link" data-scroll-target="#horizontale-stromdichte"><span class="header-section-number">5.1</span> Horizontale Stromdichte</a></li>
+  <li><a href="#horizontale-stromdichte-integriert" id="toc-horizontale-stromdichte-integriert" class="nav-link" data-scroll-target="#horizontale-stromdichte-integriert"><span class="header-section-number">5.2</span> Horizontale Stromdichte integriert</a></li>
+  <li><a href="#d-sensitivitäten" id="toc-d-sensitivitäten" class="nav-link" data-scroll-target="#d-sensitivitäten"><span class="header-section-number">5.3</span> 1D-Sensitivitäten</a></li>
+  <li><a href="#notebook-mit-sondierung" id="toc-notebook-mit-sondierung" class="nav-link" data-scroll-target="#notebook-mit-sondierung"><span class="header-section-number">5.4</span> Notebook mit Sondierung</a></li>
+  <li><a href="#zielfunktion-schlechter-leiter" id="toc-zielfunktion-schlechter-leiter" class="nav-link" data-scroll-target="#zielfunktion-schlechter-leiter"><span class="header-section-number">5.5</span> Zielfunktion schlechter Leiter</a></li>
+  <li><a href="#zielfunktion-guter-leiter" id="toc-zielfunktion-guter-leiter" class="nav-link" data-scroll-target="#zielfunktion-guter-leiter"><span class="header-section-number">5.6</span> Zielfunktion guter Leiter</a></li>
   </ul></li>
-  <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">5.3</span> Einteilung</a></li>
-  <li><a href="#frequenzen-und-targets" id="toc-frequenzen-und-targets" class="nav-link" data-scroll-target="#frequenzen-und-targets"><span class="header-section-number">5.4</span> Frequenzen und Targets</a></li>
-  <li><a href="#erkundungsmethoden" id="toc-erkundungsmethoden" class="nav-link" data-scroll-target="#erkundungsmethoden"><span class="header-section-number">5.5</span> Erkundungsmethoden</a></li>
-  <li><a href="#beispiele-für-em-messgeräte" id="toc-beispiele-für-em-messgeräte" class="nav-link" data-scroll-target="#beispiele-für-em-messgeräte"><span class="header-section-number">5.6</span> Beispiele für EM-Messgeräte</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ves.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></h1>
 </div>
 
 
@@ -275,208 +309,130 @@ window.Quarto = {
 </header>
 
 
-<p>Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.</p>
-<p>Wir werden folgende wichtige Messverfahren kennenlernen:</p>
+<section id="tiefensondierung---schlumberger" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="tiefensondierung---schlumberger"><span class="header-section-number">4.1</span> Tiefensondierung - Schlumberger</h2>
+<div class="r-stack">
+<p><img src="pics/sens/sens_slm3.svg" class="img-fluid" width="1200"></p>
+<p><img src="pics/sens/sens_slm10.svg" class="fragment img-fluid" width="1200"></p>
+<p><img src="pics/sens/sens_slm15.svg" class="fragment img-fluid" width="1200"></p>
+<p><img src="pics/sens/sens_slm18.svg" class="fragment img-fluid" width="1200"></p>
+</div>
+</section>
+<section id="inversion-am-beispiel-tiefensondierung" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Inversion am Beispiel Tiefensondierung</h1>
 <ul>
-<li>Magnetotellurik</li>
-<li>CSEM</li>
-<li>Transient-Elektromagnetik</li>
+<li>früher Auswertung mit Kurvenschablonen</li>
+<li>Datenanpassung durch iterative Veränderung des Modells</li>
+<li>Inversion: Minimierung des Misfits zwischen Daten &amp; Modellantwort
+<ul>
+<li>Sensitivitäten als wichtigste Zutat (<span class="math inline">\(\delta\rho\rightarrow\delta\rho_a\)</span>)</li>
+</ul></li>
+<li>Zielfunktion: Quadratmittel der Abweichung darstellen</li>
 </ul>
-<section id="prinzip" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="prinzip"><span class="header-section-number">5.1</span> Prinzip</h2>
-<p>Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:</p>
+<section id="horizontale-stromdichte" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="horizontale-stromdichte"><span class="header-section-number">5.1</span> Horizontale Stromdichte</h2>
+<div class="columns">
+<div class="column">
+<p><span class="math inline">\(j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})\)</span></p>
+<p>in der Mitte (<span class="math inline">\(r_A=r_B\)</span>, AB=<span class="math inline">\(L\)</span>): <span class="math display">\[j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}\]</span></p>
+</div><div class="column">
+<div id="e3233ea1" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zL <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">3</span>, <span class="fl">.01</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>jx <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(zL<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="fl">0.25</span>)<span class="op">**</span><span class="fl">1.5</span><span class="op">/</span><span class="dv">2</span><span class="op">/</span>np.pi</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sumjx <span class="op">=</span> np.cumsum(jx)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, jx<span class="op">/</span>jx[<span class="dv">0</span>], label<span class="op">=</span><span class="st">"jx"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, sumjx<span class="op">/</span>sumjx[<span class="op">-</span><span class="dv">1</span>], label<span class="op">=</span><span class="st">"sum"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"z/L"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="vs">j_x</span><span class="dv">$</span><span class="vs">/</span><span class="dv">$\S</span><span class="vs">igma j_x</span><span class="dv">$</span><span class="vs"> </span><span class="kw">(</span><span class="vs">normalized</span><span class="kw">)</span><span class="vs">"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.grid()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ves_files/figure-html/cell-3-output-1.png" width="591" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="horizontale-stromdichte-integriert" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="horizontale-stromdichte-integriert"><span class="header-section-number">5.2</span> Horizontale Stromdichte integriert</h2>
+<p><span class="math display">\[\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\]</span></p>
+<div class="columns">
+<div class="column">
+<p><span class="math display">\[\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} \]</span> - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2</p>
+</div><div class="column">
+<div id="2b6133e4" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, np.arctan(<span class="dv">2</span><span class="op">*</span>zL)<span class="op">*</span><span class="dv">2</span><span class="op">/</span>np.pi)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"z/L"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.grid()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ves_files/figure-html/cell-4-output-1.png" width="571" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="d-sensitivitäten" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="d-sensitivitäten"><span class="header-section-number">5.3</span> 1D-Sensitivitäten</h2>
+<div class="columns">
+<div class="column">
+<p><img src="pics/ves/ves_sens1d.svg" class="img-fluid" style="width:150.0%"></p>
+</div><div class="column">
+<ul>
+<li>logarithmisch äquidistante L (AB)</li>
+<li>Sondierungsparameter AB/2</li>
+<li>Maximum bei AB/2/2</li>
+<li>90%-Summe bei AB/2*3</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="notebook-mit-sondierung" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="notebook-mit-sondierung"><span class="header-section-number">5.4</span> Notebook mit Sondierung</h2>
+</section>
+<section id="zielfunktion-schlechter-leiter" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="zielfunktion-schlechter-leiter"><span class="header-section-number">5.5</span> Zielfunktion schlechter Leiter</h2>
 <div class="columns">
 <div class="column">
 <ul>
-<li>Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld</li>
-<li>Im leitenden Störkörper werden elektrische Wechselfelder (<strong>Wirbelströme</strong>) induziert</li>
-<li>Die Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird</li>
+<li>3-Schicht-Fall</li>
+<li>Mächtigkeiten 20m</li>
+<li>spez. Widerstände 100/10/100 <span class="math inline">\(\Omega\)</span>m</li>
 </ul>
 </div><div class="column">
-<p><img src="pics/em/prinzip.png" class="img-fluid"></p>
+<p><img src="pics/ves/objfun-resistor.svg" class="img-fluid"></p>
 </div>
 </div>
-<p>Diesem Grundprinzip folgen alle EM-Verfahren.</p>
-<p>Unterschiede bestehen hinsichtlich</p>
+</section>
+<section id="zielfunktion-guter-leiter" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="zielfunktion-guter-leiter"><span class="header-section-number">5.6</span> Zielfunktion guter Leiter</h2>
+<div class="columns">
+<div class="column">
 <ul>
-<li>der verwendeten Sender (induktiv oder galvanisch angekoppelt)</li>
-<li>der Stromfunktion im Sender (sinus- oder rechteckförmig)</li>
-<li>der gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)</li>
-<li>der Position der Quelle (marin, luftgestützt, bodengestützt)</li>
-<li>der Natur der Quelle (technisch oder natürlich)</li>
+<li>3-Schicht-Fall</li>
+<li>Mächtigkeiten 20m</li>
+<li>spez. Widerstände 100/1000/100 <span class="math inline">\(\Omega\)</span>m</li>
 </ul>
-<p><img src="pics/em/CSEM-Maxwell.excalidraw.svg" class="img-fluid"></p>
-</section>
-<section id="beispiele" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">5.2</span> Beispiele</h2>
-<section id="marine-csem" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</h3>
-<p>Eine leistungsstarke Stromquelle wird als <em>elektrischer Dipol</em> über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.</p>
-<p>Zusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der <em>Magnetotellurik</em> mit größerer Eindringtiefe genutzt werden.</p>
-<p>Das Bild zeigt schematisch das CSEM-Messkonzept des <em>Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US</em>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/CSEM_MTconcepts.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: Scripps</figcaption>
-</figure>
+</div><div class="column">
+<p><img src="pics/ves/objfun-conductor.svg" class="img-fluid"></p>
 </div>
-<p>Der Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.</p>
-</section>
-<section id="airborne-em" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</h3>
-<p>Die Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/hubschrauber_namibia.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: BGR</figcaption>
-</figure>
 </div>
-<p>Die luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:</p>
-<ul>
-<li>Bestimmung von Salz-/Süßwassergrenzen</li>
-<li>Grundwassersuche</li>
-<li>Geologische Kartierung</li>
-<li>Kartierung von Störungszonen</li>
-<li>Suche nach Altlasten</li>
-<li>Kartierung leitfähiger Sickerwässer</li>
-<li>Archäologische Vermessungen</li>
-<li>Ingenieurgeologische Messungen</li>
-<li>Lagerstättenexploration</li>
-</ul>
-<p><em>Semi-airborne</em>-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden.</p>
-<p>Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des <a href="https://www.uni-muenster.de/DESMEX/startseite.html">DESMEX</a>-Projektes.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://gitlab.com/Rochlitz.R/custem-examples/-/raw/main/supplementsGJI/03_schleiz_example/results_2022_10/final_res_model_3D_view_p2.png?ref_type=heads" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Rochlitz <em>et al.</em> (2023)</figcaption>
-</figure>
-</div>
-</section>
-<section id="magnetotellurik" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</h3>
-<p>Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/em/mtexamplepic.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: FU Berlin</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.bgr.bund.de/DE/BGR/Wissenschaftliche-Infrastruktur/Geophysik/Bodengeophysik/Bilder/B_Magnetotellurik/mt_messung_im_gelaende_de.jpg?__blob=poster&amp;v=2" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Quelle: BGR</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="einteilung" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="einteilung"><span class="header-section-number">5.3</span> Einteilung</h2>
-<p>Es existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.</p>
-<p>Möglich ist eine Unterscheidung</p>
-<ul>
-<li>hinsichtlich der eingesetzten Sender und Empfänger oder</li>
-<li>nach den Merkmalen der Felder.</li>
-</ul>
-<table class="table-striped table-hover caption-top table">
-<caption>Zweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung</caption>
-<colgroup>
-<col style="width: 29%">
-<col style="width: 21%">
-<col style="width: 17%">
-<col style="width: 21%">
-<col style="width: 10%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Sender</th>
-<th>Elektroden</th>
-<th>Elektroden und Spulen</th>
-<th>Spulen (Erdoberfläche)</th>
-<th>Spulen (Luft)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Geerdetes Kabel (galvanisch)</td>
-<td>Widerstandsgeoelektrik, IP</td>
-<td></td>
-<td>MMR</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Geerdetes Kabel (induktiv)</td>
-<td></td>
-<td>CSAMT</td>
-<td>LOTEM</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Spule</td>
-<td></td>
-<td></td>
-<td>Slingram, TEM, Bohrloch-EM</td>
-<td>Aero-EM</td>
-</tr>
-<tr class="even">
-<td>Langes Kabel, große Spule</td>
-<td></td>
-<td></td>
-<td>TURAM, TEM, Bohrloch-EM</td>
-<td>Semi-Airborne</td>
-</tr>
-<tr class="odd">
-<td>Ebene Wellen: Vertikale Antenne</td>
-<td></td>
-<td>VLF-R</td>
-<td>VLF</td>
-<td>VLF</td>
-</tr>
-<tr class="even">
-<td>Natürliche elektromagnetische Felder</td>
-<td>Tellurik</td>
-<td>MT</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Wir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:</p>
-<ul>
-<li><strong>zeitharmonisch</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}) e^{ i \omega t }\)</span>
-<ul>
-<li>monofrequent</li>
-<li>Kontinuum (Frequenzgemisch)</li>
-</ul></li>
-<li><strong>Zeitbereich</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}, t)\)</span>
-<ul>
-<li>Impulsfolgen</li>
-<li>Rechteckimpulsfolgen</li>
-</ul></li>
-</ul>
-</section>
-<section id="frequenzen-und-targets" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="frequenzen-und-targets"><span class="header-section-number">5.4</span> Frequenzen und Targets</h2>
-<p><img src="pics/em/EM-Target-Frequenz.excalidraw.svg" class="img-fluid"></p>
-</section>
-<section id="erkundungsmethoden" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="erkundungsmethoden"><span class="header-section-number">5.5</span> Erkundungsmethoden</h2>
-<p>Wir unterscheiden drei unterschiedliche Methoden der Untersuchug des Untergrundes:</p>
-<ul>
-<li>Die <strong>Kartierung</strong>, bei welcher mit gleichbleibender Frequenz und Abstand zwischen Sender und Empfänger <em>laterale Leitfähigkeitsinhomogenitäten</em> durch Messungen entlang von Profilen erfasst werden</li>
-<li>Die <strong>Sondierung</strong>, bei welcher an einem festen Standort entweder die Frequenz oder der Abstand zwischen Sender und Empfänger verändert wird, um auf diese Weise die Eindringtiefe zu variieren. Die Information kommt dann aus <em>unterschiedlichen Tiefenbereichen</em>.</li>
-<li>Eine <strong>Kombination aus beiden Methoden</strong> liefert Messwerte, aus denen sich die Verteilung der elektrischen Leitfähigkeit <em>im gesamten Raum</em> rekonstruieren lässt.</li>
-</ul>
-</section>
-<section id="beispiele-für-em-messgeräte" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="beispiele-für-em-messgeräte"><span class="header-section-number">5.6</span> Beispiele für EM-Messgeräte</h2>
-<ul>
-<li>Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern <em>scheinbare Leitfähigkeit</em></li>
-<li>TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient <span class="math inline">\(\frac{ \partial B_{z}(t) }{ \partial t }\)</span></li>
-<li>MT-Apparatur, z.B. Metronix ADU-08e, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte</li>
-<li>Airborne-EM-System, z.B. Fugro, liefert Magnetfeldverhältnis <span class="math inline">\(B_{z}/B_{z}^{0}\)</span> oder sekundäres Magnetfeld <span class="math inline">\(B_{z}^{s}=B_{z}-B_{z}^{0}\)</span></li>
-</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -882,13 +838,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ves.html" class="pagination-link" aria-label="Widerstands-Tiefensondierung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span>
+      <a href="./sens_arrays.html" class="pagination-link" aria-label="Sensitivitäten und Messanordnungen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./grundgleichungen_em.html" class="pagination-link" aria-label="Grundgleichungen">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./einfuehrung_em.html" class="pagination-link" aria-label="Einführung">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

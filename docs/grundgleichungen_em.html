@@ -247,8 +247,10 @@ window.Quarto = {
   <li><a href="#materialgleichungen" id="toc-materialgleichungen" class="nav-link" data-scroll-target="#materialgleichungen"><span class="header-section-number">6.2</span> Materialgleichungen</a></li>
   <li><a href="#ohmsches-gesetz" id="toc-ohmsches-gesetz" class="nav-link" data-scroll-target="#ohmsches-gesetz"><span class="header-section-number">6.3</span> Ohmsches Gesetz</a></li>
   <li><a href="#schematisches-konzept-der-elektromagnetischen-induktion" id="toc-schematisches-konzept-der-elektromagnetischen-induktion" class="nav-link" data-scroll-target="#schematisches-konzept-der-elektromagnetischen-induktion"><span class="header-section-number">6.4</span> Schematisches Konzept der elektromagnetischen Induktion</a></li>
-  <li><a href="#einteilung-der-methoden-nach-merkmalen-der-felder" id="toc-einteilung-der-methoden-nach-merkmalen-der-felder" class="nav-link" data-scroll-target="#einteilung-der-methoden-nach-merkmalen-der-felder"><span class="header-section-number">6.5</span> Einteilung der Methoden nach Merkmalen der Felder</a></li>
-  <li><a href="#messung" id="toc-messung" class="nav-link" data-scroll-target="#messung"><span class="header-section-number">6.6</span> Messung</a></li>
+  <li><a href="#felder-und-einheiten" id="toc-felder-und-einheiten" class="nav-link" data-scroll-target="#felder-und-einheiten"><span class="header-section-number">6.5</span> Felder und Einheiten</a></li>
+  <li><a href="#messgrößen" id="toc-messgrößen" class="nav-link" data-scroll-target="#messgrößen"><span class="header-section-number">6.6</span> Messgrößen</a></li>
+  <li><a href="#einteilung-der-methoden-nach-merkmalen-der-felder" id="toc-einteilung-der-methoden-nach-merkmalen-der-felder" class="nav-link" data-scroll-target="#einteilung-der-methoden-nach-merkmalen-der-felder"><span class="header-section-number">6.7</span> Einteilung der Methoden nach Merkmalen der Felder</a></li>
+  <li><a href="#messung" id="toc-messung" class="nav-link" data-scroll-target="#messung"><span class="header-section-number">6.8</span> Messung</a></li>
   </ul>
 </nav>
     </div>
@@ -383,8 +385,90 @@ F(\omega) &amp; = \phantom{\frac{1}{2 \pi}} \int_{-\infty}^{\infty} f(t) e^{ -i 
 </div>
 <p>Über Amplitude und Phasenverschiebung lassen sich die Leitfähigkeit und die Geometrie des Störkörpers unter Beachtung des Äquivalenzprinzips rekonstruieren.</p>
 </section>
-<section id="einteilung-der-methoden-nach-merkmalen-der-felder" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="einteilung-der-methoden-nach-merkmalen-der-felder"><span class="header-section-number">6.5</span> Einteilung der Methoden nach Merkmalen der Felder</h2>
+<section id="felder-und-einheiten" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="felder-und-einheiten"><span class="header-section-number">6.5</span> Felder und Einheiten</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Feldgrößen und ihre Einheiten</caption>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Symbol</th>
+<th>Einheit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Magnetfeld</td>
+<td><span class="math inline">\(\mathbf{H}\)</span></td>
+<td>A/m</td>
+</tr>
+<tr class="even">
+<td>Elektrisches Feld</td>
+<td><span class="math inline">\(\mathbf{E}\)</span></td>
+<td>V/m</td>
+</tr>
+<tr class="odd">
+<td>Magnetische Flussdichte</td>
+<td><span class="math inline">\(\mathbf{B}\)</span></td>
+<td>Vs/Am<span class="math inline">\(^{2}\)</span> (T)</td>
+</tr>
+<tr class="even">
+<td>Dielektrische Verschiebung</td>
+<td><span class="math inline">\(\mathbf{D}\)</span></td>
+<td>As/m<span class="math inline">\(^{2}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Elektrische Stromdichte</td>
+<td><span class="math inline">\(\mathbf{j}\)</span></td>
+<td>A/m<span class="math inline">\(^{2}\)</span></td>
+</tr>
+<tr class="even">
+<td>Spannung</td>
+<td><span class="math inline">\(U\)</span></td>
+<td>V</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="messgrößen" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="messgrößen"><span class="header-section-number">6.6</span> Messgrößen</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 13%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Symbol</th>
+<th>Messgerät</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Elektrisches Feld</td>
+<td><span class="math inline">\(\mathbf{E}\)</span></td>
+<td>Elektroden</td>
+</tr>
+<tr class="even">
+<td>Magnetische Flussdichte</td>
+<td><span class="math inline">\(\mathbf{B}\)</span></td>
+<td>Magnetometer</td>
+</tr>
+<tr class="odd">
+<td>Zeitliche Änderung der Flussdichte</td>
+<td><span class="math inline">\(\frac{ \partial \mathbf{B} }{ \partial t }\)</span></td>
+<td>Induktionsspulen</td>
+</tr>
+</tbody>
+</table>
+<p>Mit Induktionsspulen kann nur die zeitliche Änderung der magnetischen Flussdichte als <em>induzierte Spannung</em> gemessen werden: <span class="math display">\[
+U_{ind} \sim \frac{ \partial \mathbf{B} }{ \partial t }
+\]</span></p>
+</section>
+<section id="einteilung-der-methoden-nach-merkmalen-der-felder" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="einteilung-der-methoden-nach-merkmalen-der-felder"><span class="header-section-number">6.7</span> Einteilung der Methoden nach Merkmalen der Felder</h2>
 <table class="table-striped table-hover caption-top table">
 <caption>Zweckmäßige Einteilung anhand der Merkmale der Felder</caption>
 <colgroup>
@@ -435,8 +519,8 @@ F(\omega) &amp; = \phantom{\frac{1}{2 \pi}} \int_{-\infty}^{\infty} f(t) e^{ -i 
 </tbody>
 </table>
 </section>
-<section id="messung" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="messung"><span class="header-section-number">6.6</span> Messung</h2>
+<section id="messung" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="messung"><span class="header-section-number">6.8</span> Messung</h2>
 <p>Bei der Messung wird versucht, die <em>Übertragungsfunktion</em> oder <em>response function</em> des Systems Erde zu erfassen.</p>
 <p>Dazu ist ein breites Frequenzspektrum erforderlich.</p>
 <div class="columns">

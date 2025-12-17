@@ -116,3 +116,23 @@ Wir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal u
 - **Zeitbereich**: $\mathbf{j}(\mathbf{r}, t)$
     - Impulsfolgen
     - Rechteckimpulsfolgen
+
+## Frequenzen und Targets
+
+![](pics/em/EM-Target-Frequenz.excalidraw.svg)
+
+## Erkundungsmethoden
+
+Wir unterscheiden drei unterschiedliche Methoden der Untersuchug des Untergrundes:
+
+- Die __Kartierung__, bei welcher mit gleichbleibender Frequenz und Abstand zwischen Sender und Empfänger _laterale Leitfähigkeitsinhomogenitäten_ durch Messungen entlang von Profilen erfasst werden
+- Die __Sondierung__, bei welcher an einem festen Standort entweder die Frequenz oder der Abstand zwischen Sender und Empfänger verändert wird, um auf diese Weise die Eindringtiefe zu variieren. Die Information kommt dann aus _unterschiedlichen Tiefenbereichen_.
+- Eine __Kombination aus beiden Methoden__ liefert Messwerte, aus denen sich die Verteilung der elektrischen Leitfähigkeit _im gesamten Raum_ rekonstruieren lässt.
+
+
+## Beispiele für EM-Messgeräte
+
+- Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern _scheinbare Leitfähigkeit_
+- TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient $\frac{ \partial B_{z}(t) }{ \partial t }$
+- MT-Apparatur, z.B. Metronix ADU-08e, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte
+- Airborne-EM-System, z.B. Fugro, liefert Magnetfeldverhältnis $B_{z}/B_{z}^{0}$ oder sekundäres Magnetfeld $B_{z}^{s}=B_{z}-B_{z}^{0}$
