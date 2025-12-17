@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Widerstands-Tiefensondierung – Geoelektrik und Elektromagnetik</title>
+<title>Literaturverzeichnis – Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -84,8 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ert.html" rel="next">
-<link href="./sens_arrays.html" rel="prev">
+<link href="./slidedecks.html" rel="next">
+<link href="./zusammenfassung.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -135,35 +100,6 @@ window.MathJax = {
 };
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -176,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ves.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./literatur.html">Literaturverzeichnis</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -236,7 +172,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ves.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ves.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span></a>
   </div>
 </li>
@@ -303,7 +239,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./literatur.html" class="sidebar-item-text sidebar-link">
+  <a href="./literatur.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Literaturverzeichnis</span></a>
   </div>
 </li>
@@ -318,27 +254,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhaltsverzeichnis</h2>
-   
-  <ul>
-  <li><a href="#d-sensitivitäten" id="toc-d-sensitivitäten" class="nav-link active" data-scroll-target="#d-sensitivitäten"><span class="header-section-number">4.1</span> 1D-Sensitivitäten</a>
-  <ul class="collapse">
-  <li><a href="#horizontale-stromdichte" id="toc-horizontale-stromdichte" class="nav-link" data-scroll-target="#horizontale-stromdichte"><span class="header-section-number">4.1.1</span> Horizontale Stromdichte</a></li>
-  </ul></li>
-  <li><a href="#inversion-am-beispiel-tiefensondierung" id="toc-inversion-am-beispiel-tiefensondierung" class="nav-link" data-scroll-target="#inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.2</span> Inversion am Beispiel Tiefensondierung</a></li>
-  <li><a href="#zielfunktion-schlechter-leiter" id="toc-zielfunktion-schlechter-leiter" class="nav-link" data-scroll-target="#zielfunktion-schlechter-leiter"><span class="header-section-number">4.3</span> Zielfunktion schlechter Leiter</a></li>
-  <li><a href="#zielfunktion-guter-leiter" id="toc-zielfunktion-guter-leiter" class="nav-link" data-scroll-target="#zielfunktion-guter-leiter"><span class="header-section-number">4.4</span> Zielfunktion guter Leiter</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grundgleichungen_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ves.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></h1>
+<h1 class="title">Literaturverzeichnis</h1>
 </div>
 
 
@@ -355,130 +279,125 @@ window.Quarto = {
 </header>
 
 
-<p>Eine Tiefensondierung erreicht man, indem man am gleichen Mess-Mittelpunkt die Elektrodenabstände (z.T. nur die der Stromelektroden) sukzessive erhöht. Die dafür meist eingesetzte Anordnung ist die Schlumberger-Anordnung. Dabei bleiben die Spannungselektroden konstant und die beiden Stromelektroden entfernen sich vom Mittelpunkt immer weiter.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/ert/sens/ves.gif" class="img-fluid figure-img"></p>
-<figcaption>Sensitivitäten einer Schlumberger-Tiefensondierung</figcaption>
-</figure>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-dm2014" class="csl-entry" role="listitem">
+Dentith M and Mudge S T. 2014. <em><a href="https://doi.org/10.1017/cbo9781139024358">Geophysics for the
+mineral exploration geoscientist</a></em> (Cambridge University Press)
 </div>
-<section id="d-sensitivitäten" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="d-sensitivitäten"><span class="header-section-number">4.1</span> 1D-Sensitivitäten</h2>
-<section id="horizontale-stromdichte" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="horizontale-stromdichte"><span class="header-section-number">4.1.1</span> Horizontale Stromdichte</h3>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">\(j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})\)</span></p>
-<p>in der Mitte (<span class="math inline">\(r_A=r_B\)</span>, AB=<span class="math inline">\(L\)</span>): <span class="math display">\[j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}\]</span></p>
-</div><div class="column">
-<div id="68e84331" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Code anzeigen</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zL <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">3</span>, <span class="fl">.01</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>jx <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(zL<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="fl">0.25</span>)<span class="op">**</span><span class="fl">1.5</span><span class="op">/</span><span class="dv">2</span><span class="op">/</span>np.pi</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sumjx <span class="op">=</span> np.cumsum(jx)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, jx<span class="op">/</span>jx[<span class="dv">0</span>], label<span class="op">=</span><span class="st">"jx"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, sumjx<span class="op">/</span>sumjx[<span class="op">-</span><span class="dv">1</span>], label<span class="op">=</span><span class="st">"sum"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"z/L"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="vs">j_x</span><span class="dv">$</span><span class="vs">/</span><span class="dv">$\S</span><span class="vs">igma j_x</span><span class="dv">$</span><span class="vs"> </span><span class="kw">(</span><span class="vs">normalized</span><span class="kw">)</span><span class="vs">"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.grid()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ves_files/figure-html/cell-3-output-1.png" width="591" height="429" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>Wenn wir nun die horizontale Stromdichte über die y-Achse (in die Tafelebene hinein) aufintegrieren, erhalten wir <span class="math display">\[\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\]</span></p>
-<div class="columns">
-<div class="column">
-<p><span class="math display">\[\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} \]</span> - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2</p>
-</div><div class="column">
-<div id="443ad074" class="cell" data-execution_count="3">
-<details class="code-fold">
-<summary>Code anzeigen</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, np.arctan(<span class="dv">2</span><span class="op">*</span>zL)<span class="op">*</span><span class="dv">2</span><span class="op">/</span>np.pi)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"z/L"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.grid()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ves_files/figure-html/cell-4-output-1.png" width="571" height="429" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>Die 1D Sensitivitätsfunktion für eine Pol-Pol-Messung <span class="citation" data-cites="Guenther2004">(<a href="literatur.html#ref-Guenther2004" role="doc-biblioref">Günther 2004</a>)</span> <span class="math display">\[ s(z) = \frac{z}{\sqrt{a^2+z^2}^3} \]</span> und damit für eine Vier-Punkt-Messung <span class="math display">\[ s(z) = \frac{z}{\sqrt{AM^2+z^2}^3} - \frac{z}{\sqrt{BM^2+z^2}^3} - \frac{z}{\sqrt{AN^2+z^2}^3} + \frac{z}{\sqrt{BN^2+z^2}^3} \]</span></p>
-<p>Für eine Schlumberger-Sondierung gilt <span class="math inline">\(AM=BN=AB/2-MN/2\)</span> und <span class="math inline">\(AN=BM=AB/2+MN/2\)</span> <span class="math display">\[ s(z) = 2\frac{z}{\sqrt{(AB/2-MN/2)^2+z^2}^3} - 2\frac{z}{\sqrt{(AB/2+MN/2)^2+z^2}^3} \]</span></p>
-<div class="columns">
-<div class="column">
-<p><img src="pics/ves/ves_sens1d.svg" class="img-fluid" style="width:150.0%"></p>
-</div><div class="column">
-<ul>
-<li>logarithmisch äquidistante L (AB)</li>
-<li>Sondierungsparameter AB/2</li>
-<li>Maximum bei AB/2/2</li>
-<li>90%-Summe bei AB/2*3</li>
-</ul>
-</div>
-</div>
-</section>
-</section>
-<section id="inversion-am-beispiel-tiefensondierung" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="inversion-am-beispiel-tiefensondierung"><span class="header-section-number">4.2</span> Inversion am Beispiel Tiefensondierung</h2>
-<ul>
-<li>früher Auswertung mit Kurvenschablonen</li>
-<li>Datenanpassung durch iterative Veränderung des Modells</li>
-<li>Zielfunktion: Quadratmittel der Abweichung Daten und Modellantwort <span class="math display">\[ \Phi=\sum (d_i-f_i(\vb m))^2 \rightarrow \min \]</span></li>
-<li>Inversion: Minimierung des Misfits zwischen Daten &amp;
-<ul>
-<li>Sensitivitäten als wichtigste Zutat (<span class="math inline">\(\delta\rho\rightarrow\delta\rho_a\)</span>)</li>
-</ul></li>
-</ul>
-</section>
-<section id="zielfunktion-schlechter-leiter" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="zielfunktion-schlechter-leiter"><span class="header-section-number">4.3</span> Zielfunktion schlechter Leiter</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li>3-Schicht-Fall</li>
-<li>Mächtigkeiten 20m</li>
-<li>spez. Widerstände 100/10/100 <span class="math inline">\(\Omega\)</span>m</li>
-</ul>
-</div><div class="column">
-<p><img src="pics/ves/objfun-resistor.svg" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="zielfunktion-guter-leiter" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="zielfunktion-guter-leiter"><span class="header-section-number">4.4</span> Zielfunktion guter Leiter</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li>3-Schicht-Fall</li>
-<li>Mächtigkeiten 20m</li>
-<li>spez. Widerstände 100/1000/100 <span class="math inline">\(\Omega\)</span>m</li>
-</ul>
-</div><div class="column">
-<p><img src="pics/ves/objfun-conductor.svg" class="img-fluid"></p>
-</div>
-</div>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Guenther2004" class="csl-entry" role="listitem">
-Günther T. 2004. <em><span>I</span>nversion <span>M</span>ethods and <span>R</span>esolution <span>A</span>nalysis for the 2<span>D</span>/3<span>D</span> <span>R</span>econstruction of <span>R</span>esistivity <span>S</span>tructures from <span>DC</span> <span>M</span>easurements</em> phdthesis (University of Mining; Technology Freiberg)
+Günther T. 2004. <em><span>I</span>nversion <span>M</span>ethods and
+<span>R</span>esolution <span>A</span>nalysis for the
+2<span>D</span>/3<span>D</span> <span>R</span>econstruction of
+<span>R</span>esistivity <span>S</span>tructures from <span>DC</span>
+<span>M</span>easurements</em> PhD thesis (University of Mining;
+Technology Freiberg)
+</div>
+<div id="ref-Guenther2016" class="csl-entry" role="listitem">
+Günther T and Martin T. 2016. <a href="https://doi.org/10.1016/j.jappgeo.2016.01.008"><span>S</span>pectral
+two-dimensional inversion of frequency-domain induced polarisation data
+from a mining slag heap</a>. <em>Journal of Applied Geophysics</em>.
+<strong>135</strong>. 436–48
+</div>
+<div id="ref-Guenther2015" class="csl-entry" role="listitem">
+Günther T, Ronczka M and Voß T. 2015. <a href="https://doi.org/10.1007/978-3-319-13930-2_8"><span>S</span>altwater
+<span>M</span>onitoring <span>U</span>sing
+<span>L</span>ong-<span>E</span>lectrode <span>ERT</span></a>.
+<em>Geological storage of CO2 – long term security aspects</em> Advanced
+technologies in earth sciences ed A Liebscher and U Münch (Springer
+International Publishing) pp 167–82
+</div>
+<div id="ref-Guenther2006" class="csl-entry" role="listitem">
+Günther T, Rücker C and Spitzer K. 2006. <a href="https://doi.org/10.1111/j.1365-246X.2006.03011.x">Three-dimensional
+modeling and inversion of dc resistivity data incorporating topography -
+<span>II</span>: inversion</a>. <em>Geophys. J. Int.</em>
+<strong>166</strong>. 506–17
+</div>
+<div id="ref-Huebner2015" class="csl-entry" role="listitem">
+Hübner R, Heller K, Günther T and Kleber A. 2015.
+<span>M</span>onitoring hillslope moisture dynamics with surface
+<span>ERT</span> for enhancing spatial significance of hydrometric point
+measurements. <em>Hydrology and Earth System Sciences</em>.
+<strong>19</strong>. 225–40 Online: <a href="http://www.hydrol-earth-syst-sci.net/19/225/2015/">http://www.hydrol-earth-syst-sci.net/19/225/2015/</a>
+</div>
+<div id="ref-Knoedel2005" class="csl-entry" role="listitem">
+Knödel K, Krummel H and Lange G. 2005. <em><a href="https://doi.org/10.1007/b137869">Handbuch zur erkundung des
+untergrundes von deponien und altlasten - band 3: geophysik</a></em>
+(Springer-Verlag)
+</div>
+<div id="ref-Loewer2017" class="csl-entry" role="listitem">
+Loewer M, Günther T, Igel J, Kruschwitz S, Martin T and Wagner N. 2017.
+Ultra-broad-band electrical spectroscopy of soils and
+sediments<span></span>a combined permittivity and conductivity model.
+<em>Geophysical Journal International</em>. <strong>210</strong>.
+1360–73 Online: <a href="https://doi.org/10.1093/gji/ggx242">https://doi.org/10.1093/gji/ggx242</a>
+</div>
+<div id="ref-Martin2013" class="csl-entry" role="listitem">
+Martin T and Günther T. 2013. <span>C</span>omplex resistivity
+tomography (<span>CRT</span>) for fungus detection on standing oak
+trees. <em>European Journal of Forest Research</em>.
+<strong>132</strong>. 765–76 Online: <a href="http://dx.doi.org/10.1007/s10342-013-0711-4">http://dx.doi.org/10.1007/s10342-013-0711-4</a>
+</div>
+<div id="ref-Martin2020" class="csl-entry" role="listitem">
+Martin T, Günther T, Orozco A F and Dahlin T. 2020. <a href="https://doi.org/10.1016/j.jappgeo.2020.104141">Evaluation of
+spectral induced polarization field measurements in time and frequency
+domain</a>. <em>Journal of Applied Geophysics</em>.
+<strong>180</strong>. 104141
+</div>
+<div id="ref-Martin2021" class="csl-entry" role="listitem">
+Martin T, Günther T, Weller A and Kuhn K. 2021. Classification of slag
+material by spectral induced polarization laboratory and field
+measurements. <em>Journal of Applied Geophysics</em>.
+<strong>194</strong>. 104439 Online: <a href="https://doi.org/10.1016/j.jappgeo.2021.104439">https://doi.org/10.1016/j.jappgeo.2021.104439</a>
+</div>
+<div id="ref-Nickschick2019" class="csl-entry" role="listitem">
+Nickschick T, Flechsig C, Mrlina J, Oppermann F, Löbig F and Günther T.
+2019. Large-scale electrical resistivity tomography in the <span>Cheb
+Basin</span> (<span>Eger Rift</span>) at an <span>I</span>nternational
+<span>C</span>ontinental <span>D</span>rilling <span>P</span>rogram
+(<span>ICDP</span>) monitoring site to image fluid-related structures.
+<em>Solid Earth</em>. <strong>10</strong>. 1951–69 Online: <a href="https://www.solid-earth.net/10/1951/2019/">https://www.solid-earth.net/10/1951/2019/</a>
+</div>
+<div id="ref-Persson2015" class="csl-entry" role="listitem">
+Persson M, Dahlin T and Günther T. 2015. <a href="https://doi.org/10.2136/vzj2014.07.0085"><span>O</span>bserving
+<span>S</span>olute <span>T</span>ransport in the <span>C</span>apillary
+<span>F</span>ringe <span>U</span>sing <span>I</span>mage
+<span>A</span>nalysis and <span>E</span>lectrical
+<span>R</span>esistivity <span>T</span>omography in
+<span>L</span>aboratory <span>E</span>xperiments</a>. <em>Vadose Zone
+Journal</em>. <strong>14</strong>. 11p.
+</div>
+<div id="ref-Ronczka2025" class="csl-entry" role="listitem">
+Ronczka M, Günther T, Grinat M, Siemon B, Scheihing K and Müller‐Petke
+M. 2025. <a href="https://doi.org/10.1002/nsg.70006">Multi‐scale
+electrical resistivity imaging and long‐term monitoring as a tool for
+groundwater management</a>. <em>Near Surface Geophysics</em>
+</div>
+<div id="ref-Ronczka2015" class="csl-entry" role="listitem">
+Ronczka M, Rücker C and Günther T. 2015. <a href="https://doi.org/10.1190/geo2014-0551.1"><span>N</span>umerical
+study of long-electrode electric resistivity tomography <span></span>
+<span>A</span>ccuracy, sensitivity, and resolution</a>.
+<em>Geophysics</em>. <strong>80</strong>. E317–28
+</div>
+<div id="ref-Ruecker2011" class="csl-entry" role="listitem">
+Rücker C and Günther T. 2011. <a href="https://doi.org/10.1190/1.3581356"><span>T</span>he simulation of
+finite <span>ERT</span> electrodes using the complete electrode
+model</a>. <em>Geophysics</em>. <strong>76</strong>. F227
+</div>
+<div id="ref-Skibbe2024" class="csl-entry" role="listitem">
+Skibbe N, Günther T, Schwalfenberg K, Meyer R, Reckhardt A, Greskowiak
+J, Massmann G and Müller-Petke M. 2024. <a href="https://doi.org/10.1016/j.jhydrol.2024.131905">Comparison of
+methods measuring electrical conductivity in coastal aquifers</a>.
+<em>Journal of Hydrology</em>. <strong>643</strong>. 131905
+</div>
+<div id="ref-Tanner2020" class="csl-entry" role="listitem">
+Tanner D C, Buness H, Igel J, Günther T, Gabriel G, Skiba P, Plenefisch
+T, Gestermann N and Walter T R. 2020. Chapter 3 - fault detection.
+<em>Understanding faults</em> ed D Tanner and C Brandes (Elsevier) pp
+81–146 Online: <a href="http://www.sciencedirect.com/science/article/pii/B9780128159859000035">http://www.sciencedirect.com/science/article/pii/B9780128159859000035</a>
 </div>
 </div>
-</section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -883,13 +802,13 @@ Günther T. 2004. <em><span>I</span>nversion <span>M</span>ethods and <span>R</s
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./sens_arrays.html" class="pagination-link" aria-label="Sensitivitäten und Messanordnungen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></span>
+      <a href="./zusammenfassung.html" class="pagination-link" aria-label="Zusammenfassung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ert.html" class="pagination-link" aria-label="Widerstandstomographie">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./slidedecks.html" class="pagination-link" aria-label="Slide decks">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Slide decks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
