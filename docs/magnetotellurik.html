@@ -81,6 +81,35 @@ window.MathJax = {
 };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -205,8 +234,16 @@ window.MathJax = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#theoretische-grundlagen" id="toc-theoretische-grundlagen" class="nav-link active" data-scroll-target="#theoretische-grundlagen"><span class="header-section-number">7.1</span> Theoretische Grundlagen</a></li>
+  <li><a href="#impedanz" id="toc-impedanz" class="nav-link" data-scroll-target="#impedanz"><span class="header-section-number">7.2</span> Impedanz</a></li>
+  <li><a href="#datenprocessing" id="toc-datenprocessing" class="nav-link" data-scroll-target="#datenprocessing"><span class="header-section-number">7.3</span> Datenprocessing</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -230,9 +267,221 @@ window.MathJax = {
 </header>
 
 
-<p>Ipsum lorum darum</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Lernziele">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tipp</span>Lernziele
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Natürliche Variationen des Magnetfeldes</li>
+<li>Messgrößen</li>
+<li>Aufbau einer MT-Station</li>
+<li>Daten-Processing</li>
+<li>Darstellungsgrößen</li>
+<li>Interpretation</li>
+<li>Grenzen</li>
+</ul>
+</div>
+</div>
+<section id="theoretische-grundlagen" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="theoretische-grundlagen"><span class="header-section-number">7.1</span> Theoretische Grundlagen</h2>
+<p>Aus dem System der Maxwellgleichungen erhalten wir die <em>Helmholtz-Gleichung</em>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Helmholtz-Gleichung der MT">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Helmholtz-Gleichung der MT
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Eliminieren einer Feldgröße liefert PDE zweiter Ordnung <span class="math display">\[
+\curl \curl \vb{E} + i \omega \mu \sigma \vb{E} + \omega^{2} \mu  \varepsilon \vb{E} = \vb{0}
+\]</span> Bei niedrigen Frequenzen kann Verschiebungsstromdichte vernachlässigt werden: <span class="math display">\[
+\curl \curl \vb{E} + i \omega \mu \sigma \vb{E} = \vb{0}
+\]</span> Mit Vektorindentität <span class="math display">\[
+\curl \curl \vb{f} = -\grad^{2} \vb{f} + \grad \divergence \vb{f}
+\]</span> folgt Helmholtzgleichung <span class="math display">\[
+-\grad^{2}\vb{E} + i \omega \mu \sigma \vb{E} = \vb{0}
+\]</span> oder, mit komplexer Ausbreitungskonstante <span class="math inline">\(k^{2}=-i \omega \mu_{0} \sigma\)</span>, <span class="math display">\[
+\grad^{2}\vb{E} + k^{2} \vb{E} = \vb{0}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Quellen der MT sind Magnetfelder von Strömen in der Ionosphäre und Magnetosphäre. Wegen der großen Entfernung zur Quelle können diese Felder an der Erdoberfläche als <strong>ebene Welle</strong> mit vertikaler Ausbreitungsrichtung angenommen werden.</p>
+<p>Wir nehmen o.B.d.A. weiterhin an, dass das magnetische Quellenfeld außerhalb der Erde ein in <span class="math inline">\(y\)</span>-Richtung linear polarisiertes homogenes Feld ist: <span class="math display">\[
+\vb{H} = \begin{pmatrix}
+0 \\ H_{y} \\ 0
+\end{pmatrix}
+\]</span> Das anregende Feld ist eine Transversalwelle mit <span class="math inline">\(\vb{H} \perp \vb{E} \perp \vb{k}\)</span>. Die Größe <span class="math inline">\(\vb{k}\)</span> bezeichnet den Wellenvektor, welcher in Ausbreitungsrichtung zeigt. Zum anregenden Magnetfeld passt also <span class="math display">\[
+\vb{E} = \begin{pmatrix}
+E_{x} \\ 0 \\ 0
+\end{pmatrix}
+\]</span> Wie breiten sich die Felder <span class="math inline">\(\vb{E}\)</span> und <span class="math inline">\(\vb{H}\)</span> innerhalb der Erde aus? Da die anregenden Felder horizontal homogen sind, muss das auch für die Felder innerhalb der Erde (für <span class="math inline">\(z\geq 0\)</span>) gelten.</p>
+<p>Wir fragen also nach <span class="math inline">\(E_{x}(z)\)</span>.</p>
+<p>Die Gleichung <span class="math display">\[
+\frac{ \partial^{2} E_{x} }{ \partial z^{2} } + k^{2} E_{x} = 0
+\]</span> hat in <span class="math inline">\(z\geq 0\)</span> folgende Lösung: <span class="math display">\[
+E_{x}(z) = E_{x}(0) e^{ - i k z }
+\]</span> Unter Beachtung des Vorzeichens von <span class="math inline">\(k = \pm \sqrt{ k^{2} }\)</span> ergibt sich eine in pos. <span class="math inline">\(z\)</span>-Richtung gedämpfte Welle.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Dämpfung im Erdinnern">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Dämpfung im Erdinnern
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Welches Vorzeichen muss für <span class="math inline">\(k\)</span> gewählt werden?</p>
+<p>Ansatz <span class="math inline">\(k^{2}= (\alpha - i \beta)^{2}\)</span>, daraus <span class="math display">\[
+k^{2} = \alpha^{2} - 2 i \alpha \beta - \beta^{2} = -i \omega \mu \sigma
+\]</span> und <span class="math display">\[
+\alpha^{2} = \beta^{2}
+\]</span> sowie <span class="math display">\[
+2 \alpha \beta = \omega \mu \sigma
+\]</span></p>
+<p>Schließlich <span class="math display">\[
+\alpha = \beta = \pm \sqrt{ \frac{\omega \mu \sigma}{2} }
+\]</span> Damit <span class="math inline">\(E_{x}(z) \to 0\)</span> für <span class="math inline">\(z \to \infty\)</span>, muss <span class="math inline">\(\beta &gt; 0\)</span> sein.</p>
+<p>Wir zerlegen den Exponenten: <span class="math display">\[
+e^{ - i k z } = e^{ -i (\alpha - i \beta) z} = \underbrace{ e^{ - i \alpha z } }_{ \text{Welle} } \cdot\underbrace{ e^{ - \beta z } }_{ \text{Dämpfung} }
+\]</span> Die Tiefe, in der die Amplitude der Welle auf den <span class="math inline">\(e\)</span>-ten Teil der Oberflächenamplitude abgeklungen ist, wird Skintiefe oder elektromagnetische Eindringtiefe <span class="math inline">\(\tau\)</span> genannt.</p>
+<p><span class="math display">\[
+\left|\frac{E_{x}(\tau)}{E_{x}(0)}\right| = e^{ -1 } = e^{ -\beta \tau }
+\]</span> <span class="math display">\[
+\tau = \sqrt{ \frac{2}{\omega \mu \sigma} }
+\]</span> Vereinfacht für Periodendauer <span class="math inline">\(T\)</span> und spezifischen Widerstand <span class="math inline">\(\rho\)</span> <span class="math display">\[
+\tau \approx 503 \sqrt{ \rho T }
+\]</span> liefert Skintiefe in Metern.</p>
+</div>
+</div>
+</div>
+<p>Folgender Zusammenhang besteht zwischen elektromagnetischer Eindringtiefe und der Wellenlänge:</p>
+<p><span class="math display">\[
+\tau = \frac{\lambda}{2 \pi}
+\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tiefe <span class="math inline">\(z=\)</span></th>
+<th>Amplitude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\tau = \frac{\lambda}{2 \pi}\)</span></td>
+<td><span class="math inline">\(\| E_{x}(0)e^{ -1 }\| \approx 0.368 \| E_{x}(0)\|\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\pi \tau = \frac{\lambda}{2}\)</span></td>
+<td><span class="math inline">\(\| E_{x}(0)e^{ -\pi }\| \approx 0.043 \|E_{x}(0)\|\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(2 \pi \tau = \lambda\)</span></td>
+<td><span class="math inline">\(\| E_{x}(0)e^{ -2\pi }\| \approx 0.002 \|E_{x}(0)\|\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="impedanz" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="impedanz"><span class="header-section-number">7.2</span> Impedanz</h2>
+<p>Impedanz: Frequenzabhängiger Wellenwiderstand, <span class="math inline">\(Z(\omega)\)</span>.</p>
+<p>Messgrößen: <span class="math inline">\(\vb{E}(\omega, \vb{r})\)</span> und <span class="math inline">\(\vb{B}(\omega, \vb{r})\)</span>.</p>
+<p><span class="math display">\[
+Z(\omega) = \frac{\vb{e}_{h}\cdot \vb{E}}{(\vb{e}_{h} \times \vb{e}_{z})\cdot\vb{B}}
+\]</span></p>
+<p>mit <span class="math inline">\(\vb{e}_{h}\)</span>: horizontaler kartesischer Einheitsvektor</p>
+<p>Wir bezeichnen <span class="math display">\[
+Z_{s}(\omega) = \frac{E_{x}}{B_{y}} = -\frac{E_{y}}{B_{x}}
+\]</span> als <em>Oberflächenimpedanz</em>. <!-- ![[MT-Drehung-EH.excalidraw|50%]] --></p>
+<p>Wie bekommen wir aus den Messgrößen <span class="math inline">\(\mathbf{E}\)</span> und <span class="math inline">\(\mathbf{B}\)</span> Informationen über die Leitfähigkeit des Untergrundes?</p>
+<p>Beide Feldgrößen sind über die Maxwellgleichungen verknüpft. <span class="math display">\[
+\nabla \times \vb{E} = -i \omega \vb{B}
+\]</span> Das Magnetfeld besitzt nur eine <span class="math inline">\(y\)</span>-Komponente, also muss gelten <span class="math display">\[
+\frac{ \partial E_{x} }{ \partial z } - \underbrace{ \frac{ \partial E_{z} }{ \partial x } }_{ =0 } = -i \omega B_{y}
+\]</span> woraus folgt: <span class="math display">\[
+B_{y}(z) = -\frac{1}{i \omega } \frac{ \partial E_{y}(z) }{ \partial z } = -\frac{1}{i \omega } \frac{ \partial  }{ \partial z } E_{x}(0) e^{ - i k z } = \frac{k}{\omega } E_{x}(z)
+\]</span></p>
+<p>In <span class="math inline">\(z=0\)</span> <span class="math display">\[
+Z_{s} = \frac{E_{x}(0)}{B_{y}(0)} = \frac{\omega}{k} = Z_{1}
+\]</span> Die Oberflächenimpedanz des homogenen Halbraums <span class="math inline">\(Z_{s}\)</span> stimmt mit der intrinsischen Impedanz des homogenen Halbraums <span class="math inline">\(Z_{1}\)</span> überein.</p>
+</section>
+<section id="datenprocessing" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="datenprocessing"><span class="header-section-number">7.3</span> Datenprocessing</h2>
+<p>Die Messwerte der MT liegen als Zeitreihen <span class="math inline">\(\mathbf{e}(t)\)</span> und <span class="math inline">\(\mathbf{b}(t)\)</span> vor.</p>
+<p>Die MT-Station registriert</p>
+<ul>
+<li>Komponenten des E-Feldes <span class="math inline">\(E_x(t), E_y(t)\)</span></li>
+<li>Komponenten des H-Feldes <span class="math inline">\(H_x(t), H_y(t), H_{z}(t)\)</span></li>
+</ul>
+<p>Die fundamentale Annahme der MT besteht darin, dass es einen linearen Zusammenhang zwischen den Horizontalkomponenten des E- und H-Feldes gibt.</p>
+<p>Das Ziel des MT-Datenprocessings besteht in der Berechnung (genauer: Schätzung) des Impedanztensors <span class="math inline">\(\mathbf{Z}(\omega)\)</span>.</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+E_x(\omega) \\
+E_y(\omega)
+\end{pmatrix}
+=
+\begin{pmatrix}
+Z_{xx}(\omega) &amp; Z_{xy}(\omega) \\
+Z_{yx}(\omega) &amp; Z_{yy}(\omega)
+\end{pmatrix}
+\begin{pmatrix}
+H_x(\omega) \\
+H_y(\omega)
+\end{pmatrix}.
+\]</span></p>
+<p>Das Processing der MT-Zeitreihen besteht grob aus folgenden Schritten:</p>
+<ul>
+<li>Instrumentenkorrekturen
+<ul>
+<li>Berücksichtigung von Dipolauslage und Messkoordinatensystem</li>
+<li>Kenntnis des Frequenzganges der Sensorik</li>
+</ul></li>
+<li>Qualitätskontrolle: Sichtung und Rauschunterdrückung
+<ul>
+<li>Entfernen von Spikes, Dropouts</li>
+<li>Beseitigen von gestörten Zeitreihenintervallen</li>
+</ul></li>
+<li>Aufteilen in Fenster
+<ul>
+<li>überlappende Segmente der Länge <span class="math inline">\(T\)</span></li>
+<li>Taperung</li>
+</ul></li>
+<li>Fouriertransformation
+<ul>
+<li><span class="math inline">\(\hat{E}_i^{(k)}(\omega), \quad \hat{H}_j^{(k)}(\omega)\)</span>, <span class="math inline">\(i,j \in {x,y}\)</span></li>
+<li>komplexwertige Fourierkoeffizienten für diskrete Frequenzen</li>
+</ul></li>
+<li>Spektrale Schätzung
+<ul>
+<li>Berechnung von Kreuz- und Autospektren für jede Frequenz</li>
+</ul></li>
+<li>Robuste lineare Regression für <span class="math inline">\(\mathbf{Z}\)</span></li>
+<li>Fehleranalyse</li>
+<li>Berechnung der Darstellungsgrößen</li>
+</ul>
+<p>Das MT-Datenprocessing ist ein <strong>multivariates lineares Ausgleichsproblem im Frequenzbereich</strong>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

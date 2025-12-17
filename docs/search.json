@@ -911,7 +911,7 @@
     "href": "einfuehrung_em.html",
     "title": "5  Einführung",
     "section": "",
-    "text": "5.1 Motivation",
+    "text": "5.1 Prinzip\nDie elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.\nWir werden folgende wichtige Messverfahren kennenlernen:\nDas grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:\nDiesem Grundprinzip folgen alle EM-Verfahren.\nUnterschiede bestehen hinsichtlich",
     "crumbs": [
       "Elektromagnetik",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
@@ -922,7 +922,7 @@
     "href": "einfuehrung_em.html#beispiele",
     "title": "5  Einführung",
     "section": "5.2 Beispiele",
-    "text": "5.2 Beispiele\n\n5.2.1 Marine CSEM\n\n\n\n5.2.2 Airborne EM\n\n\n\n5.2.3 Magnetotellurik",
+    "text": "5.2 Beispiele\n\n5.2.1 Marine CSEM\nEine leistungsstarke Stromquelle wird als elektrischer Dipol über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.\nZusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der Magnetotellurik mit größerer Eindringtiefe genutzt werden.\nDas Bild zeigt schematisch das CSEM-Messkonzept des Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US.\n\n\n\nQuelle: Scripps\n\n\nDer Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.\n\n\n5.2.2 Airborne EM\nDie Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.\n\n\n\nQuelle: BGR\n\n\nDie luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:\n\nBestimmung von Salz-/Süßwassergrenzen\nGrundwassersuche\nGeologische Kartierung\nKartierung von Störungszonen\nSuche nach Altlasten\nKartierung leitfähiger Sickerwässer\nArchäologische Vermessungen\nIngenieurgeologische Messungen\nLagerstättenexploration\n\nSemi-airborne-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden.\nDas Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des DESMEX-Projektes.\n\n\n\nRochlitz et al. (2023)\n\n\n\n\n5.2.3 Magnetotellurik\nDie Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.\n\n\n\nQuelle: FU Berlin\n\n\n\n\n\nQuelle: BGR",
     "crumbs": [
       "Elektromagnetik",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
@@ -977,7 +977,7 @@
     "href": "magnetotellurik.html",
     "title": "7  Magnetotellurik",
     "section": "",
-    "text": "Ipsum lorum darum",
+    "text": "7.1 Theoretische Grundlagen\nAus dem System der Maxwellgleichungen erhalten wir die Helmholtz-Gleichung.\nQuellen der MT sind Magnetfelder von Strömen in der Ionosphäre und Magnetosphäre. Wegen der großen Entfernung zur Quelle können diese Felder an der Erdoberfläche als ebene Welle mit vertikaler Ausbreitungsrichtung angenommen werden.\nWir nehmen o.B.d.A. weiterhin an, dass das magnetische Quellenfeld außerhalb der Erde ein in \\(y\\)-Richtung linear polarisiertes homogenes Feld ist: \\[\n\\vb{H} = \\begin{pmatrix}\n0 \\\\ H_{y} \\\\ 0\n\\end{pmatrix}\n\\] Das anregende Feld ist eine Transversalwelle mit \\(\\vb{H} \\perp \\vb{E} \\perp \\vb{k}\\). Die Größe \\(\\vb{k}\\) bezeichnet den Wellenvektor, welcher in Ausbreitungsrichtung zeigt. Zum anregenden Magnetfeld passt also \\[\n\\vb{E} = \\begin{pmatrix}\nE_{x} \\\\ 0 \\\\ 0\n\\end{pmatrix}\n\\] Wie breiten sich die Felder \\(\\vb{E}\\) und \\(\\vb{H}\\) innerhalb der Erde aus? Da die anregenden Felder horizontal homogen sind, muss das auch für die Felder innerhalb der Erde (für \\(z\\geq 0\\)) gelten.\nWir fragen also nach \\(E_{x}(z)\\).\nDie Gleichung \\[\n\\frac{ \\partial^{2} E_{x} }{ \\partial z^{2} } + k^{2} E_{x} = 0\n\\] hat in \\(z\\geq 0\\) folgende Lösung: \\[\nE_{x}(z) = E_{x}(0) e^{ - i k z }\n\\] Unter Beachtung des Vorzeichens von \\(k = \\pm \\sqrt{ k^{2} }\\) ergibt sich eine in pos. \\(z\\)-Richtung gedämpfte Welle.\nFolgender Zusammenhang besteht zwischen elektromagnetischer Eindringtiefe und der Wellenlänge:\n\\[\n\\tau = \\frac{\\lambda}{2 \\pi}\n\\]",
     "crumbs": [
       "Elektromagnetik",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Magnetotellurik</span>"
@@ -1001,6 +1001,94 @@
     "text": "Here are the slide decks:\n\n👉 Methods — Slides\n\n\n\n\n👉 History — Slides",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Slide decks</span>"
+    ]
+  },
+  {
+    "objectID": "einfuehrung_em.html#prinzip",
+    "href": "einfuehrung_em.html#prinzip",
+    "title": "5  Einführung",
+    "section": "",
+    "text": "Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld\nIm leitenden Störkörper werden elektrische Wechselfelder (Wirbelströme) induziert\nDie Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird\n\n\n\n\n\n\n\n\nder verwendeten Sender (induktiv oder galvanisch angekoppelt)\nder Stromfunktion im Sender (sinus- oder rechteckförmig)\nder gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)\nder Position der Quelle (marin, luftgestützt, bodengestützt)\nder Natur der Quelle (technisch oder natürlich)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "grundgleichungen_em.html#schematisches-konzept-der-elektromagnetischen-induktion",
+    "href": "grundgleichungen_em.html#schematisches-konzept-der-elektromagnetischen-induktion",
+    "title": "6  Grundgleichungen",
+    "section": "6.4 Schematisches Konzept der elektromagnetischen Induktion",
+    "text": "6.4 Schematisches Konzept der elektromagnetischen Induktion\n\n\n\n\nFaradaysches Induktionsgesetz \\(\\to\\) Ohmsches Gesetz \\(\\to\\) Amperesches Durchflutungsgesetz\n\nDas sekundäre Magnetfeld ist gegenüber dem primären Magnetfeld phasenverschoben und hat eine geringere Amplitude.\n\n\nÜber Amplitude und Phasenverschiebung lassen sich die Leitfähigkeit und die Geometrie des Störkörpers unter Beachtung des Äquivalenzprinzips rekonstruieren.",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+    ]
+  },
+  {
+    "objectID": "einfuehrung_em.html#einteilung",
+    "href": "einfuehrung_em.html#einteilung",
+    "title": "5  Einführung",
+    "section": "5.3 Einteilung",
+    "text": "5.3 Einteilung\nEs existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.\nMöglich ist eine Unterscheidung\n\nhinsichtlich der eingesetzten Sender und Empfänger oder\nnach den Merkmalen der Felder.\n\n\nZweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung\n\n\n\n\n\n\n\n\n\nSender\nElektroden\nElektroden und Spulen\nSpulen (Erdoberfläche)\nSpulen (Luft)\n\n\n\n\nGeerdetes Kabel (galvanisch)\nWiderstandsgeoelektrik, IP\n\nMMR\n\n\n\nGeerdetes Kabel (induktiv)\n\nCSAMT\nLOTEM\n\n\n\nSpule\n\n\nSlingram, TEM, Bohrloch-EM\nAero-EM\n\n\nLanges Kabel, große Spule\n\n\nTURAM, TEM, Bohrloch-EM\nSemi-Airborne\n\n\nEbene Wellen: Vertikale Antenne\n\nVLF-R\nVLF\nVLF\n\n\nNatürliche elektromagnetische Felder\nTellurik\nMT\n\n\n\n\n\nWir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:\n\nzeitharmonisch: \\(\\mathbf{j}(\\mathbf{r}) e^{ i \\omega t }\\)\n\nmonofrequent\nKontinuum (Frequenzgemisch)\n\nZeitbereich: \\(\\mathbf{j}(\\mathbf{r}, t)\\)\n\nImpulsfolgen\nRechteckimpulsfolgen",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "grundgleichungen_em.html#einteilung-der-methoden-nach-merkmalen-der-felder",
+    "href": "grundgleichungen_em.html#einteilung-der-methoden-nach-merkmalen-der-felder",
+    "title": "6  Grundgleichungen",
+    "section": "6.5 Einteilung der Methoden nach Merkmalen der Felder",
+    "text": "6.5 Einteilung der Methoden nach Merkmalen der Felder\n\nZweckmäßige Einteilung anhand der Merkmale der Felder\n\n\n\n\n\n\n\n\n\n\n\\(\\nabla \\times \\mathbf{H}=\\)\n\\(\\nabla \\times \\mathbf{E}=\\)\n\n\n\n\n\n\nWellenvorgänge\n\\(\\mathbf{j} + \\frac{ \\partial \\mathbf{D} }{ \\partial t }\\)\n\\(- \\frac{ \\partial \\mathbf{B} }{ \\partial t }\\)\nGPR\nHF-Methoden\n\n\nQuasistationäre Vorgänge\n\\(\\mathbf{j}\\)\n\\(- \\frac{ \\partial \\mathbf{B} }{ \\partial t }\\)\nCSEM, MT, TEM\nNF-Methoden\n\n\nStationäre Felder\n\\(\\mathbf{j}\\)\n\\(\\mathbf{0}\\)\nGeoelektrik\nDC\n\n\nStatische Felder\n\\(\\mathbf{0}\\)\n\\(\\mathbf{0}\\)\n–",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+    ]
+  },
+  {
+    "objectID": "grundgleichungen_em.html#messung",
+    "href": "grundgleichungen_em.html#messung",
+    "title": "6  Grundgleichungen",
+    "section": "6.6 Messung",
+    "text": "6.6 Messung\nBei der Messung wird versucht, die Übertragungsfunktion oder response function des Systems Erde zu erfassen.\nDazu ist ein breites Frequenzspektrum erforderlich.\n\n\nInput \\(\\to\\) Erde \\(\\to\\) Output\n\n\\(\\ \\ \\mapsto\\)\n\nFeld \\(\\to\\) Erde \\(\\to\\) Feld",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grundgleichungen</span>"
+    ]
+  },
+  {
+    "objectID": "magnetotellurik.html#theoretische-grundlagen",
+    "href": "magnetotellurik.html#theoretische-grundlagen",
+    "title": "7  Magnetotellurik",
+    "section": "",
+    "text": "HinweisHelmholtz-Gleichung der MT\n\n\n\n\n\nEliminieren einer Feldgröße liefert PDE zweiter Ordnung \\[\n\\curl \\curl \\vb{E} + i \\omega \\mu \\sigma \\vb{E} + \\omega^{2} \\mu  \\varepsilon \\vb{E} = \\vb{0}\n\\] Bei niedrigen Frequenzen kann Verschiebungsstromdichte vernachlässigt werden: \\[\n\\curl \\curl \\vb{E} + i \\omega \\mu \\sigma \\vb{E} = \\vb{0}\n\\] Mit Vektorindentität \\[\n\\curl \\curl \\vb{f} = -\\grad^{2} \\vb{f} + \\grad \\divergence \\vb{f}\n\\] folgt Helmholtzgleichung \\[\n-\\grad^{2}\\vb{E} + i \\omega \\mu \\sigma \\vb{E} = \\vb{0}\n\\] oder, mit komplexer Ausbreitungskonstante \\(k^{2}=-i \\omega \\mu_{0} \\sigma\\), \\[\n\\grad^{2}\\vb{E} + k^{2} \\vb{E} = \\vb{0}.\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nHinweisDämpfung im Erdinnern\n\n\n\n\n\nWelches Vorzeichen muss für \\(k\\) gewählt werden?\nAnsatz \\(k^{2}= (\\alpha - i \\beta)^{2}\\), daraus \\[\nk^{2} = \\alpha^{2} - 2 i \\alpha \\beta - \\beta^{2} = -i \\omega \\mu \\sigma\n\\] und \\[\n\\alpha^{2} = \\beta^{2}\n\\] sowie \\[\n2 \\alpha \\beta = \\omega \\mu \\sigma\n\\]\nSchließlich \\[\n\\alpha = \\beta = \\pm \\sqrt{ \\frac{\\omega \\mu \\sigma}{2} }\n\\] Damit \\(E_{x}(z) \\to 0\\) für \\(z \\to \\infty\\), muss \\(\\beta &gt; 0\\) sein.\nWir zerlegen den Exponenten: \\[\ne^{ - i k z } = e^{ -i (\\alpha - i \\beta) z} = \\underbrace{ e^{ - i \\alpha z } }_{ \\text{Welle} } \\cdot\\underbrace{ e^{ - \\beta z } }_{ \\text{Dämpfung} }\n\\] Die Tiefe, in der die Amplitude der Welle auf den \\(e\\)-ten Teil der Oberflächenamplitude abgeklungen ist, wird Skintiefe oder elektromagnetische Eindringtiefe \\(\\tau\\) genannt.\n\\[\n\\left|\\frac{E_{x}(\\tau)}{E_{x}(0)}\\right| = e^{ -1 } = e^{ -\\beta \\tau }\n\\] \\[\n\\tau = \\sqrt{ \\frac{2}{\\omega \\mu \\sigma} }\n\\] Vereinfacht für Periodendauer \\(T\\) und spezifischen Widerstand \\(\\rho\\) \\[\n\\tau \\approx 503 \\sqrt{ \\rho T }\n\\] liefert Skintiefe in Metern.\n\n\n\n\n\n\n\n\n\n\n\n\nTiefe \\(z=\\)\nAmplitude\n\n\n\n\n\\(\\tau = \\frac{\\lambda}{2 \\pi}\\)\n\\(\\| E_{x}(0)e^{ -1 }\\| \\approx 0.368 \\| E_{x}(0)\\|\\)\n\n\n\\(\\pi \\tau = \\frac{\\lambda}{2}\\)\n\\(\\| E_{x}(0)e^{ -\\pi }\\| \\approx 0.043 \\|E_{x}(0)\\|\\)\n\n\n\\(2 \\pi \\tau = \\lambda\\)\n\\(\\| E_{x}(0)e^{ -2\\pi }\\| \\approx 0.002 \\|E_{x}(0)\\|\\)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Magnetotellurik</span>"
+    ]
+  },
+  {
+    "objectID": "magnetotellurik.html#impedanz",
+    "href": "magnetotellurik.html#impedanz",
+    "title": "7  Magnetotellurik",
+    "section": "7.2 Impedanz",
+    "text": "7.2 Impedanz\nImpedanz: Frequenzabhängiger Wellenwiderstand, \\(Z(\\omega)\\).\nMessgrößen: \\(\\vb{E}(\\omega, \\vb{r})\\) und \\(\\vb{B}(\\omega, \\vb{r})\\).\n\\[\nZ(\\omega) = \\frac{\\vb{e}_{h}\\cdot \\vb{E}}{(\\vb{e}_{h} \\times \\vb{e}_{z})\\cdot\\vb{B}}\n\\]\nmit \\(\\vb{e}_{h}\\): horizontaler kartesischer Einheitsvektor\nWir bezeichnen \\[\nZ_{s}(\\omega) = \\frac{E_{x}}{B_{y}} = -\\frac{E_{y}}{B_{x}}\n\\] als Oberflächenimpedanz. \nWie bekommen wir aus den Messgrößen \\(\\mathbf{E}\\) und \\(\\mathbf{B}\\) Informationen über die Leitfähigkeit des Untergrundes?\nBeide Feldgrößen sind über die Maxwellgleichungen verknüpft. \\[\n\\nabla \\times \\vb{E} = -i \\omega \\vb{B}\n\\] Das Magnetfeld besitzt nur eine \\(y\\)-Komponente, also muss gelten \\[\n\\frac{ \\partial E_{x} }{ \\partial z } - \\underbrace{ \\frac{ \\partial E_{z} }{ \\partial x } }_{ =0 } = -i \\omega B_{y}\n\\] woraus folgt: \\[\nB_{y}(z) = -\\frac{1}{i \\omega } \\frac{ \\partial E_{y}(z) }{ \\partial z } = -\\frac{1}{i \\omega } \\frac{ \\partial  }{ \\partial z } E_{x}(0) e^{ - i k z } = \\frac{k}{\\omega } E_{x}(z)\n\\]\nIn \\(z=0\\) \\[\nZ_{s} = \\frac{E_{x}(0)}{B_{y}(0)} = \\frac{\\omega}{k} = Z_{1}\n\\] Die Oberflächenimpedanz des homogenen Halbraums \\(Z_{s}\\) stimmt mit der intrinsischen Impedanz des homogenen Halbraums \\(Z_{1}\\) überein.",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Magnetotellurik</span>"
+    ]
+  },
+  {
+    "objectID": "magnetotellurik.html#datenprocessing",
+    "href": "magnetotellurik.html#datenprocessing",
+    "title": "7  Magnetotellurik",
+    "section": "7.3 Datenprocessing",
+    "text": "7.3 Datenprocessing\nDie Messwerte der MT liegen als Zeitreihen \\(\\mathbf{e}(t)\\) und \\(\\mathbf{b}(t)\\) vor.\nDie MT-Station registriert\n\nKomponenten des E-Feldes \\(E_x(t), E_y(t)\\)\nKomponenten des H-Feldes \\(H_x(t), H_y(t), H_{z}(t)\\)\n\nDie fundamentale Annahme der MT besteht darin, dass es einen linearen Zusammenhang zwischen den Horizontalkomponenten des E- und H-Feldes gibt.\nDas Ziel des MT-Datenprocessings besteht in der Berechnung (genauer: Schätzung) des Impedanztensors \\(\\mathbf{Z}(\\omega)\\).\n\\[\n\\begin{pmatrix}\nE_x(\\omega) \\\\\nE_y(\\omega)\n\\end{pmatrix}\n=\n\\begin{pmatrix}\nZ_{xx}(\\omega) & Z_{xy}(\\omega) \\\\\nZ_{yx}(\\omega) & Z_{yy}(\\omega)\n\\end{pmatrix}\n\\begin{pmatrix}\nH_x(\\omega) \\\\\nH_y(\\omega)\n\\end{pmatrix}.\n\\]\nDas Processing der MT-Zeitreihen besteht grob aus folgenden Schritten:\n\nInstrumentenkorrekturen\n\nBerücksichtigung von Dipolauslage und Messkoordinatensystem\nKenntnis des Frequenzganges der Sensorik\n\nQualitätskontrolle: Sichtung und Rauschunterdrückung\n\nEntfernen von Spikes, Dropouts\nBeseitigen von gestörten Zeitreihenintervallen\n\nAufteilen in Fenster\n\nüberlappende Segmente der Länge \\(T\\)\nTaperung\n\nFouriertransformation\n\n\\(\\hat{E}_i^{(k)}(\\omega), \\quad \\hat{H}_j^{(k)}(\\omega)\\), \\(i,j \\in {x,y}\\)\nkomplexwertige Fourierkoeffizienten für diskrete Frequenzen\n\nSpektrale Schätzung\n\nBerechnung von Kreuz- und Autospektren für jede Frequenz\n\nRobuste lineare Regression für \\(\\mathbf{Z}\\)\nFehleranalyse\nBerechnung der Darstellungsgrößen\n\nDas MT-Datenprocessing ist ein multivariates lineares Ausgleichsproblem im Frequenzbereich.",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Magnetotellurik</span>"
     ]
   }
 ]

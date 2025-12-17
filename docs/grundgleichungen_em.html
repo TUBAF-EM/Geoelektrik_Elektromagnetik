@@ -246,6 +246,9 @@ window.Quarto = {
   </ul></li>
   <li><a href="#materialgleichungen" id="toc-materialgleichungen" class="nav-link" data-scroll-target="#materialgleichungen"><span class="header-section-number">6.2</span> Materialgleichungen</a></li>
   <li><a href="#ohmsches-gesetz" id="toc-ohmsches-gesetz" class="nav-link" data-scroll-target="#ohmsches-gesetz"><span class="header-section-number">6.3</span> Ohmsches Gesetz</a></li>
+  <li><a href="#schematisches-konzept-der-elektromagnetischen-induktion" id="toc-schematisches-konzept-der-elektromagnetischen-induktion" class="nav-link" data-scroll-target="#schematisches-konzept-der-elektromagnetischen-induktion"><span class="header-section-number">6.4</span> Schematisches Konzept der elektromagnetischen Induktion</a></li>
+  <li><a href="#einteilung-der-methoden-nach-merkmalen-der-felder" id="toc-einteilung-der-methoden-nach-merkmalen-der-felder" class="nav-link" data-scroll-target="#einteilung-der-methoden-nach-merkmalen-der-felder"><span class="header-section-number">6.5</span> Einteilung der Methoden nach Merkmalen der Felder</a></li>
+  <li><a href="#messung" id="toc-messung" class="nav-link" data-scroll-target="#messung"><span class="header-section-number">6.6</span> Messung</a></li>
   </ul>
 </nav>
     </div>
@@ -294,14 +297,16 @@ window.Quarto = {
 \]</span></p>
 <p>Bei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Bemerkungen zur Notation">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Hinweis</span>Bemerkungen zur Notation
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Im Zeitbereich werden die Feldgrößen kleingeschrieben, z.B. <span class="math inline">\(\mathbf{e}\)</span>, <span class="math inline">\(\mathbf{h}\)</span>.</p>
 <p>Im Frequenzbereich schreiben wir die Feldgrößen mit Großbuchstaben, z.B. <span class="math inline">\(\mathbf{B}\)</span>.</p>
@@ -316,6 +321,7 @@ F(\omega) &amp; = \phantom{\frac{1}{2 \pi}} \int_{-\infty}^{\infty} f(t) e^{ -i 
 \mathbf{E}(\omega) = \mathbf{E}_{0} e^{ i \omega t }.
 \]</span> Der Term <span class="math inline">\(e^{ i \omega t }\)</span> tritt bei allen Feldgrößen als derselbe Faktor auf und wird daher der besseren Übersicht halber weggelassen.</p>
 <p>Die physikalisch relevante Größe ist die Feldamplitude <span class="math inline">\(\mathbf{E}_{0}\)</span>.</p>
+</div>
 </div>
 </div>
 <section id="maxwell-gleichungen" class="level2" data-number="6.1">
@@ -363,6 +369,85 @@ F(\omega) &amp; = \phantom{\frac{1}{2 \pi}} \int_{-\infty}^{\infty} f(t) e^{ -i 
 <p><span class="math display">\[
 \mathbf{j} = \sigma \mathbf{e} \quad\text{  bzw.  }\quad \mathbf{J} = \sigma \mathbf{E}.
 \]</span></p>
+</section>
+<section id="schematisches-konzept-der-elektromagnetischen-induktion" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="schematisches-konzept-der-elektromagnetischen-induktion"><span class="header-section-number">6.4</span> Schematisches Konzept der elektromagnetischen Induktion</h2>
+<div class="columns">
+<div class="column">
+<p><img src="pics/em/prinzip.png" class="img-fluid" style="width:90.0%"></p>
+</div><div class="column">
+<p>Faradaysches Induktionsgesetz <span class="math inline">\(\to\)</span> Ohmsches Gesetz <span class="math inline">\(\to\)</span> Amperesches Durchflutungsgesetz</p>
+<p><img src="pics/em/CSEM-Maxwell.excalidraw.svg" class="img-fluid"></p>
+<p>Das sekundäre Magnetfeld ist gegenüber dem primären Magnetfeld <em>phasenverschoben</em> und hat eine <em>geringere Amplitude</em>.</p>
+</div>
+</div>
+<p>Über Amplitude und Phasenverschiebung lassen sich die Leitfähigkeit und die Geometrie des Störkörpers unter Beachtung des Äquivalenzprinzips rekonstruieren.</p>
+</section>
+<section id="einteilung-der-methoden-nach-merkmalen-der-felder" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="einteilung-der-methoden-nach-merkmalen-der-felder"><span class="header-section-number">6.5</span> Einteilung der Methoden nach Merkmalen der Felder</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Zweckmäßige Einteilung anhand der Merkmale der Felder</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 23%">
+<col style="width: 20%">
+<col style="width: 9%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(\nabla \times \mathbf{H}=\)</span></th>
+<th><span class="math inline">\(\nabla \times \mathbf{E}=\)</span></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wellenvorgänge</td>
+<td><span class="math inline">\(\mathbf{j} + \frac{ \partial \mathbf{D} }{ \partial t }\)</span></td>
+<td><span class="math inline">\(- \frac{ \partial \mathbf{B} }{ \partial t }\)</span></td>
+<td>GPR</td>
+<td>HF-Methoden</td>
+</tr>
+<tr class="even">
+<td>Quasistationäre Vorgänge</td>
+<td><span class="math inline">\(\mathbf{j}\)</span></td>
+<td><span class="math inline">\(- \frac{ \partial \mathbf{B} }{ \partial t }\)</span></td>
+<td>CSEM, MT, TEM</td>
+<td>NF-Methoden</td>
+</tr>
+<tr class="odd">
+<td>Stationäre Felder</td>
+<td><span class="math inline">\(\mathbf{j}\)</span></td>
+<td><span class="math inline">\(\mathbf{0}\)</span></td>
+<td>Geoelektrik</td>
+<td>DC</td>
+</tr>
+<tr class="even">
+<td>Statische Felder</td>
+<td><span class="math inline">\(\mathbf{0}\)</span></td>
+<td><span class="math inline">\(\mathbf{0}\)</span></td>
+<td>–</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="messung" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="messung"><span class="header-section-number">6.6</span> Messung</h2>
+<p>Bei der Messung wird versucht, die <em>Übertragungsfunktion</em> oder <em>response function</em> des Systems Erde zu erfassen.</p>
+<p>Dazu ist ein breites Frequenzspektrum erforderlich.</p>
+<div class="columns">
+<div class="column" style="width:39%;">
+<p><span style="background:lightblue; border-radius:10px; padding:0.3em">Input</span> <span class="math inline">\(\to\)</span> <span style="background:lightgrey; border-radius:10px; padding:0.3em">Erde</span> <span class="math inline">\(\to\)</span> <span style="background:lightgreen; border-radius:10px; padding:0.3em">Output</span></p>
+</div><div class="column" style="width:10%;">
+<p><span class="math inline">\(\ \ \mapsto\)</span></p>
+</div><div class="column" style="width:48%;">
+<p><span style="background:lightblue; border-radius:10px; padding:0.3em">Feld</span> <span class="math inline">\(\to\)</span> <span style="background:lightgrey; border-radius:10px; padding:0.3em">Erde</span> <span class="math inline">\(\to\)</span> <span style="background:lightgreen; border-radius:10px; padding:0.3em">Feld</span></p>
+</div>
+</div>
 
 
 </section>

@@ -4,18 +4,115 @@ editor: source
 
 # Einführung
 
-## Motivation
+Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.
+
+Wir werden folgende wichtige Messverfahren kennenlernen:
+
+- Magnetotellurik
+- CSEM
+- Transient-Elektromagnetik
+
+## Prinzip
+
+Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:
+
+::: {.columns}
+::: {.column}
+- Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld
+- Im leitenden Störkörper werden elektrische Wechselfelder (__Wirbelströme__) induziert
+- Die Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird
+
+:::
+::: {.column}
+![](pics/em/prinzip.png)
+:::
+::: 
+
+Diesem Grundprinzip folgen alle EM-Verfahren.
+
+Unterschiede bestehen hinsichtlich
+
+- der verwendeten Sender (induktiv oder galvanisch angekoppelt)
+- der Stromfunktion im Sender (sinus- oder rechteckförmig)
+- der gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)
+- der Position der Quelle (marin, luftgestützt, bodengestützt)
+- der Natur der Quelle (technisch oder natürlich)
+
+
+![](pics/em/CSEM-Maxwell.excalidraw.svg)
 
 ## Beispiele
 
 ### Marine CSEM
 
-![](pics/em/CSEM_MTconcepts.jpg)
+Eine leistungsstarke Stromquelle wird als _elektrischer Dipol_ über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.
+
+Zusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der _Magnetotellurik_ mit größerer Eindringtiefe genutzt werden.
+
+Das Bild zeigt schematisch das CSEM-Messkonzept des _Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US_.
+
+![Quelle: Scripps](pics/em/CSEM_MTconcepts.jpg){width="70%"}
+
+Der Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.
 
 ### Airborne EM
 
-![](pics/em/hubschrauber_namibia.jpg)
+Die Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.
+
+![Quelle: BGR](pics/em/hubschrauber_namibia.jpg){width="70%"}
+
+Die luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:
+
+- Bestimmung von Salz-/Süßwassergrenzen
+- Grundwassersuche
+- Geologische Kartierung
+- Kartierung von Störungszonen
+- Suche nach Altlasten
+- Kartierung leitfähiger Sickerwässer
+- Archäologische Vermessungen
+- Ingenieurgeologische Messungen
+- Lagerstättenexploration
+
+_Semi-airborne_-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden. 
+
+Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des [DESMEX](https://www.uni-muenster.de/DESMEX/startseite.html)-Projektes.
+
+![Rochlitz _et al._ (2023)](https://gitlab.com/Rochlitz.R/custem-examples/-/raw/main/supplementsGJI/03_schleiz_example/results_2022_10/final_res_model_3D_view_p2.png?ref_type=heads){width="70%"}
 
 ### Magnetotellurik
 
-![](pics/em/mtexamplepic.png)
+Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.
+
+![Quelle: FU Berlin](pics/em/mtexamplepic.png){width="70%"}
+
+![Quelle: BGR](https://www.bgr.bund.de/DE/BGR/Wissenschaftliche-Infrastruktur/Geophysik/Bodengeophysik/Bilder/B_Magnetotellurik/mt_messung_im_gelaende_de.jpg?__blob=poster&v=2){width="70%"}
+
+
+## Einteilung
+
+Es existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.
+
+Möglich ist eine Unterscheidung 
+
+- hinsichtlich der eingesetzten Sender und Empfänger oder 
+- nach den Merkmalen der Felder.
+
+| Sender                               | Elektroden                 | Elektroden und Spulen | Spulen (Erdoberfläche)     | Spulen (Luft) |
+| ------------------------------------ | -------------------------- | --------------------- | -------------------------- | ------------- |
+| Geerdetes Kabel (galvanisch)         | Widerstandsgeoelektrik, IP |                       | MMR                        |               |
+| Geerdetes Kabel (induktiv)           |                            | CSAMT                 | LOTEM                      |               |
+| Spule                                |                            |                       | Slingram, TEM, Bohrloch-EM | Aero-EM       |
+| Langes Kabel, große Spule            |                            |                       | TURAM, TEM, Bohrloch-EM    |   Semi-Airborne            |
+| Ebene Wellen: Vertikale Antenne     |                            | VLF-R                 | VLF                        | VLF           |
+| Natürliche elektromagnetische Felder | Tellurik                   | MT                    |                            |               |
+
+: Zweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung {.striped .hover}
+
+Wir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:
+
+- **zeitharmonisch**: $\mathbf{j}(\mathbf{r}) e^{ i \omega t }$
+    - monofrequent
+    - Kontinuum (Frequenzgemisch)
+- **Zeitbereich**: $\mathbf{j}(\mathbf{r}, t)$
+    - Impulsfolgen
+    - Rechteckimpulsfolgen

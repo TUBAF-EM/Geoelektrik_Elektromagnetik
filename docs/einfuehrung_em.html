@@ -81,6 +81,35 @@ window.MathJax = {
 };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -210,13 +239,14 @@ window.MathJax = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation"><span class="header-section-number">5.1</span> Motivation</a></li>
+  <li><a href="#prinzip" id="toc-prinzip" class="nav-link active" data-scroll-target="#prinzip"><span class="header-section-number">5.1</span> Prinzip</a></li>
   <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">5.2</span> Beispiele</a>
   <ul class="collapse">
   <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</a></li>
   <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</a></li>
   <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</a></li>
   </ul></li>
+  <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">5.3</span> Einteilung</a></li>
   </ul>
 </nav>
     </div>
@@ -242,25 +272,186 @@ window.MathJax = {
 </header>
 
 
-<section id="motivation" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">5.1</span> Motivation</h2>
+<p>Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.</p>
+<p>Wir werden folgende wichtige Messverfahren kennenlernen:</p>
+<ul>
+<li>Magnetotellurik</li>
+<li>CSEM</li>
+<li>Transient-Elektromagnetik</li>
+</ul>
+<section id="prinzip" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="prinzip"><span class="header-section-number">5.1</span> Prinzip</h2>
+<p>Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:</p>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld</li>
+<li>Im leitenden Störkörper werden elektrische Wechselfelder (<strong>Wirbelströme</strong>) induziert</li>
+<li>Die Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird</li>
+</ul>
+</div><div class="column">
+<p><img src="pics/em/prinzip.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Diesem Grundprinzip folgen alle EM-Verfahren.</p>
+<p>Unterschiede bestehen hinsichtlich</p>
+<ul>
+<li>der verwendeten Sender (induktiv oder galvanisch angekoppelt)</li>
+<li>der Stromfunktion im Sender (sinus- oder rechteckförmig)</li>
+<li>der gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)</li>
+<li>der Position der Quelle (marin, luftgestützt, bodengestützt)</li>
+<li>der Natur der Quelle (technisch oder natürlich)</li>
+</ul>
+<p><img src="pics/em/CSEM-Maxwell.excalidraw.svg" class="img-fluid"></p>
 </section>
 <section id="beispiele" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">5.2</span> Beispiele</h2>
 <section id="marine-csem" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="marine-csem"><span class="header-section-number">5.2.1</span> Marine CSEM</h3>
-<p><img src="pics/em/CSEM_MTconcepts.jpg" class="img-fluid"></p>
+<p>Eine leistungsstarke Stromquelle wird als <em>elektrischer Dipol</em> über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.</p>
+<p>Zusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der <em>Magnetotellurik</em> mit größerer Eindringtiefe genutzt werden.</p>
+<p>Das Bild zeigt schematisch das CSEM-Messkonzept des <em>Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM_MTconcepts.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: Scripps</figcaption>
+</figure>
+</div>
+<p>Der Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.</p>
 </section>
 <section id="airborne-em" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="airborne-em"><span class="header-section-number">5.2.2</span> Airborne EM</h3>
-<p><img src="pics/em/hubschrauber_namibia.jpg" class="img-fluid"></p>
+<p>Die Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/hubschrauber_namibia.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: BGR</figcaption>
+</figure>
+</div>
+<p>Die luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:</p>
+<ul>
+<li>Bestimmung von Salz-/Süßwassergrenzen</li>
+<li>Grundwassersuche</li>
+<li>Geologische Kartierung</li>
+<li>Kartierung von Störungszonen</li>
+<li>Suche nach Altlasten</li>
+<li>Kartierung leitfähiger Sickerwässer</li>
+<li>Archäologische Vermessungen</li>
+<li>Ingenieurgeologische Messungen</li>
+<li>Lagerstättenexploration</li>
+</ul>
+<p><em>Semi-airborne</em>-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden.</p>
+<p>Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des <a href="https://www.uni-muenster.de/DESMEX/startseite.html">DESMEX</a>-Projektes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://gitlab.com/Rochlitz.R/custem-examples/-/raw/main/supplementsGJI/03_schleiz_example/results_2022_10/final_res_model_3D_view_p2.png?ref_type=heads" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Rochlitz <em>et al.</em> (2023)</figcaption>
+</figure>
+</div>
 </section>
 <section id="magnetotellurik" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="magnetotellurik"><span class="header-section-number">5.2.3</span> Magnetotellurik</h3>
-<p><img src="pics/em/mtexamplepic.png" class="img-fluid"></p>
-
-
+<p>Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/mtexamplepic.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: FU Berlin</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.bgr.bund.de/DE/BGR/Wissenschaftliche-Infrastruktur/Geophysik/Bodengeophysik/Bilder/B_Magnetotellurik/mt_messung_im_gelaende_de.jpg?__blob=poster&amp;v=2" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: BGR</figcaption>
+</figure>
+</div>
 </section>
+</section>
+<section id="einteilung" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="einteilung"><span class="header-section-number">5.3</span> Einteilung</h2>
+<p>Es existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.</p>
+<p>Möglich ist eine Unterscheidung</p>
+<ul>
+<li>hinsichtlich der eingesetzten Sender und Empfänger oder</li>
+<li>nach den Merkmalen der Felder.</li>
+</ul>
+<table class="table-striped table-hover caption-top table">
+<caption>Zweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung</caption>
+<colgroup>
+<col style="width: 29%">
+<col style="width: 21%">
+<col style="width: 17%">
+<col style="width: 21%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sender</th>
+<th>Elektroden</th>
+<th>Elektroden und Spulen</th>
+<th>Spulen (Erdoberfläche)</th>
+<th>Spulen (Luft)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Geerdetes Kabel (galvanisch)</td>
+<td>Widerstandsgeoelektrik, IP</td>
+<td></td>
+<td>MMR</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Geerdetes Kabel (induktiv)</td>
+<td></td>
+<td>CSAMT</td>
+<td>LOTEM</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Spule</td>
+<td></td>
+<td></td>
+<td>Slingram, TEM, Bohrloch-EM</td>
+<td>Aero-EM</td>
+</tr>
+<tr class="even">
+<td>Langes Kabel, große Spule</td>
+<td></td>
+<td></td>
+<td>TURAM, TEM, Bohrloch-EM</td>
+<td>Semi-Airborne</td>
+</tr>
+<tr class="odd">
+<td>Ebene Wellen: Vertikale Antenne</td>
+<td></td>
+<td>VLF-R</td>
+<td>VLF</td>
+<td>VLF</td>
+</tr>
+<tr class="even">
+<td>Natürliche elektromagnetische Felder</td>
+<td>Tellurik</td>
+<td>MT</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Wir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:</p>
+<ul>
+<li><strong>zeitharmonisch</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}) e^{ i \omega t }\)</span>
+<ul>
+<li>monofrequent</li>
+<li>Kontinuum (Frequenzgemisch)</li>
+</ul></li>
+<li><strong>Zeitbereich</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}, t)\)</span>
+<ul>
+<li>Impulsfolgen</li>
+<li>Rechteckimpulsfolgen</li>
+</ul></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

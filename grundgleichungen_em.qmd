@@ -2,8 +2,6 @@
 editor: source
 ---
 
-
-
 ::: {.callout-tip title="Lernziele"}
 - Maxwellgleichungen
 - Feldgrößen der Elektromagnetik
@@ -21,7 +19,7 @@ $$
 
 Bei Verfahren mit Wechselfeldern kann die explizite Zeitabhängigkeit durch eine Fouriertransformation abgekoppelt werden.
 
-::: {.callout-note title="Bemerkungen zur Notation"}
+::: {.callout-note title="Bemerkungen zur Notation" collapse="true"}
 Im Zeitbereich werden die Feldgrößen kleingeschrieben, z.B. $\mathbf{e}$, $\mathbf{h}$. 
 
 Im Frequenzbereich schreiben wir die Feldgrößen mit Großbuchstaben, z.B. $\mathbf{B}$.
@@ -89,4 +87,58 @@ $$
 \mathbf{j} = \sigma \mathbf{e} \quad\text{  bzw.  }\quad \mathbf{J} = \sigma \mathbf{E}.
 $$
 
+## Schematisches Konzept der elektromagnetischen Induktion
 
+::: {.columns}
+::: {.column}
+![](pics/em/prinzip.png){width="90%"}
+:::
+::: {.column}
+Faradaysches Induktionsgesetz $\to$ Ohmsches Gesetz $\to$ Amperesches Durchflutungsgesetz
+
+![](pics/em/CSEM-Maxwell.excalidraw.svg)
+
+Das sekundäre Magnetfeld ist gegenüber dem primären Magnetfeld _phasenverschoben_ und hat eine _geringere Amplitude_.
+:::
+:::
+
+Über Amplitude und Phasenverschiebung lassen sich die Leitfähigkeit und die Geometrie des Störkörpers unter Beachtung des Äquivalenzprinzips rekonstruieren.
+
+## Einteilung der Methoden nach Merkmalen der Felder
+
+|       | $\nabla \times \mathbf{H}=$ | $\nabla \times \mathbf{E}=$ |  |  |
+|-------|----------|---------|----|-------------|
+| Wellenvorgänge | $\mathbf{j} + \frac{ \partial \mathbf{D} }{ \partial t }$ | $- \frac{ \partial \mathbf{B} }{ \partial t }$ | GPR | HF-Methoden |
+| Quasistationäre Vorgänge | $\mathbf{j}$ | $- \frac{ \partial \mathbf{B} }{ \partial t }$ | CSEM, MT, TEM | NF-Methoden |
+| Stationäre Felder | $\mathbf{j}$ | $\mathbf{0}$ | Geoelektrik | DC |
+| Statische Felder | $\mathbf{0}$ | $\mathbf{0}$ | -- | |
+
+: Zweckmäßige Einteilung anhand der Merkmale der Felder {.striped .hover}
+
+## Messung
+
+Bei der Messung wird versucht, die _Übertragungsfunktion_ oder _response function_ des Systems Erde zu erfassen.
+
+Dazu ist ein breites Frequenzspektrum erforderlich.
+
+::: {.columns}
+::: {.column width="39%"}
+[Input]{style="background:lightblue; border-radius:10px; padding:0.3em"}
+$\to$
+[Erde]{style="background:lightgrey; border-radius:10px; padding:0.3em"}
+$\to$
+[Output]{style="background:lightgreen; border-radius:10px; padding:0.3em"}
+:::
+
+::: {.column width="10%"}
+$\ \ \mapsto$
+:::
+
+::: {.column width="48%"}
+[Feld]{style="background:lightblue; border-radius:10px; padding:0.3em"}
+$\to$
+[Erde]{style="background:lightgrey; border-radius:10px; padding:0.3em"}
+$\to$
+[Feld]{style="background:lightgreen; border-radius:10px; padding:0.3em"}
+:::
+:::
