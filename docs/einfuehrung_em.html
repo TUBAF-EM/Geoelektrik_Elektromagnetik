@@ -269,17 +269,18 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#prinzip" id="toc-prinzip" class="nav-link active" data-scroll-target="#prinzip"><span class="header-section-number">9.1</span> Prinzip</a></li>
-  <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">9.2</span> Beispiele</a>
+  <li><a href="#petrophysikalische-grundlage" id="toc-petrophysikalische-grundlage" class="nav-link active" data-scroll-target="#petrophysikalische-grundlage"><span class="header-section-number">9.1</span> Petrophysikalische Grundlage</a></li>
+  <li><a href="#prinzip" id="toc-prinzip" class="nav-link" data-scroll-target="#prinzip"><span class="header-section-number">9.2</span> Prinzip</a></li>
+  <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">9.3</span> Beispiele</a>
   <ul class="collapse">
-  <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">9.2.1</span> Marine CSEM</a></li>
-  <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">9.2.2</span> Airborne EM</a></li>
-  <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">9.2.3</span> Magnetotellurik</a></li>
+  <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">9.3.1</span> Marine CSEM</a></li>
+  <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">9.3.2</span> Airborne EM</a></li>
+  <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">9.3.3</span> Magnetotellurik</a></li>
   </ul></li>
-  <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">9.3</span> Einteilung</a></li>
-  <li><a href="#frequenzen-und-targets" id="toc-frequenzen-und-targets" class="nav-link" data-scroll-target="#frequenzen-und-targets"><span class="header-section-number">9.4</span> Frequenzen und Targets</a></li>
-  <li><a href="#erkundungsmethoden" id="toc-erkundungsmethoden" class="nav-link" data-scroll-target="#erkundungsmethoden"><span class="header-section-number">9.5</span> Erkundungsmethoden</a></li>
-  <li><a href="#beispiele-für-em-messgeräte" id="toc-beispiele-für-em-messgeräte" class="nav-link" data-scroll-target="#beispiele-für-em-messgeräte"><span class="header-section-number">9.6</span> Beispiele für EM-Messgeräte</a></li>
+  <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">9.4</span> Einteilung</a></li>
+  <li><a href="#frequenzen-und-targets" id="toc-frequenzen-und-targets" class="nav-link" data-scroll-target="#frequenzen-und-targets"><span class="header-section-number">9.5</span> Frequenzen und Targets</a></li>
+  <li><a href="#erkundungsmethoden" id="toc-erkundungsmethoden" class="nav-link" data-scroll-target="#erkundungsmethoden"><span class="header-section-number">9.6</span> Erkundungsmethoden</a></li>
+  <li><a href="#beispiele-für-em-messgeräte" id="toc-beispiele-für-em-messgeräte" class="nav-link" data-scroll-target="#beispiele-für-em-messgeräte"><span class="header-section-number">9.7</span> Beispiele für EM-Messgeräte</a></li>
   </ul>
 </nav>
     </div>
@@ -312,8 +313,38 @@ window.Quarto = {
 <li>CSEM</li>
 <li>Transient-Elektromagnetik</li>
 </ul>
-<section id="prinzip" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="prinzip"><span class="header-section-number">9.1</span> Prinzip</h2>
+<section id="petrophysikalische-grundlage" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="petrophysikalische-grundlage"><span class="header-section-number">9.1</span> Petrophysikalische Grundlage</h2>
+<p>Die <strong>elektrische Leitfähigkeit</strong> ist der bedeutendste Stoffparameter der EM. Innerhalb der Erdkruste variiert um 25 Dekaden (Diamant-Kupfer).</p>
+<p>Daneben besitzen die <strong>magnetische Suszeptibilität</strong> <span class="math inline">\(\kappa = 1 - \mu_{r}\)</span> und die <strong>dielektrische Permittivität</strong> <span class="math inline">\(\varepsilon\)</span> nur untergeordnete Bedeutung.</p>
+<p>Die elektrische Leitfähigkeit bestimmt, welcher Stromfluss in einem leitfähigen Medium bei angelegtem elektrischen Feld realisiert werden kann.</p>
+<p>Theoretischer Zusammenhang: Ohmsches Gesetz <span class="math display">\[
+\mathbf{j} = \sigma \mathbf{E}
+\]</span></p>
+<p>Die elektrische Leitfähigkeit wird in S/m angegeben. Im Allgemeinen ist <span class="math inline">\(\sigma\)</span> ein symmetrischer Tensor der Form <span class="math display">\[
+\pmb\sigma =
+\begin{pmatrix}
+    \sigma_{xx} &amp; \sigma_{xy} &amp; \sigma_{xz} \\
+    \sigma_{yx} &amp; \sigma_{yy} &amp; \sigma_{yz} \\
+    \sigma_{zx} &amp; \sigma_{zy} &amp; \sigma_{zz}
+\end{pmatrix}
+\]</span></p>
+<p>und bewirkt eine Anisotropie (Richtungsabhängigkeit) der Leitfähigkeit. Die Folge ist, dass die Richtung des Stromflusses in einem anisotropen Medium von der Richtung des angelegten elektrischen Feldes abweicht.</p>
+<p>Bei isotroper Leitfähigkeit gilt <span class="math display">\[
+\sigma_{xx} = \sigma_{yy} = \sigma_{zz},
+\]</span></p>
+<p>und die Nebendiagonalelemente sind Null.</p>
+<p>In der EM wird eine angepasste Vorstellung der Leitfähigkeitsmechanismen benötigt.</p>
+<ul>
+<li>Tonfreie Sedimente: Archie-Beziehung</li>
+<li>Festgestein: Klüftigkeitsmodelle</li>
+<li>Kruste, Mantel: Graphit, partielle Schmelzen</li>
+<li>Subduktionszonen: Fluideintrag</li>
+</ul>
+<p>Die dielektrische Permittivität <span class="math inline">\(\varepsilon\)</span> spielt nur bei sehr hohen Frequenzen oder niedrigen Leitfähigkeiten eine Rolle und dominiert die Prozesse z.B. beim Georadar (GPR).</p>
+</section>
+<section id="prinzip" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="prinzip"><span class="header-section-number">9.2</span> Prinzip</h2>
 <p>Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:</p>
 <div class="columns">
 <div class="column">
@@ -337,10 +368,10 @@ window.Quarto = {
 </ul>
 <p><img src="pics/em/CSEM-Maxwell.excalidraw.svg" class="img-fluid"></p>
 </section>
-<section id="beispiele" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">9.2</span> Beispiele</h2>
-<section id="marine-csem" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="marine-csem"><span class="header-section-number">9.2.1</span> Marine CSEM</h3>
+<section id="beispiele" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">9.3</span> Beispiele</h2>
+<section id="marine-csem" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="marine-csem"><span class="header-section-number">9.3.1</span> Marine CSEM</h3>
 <p>Eine leistungsstarke Stromquelle wird als <em>elektrischer Dipol</em> über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.</p>
 <p>Zusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der <em>Magnetotellurik</em> mit größerer Eindringtiefe genutzt werden.</p>
 <p>Das Bild zeigt schematisch das CSEM-Messkonzept des <em>Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US</em>.</p>
@@ -352,8 +383,8 @@ window.Quarto = {
 </div>
 <p>Der Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.</p>
 </section>
-<section id="airborne-em" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="airborne-em"><span class="header-section-number">9.2.2</span> Airborne EM</h3>
+<section id="airborne-em" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="airborne-em"><span class="header-section-number">9.3.2</span> Airborne EM</h3>
 <p>Die Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -382,8 +413,8 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="magnetotellurik" class="level3" data-number="9.2.3">
-<h3 data-number="9.2.3" class="anchored" data-anchor-id="magnetotellurik"><span class="header-section-number">9.2.3</span> Magnetotellurik</h3>
+<section id="magnetotellurik" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="magnetotellurik"><span class="header-section-number">9.3.3</span> Magnetotellurik</h3>
 <p>Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -399,8 +430,8 @@ window.Quarto = {
 </div>
 </section>
 </section>
-<section id="einteilung" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="einteilung"><span class="header-section-number">9.3</span> Einteilung</h2>
+<section id="einteilung" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="einteilung"><span class="header-section-number">9.4</span> Einteilung</h2>
 <p>Es existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.</p>
 <p>Möglich ist eine Unterscheidung</p>
 <ul>
@@ -484,12 +515,12 @@ window.Quarto = {
 </ul></li>
 </ul>
 </section>
-<section id="frequenzen-und-targets" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="frequenzen-und-targets"><span class="header-section-number">9.4</span> Frequenzen und Targets</h2>
+<section id="frequenzen-und-targets" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="frequenzen-und-targets"><span class="header-section-number">9.5</span> Frequenzen und Targets</h2>
 <p><img src="pics/em/EM-Target-Frequenz.excalidraw.svg" class="img-fluid"></p>
 </section>
-<section id="erkundungsmethoden" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="erkundungsmethoden"><span class="header-section-number">9.5</span> Erkundungsmethoden</h2>
+<section id="erkundungsmethoden" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="erkundungsmethoden"><span class="header-section-number">9.6</span> Erkundungsmethoden</h2>
 <p>Wir unterscheiden drei unterschiedliche Methoden der Untersuchug des Untergrundes:</p>
 <ul>
 <li>Die <strong>Kartierung</strong>, bei welcher mit gleichbleibender Frequenz und Abstand zwischen Sender und Empfänger <em>laterale Leitfähigkeitsinhomogenitäten</em> durch Messungen entlang von Profilen erfasst werden</li>
@@ -497,8 +528,8 @@ window.Quarto = {
 <li>Eine <strong>Kombination aus beiden Methoden</strong> liefert Messwerte, aus denen sich die Verteilung der elektrischen Leitfähigkeit <em>im gesamten Raum</em> rekonstruieren lässt.</li>
 </ul>
 </section>
-<section id="beispiele-für-em-messgeräte" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="beispiele-für-em-messgeräte"><span class="header-section-number">9.6</span> Beispiele für EM-Messgeräte</h2>
+<section id="beispiele-für-em-messgeräte" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="beispiele-für-em-messgeräte"><span class="header-section-number">9.7</span> Beispiele für EM-Messgeräte</h2>
 <ul>
 <li>Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern <em>scheinbare Leitfähigkeit</em></li>
 <li>TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient <span class="math inline">\(\frac{ \partial B_{z}(t) }{ \partial t }\)</span></li>

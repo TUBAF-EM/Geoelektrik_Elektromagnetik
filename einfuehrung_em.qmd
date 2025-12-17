@@ -12,6 +12,47 @@ Wir werden folgende wichtige Messverfahren kennenlernen:
 - CSEM
 - Transient-Elektromagnetik
 
+## Petrophysikalische Grundlage
+
+Die __elektrische Leitfähigkeit__ ist der bedeutendste Stoffparameter der EM. Innerhalb der Erdkruste variiert um 25 Dekaden (Diamant-Kupfer). 
+
+Daneben besitzen die __magnetische Suszeptibilität__ $\kappa = 1 - \mu_{r}$ und die __dielektrische Permittivität__ $\varepsilon$ nur untergeordnete Bedeutung.
+
+Die elektrische Leitfähigkeit bestimmt, welcher Stromfluss in einem leitfähigen Medium bei angelegtem elektrischen Feld realisiert werden kann.
+
+Theoretischer Zusammenhang: Ohmsches Gesetz
+$$
+\mathbf{j} = \sigma \mathbf{E}
+$$
+
+Die elektrische Leitfähigkeit wird in S/m angegeben. Im Allgemeinen ist $\sigma$ ein symmetrischer Tensor der Form
+$$
+\pmb\sigma = 
+\begin{pmatrix}
+    \sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
+    \sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\
+    \sigma_{zx} & \sigma_{zy} & \sigma_{zz}
+\end{pmatrix}
+$$
+
+und bewirkt eine Anisotropie (Richtungsabhängigkeit) der Leitfähigkeit. Die Folge ist, dass die Richtung des Stromflusses in einem anisotropen Medium von der Richtung des angelegten elektrischen Feldes abweicht.
+
+Bei isotroper Leitfähigkeit gilt
+$$
+\sigma_{xx} = \sigma_{yy} = \sigma_{zz},
+$$
+
+und die Nebendiagonalelemente sind Null.
+
+In der EM wird eine angepasste Vorstellung der Leitfähigkeitsmechanismen benötigt.
+
+- Tonfreie Sedimente: Archie-Beziehung
+- Festgestein: Klüftigkeitsmodelle
+- Kruste, Mantel: Graphit, partielle Schmelzen
+- Subduktionszonen: Fluideintrag 
+
+Die dielektrische Permittivität $\varepsilon$ spielt nur bei sehr hohen Frequenzen oder niedrigen Leitfähigkeiten eine Rolle und dominiert die Prozesse z.B. beim Georadar (GPR).
+
 ## Prinzip
 
 Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:

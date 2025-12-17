@@ -13,6 +13,32 @@ editor: source
 - Grenzen
 :::
 
+## Einführung
+
+Begriff: Magnetotellurik, lat. _tellus_, die Erde. 
+
+MT misst natürliche elektrische und magnetische Felder über einem breiten Frequenzspektrum. 
+
+Quelle der Felder: (a) Durch Sonnenwind und/oder EM-Strahlung erzeugte Ströme in Ionosphäre und Magnetosphäre mit $0.01 < T < 10^4$ s, (b) weltweite Gewitteraktivität mit $f < 10$ kHz
+
+Klassische Arbeiten:
+
+- **A. N. Tikhonov (1950):** On determining electrical characteristics of the deep layers of the earth's crust, Dokl. Akad. Nauk S.S.S.R. 73, 295
+- **L. Cagniard (1953)**: Basic theory of the magneto--telluric method of geophysical prospecting, Geophysics, 18, 605-635
+
+## Anregungsspektrum
+
+![Grand Spectrum, Constable et al.](pics/em/grand-spectrum.png)
+
+## Daten
+
+Registriert werden Felder als Zeitreihen $\mathbf{E}(t), \mathbf{B}(t), \frac{ \partial \mathbf{B} }{ \partial t }(t)$
+
+Datenprocessing transformiert die registrierten Zeitreihen in den Frequenzbereich
+
+Ziel: Bestimmung der _Impedanz_. Daraus werden Darstellungsgrößen wie Sondierungskurven des scheinbaren spezifischen Widerstandes usw. gewonnen
+
+
 ## Theoretische Grundlagen
 
 Aus dem System der Maxwellgleichungen erhalten wir die _Helmholtz-Gleichung_.
@@ -140,12 +166,20 @@ $$
 
 mit $\vb{e}_{h}$: horizontaler kartesischer Einheitsvektor
 
+::: {.columns}
+::: {.column}
+
 Wir bezeichnen
 $$
 Z_{s}(\omega) = \frac{E_{x}}{B_{y}} = -\frac{E_{y}}{B_{x}}
 $$
 als _Oberflächenimpedanz_.
-<!-- ![[MT-Drehung-EH.excalidraw|50%]] -->
+:::
+
+::: {.column width="35%"}
+![](pics/em/MT-Drehung-EH.excalidraw.svg)
+:::
+::: 
 
 Wie bekommen wir aus den Messgrößen $\mathbf{E}$ und $\mathbf{B}$ Informationen über die Leitfähigkeit des Untergrundes?
 
@@ -167,6 +201,24 @@ $$
 Z_{s} = \frac{E_{x}(0)}{B_{y}(0)} = \frac{\omega}{k} = Z_{1}
 $$
 Die Oberflächenimpedanz des homogenen Halbraums $Z_{s}$ stimmt mit der intrinsischen Impedanz des homogenen Halbraums $Z_{1}$ überein.
+
+## Darstellungsgrößen
+
+Aus der Impedanz $\mathbf{Z}_{s}$ werden der scheinbare spezifische Widerstand $\rho_{s}$ sowie die Phase $\Phi$ ermittelt und als _Sondierungskurve_ dargestellt.
+
+Definitionen:
+
+$$
+\begin{align}
+\rho_{s} & = \frac{1}{\omega \mu} |Z_{s}|^{2} \\
+\Phi & = \arctan \frac{\text{Im}(Z_{s})}{\text{Re}(Z_{s})}
+\end{align}
+$$
+
+Wie wir später sehen werden, beträgt der Phasenwinkel auf der Oberfläche eines homogenen Halbraums $\Phi = \frac{\pi}{4}$, der scheinbare spezifische Widerstand stimmt mit spezifischen Widerstand des Halbraums überein. 
+
+![Schematische Darstellung der Sondierungskurven über einem inhomogenen Untergrund.](pics/em/MT-sondierungskurve.excalidraw.svg)
+
 
 ## Datenprocessing
 
