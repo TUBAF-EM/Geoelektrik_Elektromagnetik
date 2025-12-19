@@ -111,7 +111,7 @@ Das sekundäre Magnetfeld ist gegenüber dem primären Magnetfeld _phasenverscho
 |-------------|---|-------|
 | Magnetfeld | $\mathbf{H}$ | A/m |
 | Elektrisches Feld | $\mathbf{E}$ | V/m |
-| Magnetische Flussdichte | $\mathbf{B}$ | Vs/Am$^{2}$ (T) |
+| Magnetische Flussdichte | $\mathbf{B}$ | Vs/m$^{2}$ (T) |
 | Dielektrische Verschiebung | $\mathbf{D}$ | As/m$^{2}$ |
 | Elektrische Stromdichte | $\mathbf{j}$ | A/m$^{2}$ |
 | Spannung | $U$ | V |
