@@ -4,19 +4,45 @@ editor: source
 
 # Einführung
 
-Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.
+Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur räumlichen Rekonstruktion der elektrischen Leitfähigkeit im Untergrund. Sie umfassen einen breiten Anwendungsbereich von der Archäometrie über Kampfmittelsuche, Hydrogeophysik, Lagerstättenerkundung bis hin zur Erforschung der elektrischen Eigenschaften von Erdkruste und Mantel.
 
 Wir werden folgende wichtige Messverfahren kennenlernen:
 
-- Magnetotellurik
-- CSEM
-- Transient-Elektromagnetik
+- Magnetotellurik (MT)
+- Controlled-Source Elektromagnetik (CSEM)
+- Transient-Elektromagnetik (TEM)
 
-## Petrophysikalische Grundlage
+## Petrophysikalische Grundlagen
 
-Die __elektrische Leitfähigkeit__ ist der bedeutendste Stoffparameter der EM. Innerhalb der Erdkruste variiert um 25 Dekaden (Diamant-Kupfer). 
+
+::: {.columns}
+::: {.column width=50%}
+Die __elektrische Leitfähigkeit__ ist der bedeutendste Stoffparameter der geoelektromagnetischen Verfahren.
+Innerhalb der Erdkruste variiert um __25 Dekaden__ (Diamant-Kupfer). 
+
+Wir unterscheiden drei Mechanismen der Leitfähigkeit:
+
+- elektrolytische Leitfähigkeit
+- elektronische Leitfähigkeit
+- Grenzflächenleitfähigkeit
+:::
+::: {.column width="4%"}
+
+:::
+::: {.column width="45%"}
+![](pics/em/widerstaende.png)
+:::
+:::
+
+In der EM dominieren elektrolytische und elektronische Leitfähigkeit. 
+Die elektrische Leitfähigkeit von Gesteinen tritt auf durch
+
+- leitfähige Matrix: erfordert galvanisch oder induktiv gekoppelte leitfähige Minerale (Pyrit, Erze, Graphit)
+- leitfähiges Fluid: erfordert galvanisch gekoppelte Porenräume (Archie)
 
 Daneben besitzen die __magnetische Suszeptibilität__ $\kappa = 1 - \mu_{r}$ und die __dielektrische Permittivität__ $\varepsilon$ nur untergeordnete Bedeutung.
+
+![Quelle: @dm2014](pics/em/dentith-epsilon.png)
 
 Die elektrische Leitfähigkeit bestimmt, welcher Stromfluss in einem leitfähigen Medium bei angelegtem elektrischen Feld realisiert werden kann.
 
@@ -114,7 +140,7 @@ Die luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:
 - Ingenieurgeologische Messungen
 - Lagerstättenexploration
 
-_Semi-airborne_-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden. 
+_Semi-airborne_-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauber oder Drohnen über das Messgebiet geschleppt werden. 
 
 Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des [DESMEX](https://www.uni-muenster.de/DESMEX/startseite.html)-Projektes.
 
@@ -127,6 +153,27 @@ Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsystem
 ![Quelle: FU Berlin](pics/em/mtexamplepic.png){width="70%"}
 
 ![Quelle: BGR](https://www.bgr.bund.de/DE/BGR/Wissenschaftliche-Infrastruktur/Geophysik/Bodengeophysik/Bilder/B_Magnetotellurik/mt_messung_im_gelaende_de.jpg?__blob=poster&v=2){width="70%"}
+
+### Transient-Elektromagnetik
+
+::: {.columns}
+::: {.column}
+Die Transientelektromagnetik zeichnet Felder als Funktion der Zeit auf. Beobachtet werden Induktionsprozesse im leitfähigen Untergrund nach dem Abschalten eines Gleichstroms in der Sendespule.
+
+:::
+
+::: {.column width="5%"}
+
+:::
+::: {.column width="40%"} 
+![Dreikomponenten-Induktionsspulensystem (Geonics Ltd.)](pics/em/tem-receiver.png)
+:::
+::: 
+
+Die Animation simuliert die Ausbreitung des induzierten Stromsystems nach dem Abschalten des Transmitterstromes bei $t=0$.
+Zwei leitfähige zylindrische Einlagerungen erzeugen charakteristische Anomalien, die in den Transienten (s. insets) sichtbar sind.
+
+![](pics/em/efield_2_cyl_31.gif)
 
 
 ## Einteilung
@@ -175,5 +222,5 @@ Wir unterscheiden drei unterschiedliche Methoden der Untersuchug des Untergrunde
 
 - Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern _scheinbare Leitfähigkeit_
 - TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient $\frac{ \partial B_{z}(t) }{ \partial t }$
-- MT-Apparatur, z.B. Metronix ADU-08e, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte
+- MT-Apparatur, z.B. Metronix ADU-11e mit SHFT-02e-Sensoren oder MFS-Induktionsspulen, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte
 - Airborne-EM-System, z.B. Fugro, liefert Magnetfeldverhältnis $B_{z}/B_{z}^{0}$ oder sekundäres Magnetfeld $B_{z}^{s}=B_{z}-B_{z}^{0}$
