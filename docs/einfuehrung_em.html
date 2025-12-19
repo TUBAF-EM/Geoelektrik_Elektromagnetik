@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -269,13 +288,14 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#petrophysikalische-grundlage" id="toc-petrophysikalische-grundlage" class="nav-link active" data-scroll-target="#petrophysikalische-grundlage"><span class="header-section-number">9.1</span> Petrophysikalische Grundlage</a></li>
+  <li><a href="#petrophysikalische-grundlagen" id="toc-petrophysikalische-grundlagen" class="nav-link active" data-scroll-target="#petrophysikalische-grundlagen"><span class="header-section-number">9.1</span> Petrophysikalische Grundlagen</a></li>
   <li><a href="#prinzip" id="toc-prinzip" class="nav-link" data-scroll-target="#prinzip"><span class="header-section-number">9.2</span> Prinzip</a></li>
   <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">9.3</span> Beispiele</a>
   <ul class="collapse">
   <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">9.3.1</span> Marine CSEM</a></li>
   <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">9.3.2</span> Airborne EM</a></li>
   <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">9.3.3</span> Magnetotellurik</a></li>
+  <li><a href="#transient-elektromagnetik" id="toc-transient-elektromagnetik" class="nav-link" data-scroll-target="#transient-elektromagnetik"><span class="header-section-number">9.3.4</span> Transient-Elektromagnetik</a></li>
   </ul></li>
   <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">9.4</span> Einteilung</a></li>
   <li><a href="#frequenzen-und-targets" id="toc-frequenzen-und-targets" class="nav-link" data-scroll-target="#frequenzen-und-targets"><span class="header-section-number">9.5</span> Frequenzen und Targets</a></li>
@@ -306,17 +326,42 @@ window.Quarto = {
 </header>
 
 
-<p>Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur Detektion von Anomalien der elektrischen Leitfähigkeit im Untergrund.</p>
+<p>Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur räumlichen Rekonstruktion der elektrischen Leitfähigkeit im Untergrund. Sie umfassen einen breiten Anwendungsbereich von der Archäometrie über Kampfmittelsuche, Hydrogeophysik, Lagerstättenerkundung bis hin zur Erforschung der elektrischen Eigenschaften von Erdkruste und Mantel.</p>
 <p>Wir werden folgende wichtige Messverfahren kennenlernen:</p>
 <ul>
-<li>Magnetotellurik</li>
-<li>CSEM</li>
-<li>Transient-Elektromagnetik</li>
+<li>Magnetotellurik (MT)</li>
+<li>Controlled-Source Elektromagnetik (CSEM)</li>
+<li>Transient-Elektromagnetik (TEM)</li>
 </ul>
-<section id="petrophysikalische-grundlage" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="petrophysikalische-grundlage"><span class="header-section-number">9.1</span> Petrophysikalische Grundlage</h2>
-<p>Die <strong>elektrische Leitfähigkeit</strong> ist der bedeutendste Stoffparameter der EM. Innerhalb der Erdkruste variiert um 25 Dekaden (Diamant-Kupfer).</p>
+<section id="petrophysikalische-grundlagen" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="petrophysikalische-grundlagen"><span class="header-section-number">9.1</span> Petrophysikalische Grundlagen</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Die <strong>elektrische Leitfähigkeit</strong> ist der bedeutendste Stoffparameter der geoelektromagnetischen Verfahren. Innerhalb der Erdkruste variiert um <strong>25 Dekaden</strong> (Diamant-Kupfer).</p>
+<p>Wir unterscheiden drei Mechanismen der Leitfähigkeit:</p>
+<ul>
+<li>elektrolytische Leitfähigkeit</li>
+<li>elektronische Leitfähigkeit</li>
+<li>Grenzflächenleitfähigkeit</li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:45%;">
+<p><img src="pics/em/widerstaende.png" class="img-fluid"></p>
+</div>
+</div>
+<p>In der EM dominieren elektrolytische und elektronische Leitfähigkeit. Die elektrische Leitfähigkeit von Gesteinen tritt auf durch</p>
+<ul>
+<li>leitfähige Matrix: erfordert galvanisch oder induktiv gekoppelte leitfähige Minerale (Pyrit, Erze, Graphit)</li>
+<li>leitfähiges Fluid: erfordert galvanisch gekoppelte Porenräume (Archie)</li>
+</ul>
 <p>Daneben besitzen die <strong>magnetische Suszeptibilität</strong> <span class="math inline">\(\kappa = 1 - \mu_{r}\)</span> und die <strong>dielektrische Permittivität</strong> <span class="math inline">\(\varepsilon\)</span> nur untergeordnete Bedeutung.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/dentith-epsilon.png" class="img-fluid figure-img"></p>
+<figcaption>Quelle: <span class="citation" data-cites="dm2014">Dentith und Mudge (<a href="literatur.html#ref-dm2014" role="doc-biblioref">2014</a>)</span></figcaption>
+</figure>
+</div>
 <p>Die elektrische Leitfähigkeit bestimmt, welcher Stromfluss in einem leitfähigen Medium bei angelegtem elektrischen Feld realisiert werden kann.</p>
 <p>Theoretischer Zusammenhang: Ohmsches Gesetz <span class="math display">\[
 \mathbf{j} = \sigma \mathbf{E}
@@ -404,7 +449,7 @@ window.Quarto = {
 <li>Ingenieurgeologische Messungen</li>
 <li>Lagerstättenexploration</li>
 </ul>
-<p><em>Semi-airborne</em>-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauner oder Drohnen über das Messgebiet geschleppt werden.</p>
+<p><em>Semi-airborne</em>-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauber oder Drohnen über das Messgebiet geschleppt werden.</p>
 <p>Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des <a href="https://www.uni-muenster.de/DESMEX/startseite.html">DESMEX</a>-Projektes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -428,6 +473,25 @@ window.Quarto = {
 <figcaption>Quelle: BGR</figcaption>
 </figure>
 </div>
+</section>
+<section id="transient-elektromagnetik" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="transient-elektromagnetik"><span class="header-section-number">9.3.4</span> Transient-Elektromagnetik</h3>
+<div class="columns">
+<div class="column">
+<p>Die Transientelektromagnetik zeichnet Felder als Funktion der Zeit auf. Beobachtet werden Induktionsprozesse im leitfähigen Untergrund nach dem Abschalten eines Gleichstroms in der Sendespule.</p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/tem-receiver.png" class="img-fluid figure-img"></p>
+<figcaption>Dreikomponenten-Induktionsspulensystem (Geonics Ltd.)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Die Animation simuliert die Ausbreitung des induzierten Stromsystems nach dem Abschalten des Transmitterstromes bei <span class="math inline">\(t=0\)</span>. Zwei leitfähige zylindrische Einlagerungen erzeugen charakteristische Anomalien, die in den Transienten (s. insets) sichtbar sind.</p>
+<p><img src="pics/em/efield_2_cyl_31.gif" class="img-fluid"></p>
 </section>
 </section>
 <section id="einteilung" class="level2" data-number="9.4">
@@ -533,11 +597,16 @@ window.Quarto = {
 <ul>
 <li>Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern <em>scheinbare Leitfähigkeit</em></li>
 <li>TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient <span class="math inline">\(\frac{ \partial B_{z}(t) }{ \partial t }\)</span></li>
-<li>MT-Apparatur, z.B. Metronix ADU-08e, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte</li>
+<li>MT-Apparatur, z.B. Metronix ADU-11e mit SHFT-02e-Sensoren oder MFS-Induktionsspulen, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte</li>
 <li>Airborne-EM-System, z.B. Fugro, liefert Magnetfeldverhältnis <span class="math inline">\(B_{z}/B_{z}^{0}\)</span> oder sekundäres Magnetfeld <span class="math inline">\(B_{z}^{s}=B_{z}-B_{z}^{0}\)</span></li>
 </ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-dm2014" class="csl-entry" role="listitem">
+Dentith M und Mudge S T. 2014. <em><a href="https://doi.org/10.1017/cbo9781139024358">Geophysics for the Mineral Exploration Geoscientist</a></em> (Cambridge University Press)
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

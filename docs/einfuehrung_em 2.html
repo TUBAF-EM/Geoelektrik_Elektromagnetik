@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Einführung – Geoelektrik und Elektromagnetik</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./grundgleichungen_em.html" rel="next">
+<link href="./ert_praxis.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+<script>
+window.MathJax = {
+  loader: {
+    load: ['[tex]/physics']
+  },
+  tex: {
+    packages: {'[+]': ['physics']}
+  }
+};
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Geoelektrik und Elektromagnetik</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Elektromagnetische Größen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Geoelektrik</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./grundgleichungen_dc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Gleichstromgeoelektrik</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sens_arrays.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ves.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ert.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./timelapse_ert.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./induzierte_polarisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ert_praxis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Elektromagnetik</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./grundgleichungen_em.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magnetotellurik.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./zusammenfassung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./literatur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literaturverzeichnis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slidedecks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Slide decks</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#petrophysikalische-grundlagen" id="toc-petrophysikalische-grundlagen" class="nav-link active" data-scroll-target="#petrophysikalische-grundlagen"><span class="header-section-number">9.1</span> Petrophysikalische Grundlagen</a></li>
+  <li><a href="#prinzip" id="toc-prinzip" class="nav-link" data-scroll-target="#prinzip"><span class="header-section-number">9.2</span> Prinzip</a></li>
+  <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">9.3</span> Beispiele</a>
+  <ul class="collapse">
+  <li><a href="#marine-csem" id="toc-marine-csem" class="nav-link" data-scroll-target="#marine-csem"><span class="header-section-number">9.3.1</span> Marine CSEM</a></li>
+  <li><a href="#airborne-em" id="toc-airborne-em" class="nav-link" data-scroll-target="#airborne-em"><span class="header-section-number">9.3.2</span> Airborne EM</a></li>
+  <li><a href="#magnetotellurik" id="toc-magnetotellurik" class="nav-link" data-scroll-target="#magnetotellurik"><span class="header-section-number">9.3.3</span> Magnetotellurik</a></li>
+  <li><a href="#transient-elektromagnetik" id="toc-transient-elektromagnetik" class="nav-link" data-scroll-target="#transient-elektromagnetik"><span class="header-section-number">9.3.4</span> Transient-Elektromagnetik</a></li>
+  </ul></li>
+  <li><a href="#einteilung" id="toc-einteilung" class="nav-link" data-scroll-target="#einteilung"><span class="header-section-number">9.4</span> Einteilung</a></li>
+  <li><a href="#frequenzen-und-targets" id="toc-frequenzen-und-targets" class="nav-link" data-scroll-target="#frequenzen-und-targets"><span class="header-section-number">9.5</span> Frequenzen und Targets</a></li>
+  <li><a href="#erkundungsmethoden" id="toc-erkundungsmethoden" class="nav-link" data-scroll-target="#erkundungsmethoden"><span class="header-section-number">9.6</span> Erkundungsmethoden</a></li>
+  <li><a href="#beispiele-für-em-messgeräte" id="toc-beispiele-für-em-messgeräte" class="nav-link" data-scroll-target="#beispiele-für-em-messgeräte"><span class="header-section-number">9.7</span> Beispiele für EM-Messgeräte</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./einfuehrung_em.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einführung</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Die elektromagnetischen Verfahren in der Geophysik (kurz: Geo-Elektromagnetik) dienen zur räumlichen Rekonstruktion der elektrischen Leitfähigkeit im Untergrund. Sie umfassen einen breiten Anwendungsbereich von der Archäometrie über Kampfmittelsuche, Hydrogeophysik, Lagerstättenerkundung bis hin zur Erforschung der elektrischen Eigenschaften von Erdkruste und Mantel.</p>
+<p>Wir werden folgende wichtige Messverfahren kennenlernen:</p>
+<ul>
+<li>Magnetotellurik (MT)</li>
+<li>Controlled-Source Elektromagnetik (CSEM)</li>
+<li>Transient-Elektromagnetik (TEM)</li>
+</ul>
+<section id="petrophysikalische-grundlagen" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="petrophysikalische-grundlagen"><span class="header-section-number">9.1</span> Petrophysikalische Grundlagen</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Die <strong>elektrische Leitfähigkeit</strong> ist der bedeutendste Stoffparameter der geoelektromagnetischen Verfahren. Innerhalb der Erdkruste variiert um <strong>25 Dekaden</strong> (Diamant-Kupfer).</p>
+<p>Wir unterscheiden drei Mechanismen der Leitfähigkeit:</p>
+<ul>
+<li>elektrolytische Leitfähigkeit</li>
+<li>elektronische Leitfähigkeit</li>
+<li>Grenzflächenleitfähigkeit</li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:45%;">
+<p><img src="pics/em/widerstaende.png" class="img-fluid"></p>
+</div>
+</div>
+<p>In der EM dominieren elektrolytische und elektronische Leitfähigkeit. Die elektrische Leitfähigkeit von Gesteinen tritt auf durch</p>
+<ul>
+<li>leitfähige Matrix: erfordert galvanisch oder induktiv gekoppelte leitfähige Minerale (Pyrit, Erze, Graphit)</li>
+<li>leitfähiges Fluid: erfordert galvanisch gekoppelte Porenräume (Archie)</li>
+</ul>
+<p>Daneben besitzen die <strong>magnetische Suszeptibilität</strong> <span class="math inline">\(\kappa = 1 - \mu_{r}\)</span> und die <strong>dielektrische Permittivität</strong> <span class="math inline">\(\varepsilon\)</span> nur untergeordnete Bedeutung.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/dentith-epsilon.png" class="img-fluid figure-img"></p>
+<figcaption>Quelle: <span class="citation" data-cites="dm2014">Dentith und Mudge (<a href="literatur.html#ref-dm2014" role="doc-biblioref">2014</a>)</span></figcaption>
+</figure>
+</div>
+<p>Die elektrische Leitfähigkeit bestimmt, welcher Stromfluss in einem leitfähigen Medium bei angelegtem elektrischen Feld realisiert werden kann.</p>
+<p>Theoretischer Zusammenhang: Ohmsches Gesetz <span class="math display">\[
+\mathbf{j} = \sigma \mathbf{E}
+\]</span></p>
+<p>Die elektrische Leitfähigkeit wird in S/m angegeben. Im Allgemeinen ist <span class="math inline">\(\sigma\)</span> ein symmetrischer Tensor der Form <span class="math display">\[
+\pmb\sigma =
+\begin{pmatrix}
+    \sigma_{xx} &amp; \sigma_{xy} &amp; \sigma_{xz} \\
+    \sigma_{yx} &amp; \sigma_{yy} &amp; \sigma_{yz} \\
+    \sigma_{zx} &amp; \sigma_{zy} &amp; \sigma_{zz}
+\end{pmatrix}
+\]</span></p>
+<p>und bewirkt eine Anisotropie (Richtungsabhängigkeit) der Leitfähigkeit. Die Folge ist, dass die Richtung des Stromflusses in einem anisotropen Medium von der Richtung des angelegten elektrischen Feldes abweicht.</p>
+<p>Bei isotroper Leitfähigkeit gilt <span class="math display">\[
+\sigma_{xx} = \sigma_{yy} = \sigma_{zz},
+\]</span></p>
+<p>und die Nebendiagonalelemente sind Null.</p>
+<p>In der EM wird eine angepasste Vorstellung der Leitfähigkeitsmechanismen benötigt.</p>
+<ul>
+<li>Tonfreie Sedimente: Archie-Beziehung</li>
+<li>Festgestein: Klüftigkeitsmodelle</li>
+<li>Kruste, Mantel: Graphit, partielle Schmelzen</li>
+<li>Subduktionszonen: Fluideintrag</li>
+</ul>
+<p>Die dielektrische Permittivität <span class="math inline">\(\varepsilon\)</span> spielt nur bei sehr hohen Frequenzen oder niedrigen Leitfähigkeiten eine Rolle und dominiert die Prozesse z.B. beim Georadar (GPR).</p>
+</section>
+<section id="prinzip" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="prinzip"><span class="header-section-number">9.2</span> Prinzip</h2>
+<p>Das grundlegende Prinzip der Geo-Elektromagnetik beruht auf der elektromagnetischen Induktion:</p>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Eine wechselstromdurchflossene Senderspule erzeugt magnetisches Wechselfeld</li>
+<li>Im leitenden Störkörper werden elektrische Wechselfelder (<strong>Wirbelströme</strong>) induziert</li>
+<li>Die Wirbelströme besitzen Magnetfeld, welches in der Empfängerspule gemessen wird</li>
+</ul>
+</div><div class="column">
+<p><img src="pics/em/prinzip.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Diesem Grundprinzip folgen alle EM-Verfahren.</p>
+<p>Unterschiede bestehen hinsichtlich</p>
+<ul>
+<li>der verwendeten Sender (induktiv oder galvanisch angekoppelt)</li>
+<li>der Stromfunktion im Sender (sinus- oder rechteckförmig)</li>
+<li>der gemessenen Feldgrößen (elektrische oder magnetische Felder, Zeitableitung der magnetischen Flussdichte)</li>
+<li>der Position der Quelle (marin, luftgestützt, bodengestützt)</li>
+<li>der Natur der Quelle (technisch oder natürlich)</li>
+</ul>
+<p><img src="pics/em/CSEM-Maxwell.excalidraw.svg" class="img-fluid"></p>
+</section>
+<section id="beispiele" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">9.3</span> Beispiele</h2>
+<section id="marine-csem" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="marine-csem"><span class="header-section-number">9.3.1</span> Marine CSEM</h3>
+<p>Eine leistungsstarke Stromquelle wird als <em>elektrischer Dipol</em> über den Ozeanboden bewegt. Das Stromsystem bewirkt neben der Induktion im leitfähigen Sediment an den Grenzflächen der elektrischen Leitfähigkeit starke galvanische Effekte (ähnlich der Geoelektrik), inbesondere bei Anwesenheit von Schichten mit hohem spezifischen Widerstand. Diese Effekte werden durch gleichzeitige Messung von elektrischen und magnetischen Feldern erfasst.</p>
+<p>Zusätzlich zu den technischen Stromsystemen können natürliche Quellenfelder der <em>Magnetotellurik</em> mit größerer Eindringtiefe genutzt werden.</p>
+<p>Das Bild zeigt schematisch das CSEM-Messkonzept des <em>Marine EM laboratory at Scripps Institution of Oceanography, San Diego, US</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM_MTconcepts.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: Scripps</figcaption>
+</figure>
+</div>
+<p>Der Einsatz der marinen CSEM erfolgt überwiegend zur Kohlenwasserstoffexploration, während die marine MT der elektromagnetischen Tiefenforschung dient.</p>
+</section>
+<section id="airborne-em" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="airborne-em"><span class="header-section-number">9.3.2</span> Airborne EM</h3>
+<p>Die Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) setzt ein luftgestütztes Messsystem ein, das mit fünf Sendespulen arbeitet, die jeweils unterschiedliche Frequenzen nutzen. Das Bild zeigt die etwa 10 m lange Flugsonde, die an einem 45 m langen Kabel 30 bis 40 m über Gelände geflogen wird.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/hubschrauber_namibia.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: BGR</figcaption>
+</figure>
+</div>
+<p>Die luftgestützten Methoden bieten zahlreiche Anwendungsmöglichkeiten:</p>
+<ul>
+<li>Bestimmung von Salz-/Süßwassergrenzen</li>
+<li>Grundwassersuche</li>
+<li>Geologische Kartierung</li>
+<li>Kartierung von Störungszonen</li>
+<li>Suche nach Altlasten</li>
+<li>Kartierung leitfähiger Sickerwässer</li>
+<li>Archäologische Vermessungen</li>
+<li>Ingenieurgeologische Messungen</li>
+<li>Lagerstättenexploration</li>
+</ul>
+<p><em>Semi-airborne</em>-Methoden benutzen einen ortsfesten Sender und luftgestützte Empfänger, die mittels Hubschrauber oder Drohnen über das Messgebiet geschleppt werden.</p>
+<p>Das Bild zeigt ein 3D-Inversionsergebnis einer semi-airborne-Messung im Rahmen des <a href="https://www.uni-muenster.de/DESMEX/startseite.html">DESMEX</a>-Projektes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://gitlab.com/Rochlitz.R/custem-examples/-/raw/main/supplementsGJI/03_schleiz_example/results_2022_10/final_res_model_3D_view_p2.png?ref_type=heads" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Rochlitz <em>et al.</em> (2023)</figcaption>
+</figure>
+</div>
+</section>
+<section id="magnetotellurik" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="magnetotellurik"><span class="header-section-number">9.3.3</span> Magnetotellurik</h3>
+<p>Die Magnetotellurik (MT) verwendet die Anregungsenergie natürlicher Stromsysteme in Ionosphäre und Magnetosphäre sowie der globalen Gewitteraktivität als Signalquelle. Als geophysikalisches Messverfahren wertet sie die zeitlichen Variationen der elektrischen und magnetischen Felder der Erde aus, um aus deren Verhältnis die elektrische Leitfähigkeit und die Struktur des Untergrunds abzuleiten.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/mtexamplepic.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: FU Berlin</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.bgr.bund.de/DE/BGR/Wissenschaftliche-Infrastruktur/Geophysik/Bodengeophysik/Bilder/B_Magnetotellurik/mt_messung_im_gelaende_de.jpg?__blob=poster&amp;v=2" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quelle: BGR</figcaption>
+</figure>
+</div>
+</section>
+<section id="transient-elektromagnetik" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="transient-elektromagnetik"><span class="header-section-number">9.3.4</span> Transient-Elektromagnetik</h3>
+<div class="columns">
+<div class="column">
+<p>Die Transientelektromagnetik zeichnet Felder als Funktion der Zeit auf. Beobachtet werden Induktionsprozesse im leitfähigen Untergrund nach dem Abschalten eines Gleichstroms in der Sendespule.</p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/tem-receiver.png" class="img-fluid figure-img"></p>
+<figcaption>Dreikomponenten-Induktionsspulensystem (Geonics Ltd.)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Die Animation simuliert die Ausbreitung des induzierten Stromsystems nach dem Abschalten des Transmitterstromes bei <span class="math inline">\(t=0\)</span>. Zwei leitfähige zylindrische Einlagerungen erzeugen charakteristische Anomalien, die in den Transienten (s. insets) sichtbar sind.</p>
+<p><img src="pics/em/efield_2_cyl_31.gif" class="img-fluid"></p>
+</section>
+</section>
+<section id="einteilung" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="einteilung"><span class="header-section-number">9.4</span> Einteilung</h2>
+<p>Es existiert keine einheitliche Einteilung der verschiedenen EM-Methoden.</p>
+<p>Möglich ist eine Unterscheidung</p>
+<ul>
+<li>hinsichtlich der eingesetzten Sender und Empfänger oder</li>
+<li>nach den Merkmalen der Felder.</li>
+</ul>
+<table class="table-striped table-hover caption-top table">
+<caption>Zweckmäßige Einteilung anhand der verwendeten Sender und Empfänger sowie ihrer Ankopplung</caption>
+<colgroup>
+<col style="width: 29%">
+<col style="width: 21%">
+<col style="width: 17%">
+<col style="width: 21%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sender</th>
+<th>Elektroden</th>
+<th>Elektroden und Spulen</th>
+<th>Spulen (Erdoberfläche)</th>
+<th>Spulen (Luft)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Geerdetes Kabel (galvanisch)</td>
+<td>Widerstandsgeoelektrik, IP</td>
+<td></td>
+<td>MMR</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Geerdetes Kabel (induktiv)</td>
+<td></td>
+<td>CSAMT</td>
+<td>LOTEM</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Spule</td>
+<td></td>
+<td></td>
+<td>Slingram, TEM, Bohrloch-EM</td>
+<td>Aero-EM</td>
+</tr>
+<tr class="even">
+<td>Langes Kabel, große Spule</td>
+<td></td>
+<td></td>
+<td>TURAM, TEM, Bohrloch-EM</td>
+<td>Semi-Airborne</td>
+</tr>
+<tr class="odd">
+<td>Ebene Wellen: Vertikale Antenne</td>
+<td></td>
+<td>VLF-R</td>
+<td>VLF</td>
+<td>VLF</td>
+</tr>
+<tr class="even">
+<td>Natürliche elektromagnetische Felder</td>
+<td>Tellurik</td>
+<td>MT</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Wir können die Verfahren auch hinsichtlich der Stromfunktion im Primärsignal unterteilen:</p>
+<ul>
+<li><strong>zeitharmonisch</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}) e^{ i \omega t }\)</span>
+<ul>
+<li>monofrequent</li>
+<li>Kontinuum (Frequenzgemisch)</li>
+</ul></li>
+<li><strong>Zeitbereich</strong>: <span class="math inline">\(\mathbf{j}(\mathbf{r}, t)\)</span>
+<ul>
+<li>Impulsfolgen</li>
+<li>Rechteckimpulsfolgen</li>
+</ul></li>
+</ul>
+</section>
+<section id="frequenzen-und-targets" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="frequenzen-und-targets"><span class="header-section-number">9.5</span> Frequenzen und Targets</h2>
+<p><img src="pics/em/EM-Target-Frequenz.excalidraw.svg" class="img-fluid"></p>
+</section>
+<section id="erkundungsmethoden" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="erkundungsmethoden"><span class="header-section-number">9.6</span> Erkundungsmethoden</h2>
+<p>Wir unterscheiden drei unterschiedliche Methoden der Untersuchug des Untergrundes:</p>
+<ul>
+<li>Die <strong>Kartierung</strong>, bei welcher mit gleichbleibender Frequenz und Abstand zwischen Sender und Empfänger <em>laterale Leitfähigkeitsinhomogenitäten</em> durch Messungen entlang von Profilen erfasst werden</li>
+<li>Die <strong>Sondierung</strong>, bei welcher an einem festen Standort entweder die Frequenz oder der Abstand zwischen Sender und Empfänger verändert wird, um auf diese Weise die Eindringtiefe zu variieren. Die Information kommt dann aus <em>unterschiedlichen Tiefenbereichen</em>.</li>
+<li>Eine <strong>Kombination aus beiden Methoden</strong> liefert Messwerte, aus denen sich die Verteilung der elektrischen Leitfähigkeit <em>im gesamten Raum</em> rekonstruieren lässt.</li>
+</ul>
+</section>
+<section id="beispiele-für-em-messgeräte" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="beispiele-für-em-messgeräte"><span class="header-section-number">9.7</span> Beispiele für EM-Messgeräte</h2>
+<ul>
+<li>Bodenleitfähigkeitsmessgeräte, z.B. Geonics EM34, EM38 liefern <em>scheinbare Leitfähigkeit</em></li>
+<li>TEM-Apparatur, z.B. Geonics TEM-47 liefert Transient <span class="math inline">\(\frac{ \partial B_{z}(t) }{ \partial t }\)</span></li>
+<li>MT-Apparatur, z.B. Metronix ADU-11e mit SHFT-02e-Sensoren oder MFS-Induktionsspulen, liefert Zeitreihen der Komponenten des elektrischen Feldes sowie der magnetischen Flussdichte</li>
+<li>Airborne-EM-System, z.B. Fugro, liefert Magnetfeldverhältnis <span class="math inline">\(B_{z}/B_{z}^{0}\)</span> oder sekundäres Magnetfeld <span class="math inline">\(B_{z}^{s}=B_{z}-B_{z}^{0}\)</span></li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-dm2014" class="csl-entry" role="listitem">
+Dentith M und Mudge S T. 2014. <em><a href="https://doi.org/10.1017/cbo9781139024358">Geophysics for the Mineral Exploration Geoscientist</a></em> (Cambridge University Press)
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ert_praxis.html" class="pagination-link" aria-label="Geoelektrik in der Praxis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./grundgleichungen_em.html" class="pagination-link" aria-label="Grundgleichungen">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
