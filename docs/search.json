@@ -764,7 +764,7 @@
     "href": "grundgleichungen_em.html#felder-und-einheiten",
     "title": "10  Grundgleichungen",
     "section": "10.5 Felder und Einheiten",
-    "text": "10.5 Felder und Einheiten\n\nFeldgrößen und ihre Einheiten\n\n\nName\nSymbol\nEinheit\n\n\n\n\nMagnetfeld\n\\(\\mathbf{H}\\)\nA/m\n\n\nElektrisches Feld\n\\(\\mathbf{E}\\)\nV/m\n\n\nMagnetische Flussdichte\n\\(\\mathbf{B}\\)\nVs/Am\\(^{2}\\) (T)\n\n\nDielektrische Verschiebung\n\\(\\mathbf{D}\\)\nAs/m\\(^{2}\\)\n\n\nElektrische Stromdichte\n\\(\\mathbf{j}\\)\nA/m\\(^{2}\\)\n\n\nSpannung\n\\(U\\)\nV",
+    "text": "10.5 Felder und Einheiten\n\nFeldgrößen und ihre Einheiten\n\n\nName\nSymbol\nEinheit\n\n\n\n\nMagnetfeld\n\\(\\mathbf{H}\\)\nA/m\n\n\nElektrisches Feld\n\\(\\mathbf{E}\\)\nV/m\n\n\nMagnetische Flussdichte\n\\(\\mathbf{B}\\)\nVs/m\\(^{2}\\) (T)\n\n\nDielektrische Verschiebung\n\\(\\mathbf{D}\\)\nAs/m\\(^{2}\\)\n\n\nElektrische Stromdichte\n\\(\\mathbf{j}\\)\nA/m\\(^{2}\\)\n\n\nSpannung\n\\(U\\)\nV",
     "crumbs": [
       "Elektromagnetik",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grundgleichungen</span>"
@@ -920,12 +920,5 @@
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Slide decks</span>"
     ]
-  },
-  {
-    "objectID": "methods_slides.html#section-title-visible-everywhere",
-    "href": "methods_slides.html#section-title-visible-everywhere",
-    "title": "Methods",
-    "section": "Section title visible everywhere",
-    "text": "Section title visible everywhere\n\\[\nc = \\sqrt{a^{2} + b^{2} - 2 a b \\cos\\varphi}\n\\]"
   }
 ]
