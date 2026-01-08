@@ -17,6 +17,7 @@ book:
     - einfuehrung.qmd
     - part: "Geoelektrik"
       chapters:
+        - anwendung_dc.qmd
         - grundgleichungen_dc.qmd
         - sens_arrays.qmd
         - ves.qmd

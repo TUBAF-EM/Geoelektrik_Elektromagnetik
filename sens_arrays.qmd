@@ -4,8 +4,8 @@ editor: source
 ---
 
 ## Herleitung
-Gegeben sei eine Vier-Punkt-Anordnung AB-MN, bei einer Leitfähigkeitsverteilung $\sigma$ ergibt sich eine Mess-Spannung $\phi_{MN}$ bei einem Einspeisestrom $I_{AB}$.
-Frage: Wie wirkt sich eine Änderung der Leitfähigkeit $\delta\sigma$ auf den Messwert aus?
+Gegeben sei eine Vier-Punkt-Anordnung AB-MN, bei einer Leitfähigkeitsverteilung $\sigma$ ergibt sich eine Mess-Spannung $\varphi_{MN}$ bei einem Einspeisestrom $I_{AB}$.
+Frage: Wie wirkt sich eine Änderung der Leitfähigkeit $\delta\sigma$ auf den Messwert $\varphi_{MN}+\delta\varphi_{MN}$ aus?
 
 ![](pics/sens_scheme.png)
 
