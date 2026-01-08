@@ -1,0 +1,267 @@
+---
+editor: source
+---
+
+# Gleichstromgeoelektrik
+
+![](pics/ert/ohm.png){fig-align="center"}
+
+
+## Anwendung
+Die Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds.
+
+Die Anwendungsgebiete sind entsprechend vielfältig:
+
+* Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)
+* Hydrogeologie (Aquifer-Architektur, Kontaminationen)
+* Salzwasser-Intrusion in Grundwasser-Aquifere
+* Geologisch/tektonische Untersuchungen (Störungen)
+* Archäologie (Fundamente, Hütten und Schlacken)
+* Landwirtschaft (Feuchtigkeit und Tonanteil)
+* Georisiken (Hangrutschungen, Verkarstung)
+* Prozessmonitoring (Wasser- und Stoff-Transport)
+
+### Anwendungs-Skalen
+
+#### Kleinskalig: Bäume, Böden
+
+![Baumtomographie [@Martin2013]](pics/ert/treetomography.png)
+
+#### Mittelskalig: Geologie
+
+![Störungszone Irland [@Tanner2020]](pics/ert/kilmore.png)
+
+#### Großskalig: Geologie
+
+![CO2-Aufstieg an Störung im Egergraben [@Nickschick2019]](pics/ert/nickschick.png)
+
+#### Skalenübergreifend
+
+::: {#fig-subplots}
+![Skalenübergreifende Geoelektrik-Messungen](pics/ert/spiekeroog1.png)
+![Salinitäts-Bild](pics/ert/spiekeroog2.png)
+
+Salz-Süßwasser-Interaktion im [DynaDeep-Projekt](https://www.liag-institut.de/forschung/projekte/drittmittelprojekte/dynadeep.html) [@Skibbe2024]
+:::
+
+### Hydrogeologie
+
+![Wasserspeicher in Hangdellen am Teststandort Mulda [@Huebner2015]](pics/ert/mulda3d1.png)
+
+### 3D-Geoelektrik
+
+![Untersuchung von Halden [@Guenther2006]](pics/ert/haldeModel.png)
+
+## Grundgleichungen
+![](pics/halfspace.png)
+
+### Kontinuitäts-Gleichung
+
+Maxwell-Gleichungen stationär
+$$\curl \vb H = \vb j = \sigma \vb E + \vb j_s$$
+
+$$\div \curl\vb H = \div\vb j=\div(\sigma\vb E) + \div\vb j_s=0$$
+
+$$\Rightarrow -\div(\sigma\vb E)=-\div(\sigma\grad U)=\div\vb j_s$$
+
+Diese partielle Differential-Gleichung (PDE) ist eine Poisson-Gleichung & beschreibt die Potentialverteilung für beliebige Leitfähigkeiten. Im Allgemeinen lösen wir sie numerisch, für einfache Fälle analytisch.
+
+### Das Konzept der Punktquelle
+
+Elektroden sind "klein" (gegenüber Abstand zu Potentialmessung), der Strom wird an einem "Punkt" eingespeist (Integral $I$):
+
+:::: {.columns}
+::: {.column width="60%"}
+$$\div\vb j = I \delta(\vb r - \vb r_s)$$
+
+* unendliche Stromdichte bei $\vb r_s$
+
+**In Wirklichkeit**
+
+* Elektroden sind ausgedehnt und haben endliche Fläche
+$\Rightarrow$ endliche Stromdichte
+:::
+::: {.column width="40%"}
+![Elektrode [@Ruecker2011]](pics/ellipse_electrode.png)
+:::
+::::
+
+
+<!-- (Halb-)Kugelförmige Quelle: gleiche Verteilung der Stromdichte ab $r\ge R$ -->
+
+### Lösung für homogenen Vollraum
+
+$$-\div(\sigma\grad U)=\div \vb j_s$$
+
+Strom verteilt sich radial über Kugel-Oberfläche
+
+$$j=I/A=I/(4\pi r^2)$$
+
+$$U(r)=r E=r \rho j=\rho I / (4\pi r)$$
+
+Berechnung des (scheinbaren) spezifischen Widerstands aus $U$ und $I$
+
+$$\Rightarrow \rho_a = \frac{U}{I} 4\pi r=R\cdot k \quad\mbox{mit}\quad k=4\pi r$$
+
+### Lösung für homogenen Halbraum
+
+$$-\div(\sigma\grad U)=\div \vb j_s$$
+
+Strom verteilt sich radial über Halbkugel-Oberfläche
+
+$$j=I/A=I/(2\pi r^2)$$
+
+$$U(r)=r E=r \rho j=\rho I / (2\pi r)$$
+
+Berechnung des (scheinbaren) spezifischen Widerstands aus $U$ und $I$
+
+$$\Rightarrow \rho = \frac{U}{I} 2\pi r=R\cdot k \quad\mbox{mit}\quad k=2\pi r$$
+
+### Zwei Strom-Elektroden
+
+:::: {.columns}
+::: {.column width="40%"}
+![](pics/halfspace.png)
+
+::: {.callout-note title="Pol-Messungen"}
+werden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.
+:::
+:::
+::: {.column width="55%"}
+<!-- Wenn die negative Elektrode B nicht "weit weg" ist, überlagern sich die Potentiale -->
+Überlagerung der Potentiale
+$$u(\vb r) = \frac{I\rho}{2\pi} \Big(\frac{1}{|\vb r - \vb r_A|}-\frac{1}{|\vb r - \vb r_B|} \Big)$$
+
+![](pics/2punktmessung.png)
+<!-- Theoretisch könnte man zwischen A und B Strom und Spannung messen und $\rho$ bestimmen. -->
+:::
+::::
+
+![4-Punktmessung [@Knoedel2005]](pics/ert/knoedelDE.png){fig-align="center"}
+
+### Konfigurations/Geometrie-Faktor
+
+$U_{AM} = \rho I \frac{1}{2\pi \overline{AM}}$, $U_{AN} = \rho I \frac{1}{2\pi \overline{AN}}$ etc.
+
+$$ \Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) $$
+
+$$ \Delta U = \rho I \big( \frac{1}{2\pi \overline{AM}} - \frac{1}{2\pi \overline{AN}} - \frac{1}{2\pi \overline{BM}} + \frac{1}{2\pi \overline{BN}}\big)$$
+
+$$ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{mit}\quad k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} $$
+
+### Stetigkeit an Grenzflächen
+
+:::: {.columns}
+::: {.column}
+![](pics/ert/currentdensity.png)
+:::
+::: {.column}
+$$\Rightarrow \div(\sigma\vb E)=-\div(\sigma\grad U)=0$$
+
+$E_1=E_2\Rightarrow \rho_1 j_{x1}=\rho_2 j_{x2}$
+$j_{z1}=j_{z2}$
+:::
+::::
+
+### Verhalten an Grenzflächen
+
+:::: {.columns}
+::: {.column}
+![Übergang guter-schlechter Leiter](pics/gut-schlecht.png)
+:::
+::: {.column}
+![Übergang schlechter-guter Leiter](pics/schlecht-gut.png)
+:::
+::::
+
+## ERT Feldausbreitung
+
+### Homogener Untergrund: Potentialverteilung
+![](pics/ert/sens/pot-hom.svg)
+
+### Homogener Untergrund: Stromlinien
+![](pics/ert/sens/pot-hom-stream.svg)
+
+### Schlechter Leiter: Stromlinien
+![](pics/ert/badconductor.svg)
+
+### Guter Leiter: Stromlinien
+![](pics/ert/goodconductor.svg)
+
+### Inhomogener Untergrund
+![](pics/ert/sens/inhom.svg)
+
+### Inhomogener Untergrund: Stromlinien
+![](pics/ert/sens/pot-inhom-stream.svg)
+
+### Inhomogener Untergrund: Potentialverteilung
+![](pics/ert/sens/pot-inhom.svg)
+
+### Homogener Untergrund: Potentialverteilung
+![](pics/ert/sens/pot-hom.svg)
+
+### Laplace-Gleichung
+
+in einem kugelsymmetrischen Koordinatensystem
+
+$$\laplacian u = \pdv[2]{u}{r} + \frac{2}{r}\pdv{u}{r}=0$$
+
+Integration liefert $\pdv{u}{r}=\frac{C_1}{r^2}$ und dann $u=-\frac{C_1}{r} + C_2$
+
+Wegen $u(r\rightarrow\infty)=0$ gilt $C_2$=0
+
+$I=4\pi r^2 j=-4\pi r^2 \sigma\pdv{u}{r}=-4\pi\sigma C_1 \quad\Rightarrow\quad u=\frac{I\rho}{4\pi r}$
+
+## Lösung für homogenen Halbraum
+
+$$-\div(\sigma\grad U)=\div \vb j_s$$
+
+Strom verteilt sich radial über Halbkugel-Oberfläche
+
+$$j=I/A=I/(2\pi r^2)$$
+
+$$U(r)=r E=r \rho j=\rho I / (2\pi r)$$
+
+Berechnung des (scheinbaren) spezifischen Widerstands aus $U$ und $I$
+
+$$\Rightarrow \rho = \frac{U}{I} 2\pi r=R\cdot k \quad\mbox{mit}\quad k=2\pi r$$
+
+
+### Zwei Strom-Elektroden
+
+:::: {.columns}
+::: {.column width="40%"}
+::: {.callout-note title="Pol-Messungen"}
+werden angewandt, benötigen aber ein langes Kabel zur Elektrode B und sind daher meist unpraktisch.
+:::
+![](pics/halfspace.png)
+:::
+::: {.column width="55%"}
+<!-- Wenn die negative Elektrode B nicht "weit weg" ist, überlagern sich die Potentiale -->
+Überlagerung der Potentiale
+$$u(\vb r) = \frac{I\rho}{2\pi} \Big(\frac{1}{|\vb r - \vb r_A|}-\frac{1}{|\vb r - \vb r_B|} \Big)$$
+
+![](pics/2punktmessung.png)
+<!-- Theoretisch könnte man zwischen A und B Strom und Spannung messen und $\rho$ bestimmen. -->
+:::
+::::
+
+### Potentialverteilung
+![](pics/ert/sens/pot-hom.svg)
+
+### Stromlinien
+![](pics/ert/sens/pot-hom-stream.svg)
+
+## Konfigurations/Geometrie-Faktor
+
+<!-- $U_{AM} = \frac{\rho I}{2\pi \overline{AM}}=\frac{\rho I}{2\pi} \frac{1}{\overline{AM}}$, -->
+$U_{AM} = \frac{\rho I}{2\pi} \frac{1}{\overline{AM}}$,
+$U_{AN} = \frac{\rho I}{2\pi}  \frac{1}{\overline{AN}}$,
+$U_{BM} = \frac{\rho I}{2\pi}  \frac{1}{\overline{BM}}$,
+$U_{BN} = \frac{\rho I}{2\pi}  \frac{1}{\overline{BN}}$
+
+$$ \Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) $$
+
+$$ \Delta U = \frac{\rho I}{2\pi} \big( \frac{1}{\overline{AM}} - \frac{1}{\overline{AN}} - \frac{1}{\overline{BM}} + \frac{1}{\overline{BN}}\big)$$
+
+$$ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{mit}\quad k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} $$

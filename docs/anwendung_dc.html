@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Widerstands-Tiefensondierung – Geoelektrik und Elektromagnetik</title>
+<title>2&nbsp; Anwendung – Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -83,8 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ert.html" rel="next">
-<link href="./sens_arrays.html" rel="prev">
+<link href="./grundgleichungen_dc.html" rel="next">
+<link href="./einfuehrung.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -173,7 +139,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ves.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./anwendung_dc.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -221,7 +187,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./anwendung_dc.html" class="sidebar-item-text sidebar-link">
+  <a href="./anwendung_dc.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></span></a>
   </div>
 </li>
@@ -239,7 +205,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ves.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ves.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span></a>
   </div>
 </li>
@@ -326,22 +292,21 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#d-sensitivitäten" id="toc-d-sensitivitäten" class="nav-link active" data-scroll-target="#d-sensitivitäten"><span class="header-section-number">5.1</span> 1D-Sensitivitäten</a>
+  <li><a href="#anwendungs-gebiete" id="toc-anwendungs-gebiete" class="nav-link active" data-scroll-target="#anwendungs-gebiete"><span class="header-section-number">2.1</span> Anwendungs-Gebiete</a>
   <ul class="collapse">
-  <li><a href="#horizontale-stromdichte" id="toc-horizontale-stromdichte" class="nav-link" data-scroll-target="#horizontale-stromdichte"><span class="header-section-number">5.1.1</span> Horizontale Stromdichte</a></li>
+  <li><a href="#anwendungs-skalen" id="toc-anwendungs-skalen" class="nav-link" data-scroll-target="#anwendungs-skalen"><span class="header-section-number">2.1.1</span> Anwendungs-Skalen</a></li>
+  <li><a href="#d-oder-pseudo-3d" id="toc-d-oder-pseudo-3d" class="nav-link" data-scroll-target="#d-oder-pseudo-3d"><span class="header-section-number">2.1.2</span> 3D oder Pseudo-3D</a></li>
   </ul></li>
-  <li><a href="#inversion-am-beispiel-tiefensondierung" id="toc-inversion-am-beispiel-tiefensondierung" class="nav-link" data-scroll-target="#inversion-am-beispiel-tiefensondierung"><span class="header-section-number">5.2</span> Inversion am Beispiel Tiefensondierung</a></li>
-  <li><a href="#zielfunktion-schlechter-leiter" id="toc-zielfunktion-schlechter-leiter" class="nav-link" data-scroll-target="#zielfunktion-schlechter-leiter"><span class="header-section-number">5.3</span> Zielfunktion schlechter Leiter</a></li>
-  <li><a href="#zielfunktion-guter-leiter" id="toc-zielfunktion-guter-leiter" class="nav-link" data-scroll-target="#zielfunktion-guter-leiter"><span class="header-section-number">5.4</span> Zielfunktion guter Leiter</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">2.2</span> Software</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ves.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./anwendung_dc.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></h1>
 </div>
 
 
@@ -358,127 +323,111 @@ window.Quarto = {
 </header>
 
 
-<p>Eine Tiefensondierung erreicht man, indem man am gleichen Mess-Mittelpunkt die Elektrodenabstände (z.T. nur die der Stromelektroden) sukzessive erhöht. Die dafür meist eingesetzte Anordnung ist die Schlumberger-Anordnung. Dabei bleiben die Spannungselektroden konstant und die beiden Stromelektroden entfernen sich vom Mittelpunkt immer weiter.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/ert/sens/ves.gif" class="img-fluid figure-img"></p>
-<figcaption>Sensitivitäten einer Schlumberger-Tiefensondierung</figcaption>
+<p><img src="pics/ert/ohm.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<section id="d-sensitivitäten" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="d-sensitivitäten"><span class="header-section-number">5.1</span> 1D-Sensitivitäten</h2>
-<section id="horizontale-stromdichte" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="horizontale-stromdichte"><span class="header-section-number">5.1.1</span> Horizontale Stromdichte</h3>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">\(j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})\)</span></p>
-<p>in der Mitte (<span class="math inline">\(r_A=r_B\)</span>, AB=<span class="math inline">\(L\)</span>): <span class="math display">\[j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}\]</span></p>
-</div><div class="column">
-<div id="228112f1" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Code anzeigen</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zL <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">3</span>, <span class="fl">.01</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>jx <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(zL<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="fl">0.25</span>)<span class="op">**</span><span class="fl">1.5</span><span class="op">/</span><span class="dv">2</span><span class="op">/</span>np.pi</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sumjx <span class="op">=</span> np.cumsum(jx)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, jx<span class="op">/</span>jx[<span class="dv">0</span>], label<span class="op">=</span><span class="st">"jx"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, sumjx<span class="op">/</span>sumjx[<span class="op">-</span><span class="dv">1</span>], label<span class="op">=</span><span class="st">"sum"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"z/L"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r"$j_x$/$\Sigma j_x$ (normalized)"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.grid()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
+<p>Die Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds. Es beruht auf der Einspeisung eines niederfrequenten (keine Induktion verursachenden, typischerweise 0.1-25 Hz Frequenz) Stroms durch zwei Stromelektroden in den Untergrund und Spannungsmessung mittels zweier Spannungselektroden (früher als Sonden bezeichnet). Dabei hat sich die Methode von Einzelmessungen und profilhaften Kartierungen über Sondierungen zu einer zweidimensionalen oder gar dreidimensionanel Bildgebung weiterentwickelt. Die Methode ist insbesondere einfach und schnell durchzuführen (mit günstigen Geräten) und kommt daher insbesondere nicht nur zur Zustandsbeschreibung, sondern zunehmend auch zur Überwachung (Monitoring) von Prozessen im Untergrund zum Einsatz.</p>
+<section id="anwendungs-gebiete" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="anwendungs-gebiete"><span class="header-section-number">2.1</span> Anwendungs-Gebiete</h2>
+<p>Die Anwendungsgebiete sind entsprechend vielfältig:</p>
+<ul>
+<li>Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)</li>
+<li>Hydrogeologie (Aquifer-Architektur, Kontaminationen)</li>
+<li>Salzwasser-Intrusion in Grundwasser-Aquifere</li>
+<li>Geologisch/tektonische Untersuchungen (Störungen)</li>
+<li>Archäologie (Fundamente, Hütten und Schlacken)</li>
+<li>Landwirtschaft (Feuchtigkeit und Tonanteil)</li>
+<li>Georisiken (Hangrutschungen, Verkarstung)</li>
+<li>Prozessmonitoring (Wasser- und Stoff-Transport)</li>
+</ul>
+<section id="anwendungs-skalen" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="anwendungs-skalen"><span class="header-section-number">2.1.1</span> Anwendungs-Skalen</h3>
+<p>Als Potentialmethode funktioniert die Geoelektrik prinzipiell auf beliebigen Skalenlängen (repräsentiert durch Elektrodenabstände), angefangen von Zentimetern bis hin zu Kilometern. Dafür werden einige Beispiele gegeben.</p>
+<section id="kleinskalig-bäume-böden" class="level4" data-number="2.1.1.1">
+<h4 data-number="2.1.1.1" class="anchored" data-anchor-id="kleinskalig-bäume-böden"><span class="header-section-number">2.1.1.1</span> Kleinskalig: Bäume, Böden</h4>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="ves_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="pics/ert/treetomography.png" class="img-fluid figure-img"></p>
+<figcaption>Baumtomographie <span class="citation" data-cites="Martin2013">(<a href="literatur.html#ref-Martin2013" role="doc-biblioref">Martin und Günther 2013</a>)</span></figcaption>
 </figure>
 </div>
-</div>
-</div>
-</div>
-</div>
-<p>Wenn wir nun die horizontale Stromdichte über die y-Achse (in die Tafelebene hinein) aufintegrieren, erhalten wir <span class="math display">\[\frac{I_x}{I}(z)=\frac{L}{2\pi}\int\limits_{-\infty}^{\infty} \frac{dy}{(y^2+z^2+L^2/4)^{3/2}}\]</span></p>
-<div class="columns">
-<div class="column">
-<p><span class="math display">\[\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} \]</span> - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2</p>
-</div><div class="column">
-<div id="977e92b8" class="cell" data-execution_count="3">
-<details class="code-fold">
-<summary>Code anzeigen</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, np.arctan(<span class="dv">2</span><span class="op">*</span>zL)<span class="op">*</span><span class="dv">2</span><span class="op">/</span>np.pi)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"z/L"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.grid()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
+</section>
+<section id="mittelskalig-geologie" class="level4" data-number="2.1.1.2">
+<h4 data-number="2.1.1.2" class="anchored" data-anchor-id="mittelskalig-geologie"><span class="header-section-number">2.1.1.2</span> Mittelskalig: Geologie</h4>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="ves_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="pics/ert/kilmore.png" class="img-fluid figure-img"></p>
+<figcaption>Störungszone Irland <span class="citation" data-cites="Tanner2020">(<a href="literatur.html#ref-Tanner2020" role="doc-biblioref">Tanner <em>u.&nbsp;a.</em> 2020</a>)</span></figcaption>
 </figure>
 </div>
+</section>
+<section id="großskalig-geologie" class="level4" data-number="2.1.1.3">
+<h4 data-number="2.1.1.3" class="anchored" data-anchor-id="großskalig-geologie"><span class="header-section-number">2.1.1.3</span> Großskalig: Geologie</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/nickschick.png" class="img-fluid figure-img"></p>
+<figcaption>CO2-Aufstieg an Störung im Egergraben <span class="citation" data-cites="Nickschick2019">(<a href="literatur.html#ref-Nickschick2019" role="doc-biblioref">Nickschick <em>u.&nbsp;a.</em> 2019</a>)</span></figcaption>
+</figure>
 </div>
+</section>
+<section id="skalenübergreifend" class="level4" data-number="2.1.1.4">
+<h4 data-number="2.1.1.4" class="anchored" data-anchor-id="skalenübergreifend"><span class="header-section-number">2.1.1.4</span> Skalenübergreifend</h4>
+<div id="fig-subplots" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subplots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pics/ert/spiekeroog1.png" class="img-fluid figure-img">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subplots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2.1: Salz-Süßwasser-Interaktion im <a href="https://www.liag-institut.de/forschung/projekte/drittmittelprojekte/dynadeep.html">DynaDeep-Projekt</a> <span class="citation" data-cites="Skibbe2024">(<a href="literatur.html#ref-Skibbe2024" role="doc-biblioref">Skibbe <em>u.&nbsp;a.</em> 2024</a>)</span>
+</figcaption>
+</figure>
 </div>
+<p>Im vorliegenden Beispiel aus dem DynaDeep-Projekt kommen 3 verschiedene Skalen zum Einsatz, um die Dynamik der Salz-Süßwasser-Grenze abzubilden: * 4-Punkt-Messung (1D) (<span class="math inline">\(a\)</span>=2.5cm) an einem DirectPush-Gerät (links) * 1.5D-Messung (<span class="math inline">\(a\)</span>=25cm) an einer vergrabenen vertikalen Elektroden-Strecke * horizontale 2D-Messung (<span class="math inline">\(a\)</span>=2.5m) an der Oberfläche</p>
+</section>
+</section>
+<section id="d-oder-pseudo-3d" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="d-oder-pseudo-3d"><span class="header-section-number">2.1.2</span> 3D oder Pseudo-3D</h3>
+<p>Die allermeisten Messungen werden auf 2D-Profilen mit Multi-Elektroden-Instrumenten gemacht und 2D-Bilder vom Untergrund erzeugt, unter der Annahme, dass die Leitfähigkeit senkrecht zum Profil konstant ist. Häufig zeigt der Untergrund dreidimensionale Strukturen, zu deren Erkundung können flächenhafte Auslagen oder verschiedene Profile gemacht werden, wie in den folgenden Beispielen. Die einfachste Auswertung ist in 2D-Profilen, die in Fence-Diagrammen dreidimensional visualisiert werden, so wie am Beispiel der hydrogeologischen Untersuchung eines Aquifers in einer Hangdelle.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/mulda3d1.png" class="img-fluid figure-img"></p>
+<figcaption>Wasserspeicher in Hangdellen am Teststandort Mulda <span class="citation" data-cites="Huebner2015">(<a href="literatur.html#ref-Huebner2015" role="doc-biblioref">Hübner <em>u.&nbsp;a.</em> 2015</a>)</span></figcaption>
+</figure>
 </div>
-<p>Die 1D Sensitivitätsfunktion für eine Pol-Pol-Messung <span class="citation" data-cites="Guenther2004">(<a href="literatur.html#ref-Guenther2004" role="doc-biblioref">Günther 2004</a>)</span> <span class="math display">\[ s(z) = \frac{z}{\sqrt{a^2+z^2}^3} \]</span> und damit für eine Vier-Punkt-Messung <span class="math display">\[ s(z) = \frac{z}{\sqrt{AM^2+z^2}^3} - \frac{z}{\sqrt{BM^2+z^2}^3} - \frac{z}{\sqrt{AN^2+z^2}^3} + \frac{z}{\sqrt{BN^2+z^2}^3} \]</span></p>
-<p>Für eine Schlumberger-Sondierung gilt <span class="math inline">\(AM=BN=AB/2-MN/2\)</span> und <span class="math inline">\(AN=BM=AB/2+MN/2\)</span> <span class="math display">\[ s(z) = 2\frac{z}{\sqrt{(AB/2-MN/2)^2+z^2}^3} - 2\frac{z}{\sqrt{(AB/2+MN/2)^2+z^2}^3} \]</span></p>
-<div class="columns">
-<div class="column">
-<p><img src="pics/ves/ves_sens1d.svg" class="img-fluid" style="width:150.0%"></p>
-</div><div class="column">
-<ul>
-<li>logarithmisch äquidistante L (AB)</li>
-<li>Sondierungsparameter AB/2</li>
-<li>Maximum bei AB/2/2</li>
-<li>90%-Summe bei AB/2*3</li>
-</ul>
-</div>
+<p>Alternativ zur separaten 2D-Inversion können die Daten aller Profile dreidimensional invertiert werden wie im folgenden Beispiel einer Haldenuntersuchung.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/haldeModel.png" class="img-fluid figure-img"></p>
+<figcaption>Untersuchung von Halden <span class="citation" data-cites="Guenther2006">(<a href="literatur.html#ref-Guenther2006" role="doc-biblioref">Günther <em>u.&nbsp;a.</em> 2006</a>)</span></figcaption>
+</figure>
 </div>
 </section>
 </section>
-<section id="inversion-am-beispiel-tiefensondierung" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="inversion-am-beispiel-tiefensondierung"><span class="header-section-number">5.2</span> Inversion am Beispiel Tiefensondierung</h2>
-<ul>
-<li>früher Auswertung mit Kurvenschablonen</li>
-<li>Datenanpassung durch iterative Veränderung des Modells</li>
-<li>Zielfunktion: Quadratmittel der Abweichung Daten und Modellantwort <span class="math display">\[ \Phi=\sum (d_i-f_i(\vb m))^2 \rightarrow \min \]</span></li>
-<li>Inversion: Minimierung des Misfits zwischen Daten &amp;
-<ul>
-<li>Sensitivitäten als wichtigste Zutat (<span class="math inline">\(\delta\rho\rightarrow\delta\rho_a\)</span>)</li>
-</ul></li>
-</ul>
-</section>
-<section id="zielfunktion-schlechter-leiter" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="zielfunktion-schlechter-leiter"><span class="header-section-number">5.3</span> Zielfunktion schlechter Leiter</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li>3-Schicht-Fall</li>
-<li>Mächtigkeiten 20m</li>
-<li>spez. Widerstände 100/10/100 <span class="math inline">\(\Omega\)</span>m</li>
-</ul>
-</div><div class="column">
-<p><img src="pics/ves/objfun-resistor.svg" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="zielfunktion-guter-leiter" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="zielfunktion-guter-leiter"><span class="header-section-number">5.4</span> Zielfunktion guter Leiter</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li>3-Schicht-Fall</li>
-<li>Mächtigkeiten 20m</li>
-<li>spez. Widerstände 100/1000/100 <span class="math inline">\(\Omega\)</span>m</li>
-</ul>
-</div><div class="column">
-<p><img src="pics/ves/objfun-conductor.svg" class="img-fluid"></p>
-</div>
-</div>
+<section id="software" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="software"><span class="header-section-number">2.2</span> Software</h2>
+<p>Für alle Abbildungen in diesem Skript und die meisten Beispiele aus der Literatur wurde das Open-Source Python-Paket <a href="https://www.pygimli.org">pyGIMLi</a> eingesetzt. Es verfügt, neben grundlegenden Funktionen, über zwei auf Geoelektrik spezialisierte Module <code>VES</code> (Sondierungen) und <code>ERT</code> (für 2D/3D-Geoelektrik sowie Monitoring). Damit werden die Felder simuliert und durch das Modul <code>viewer.mpl</code> (basierendend auf <a href="https://matplotlib.org">matplotlib</a> sowie <code>pv</code> (basierende auf <a href="https://pyvista.org">pyVista</a>) visualisiert. Weiterhin wird das <code>meshtools</code> Modul zur Erzeugung von Geometrien und Netzen sowie das <code>solver</code>-Modul eingesetzt. Einfache numerische Berechnungen beruhen auf dem Paket <a href="https://numpy.org">NumPy</a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-Guenther2004" class="csl-entry" role="listitem">
-Günther T. 2004. <em><span>I</span>nversion <span>M</span>ethods and <span>R</span>esolution <span>A</span>nalysis for the 2<span>D</span>/3<span>D</span> <span>R</span>econstruction of <span>R</span>esistivity <span>S</span>tructures from <span>DC</span> <span>M</span>easurements</em> phdthesis (University of Mining; Technology Freiberg)
+<div id="ref-Guenther2006" class="csl-entry" role="listitem">
+Günther T, Rücker C und Spitzer K. 2006. <a href="https://doi.org/10.1111/j.1365-246X.2006.03011.x">Three-dimensional modeling and inversion of dc resistivity data incorporating topography - <span>II</span>: Inversion</a>. <em>Geophys. J. Int.</em> <strong>166</strong>. 506–17
+</div>
+<div id="ref-Huebner2015" class="csl-entry" role="listitem">
+Hübner R, Heller K, Günther T und Kleber A. 2015. <span>M</span>onitoring hillslope moisture dynamics with surface <span>ERT</span> for enhancing spatial significance of hydrometric point measurements. <em>Hydrology and Earth System Sciences</em>. <strong>19</strong>. 225–40 Online: <a href="http://www.hydrol-earth-syst-sci.net/19/225/2015/">http://www.hydrol-earth-syst-sci.net/19/225/2015/</a>
+</div>
+<div id="ref-Martin2013" class="csl-entry" role="listitem">
+Martin T und Günther T. 2013. <span>C</span>omplex resistivity tomography (<span>CRT</span>) for fungus detection on standing oak trees. <em>European Journal of Forest Research</em>. <strong>132</strong>. 765–76 Online: <a href="http://dx.doi.org/10.1007/s10342-013-0711-4">http://dx.doi.org/10.1007/s10342-013-0711-4</a>
+</div>
+<div id="ref-Nickschick2019" class="csl-entry" role="listitem">
+Nickschick T, Flechsig C, Mrlina J, Oppermann F, Löbig F und Günther T. 2019. Large-scale electrical resistivity tomography in the <span>Cheb Basin</span> (<span>Eger Rift</span>) at an <span>I</span>nternational <span>C</span>ontinental <span>D</span>rilling <span>P</span>rogram (<span>ICDP</span>) monitoring site to image fluid-related structures. <em>Solid Earth</em>. <strong>10</strong>. 1951–69 Online: <a href="https://www.solid-earth.net/10/1951/2019/">https://www.solid-earth.net/10/1951/2019/</a>
+</div>
+<div id="ref-Skibbe2024" class="csl-entry" role="listitem">
+Skibbe N, Günther T, Schwalfenberg K, Meyer R, Reckhardt A, Greskowiak J, Massmann G und Müller-Petke M. 2024. <a href="https://doi.org/10.1016/j.jhydrol.2024.131905">Comparison of methods measuring electrical conductivity in coastal aquifers</a>. <em>Journal of Hydrology</em>. <strong>643</strong>. 131905
+</div>
+<div id="ref-Tanner2020" class="csl-entry" role="listitem">
+Tanner D C, Buness H, Igel J, Günther T, Gabriel G, Skiba P, Plenefisch T, Gestermann N und Walter T R. 2020. Chapter 3 - Fault detection. <em>Understanding Faults</em> Hrsg D Tanner und C Brandes (Elsevier) S 81–146 Online: <a href="http://www.sciencedirect.com/science/article/pii/B9780128159859000035">http://www.sciencedirect.com/science/article/pii/B9780128159859000035</a>
 </div>
 </div>
 </section>
@@ -906,13 +855,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./sens_arrays.html" class="pagination-link" aria-label="Sensitivitäten und Messanordnungen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></span>
+      <a href="./einfuehrung.html" class="pagination-link" aria-label="Elektromagnetische Größen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Elektromagnetische Größen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ert.html" class="pagination-link" aria-label="Widerstandstomographie">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./grundgleichungen_dc.html" class="pagination-link" aria-label="Grundgleichungen">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
