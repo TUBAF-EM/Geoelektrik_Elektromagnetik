@@ -13,20 +13,20 @@
 
 #### Pseudosektion Wenner-Array
 
-{{< video https://www.youtube.com/watch?v=IlqWXWprC1g?autoplay=1 width="100%" height="73%" >}}
+{{< video https://www.youtube.com/watch?v=IlqWXWprC1g?autoplay=1 >}}
 
 #### Pseudosektion Schlumberger-Array
 
-{{< video https://www.youtube.com/watch?v=h0fnnpU5Pf8?autoplay=1 width="100%" height="53%" >}}
+{{< video https://www.youtube.com/watch?v=h0fnnpU5Pf8?autoplay=1 >}}
 
 #### Dipol-Dipol mit leitfähiger Einlagerung
 
-{{< video https://www.youtube.com/watch?v=lt1qV-2d5Ps?autoplay=1 width="100%" height="53%" >}}
+{{< video https://www.youtube.com/watch?v=lt1qV-2d5Ps?autoplay=1 >}}
 
 
 #### Dipol-Dipol mit resistiver Einlagerung
 
-{{< video https://www.youtube.com/watch?v=IUzSEVa4CCw?autoplay=1 width="100%" height="53%" >}}
+{{< video https://www.youtube.com/watch?v=IUzSEVa4CCw?autoplay=1 >}}
 
 
 ## Bohrlochgeoelektrik
@@ -105,6 +105,7 @@ Nach der Aufteilung der Elektroden kann man die Anordnung Klassifizieren:
 ![Crosshole-Arrays vom Typ AMN-B](pics/ert/crossholeAMN-B.png)
 
 In Abhängigkeit vom Abstand der Elektroden und Bohrlöcher kann das Bohrlochfluid, welches sich in der Regel um den Formationsfaktor vom umliegenden Aquifer unterscheidet, einen großen Einfluss auf die Messergebnisse haben, der berücksichtigt werden muss [@Doetsch2010].
+Siehe auch [2D-Crosshole-Geoelektrik-Beispiel](https://www.pygimli.org/_examples_auto/3_ert/plot_06_ert_crosshole2d.html)
 
 ## 3D-Geoelektrik
 
@@ -114,6 +115,9 @@ Entsprechend sind auch die Sensitivitätsfunktionen dreidimensional und werden l
 Die Sensitivität einer linearen Anordnung ist rotationssymmetrisch zur Mess-Linie.
 Daher können wir nicht unterscheiden, ob sich eine Anomalie in der Tiefe, vor oder hinter einem Profil befindet.
 Dazu werden weitere parallel oder besser noch senkrechte Profile benötigt, die den 3D-Raum abdecken.
+
+![Wasserspeicher in Hangdellen am Teststandort Mulda [@Huebner2015]](pics/ert/mulda3d1.png)
+
 
 3D-Inversion von 2D-Profilen
 
@@ -134,38 +138,34 @@ Garre, Bechtold,
 [@Doetsch2010], [@Coscia2011]
 
 
-
+[3D-Crosshole-Beispiel](https://www.pygimli.org/_examples_auto/3_ert/plot_08_ert_crosshole3d.html)
 
 ## Modellierung & Inversion
 
 ### Vorwärtsrechnung
 
-Lösung der partiellen Differentialgleichung
+Die Simulation von Messungen auf Basis einer Leitfähigkeitsverteilung erfordert die numerische Lösung der partiellen Differentialgleichung
 
-$$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  $$
+$$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s) $$
+
+Dazu existieren verschiedene Techniken angewendet:
+
+- die Finite-Differenzen-Methode nähert die Ableitungen durch Differenzenquotienten
+- die Finite-Element-Methode nähert die Potentialverteilung durch Superposition von Ansatzfunktionen
+
+Beide Methoden erfordern die Diskretisierung des Untergrunds mit Rechtecken oder Dreiecken (2D), Quadern, Prismen oder Tetraedern (3D).
 
 ![Diskretisierung des Untergrunds](pics/ert/ert-grid.png)
 
-Finite Elements
-triangles, tetrahedra
-
-[@Ruecker2006]
+Die Methoden der Modellierung werden beschrieben durch @Ruecker2006 und sind implementiert in pyGIMLi [@Ruecker2017]. Siehe auch [2D-ERT-Modellierungsbeispiel](https://www.pygimli.org/_examples_auto/3_ert/plot_04_ert_2_5d_potential.html)
 
 ### Inversion
 
-:::: {.columns}
-::: {.column width="60%"}
-![](pics/ert/ert_inv.png)
-:::
-::: {.column width="40%"}
-* Diskretisierung, z.B. mit Dreiecken
-* Iterative Verbesserung
-* Vorwärtsrechnung & Sensitivitäten
-* glattes Untergrundmodell
-:::
-::::
+Aufgabe der Inversion ist die Bestimmung einer Parameterverteilung (hier: spez. Widerstand), welche die Daten im Rahmen einer bestimmten Genauigkeit erklären kann.
+Dazu wird ein Startmodell (meist homogen) iterativ verbessert, bis die Vorwärtsantwort mit den Daten im Rahmen der Fehler überein stimmt.
+Dabei werden die Sensitivitäten verwendet.
 
-[@Guenther2006], Topographie [@Udphuay2011]
+![](pics/ert/ert_inv.png)
 
 ### Inversion - Methodik
 
@@ -179,6 +179,15 @@ Modellveränderung $\delta\vb m$ über Sensitivitätsmatrix $S_{i,j}=\pdv{f_i(\v
 $$\Rightarrow \vb S \vb \delta \vb m = \delta \vb d$$
 
 Least-SquaresLösung $\vb S^T \vb S \delta \vb m=\vb S^T \delta \vb d$ +Zusatzterme
+
+Die konkrete Methodik wird durch @Guenther2006 beschrieben.
+Bevorzugt wird eine Diskretisierung mit Dreiecken (2D) bzw. Tetraedern (3D) eingesetzt, weil damit beliebige Geometrien, z.B. Topographie[e.g., @Udphuay2011], nachgebildet werden können und die Zellgröße auflösungsangepasst gewählt werden kann.
+Zur Bestimmung des Daten-Fehlers kann die sogenannte Normal-Reziprok-Methode, eine statistische Analyse des Unterschieds zwischen Hin- und Rück-Messungen und Ableitung eines Fehlermodells durchgeführt werden [@Udphuay2011]. Siehe auch [pyGIMLi-Beispiel](https://www.pygimli.org/_examples_auto/3_ert/plot_10_reciprocal_analysis.html).
+
+
+2D Inversion
+
+![Untersuchung von Halden [@Guenther2006]](pics/ert/haldeModel.png)
 
 
 ## Ausgedehnte Elektroden
