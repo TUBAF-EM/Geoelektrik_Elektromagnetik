@@ -9,65 +9,132 @@
 
 ![Sensitivitäten einer Dipol-Dipol-Abfolge](pics/ert/sens/dd.gif)
 
+### Entstehung der Pseudosektionen
+
+#### Pseudosektion Wenner-Array
+
+{{< video https://www.youtube.com/watch?v=IlqWXWprC1g?autoplay=1 width="100%" height="73%" >}}
+
+#### Pseudosektion Schlumberger-Array
+
+{{< video https://www.youtube.com/watch?v=h0fnnpU5Pf8?autoplay=1 width="100%" height="53%" >}}
+
+#### Dipol-Dipol mit leitfähiger Einlagerung
+
+{{< video https://www.youtube.com/watch?v=lt1qV-2d5Ps?autoplay=1 width="100%" height="53%" >}}
+
+
+#### Dipol-Dipol mit resistiver Einlagerung
+
+{{< video https://www.youtube.com/watch?v=IUzSEVa4CCw?autoplay=1 width="100%" height="53%" >}}
+
 
 ## Bohrlochgeoelektrik
 
-### Verhalten an Grenzflächen
+Die Erdoberfläche stellt bei vergrabenen Elektroden einen Übergang zu einem schlechten Leiter da, wie wir ihn aus der Herleitung der Brechungsgesetze schon kennen.
 
-:::: {.columns}
-::: {.column}
-![Übergang guter-schlechter Leiter](pics/gut-schlecht.png)
-:::
-::: {.column}
-![Übergang schlechter-guter Leiter](pics/schlecht-gut.png)
-:::
-::::
+![Übergang zum schlechten Leiter](pics/gut-schlecht.png)
 
-### Vergrabene Elektroden
+Allerdings können die Stromlinien nicht die Grenzfläche durchdringen, d.h. die Potentiallinien stehen senkrecht auf der Erdoberfläche.
 
-Elektrode im Vollraum: $u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}$ $\Rightarrow$ Geometriefaktor $k=\frac{1}{4\pi |\vb r-\vb r_A|}$
+### Numerische Lösung und Geometrie-Faktor
 
-Stetigkeit an Erdoberfläche durch Spiegelelektrode in $\vb r_A'$
+Für eine Elektrode kennen wir bereits die Lösung im Vollraum:
 
-Überlagerung $u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}$ $\Rightarrow$ $k=\frac{1}{4\pi |\vb r-\vb r_A|}+\frac{1}{4\pi |\vb r-\vb r_A'|}$
+$$u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}$$
 
-Allgemeine Formel: $k = \frac{4\pi}{\frac{1}{\overline{AM}}+\frac{1}{\overline{A'M}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{A'N}}-\frac{1}{\overline{BM}}-\frac{1}{\overline{B'M}}+\frac{1}{\overline{BN}}+\frac{1}{\overline{B'N}}}$
+mit dem Geometriefaktor $k=\frac{1}{4\pi |\vb r-\vb r_A|}$
 
-### Vergrabene Elektroden - Modellierung
+Um an der Erdoberfläche eine Normal-Komponente mit entgegengesetztem Vorzeichen zu erzeugen, benutzen wir eine Spiegelelektrode A' ($\vb r_A=[x, y, z]$) an der Position $\vb r_A'=[x, y, -z]$$, die sich durch Spiegelung von A an der ebenen Grenzfläche ergibt.
+Diese erzeugt das Potential
 
-:::: {.columns}
-::: {.column}
+$$u'=\frac{\rho I}{4\pi |\vb r-\vb r_A|}$$
+
+Durch Superposition beider Potentiale ergibt sich
+$$u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}$$
+
+und daraus der Geometriefaktor
+$$k=\frac{1}{4\pi |\vb r-\vb r_A|}+\frac{1}{4\pi |\vb r-\vb r_A'|}$$
+
+### Potential und Stromlinien
+
+Indem wir das für die zweite Stromelektrode B mit dem Spiegelpunkt B' mit entgegengesetztem Vorzeichen wiederholen
+
+$$u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}-\frac{\rho I}{4\pi |\vb r-\vb r_B|}-\frac{\rho I}{4\pi |\vb r-\vb r_B'|}$$
+
+erhalten wir die gewünschten Stromlinien, die entlang der Oberfläche fließen.
+
 ![](pics/spiegelpunkt-modell.png)
-:::
-::: {.column}
-* Stetigkeit an Erdoberfläche erreicht durch Spiegelelektrode in $\vb r_A'$
 
-* Überlagerung $u=\frac{\rho I}{4\pi |\vb r-\vb r_A|}+\frac{\rho I}{4\pi |\vb r-\vb r_A'|}$
+Wir setzen für $\vb r$ die Positionen der Spannungselektroden M und N ein, und durch Umstellung  ergibt sich der Geometriefaktor
 
-* $\Rightarrow$ $k=\frac{1}{4\pi |\vb r-\vb r_A|}+\frac{1}{4\pi |\vb r-\vb r_A'|}$
-:::
-::::
+$$k = \frac{4\pi}{\frac{1}{\overline{AM}}+\frac{1}{\overline{A'M}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{A'N}}-\frac{1}{\overline{BM}}-\frac{1}{\overline{B'M}}+\frac{1}{\overline{BN}}+\frac{1}{\overline{B'N}}}$$
 
+der allgemeingültig ist: Wenn A und B an der Erdoberfläche sind und A/A' sowie B/B' zusammenfallen, ergibt sich die bekannte Formel
+
+$$ k = \frac{2\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} $$
 
 ### Bohrloch-Geoelektrik
 
-* Elektroden-Anordnung in einem Bohrloch
+Elektroden werden selten "vergraben", ein häufiger Einsatz ist aber mittels Bohrlöcher, wo Elektrodenkabel im Bohrlochfluid angekoppelt sind.
+
+Genau wie bei Oberflächenmessungen kann man die 2D-Mess-Strategien in einzelnen Bohrlöchern anwenden.
+Daraus ergibt sich eine sehr ähnliche (Spiegelung an der Oberfläche muss beachtet werden) Sensitivitätsverteilung,
 
 ![Sensitivität verschiedener Bohrlochanordnungen](pics/ert/inhole.png)
 
+die allerdings jetzt rotationssymmetrisch um die Bohrlochachse ist.
+Mit größer werdenden Abständen erhält man Informationen aus größeren Abständen zum Bohrloch, kann aber nicht beurteilen, in welcher Richtung die Ursache einer Anomalie zu finden ist.
+Dazu benötigt man mehrere Bohrlöcher.
+
 ### Crosshole-Geoelektrik
 
-* Verteilung von Strom und Spannungselektroden auf 2 Bohrlöcher
+Hier werden Verteilung von Strom und Spannungselektroden auf zwei oder mehr Bohrlöcher verteilt.
+Nach der Aufteilung der Elektroden kann man die Anordnung Klassifizieren:
+
+* Strom- und Spannungs-Elektroden in je einem Bohrloch
 
 ![Crosshole-Arrays vom Typ AB-MN](pics/ert/crossholeAB-MN.png)
 
+* je eine Strom- und Spannungs-Elektroden in einem Bohrloch
+
 ![Crosshole-Arrays vom Typ AM-BN](pics/ert/crossholeAM-BN.png)
+
+* eine einzelne Strom-(oder Spannungs)Elektrode in einem Bohrloch, die restlichen im zweiten
 
 ![Crosshole-Arrays vom Typ AMN-B](pics/ert/crossholeAMN-B.png)
 
-
+In Abhängigkeit vom Abstand der Elektroden und Bohrlöcher kann das Bohrlochfluid, welches sich in der Regel um den Formationsfaktor vom umliegenden Aquifer unterscheidet, einen großen Einfluss auf die Messergebnisse haben, der berücksichtigt werden muss [@Doetsch2010].
 
 ## 3D-Geoelektrik
+
+Prinzipiell lebt die Geoelektrik immer im dreidimensionalen Raum, da die Punktelektrode verhindert, dass Ableitung in senkrecht zur Mess-Ebene verschwinden.
+Entsprechend sind auch die Sensitivitätsfunktionen dreidimensional und werden lediglich für die Inversion entlang der Senkrechten integriert.
+
+Die Sensitivität einer linearen Anordnung ist rotationssymmetrisch zur Mess-Linie.
+Daher können wir nicht unterscheiden, ob sich eine Anomalie in der Tiefe, vor oder hinter einem Profil befindet.
+Dazu werden weitere parallel oder besser noch senkrechte Profile benötigt, die den 3D-Raum abdecken.
+
+3D-Inversion von 2D-Profilen
+
+[@Udphuay2011]
+
+3D-Auslage
+
+![3D-Elektroden Auslage eines Infiltrationsexperimentes [@Huebner2017]](pics/mulda3dsketch.png)
+
+
+Garre, Bechtold,
+
+
+
+
+### 3D Crosshole surveys
+
+[@Doetsch2010], [@Coscia2011]
+
+
+
 
 ## Modellierung & Inversion
 
@@ -78,6 +145,11 @@ Lösung der partiellen Differentialgleichung
 $$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  $$
 
 ![Diskretisierung des Untergrunds](pics/ert/ert-grid.png)
+
+Finite Elements
+triangles, tetrahedra
+
+[@Ruecker2006]
 
 ### Inversion
 
@@ -92,6 +164,8 @@ $$ -\nabla \cdot \sigma \grad u = \delta(\vb r - \vb r_s)  $$
 * glattes Untergrundmodell
 :::
 ::::
+
+[@Guenther2006], Topographie [@Udphuay2011]
 
 ### Inversion - Methodik
 
