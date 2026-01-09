@@ -374,7 +374,7 @@ window.Quarto = {
 <p><span class="math inline">\(j_x=\sigma\pdv{u}{x}=-\frac{I}{2\pi}\pdv{x} (\frac{1}{r_A}-\frac{1}{r_B})\)</span></p>
 <p>in der Mitte (<span class="math inline">\(r_A=r_B\)</span>, AB=<span class="math inline">\(L\)</span>): <span class="math display">\[j_x=\frac{I}{2\pi} \frac{L}{(z^2+L^2/4)^{3/2}}\]</span></p>
 </div><div class="column">
-<div id="56941825" class="cell" data-execution_count="2">
+<div id="417851ed" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code anzeigen</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>zL <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">3</span>, <span class="fl">.01</span>)</span>
@@ -402,7 +402,7 @@ window.Quarto = {
 <div class="column">
 <p><span class="math display">\[\frac{I_x}{I}(z)=\frac{2}{\pi}\arctan\frac{2z}{L} \]</span> - Hälfte des Gesamtstroms fließt zwischen Oberfläche und L/2</p>
 </div><div class="column">
-<div id="2299087e" class="cell" data-execution_count="3">
+<div id="75b51a6e" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code anzeigen</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.plot(zL, np.arctan(<span class="dv">2</span><span class="op">*</span>zL)<span class="op">*</span><span class="dv">2</span><span class="op">/</span>np.pi)</span>

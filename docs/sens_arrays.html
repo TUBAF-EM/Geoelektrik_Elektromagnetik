@@ -317,11 +317,11 @@ window.Quarto = {
 <p>Geselowitz (1971):</p>
 <p><span class="math display">\[\Rightarrow S(\vb r)=\frac{k}{\rho^2} \int\Omega\frac{\grad u^{AB}}{I^{AB}} \frac{\grad u^{MN}}{I^{MN}}\dd\Omega\]</span></p>
 <p>Im homogenen Halbraum können wir die Lösung einsetzen und erhalten</p>
-<p><span class="math display">\[\Rightarrow S(\vb r)=\frac{k}{4\pi^2} \int\Omega\qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})\dd\Omega\]</span></p>
+<p><span class="math display">\[\Rightarrow S(\vb r)=\frac{k}{4\pi^2} \int_\Omega\qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\vdot\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})\dd\Omega\]</span></p>
 <p>Im Folgenden betrachten wir ausschließlich die Sensitivität des homogenen Halbraums, was für das Verständnis völlig ausreichend ist. Natürlich hängt die Potentialverteilung von der Leitfähigkeit selbst ab. Insbesondere wenn man Logarithmen betrachtet, ist der Grad der Nichtlinearität aber klein, so dass die grundlegenden Bilder bei kleinen Kontrasten sehr ähnlich sind.</p>
 <p>Man beachte außerdem, dass Strom- und Potential-Elektroden austauschbar sind. Wir diskretisieren den Untergrund in ein Dreiecksnetz und integrieren die Funktion über Gauss-Quadratur:</p>
 <p><img src="pics/sens/wa-empty.svg" class="img-fluid"></p>
-<p>Die Wenner-Anordnung <img src="pics/sens/sens_wa13.svg" class="img-fluid" alt="Sensitivität der Wenner-Anordnung"> zeigt oberflächennah eine Abfolge von positiven und negativen Vorzeichen (Skala ist normiert). Eine Oberflächennahe Erhöhung (bis 1m Tiefe) würde ein zentrales Maximum mit zwei flankierenden Minima (und daran anschließend wieder Maxima) zeigen. Generell ist die Anordnung bis zu einer Tiefe sensitiv, die etwas kleiner als der Elktrodenabstand ist.</p>
+<p>Die Wenner-Anordnung <img src="pics/sens/sens_wa13.svg" class="img-fluid" alt="Sensitivität der Wenner-Anordnung"> zeigt oberflächennah eine Abfolge von positiven und negativen Vorzeichen (Skala ist normiert). Eine Oberflächennahe Erhöhung (bis 1m Tiefe) würde ein zentrales Maximum mit zwei flankierenden Minima (und daran anschließend wieder Maxima) zeigen. Generell ist die Anordnung bis zu einer Tiefe sensitiv, die etwas kleiner als der Elektrodenabstand ist.</p>
 <p>Die Funktion der Schlumberger-Anordnung ist generell ähnlich, <img src="pics/sens/sens_slm18.svg" class="img-fluid" alt="Sensitivität der Schlumberger-Anordnung"></p>
 <p>nur dass der mittlere Bereich schmaler ist. Anordnungen mit Spannungsmessung innerhalb der Stromelektroden werden als <span class="math inline">\(\alpha\)</span>-Typ bezeichnet (die einfach Wenner-Anordnung auch Wenner-<span class="math inline">\(\alpha\)</span> genannt). Wenn man Strom- und Spannungselektroden trennt, aber die Abstände gleich behält, erhält man die Wenner-<span class="math inline">\(\beta\)</span> Anordnung <img src="pics/sens/sens_wb13.svg" class="img-fluid" alt="Sensitivität der Wenna-\beta-Anordnung"></p>
 <p>Bei der Dipol-Dipol-Anordnung werden die Spannungs- und Strom-Strecken nicht mit vergrößert und bleiben daher kleiner als der Dipol-Abstand. <img src="pics/sens/sens_dd27.svg" class="img-fluid" alt="Sensitivität der Dipol-Dipol-Anordnung"></p>
@@ -329,7 +329,7 @@ window.Quarto = {
 <section id="sensitivitäten-erklärt" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sensitivitäten-erklärt"><span class="header-section-number">4.2</span> Sensitivitäten erklärt</h2>
 <p>Die Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?</p>
-<p>Wir betrachten eine Wenner-Messung (A-M-N-B).</p>
+<p>Wir betrachten die Potentialverteilung und Stromlinien einer Wenner-Messung (A-M-N-B) und wie sie sich verändern wenn Anomalien eingebracht werden, siehe dazu auch Slidedeck 2 zur Überblendung. Zunächst der homogene Fall:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/ert/sens/sens_hom.svg" class="img-fluid figure-img"></p>
@@ -343,19 +343,22 @@ window.Quarto = {
 <figcaption>Resistive Einlagerung</figcaption>
 </figure>
 </div>
+<p>Während auf der rechten Seite wenige Änderungen zu verzeichnen sind, sehen wir, dass die Stromlinien die Einlagerung umgehen und die Potentiallinien nach links verschoben werden, also die Potentialdifferenz sinkt. Damit sinkt auch der scheinbare spezifische Widerstand aufgrund der Widerstands-Erhöhung, was einer negative Sensitivität entspricht.</p>
+<p>Wenn wir die Einlagerung stattdessen leitfähig machen (Verringerung des spez. Widerstands), werden die Stromlinien hineingezogen und die Potentialdifferenz steigt.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/ert/sens/sens_con1.svg" class="img-fluid figure-img"></p>
 <figcaption>Leitfähige Einlagerung</figcaption>
 </figure>
 </div>
-<p>Nun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.</p>
+<p>Nun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitätsverteilung, zunächst mit einem erhöhten Widerstand. Durch die Verschiebung der Stromlinien nach außen werden die Potentiallinien auf beiden Seiten nach innen gezogen, wodurch die Spannung steigt und damit der scheinbare spez. Widerstand. Dies entspricht einer positiven Sensitivität, die sich fast überall ergibt.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/ert/sens/sens_res2.svg" class="img-fluid figure-img"></p>
 <figcaption>Resistive Einlagerung</figcaption>
 </figure>
 </div>
+<p>Wenn wir die zentrale Einlagerung leitfähig machen (Verringerund des spez. Widerstands), werden die Stromlinien hinein gezogen und die Potentiallinien nach außen geschoben, wodurch ihre Differenz (die Spannung) sinkt und damit der scheinbare spez. Widerstand.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/ert/sens/sens_con2.svg" class="img-fluid figure-img"></p>

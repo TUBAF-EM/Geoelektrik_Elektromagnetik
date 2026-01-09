@@ -27,7 +27,7 @@ $$\Rightarrow S(\vb r)=\frac{k}{\rho^2} \int\Omega\frac{\grad u^{AB}}{I^{AB}} \f
 
 Im homogenen Halbraum können wir die Lösung einsetzen und erhalten
 
-$$\Rightarrow S(\vb r)=\frac{k}{4\pi^2} \int\Omega\qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})\dd\Omega$$
+$$\Rightarrow S(\vb r)=\frac{k}{4\pi^2} \int_\Omega\qty(\frac{\vb r_A}{r_A^3}-\frac{\vb r_B}{r_B^3})\vdot\qty(\frac{\vb r_M}{r_M^3}-\frac{\vb r_N}{r_N^3})\dd\Omega$$
 
 Im Folgenden betrachten wir ausschließlich die Sensitivität des homogenen Halbraums, was für das Verständnis völlig ausreichend ist.
 Natürlich hängt die Potentialverteilung von der Leitfähigkeit selbst ab.
@@ -42,7 +42,7 @@ Die Wenner-Anordnung
 ![Sensitivität der Wenner-Anordnung](pics/sens/sens_wa13.svg)
 zeigt oberflächennah eine Abfolge von positiven und negativen Vorzeichen (Skala ist normiert).
 Eine Oberflächennahe Erhöhung (bis 1m Tiefe) würde ein zentrales Maximum mit zwei flankierenden Minima (und daran anschließend wieder Maxima) zeigen.
-Generell ist die Anordnung bis zu einer Tiefe sensitiv, die etwas kleiner als der Elktrodenabstand ist.
+Generell ist die Anordnung bis zu einer Tiefe sensitiv, die etwas kleiner als der Elektrodenabstand ist.
 
 Die Funktion der Schlumberger-Anordnung ist generell ähnlich,
 ![Sensitivität der Schlumberger-Anordnung](pics/sens/sens_slm18.svg)
@@ -59,7 +59,7 @@ Bei der Dipol-Dipol-Anordnung werden die Spannungs- und Strom-Strecken nicht mit
 
 Die Frage erlaubt sich: Wie kommt es denn zur Verteilung der positiven und negativen Sensitivitäten? Kann man das plausibel erklären?
 
-Wir betrachten eine Wenner-Messung (A-M-N-B).
+Wir betrachten die Potentialverteilung und Stromlinien einer Wenner-Messung (A-M-N-B) und wie sie sich verändern wenn Anomalien eingebracht werden, siehe dazu auch Slidedeck 2 zur Überblendung. Zunächst der homogene Fall:
 
 ![Potential und Strom für homogenen Fall](pics/ert/sens/sens_hom.svg)
 
@@ -67,11 +67,19 @@ Nun erzeugen wir kleine flache Einlagerungen (Kreise), zunächst im Bereich der 
 
 ![Resistive Einlagerung](pics/ert/sens/sens_res1.svg)
 
+Während auf der rechten Seite wenige Änderungen zu verzeichnen sind, sehen wir, dass die Stromlinien die Einlagerung umgehen und die Potentiallinien nach links verschoben werden, also die Potentialdifferenz sinkt. Damit sinkt auch der scheinbare spezifische Widerstand aufgrund der Widerstands-Erhöhung, was einer negative Sensitivität entspricht.
+
+Wenn wir die Einlagerung stattdessen leitfähig machen (Verringerung des spez. Widerstands), werden die Stromlinien hineingezogen und die Potentialdifferenz steigt.
+
 ![Leitfähige Einlagerung](pics/ert/sens/sens_con1.svg)
 
-Nun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitäten.
+Nun verschieben wir die Einlagerung in die Mitte, den Bereich der positiven Sensitivitätsverteilung, zunächst mit einem erhöhten Widerstand.
+Durch die Verschiebung der Stromlinien nach außen werden die Potentiallinien auf beiden Seiten nach innen gezogen, wodurch die Spannung steigt und damit der scheinbare spez. Widerstand.
+Dies entspricht einer positiven Sensitivität, die sich fast überall ergibt.
 
 ![Resistive Einlagerung](pics/ert/sens/sens_res2.svg)
+
+Wenn wir die zentrale Einlagerung leitfähig machen (Verringerund des spez. Widerstands), werden die Stromlinien hinein gezogen und die Potentiallinien nach außen geschoben, wodurch ihre Differenz (die Spannung) sinkt und damit der scheinbare spez. Widerstand.
 
 ![Resistive Einlagerung](pics/ert/sens/sens_con2.svg)
 
