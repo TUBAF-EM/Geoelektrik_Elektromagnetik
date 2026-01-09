@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Geoelektrik in der Praxis – Geoelektrik und Elektromagnetik</title>
+<title>2&nbsp; Anwendung – Geoelektrik und Elektromagnetik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./einfuehrung_em.html" rel="next">
-<link href="./induzierte_polarisation.html" rel="prev">
+<link href="./grundgleichungen_dc.html" rel="next">
+<link href="./einfuehrung.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -79,6 +98,35 @@ window.MathJax = {
 };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -91,7 +139,7 @@ window.MathJax = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ert_praxis.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./anwendung_dc.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -139,7 +187,7 @@ window.MathJax = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./anwendung_dc.html" class="sidebar-item-text sidebar-link">
+  <a href="./anwendung_dc.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></span></a>
   </div>
 </li>
@@ -181,7 +229,7 @@ window.MathJax = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ert_praxis.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ert_praxis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></span></a>
   </div>
 </li>
@@ -244,25 +292,21 @@ window.MathJax = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung"><span class="header-section-number">9.1</span> Aufgabenstellung</a></li>
-  <li><a href="#eindrücke" id="toc-eindrücke" class="nav-link" data-scroll-target="#eindrücke"><span class="header-section-number">9.2</span> Eindrücke</a></li>
-  <li><a href="#daten-profil-4" id="toc-daten-profil-4" class="nav-link" data-scroll-target="#daten-profil-4"><span class="header-section-number">9.3</span> Daten Profil 4</a></li>
-  <li><a href="#inversion-ohne-topographie" id="toc-inversion-ohne-topographie" class="nav-link" data-scroll-target="#inversion-ohne-topographie"><span class="header-section-number">9.4</span> Inversion ohne Topographie</a></li>
-  <li><a href="#inversion-mit-topographie" id="toc-inversion-mit-topographie" class="nav-link" data-scroll-target="#inversion-mit-topographie"><span class="header-section-number">9.5</span> Inversion mit Topographie</a></li>
-  <li><a href="#inversion-ohne-topographie-2" id="toc-inversion-ohne-topographie-2" class="nav-link" data-scroll-target="#inversion-ohne-topographie-2"><span class="header-section-number">9.6</span> Inversion ohne Topographie: 2</a></li>
-  <li><a href="#inversion-mit-topographie-2" id="toc-inversion-mit-topographie-2" class="nav-link" data-scroll-target="#inversion-mit-topographie-2"><span class="header-section-number">9.7</span> Inversion mit Topographie: 2</a></li>
-  <li><a href="#abgleich-mit-bohrungen" id="toc-abgleich-mit-bohrungen" class="nav-link" data-scroll-target="#abgleich-mit-bohrungen"><span class="header-section-number">9.8</span> Abgleich mit Bohrungen</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">9.9</span> Interpretation</a></li>
-  <li><a href="#d-modell" id="toc-d-modell" class="nav-link" data-scroll-target="#d-modell"><span class="header-section-number">9.10</span> 3D-Modell</a></li>
+  <li><a href="#anwendungs-gebiete" id="toc-anwendungs-gebiete" class="nav-link active" data-scroll-target="#anwendungs-gebiete"><span class="header-section-number">2.1</span> Anwendungs-Gebiete</a>
+  <ul class="collapse">
+  <li><a href="#anwendungs-skalen" id="toc-anwendungs-skalen" class="nav-link" data-scroll-target="#anwendungs-skalen"><span class="header-section-number">2.1.1</span> Anwendungs-Skalen</a></li>
+  <li><a href="#d-oder-pseudo-3d" id="toc-d-oder-pseudo-3d" class="nav-link" data-scroll-target="#d-oder-pseudo-3d"><span class="header-section-number">2.1.2</span> 3D oder Pseudo-3D</a></li>
+  </ul></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">2.2</span> Software</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./ert_praxis.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anwendung_dc.html">Geoelektrik</a></li><li class="breadcrumb-item"><a href="./anwendung_dc.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></h1>
 </div>
 
 
@@ -279,80 +323,113 @@ window.MathJax = {
 </header>
 
 
-<ul>
-<li>Konzeptualisierung und Experimentaldesign</li>
-<li>Zugänglichkeit, Genehmigungen und Organisation</li>
-<li>Durchführung der Messungen, Quality Check und Dokumentation</li>
-<li>Datenanalyse (Filterung, Inversion) und Interpretation</li>
-<li>Dissemination der Ergebnisse (Bericht, Vortrag, Geodaten-Upload)</li>
-</ul>
-<p>Beispiel: Festgesteinserkundung mit BEAK</p>
-<section id="aufgabenstellung" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="aufgabenstellung"><span class="header-section-number">9.1</span> Aufgabenstellung</h2>
-<div class="columns">
-<div class="column">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/schwerz/lage_geologie.png" class="img-fluid figure-img"></p>
-<figcaption>Lage und Geologie</figcaption>
+<p><img src="pics/ert/ohm.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</div><div class="column">
+<p>Die Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds. Es beruht auf der Einspeisung eines niederfrequenten (keine Induktion verursachenden, typischerweise 0.1-25 Hz Frequenz) Stroms durch zwei Stromelektroden in den Untergrund und Spannungsmessung mittels zweier Spannungselektroden (früher als Sonden bezeichnet). Dabei hat sich die Methode von Einzelmessungen und profilhaften Kartierungen über Sondierungen zu einer zweidimensionalen oder gar dreidimensionanel Bildgebung weiterentwickelt. Die Methode ist insbesondere einfach und schnell durchzuführen (mit günstigen Geräten) und kommt daher insbesondere nicht nur zur Zustandsbeschreibung, sondern zunehmend auch zur Überwachung (Monitoring) von Prozessen im Untergrund zum Einsatz.</p>
+<section id="anwendungs-gebiete" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="anwendungs-gebiete"><span class="header-section-number">2.1</span> Anwendungs-Gebiete</h2>
+<p>Die Anwendungsgebiete sind entsprechend vielfältig:</p>
+<ul>
+<li>Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)</li>
+<li>Hydrogeologie (Aquifer-Architektur, Kontaminationen)</li>
+<li>Salzwasser-Intrusion in Grundwasser-Aquifere</li>
+<li>Geologisch/tektonische Untersuchungen (Störungen)</li>
+<li>Archäologie (Fundamente, Hütten und Schlacken)</li>
+<li>Landwirtschaft (Feuchtigkeit und Tonanteil)</li>
+<li>Georisiken (Hangrutschungen, Verkarstung)</li>
+<li>Prozessmonitoring (Wasser- und Stoff-Transport)</li>
+</ul>
+<section id="anwendungs-skalen" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="anwendungs-skalen"><span class="header-section-number">2.1.1</span> Anwendungs-Skalen</h3>
+<p>Als Potentialmethode funktioniert die Geoelektrik prinzipiell auf beliebigen Skalenlängen (repräsentiert durch Elektrodenabstände), angefangen von Zentimetern bis hin zu Kilometern. Dafür werden einige Beispiele gegeben.</p>
+<section id="kleinskalig-bäume-böden" class="level4" data-number="2.1.1.1">
+<h4 data-number="2.1.1.1" class="anchored" data-anchor-id="kleinskalig-bäume-böden"><span class="header-section-number">2.1.1.1</span> Kleinskalig: Bäume, Böden</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/schwerz/luftbild.jpg" class="img-fluid figure-img"></p>
-<figcaption>Luftbild und Profilanlage</figcaption>
+<p><img src="pics/ert/treetomography.png" class="img-fluid figure-img"></p>
+<figcaption>Baumtomographie <span class="citation" data-cites="Martin2013">(<a href="literatur.html#ref-Martin2013" role="doc-biblioref">Martin und Günther 2013</a>)</span></figcaption>
 </figure>
 </div>
-</div>
-</div>
 </section>
-<section id="eindrücke" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="eindrücke"><span class="header-section-number">9.2</span> Eindrücke</h2>
-<p><img src="pics/schwerz/foto.jpg" class="img-fluid"></p>
-</section>
-<section id="daten-profil-4" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="daten-profil-4"><span class="header-section-number">9.3</span> Daten Profil 4</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img src="pics/schwerz/profil4daten.png" class="img-fluid"></p>
-</div><div class="column" style="width:40%;">
-<ul>
-<li>4 Ketten a 21 El. a=5m</li>
-<li>multi-gradient array (Dahlin &amp; Zhou, 2004)</li>
-</ul>
-</div>
+<section id="mittelskalig-geologie" class="level4" data-number="2.1.1.2">
+<h4 data-number="2.1.1.2" class="anchored" data-anchor-id="mittelskalig-geologie"><span class="header-section-number">2.1.1.2</span> Mittelskalig: Geologie</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/kilmore.png" class="img-fluid figure-img"></p>
+<figcaption>Störungszone Irland <span class="citation" data-cites="Tanner2020">(<a href="literatur.html#ref-Tanner2020" role="doc-biblioref">Tanner <em>u.&nbsp;a.</em> 2020</a>)</span></figcaption>
+</figure>
 </div>
 </section>
-<section id="inversion-ohne-topographie" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="inversion-ohne-topographie"><span class="header-section-number">9.4</span> Inversion ohne Topographie</h2>
-<p><img src="pics/schwerz/profil4notopo.png" class="img-fluid"></p>
+<section id="großskalig-geologie" class="level4" data-number="2.1.1.3">
+<h4 data-number="2.1.1.3" class="anchored" data-anchor-id="großskalig-geologie"><span class="header-section-number">2.1.1.3</span> Großskalig: Geologie</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/nickschick.png" class="img-fluid figure-img"></p>
+<figcaption>CO2-Aufstieg an Störung im Egergraben <span class="citation" data-cites="Nickschick2019">(<a href="literatur.html#ref-Nickschick2019" role="doc-biblioref">Nickschick <em>u.&nbsp;a.</em> 2019</a>)</span></figcaption>
+</figure>
+</div>
 </section>
-<section id="inversion-mit-topographie" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="inversion-mit-topographie"><span class="header-section-number">9.5</span> Inversion mit Topographie</h2>
-<p><img src="pics/schwerz/profil4topo.png" class="img-fluid"></p>
+<section id="skalenübergreifend" class="level4" data-number="2.1.1.4">
+<h4 data-number="2.1.1.4" class="anchored" data-anchor-id="skalenübergreifend"><span class="header-section-number">2.1.1.4</span> Skalenübergreifend</h4>
+<div id="fig-subplots" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subplots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pics/ert/spiekeroog1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subplots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2.1: Salz-Süßwasser-Interaktion im <a href="https://www.liag-institut.de/forschung/projekte/drittmittelprojekte/dynadeep.html">DynaDeep-Projekt</a> <span class="citation" data-cites="Skibbe2024">(<a href="literatur.html#ref-Skibbe2024" role="doc-biblioref">Skibbe <em>u.&nbsp;a.</em> 2024</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>Im vorliegenden Beispiel aus dem DynaDeep-Projekt kommen 3 verschiedene Skalen zum Einsatz, um die Dynamik der Salz-Süßwasser-Grenze abzubilden: * 4-Punkt-Messung (1D) (<span class="math inline">\(a\)</span>=2.5cm) an einem DirectPush-Gerät (links) * 1.5D-Messung (<span class="math inline">\(a\)</span>=25cm) an einer vergrabenen vertikalen Elektroden-Strecke * horizontale 2D-Messung (<span class="math inline">\(a\)</span>=2.5m) an der Oberfläche</p>
 </section>
-<section id="inversion-ohne-topographie-2" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="inversion-ohne-topographie-2"><span class="header-section-number">9.6</span> Inversion ohne Topographie: 2</h2>
-<p><img src="pics/schwerz/profil2notopo.png" class="img-fluid"></p>
 </section>
-<section id="inversion-mit-topographie-2" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="inversion-mit-topographie-2"><span class="header-section-number">9.7</span> Inversion mit Topographie: 2</h2>
-<p><img src="pics/schwerz/profil2topo.png" class="img-fluid"></p>
+<section id="d-oder-pseudo-3d" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="d-oder-pseudo-3d"><span class="header-section-number">2.1.2</span> 3D oder Pseudo-3D</h3>
+<p>Die allermeisten Messungen werden auf 2D-Profilen mit Multi-Elektroden-Instrumenten gemacht und 2D-Bilder vom Untergrund erzeugt, unter der Annahme, dass die Leitfähigkeit senkrecht zum Profil konstant ist. Häufig zeigt der Untergrund dreidimensionale Strukturen, zu deren Erkundung können flächenhafte Auslagen oder verschiedene Profile gemacht werden, wie in den folgenden Beispielen. Die einfachste Auswertung ist in 2D-Profilen, die in Fence-Diagrammen dreidimensional visualisiert werden, so wie am Beispiel der hydrogeologischen Untersuchung eines Aquifers in einer Hangdelle.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/mulda3d1.png" class="img-fluid figure-img"></p>
+<figcaption>Wasserspeicher in Hangdellen am Teststandort Mulda <span class="citation" data-cites="Huebner2015">(<a href="literatur.html#ref-Huebner2015" role="doc-biblioref">Hübner <em>u.&nbsp;a.</em> 2015</a>)</span></figcaption>
+</figure>
+</div>
+<p>Alternativ zur separaten 2D-Inversion können die Daten aller Profile dreidimensional invertiert werden wie im folgenden Beispiel einer Haldenuntersuchung.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/ert/haldeModel.png" class="img-fluid figure-img"></p>
+<figcaption>Untersuchung von Halden <span class="citation" data-cites="Guenther2006">(<a href="literatur.html#ref-Guenther2006" role="doc-biblioref">Günther <em>u.&nbsp;a.</em> 2006</a>)</span></figcaption>
+</figure>
+</div>
 </section>
-<section id="abgleich-mit-bohrungen" class="level2" data-number="9.8">
-<h2 data-number="9.8" class="anchored" data-anchor-id="abgleich-mit-bohrungen"><span class="header-section-number">9.8</span> Abgleich mit Bohrungen</h2>
-<p><img src="pics/schwerz/drillings.jpg" class="img-fluid"></p>
 </section>
-<section id="interpretation" class="level2" data-number="9.9">
-<h2 data-number="9.9" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">9.9</span> Interpretation</h2>
-<p><img src="pics/schwerz/profil2interpretation.png" class="img-fluid"></p>
-</section>
-<section id="d-modell" class="level2" data-number="9.10">
-<h2 data-number="9.10" class="anchored" data-anchor-id="d-modell"><span class="header-section-number">9.10</span> 3D-Modell</h2>
-<p><img src="pics/schwerz/3dmodell.png" class="img-fluid"></p>
+<section id="software" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="software"><span class="header-section-number">2.2</span> Software</h2>
+<p>Für alle Abbildungen in diesem Skript und die meisten Beispiele aus der Literatur wurde das Open-Source Python-Paket <a href="https://www.pygimli.org">pyGIMLi</a> eingesetzt. Es verfügt, neben grundlegenden Funktionen, über zwei auf Geoelektrik spezialisierte Module <code>VES</code> (Sondierungen) und <code>ERT</code> (für 2D/3D-Geoelektrik sowie Monitoring). Damit werden die Felder simuliert und durch das Modul <code>viewer.mpl</code> (basierendend auf <a href="https://matplotlib.org">matplotlib</a> sowie <code>pv</code> (basierende auf <a href="https://pyvista.org">pyVista</a>) visualisiert. Weiterhin wird das <code>meshtools</code> Modul zur Erzeugung von Geometrien und Netzen sowie das <code>solver</code>-Modul eingesetzt. Einfache numerische Berechnungen beruhen auf dem Paket <a href="https://numpy.org">NumPy</a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Guenther2006" class="csl-entry" role="listitem">
+Günther T, Rücker C und Spitzer K. 2006. <a href="https://doi.org/10.1111/j.1365-246X.2006.03011.x">Three-dimensional modeling and inversion of dc resistivity data incorporating topography - <span>II</span>: Inversion</a>. <em>Geophys. J. Int.</em> <strong>166</strong>. 506–17
+</div>
+<div id="ref-Huebner2015" class="csl-entry" role="listitem">
+Hübner R, Heller K, Günther T und Kleber A. 2015. <span>M</span>onitoring hillslope moisture dynamics with surface <span>ERT</span> for enhancing spatial significance of hydrometric point measurements. <em>Hydrology and Earth System Sciences</em>. <strong>19</strong>. 225–40 Online: <a href="http://www.hydrol-earth-syst-sci.net/19/225/2015/">http://www.hydrol-earth-syst-sci.net/19/225/2015/</a>
+</div>
+<div id="ref-Martin2013" class="csl-entry" role="listitem">
+Martin T und Günther T. 2013. <span>C</span>omplex resistivity tomography (<span>CRT</span>) for fungus detection on standing oak trees. <em>European Journal of Forest Research</em>. <strong>132</strong>. 765–76 Online: <a href="http://dx.doi.org/10.1007/s10342-013-0711-4">http://dx.doi.org/10.1007/s10342-013-0711-4</a>
+</div>
+<div id="ref-Nickschick2019" class="csl-entry" role="listitem">
+Nickschick T, Flechsig C, Mrlina J, Oppermann F, Löbig F und Günther T. 2019. Large-scale electrical resistivity tomography in the <span>Cheb Basin</span> (<span>Eger Rift</span>) at an <span>I</span>nternational <span>C</span>ontinental <span>D</span>rilling <span>P</span>rogram (<span>ICDP</span>) monitoring site to image fluid-related structures. <em>Solid Earth</em>. <strong>10</strong>. 1951–69 Online: <a href="https://www.solid-earth.net/10/1951/2019/">https://www.solid-earth.net/10/1951/2019/</a>
+</div>
+<div id="ref-Skibbe2024" class="csl-entry" role="listitem">
+Skibbe N, Günther T, Schwalfenberg K, Meyer R, Reckhardt A, Greskowiak J, Massmann G und Müller-Petke M. 2024. <a href="https://doi.org/10.1016/j.jhydrol.2024.131905">Comparison of methods measuring electrical conductivity in coastal aquifers</a>. <em>Journal of Hydrology</em>. <strong>643</strong>. 131905
+</div>
+<div id="ref-Tanner2020" class="csl-entry" role="listitem">
+Tanner D C, Buness H, Igel J, Günther T, Gabriel G, Skiba P, Plenefisch T, Gestermann N und Walter T R. 2020. Chapter 3 - Fault detection. <em>Understanding Faults</em> Hrsg D Tanner und C Brandes (Elsevier) S 81–146 Online: <a href="http://www.sciencedirect.com/science/article/pii/B9780128159859000035">http://www.sciencedirect.com/science/article/pii/B9780128159859000035</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -778,13 +855,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./induzierte_polarisation.html" class="pagination-link" aria-label="Induzierte Polarisation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span>
+      <a href="./einfuehrung.html" class="pagination-link" aria-label="Elektromagnetische Größen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Elektromagnetische Größen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./einfuehrung_em.html" class="pagination-link" aria-label="Einführung">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./grundgleichungen_dc.html" class="pagination-link" aria-label="Grundgleichungen">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
