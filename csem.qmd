@@ -1,5 +1,5 @@
 ---
-title: "Controlled-Source-EM-methoden"
+title: "Controlled-Source-EM-Methoden"
 editor: source
 jupyter: python3
 execute: 
