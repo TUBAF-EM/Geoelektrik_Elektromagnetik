@@ -25,7 +25,7 @@
         ":::\n",
         "::: {.column}"
       ],
-      "id": "f0dbfc5a"
+      "id": "33bcddc7"
     },
     {
       "cell_type": "code",
@@ -36,7 +36,7 @@
         "import numpy as np\n",
         "import matplotlib.pyplot as plt"
       ],
-      "id": "1c21622c",
+      "id": "85515196",
       "execution_count": null,
       "outputs": []
     },
@@ -57,7 +57,7 @@
         "plt.ylabel(r\"$j_x$/$\\Sigma j_x$ (normalized)\")\n",
         "plt.grid()"
       ],
-      "id": "75e70d5a",
+      "id": "e00f4db2",
       "execution_count": null,
       "outputs": []
     },
@@ -78,7 +78,7 @@
         ":::\n",
         "::: {.column}"
       ],
-      "id": "00ceda70"
+      "id": "5dce261e"
     },
     {
       "cell_type": "code",
@@ -91,7 +91,7 @@
         "plt.xlabel(\"z/L\")\n",
         "plt.grid()"
       ],
-      "id": "d5a3c67f",
+      "id": "f3398dee",
       "execution_count": null,
       "outputs": []
     },
@@ -159,7 +159,7 @@
         ":::\n",
         "::::"
       ],
-      "id": "66fd98dc"
+      "id": "9113d380"
     }
   ],
   "metadata": {
