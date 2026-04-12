@@ -1,0 +1,171 @@
+# Induzierte Polarisation
+
+* bisher Beschreibung durch Widerstands-Netzwerk
+* Beobachtung von Aufladeeffekten (Kondensator mit $\epsilon$)
+  - bereits durch Gebrüder Schlumberger (1930) & Dachnov (1941)
+* Methode der Induzierten Polarisation (Bleil, 1953)
+
+## Äquivalente Pumpen-Kreise
+
+### Gleichstrom-Äquivalent
+
+:::: {.columns}
+::: {.column}
+![Pumpenkreislauf [@dm2014, Fig. 5.3]](pics/ip/dm_fig53a.png)
+:::
+::: {.column}
+![Stromkreislauf [@dm2014], Fig. 5.3](pics/ip/dm_fig53b.png)
+:::
+::::
+
+### Wechselstrom-Äquivalent (Dentith&Mudge)
+
+:::: {.columns}
+::: {.column width="40%"}
+![Resistor im Wechselstrom-Kreislauf [@dm2014, Fig. 5.4]](pics/ip/dm_fig54.png)
+:::
+::: {.column width="55%"}
+![Kapazität im Wechselstrom-Kreislauf [@dm2014, Fig. 5.4]](pics/ip/dm_fig56.png)
+:::
+::::
+
+
+## Induzierte Polarisation - Zeitbereich
+
+![[@dm2014]](pics/ip/ipFD1.png)
+
+## Induzierte Polarisation - Frequenzbereich
+:::: {.columns}
+::: {.column width="53%"}
+![[@dm2014]](pics/ert/ipphase.png)
+:::
+::: {.column width="47%"}
+### Phasenverschiebung
+![[@dm2014]](pics/ert/ipFD2.png)
+
+$$ \sigma^* = \sigma' + \imath\sigma'' = |\sigma| e^{\imath\phi} $$
+:::
+::::
+
+## Induzierte Polarisation
+::: {.r-stack}
+![](pics/petro/DentithMudge_fig519ab.png){width="73%"}
+
+![Polarisationsmechanismen [@dm2014, Fig. 5.19]](pics/petro/DentithMudge_fig519cd.png){.fragment width="70%" fig-align="center"}
+:::
+
+## Leitfähigkeit vs. Permittivität
+
+$$ \vb j = \curl\vb H=\sigma\vb E+\epsilon\dot{\vb E}=\sigma\vb E + \imath\omega\vb E = (\sigma+\imath\omega)\vb E
+= (\frac{\sigma}{\imath\omega}+\epsilon)\dot{\vb E} $$
+
+$$ \sigma^* = \sigma' + \imath\sigma'' = \sigma + \imath\omega\epsilon $$
+
+$$ \rho^* = (\sigma^*)^{-1} = \frac{\sigma' - \imath\sigma''}{\sigma'^2 + \sigma''^2} =
+\frac{\sigma' - \imath\sigma''}{|\sigma^*|^2} = \rho' - \imath\rho'' = |\rho^*|e^{-\imath\phi} $$
+
+## Relaxationen
+
+:::: {.columns}
+::: {.column width="45%"}
+![Relaxationen [@Loewer2017]](pics/ip/loewer_fig1.png)
+:::
+::: {.column width="55%"}
+### Debye-Relaxation
+
+* fundamentale Polarisation
+
+$$ \sigma(\omega)=\sigma_\infty + (\sigma_0-\sigma_\infty)\frac{m}{\imath\omega\tau} $$
+
+* exponentielles Abklingen
+
+$$ U(t) = U_0 m e^{-t/\tau} $$
+:::
+::::
+
+## Kramers-Kronig Beziehungen
+
+Zusammenhang Real- und Imaginärteil analytischer Funktionen
+
+$$ \rho''(\omega) = \frac{2\omega}{\pi}\int\limits_0^\infty \frac{\rho'(x)-\rho'(\omega)}{x^2-\omega^2}\dd x $$
+
+$$ \rho'(\omega) = \rho'(\infty) + \frac{2}{\pi}\int\limits_0^\infty \frac{x \rho''(x)-\omega\rho''(\omega)}{x^2-\omega^2}\dd x $$
+
+## Kramers-Kronig Beziehungen
+
+![IP & DK Messung an Loess [@Loewer2017]](pics/ip/loewer_fig4.png)
+
+## Spektrale Induzierte Polarisation (SIP)
+
+![REFERENCE](pics/ert/ipspectra.png)
+
+# Feld-IP
+
+::: {.columns}
+::: {.column}
+* Messung im Frequenzbereich
+  - genau, nicht robust
+* Messung im Zeitbereich
+  - klassische Multielektrode
+* Auswertung mit `pyBERT`
+  - Klassen für FDIP und TDIP
+  - Prozessing & Inversion
+:::
+::: {.column}
+![SIP256C im Gelände [@Guenther2016]](pics/ip/haldenmessung.jpg)
+:::
+::::
+
+## Vergleich von Geräten (Martin et al., 2020)
+
+![SIP256C, MPT DAS-1, ABEM Terrameter LS2, Syscal Pro Switch 72 [@Martin2020]](pics/ip/4geraete.jpg)
+
+![Scheinbare spez. Widerstände [@Martin2020]](pics/ip/schleiz-rhoa.png)
+
+### FDIP
+
+![FDIP - Phasen [@Martin2020]](pics/ip/schleiz-phasen.png)
+
+### TDIP
+
+:::: {.columns}
+::: {.column}
+![](pics/ip/schleiz-timeseries1.png)
+:::
+::: {.column}
+![TDIP-Zeitreihen [@Martin2020]](pics/ip/schleiz-timeseries2.png)
+
+* Filter: Tiefpass, 50Hz, Offset, Drift, Elektrodenpolarisation
+* Gating & Stapelung $\Rightarrow$ Decay
+:::
+::::
+
+:::: {.columns}
+::: {.column}
+![TDIP - Gating [@Martin2020]](pics/ip/gating.png)
+:::
+::: {.column .fragment}
+![](pics/ip/schleiz-appcharg.png)
+:::
+::::
+
+### Inversion
+
+![Inversion [@Martin2020]](pics/ip/schleiz-inversion.png)
+
+## Umsetzung (Martin et al. 2021)
+
+::: {#fig-subplots}
+:::: {.columns}
+::: {.column width="68%"}
+![](pics/ip/martinguentherSlag.png)
+:::
+::: {.column width="32%"}
+$\Rightarrow$ Mineral-Grad/Typ
+![](pics/ip/martinguentherSlagGrade.png)
+![](pics/ip/martinguentherSlagType.png)
+:::
+::::
+
+Inversionsergebnisse und Ableitung von Mineralgehalt und Typ [@Martin2021]
+:::

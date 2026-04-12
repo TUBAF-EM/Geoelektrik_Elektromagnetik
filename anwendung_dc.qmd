@@ -1,0 +1,74 @@
+---
+title: "Anwendung"
+editor: source
+---
+
+![](pics/ert/ohm.png){fig-align="center"}
+
+Die Gleichstromgeoelektrik gehört zu den am häufigsten eingesetzten Methoden der Angewandten Geophysik, insbesondere bei der Erkundung des oberflächennahen Untergrunds.
+Es beruht auf der Einspeisung eines niederfrequenten (keine Induktion verursachenden, typischerweise 0.1-25 Hz Frequenz) Stroms durch zwei Stromelektroden in den Untergrund und Spannungsmessung mittels zweier Spannungselektroden (früher als Sonden bezeichnet).
+Dabei hat sich die Methode von Einzelmessungen und profilhaften Kartierungen über Sondierungen zu einer zweidimensionalen oder gar dreidimensionanel Bildgebung weiterentwickelt.
+Die Methode ist insbesondere einfach und schnell durchzuführen (mit günstigen Geräten) und kommt daher insbesondere nicht nur zur Zustandsbeschreibung, sondern zunehmend auch zur Überwachung (Monitoring) von Prozessen im Untergrund zum Einsatz.
+
+## Anwendungs-Gebiete
+
+Die Anwendungsgebiete sind entsprechend vielfältig:
+
+* Ingenieurgeophysik (Festgestein, Hohlräume, Bäume/Wurzeln)
+* Hydrogeologie (Aquifer-Architektur, Kontaminationen)
+* Salzwasser-Intrusion in Grundwasser-Aquifere
+* Geologisch/tektonische Untersuchungen (Störungen)
+* Archäologie (Fundamente, Hütten und Schlacken)
+* Landwirtschaft (Feuchtigkeit und Tonanteil)
+* Georisiken (Hangrutschungen, Verkarstung)
+* Prozessmonitoring (Wasser- und Stoff-Transport)
+
+### Anwendungs-Skalen
+
+Als Potentialmethode funktioniert die Geoelektrik prinzipiell auf beliebigen Skalenlängen (repräsentiert durch Elektrodenabstände), angefangen von Zentimetern bis hin zu Kilometern. Dafür werden einige Beispiele gegeben.
+
+#### Kleinskalig: Bäume, Böden
+
+![Baumtomographie [@Martin2013]](pics/ert/treetomography.png)
+
+#### Mittelskalig: Geologie
+
+![Störungszone Irland [@Tanner2020]](pics/ert/kilmore.png)
+
+#### Großskalig: Geologie
+
+![CO2-Aufstieg an Störung im Egergraben [@Nickschick2019]](pics/ert/nickschick.png)
+
+#### Skalenübergreifend
+
+::: {#fig-subplots}
+![Skalenübergreifende Geoelektrik-Messungen](pics/ert/spiekeroog1.png)
+![Salinitäts-Bild](pics/ert/spiekeroog2.png)
+
+Salz-Süßwasser-Interaktion im [DynaDeep-Projekt](https://www.liag-institut.de/forschung/projekte/drittmittelprojekte/dynadeep.html) [@Skibbe2024]
+:::
+
+Im vorliegenden Beispiel aus dem DynaDeep-Projekt kommen 3 verschiedene Skalen zum Einsatz, um die Dynamik der Salz-Süßwasser-Grenze abzubilden:
+* 4-Punkt-Messung (1D) ($a$=2.5cm) an einem DirectPush-Gerät (links)
+* 1.5D-Messung ($a$=25cm) an einer vergrabenen vertikalen Elektroden-Strecke
+* horizontale 2D-Messung ($a$=2.5m) an der Oberfläche
+
+### 3D oder Pseudo-3D
+
+Die allermeisten Messungen werden auf 2D-Profilen mit Multi-Elektroden-Instrumenten gemacht und 2D-Bilder vom Untergrund erzeugt, unter der Annahme, dass die Leitfähigkeit senkrecht zum Profil konstant ist.
+Häufig zeigt der Untergrund dreidimensionale Strukturen, zu deren Erkundung können flächenhafte Auslagen oder verschiedene Profile gemacht werden, wie in den folgenden Beispielen.
+Die einfachste Auswertung ist in 2D-Profilen, die in Fence-Diagrammen dreidimensional visualisiert werden, so wie am Beispiel der hydrogeologischen Untersuchung eines Aquifers in einer Hangdelle.
+
+![Wasserspeicher in Hangdellen am Teststandort Mulda [@Huebner2015]](pics/ert/mulda3d1.png)
+
+Alternativ zur separaten 2D-Inversion können die Daten aller Profile dreidimensional invertiert werden wie im folgenden Beispiel einer Haldenuntersuchung.
+
+![Untersuchung von Halden [@Guenther2006]](pics/ert/haldeModel.png)
+
+## Software
+
+Für alle Abbildungen in diesem Skript und die meisten Beispiele aus der Literatur wurde das Open-Source Python-Paket [pyGIMLi](https://www.pygimli.org) eingesetzt.
+Es verfügt, neben grundlegenden Funktionen, über zwei auf Geoelektrik spezialisierte Module `VES` (Sondierungen) und `ERT` (für 2D/3D-Geoelektrik sowie Monitoring).
+Damit werden die Felder simuliert und durch das Modul `viewer.mpl` (basierendend auf [matplotlib](https://matplotlib.org) sowie `pv` (basierende auf [pyVista](https://pyvista.org)) visualisiert.
+Weiterhin wird das `meshtools` Modul zur Erzeugung von Geometrien und Netzen sowie das `solver`-Modul eingesetzt.
+Einfache numerische Berechnungen beruhen auf dem Paket [NumPy](https://numpy.org).
