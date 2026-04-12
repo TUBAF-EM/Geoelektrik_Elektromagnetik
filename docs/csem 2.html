@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>13&nbsp; Controlled-Source-EM-methoden – Geoelektrik und Elektromagnetik</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./zusammenfassung.html" rel="next">
+<link href="./magnetotellurik.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+<script>
+window.MathJax = {
+  loader: {
+    load: ['[tex]/physics']
+  },
+  tex: {
+    packages: {'[+]': ['physics']}
+  }
+};
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./csem.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Controlled-Source-EM-methoden</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Geoelektrik und Elektromagnetik</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Elektromagnetische Größen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Geoelektrik</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./anwendung_dc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anwendung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./grundgleichungen_dc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sens_arrays.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sensitivitäten und Messanordnungen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ves.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Widerstands-Tiefensondierung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ert.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Widerstandstomographie</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./timelapse_ert.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Geoelektrisches Monitoring</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./induzierte_polarisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Induzierte Polarisation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ert_praxis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Geoelektrik in der Praxis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Elektromagnetik</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./einfuehrung_em.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./grundgleichungen_em.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Grundgleichungen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magnetotellurik.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./csem.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Controlled-Source-EM-methoden</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./zusammenfassung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./literatur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literaturverzeichnis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slidedecks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Slide decks</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#einführung" id="toc-einführung" class="nav-link active" data-scroll-target="#einführung"><span class="header-section-number">13.1</span> Einführung</a></li>
+  <li><a href="#dipolquellen" id="toc-dipolquellen" class="nav-link" data-scroll-target="#dipolquellen"><span class="header-section-number">13.2</span> Dipolquellen</a>
+  <ul class="collapse">
+  <li><a href="#magnetischer-dipol" id="toc-magnetischer-dipol" class="nav-link" data-scroll-target="#magnetischer-dipol"><span class="header-section-number">13.2.1</span> Magnetischer Dipol</a></li>
+  <li><a href="#elektrischer-dipol" id="toc-elektrischer-dipol" class="nav-link" data-scroll-target="#elektrischer-dipol"><span class="header-section-number">13.2.2</span> Elektrischer Dipol</a></li>
+  </ul></li>
+  <li><a href="#em-34" id="toc-em-34" class="nav-link" data-scroll-target="#em-34"><span class="header-section-number">13.3</span> EM-34</a>
+  <ul class="collapse">
+  <li><a href="#spulenkonfigurationen" id="toc-spulenkonfigurationen" class="nav-link" data-scroll-target="#spulenkonfigurationen"><span class="header-section-number">13.3.1</span> Spulenkonfigurationen</a></li>
+  </ul></li>
+  <li><a href="#em-34-konfigurationen" id="toc-em-34-konfigurationen" class="nav-link" data-scroll-target="#em-34-konfigurationen"><span class="header-section-number">13.4</span> EM-34 Konfigurationen</a></li>
+  <li><a href="#lin-abhängigkeit-von-der-elektrischen-leitfähigkeit" id="toc-lin-abhängigkeit-von-der-elektrischen-leitfähigkeit" class="nav-link" data-scroll-target="#lin-abhängigkeit-von-der-elektrischen-leitfähigkeit"><span class="header-section-number">13.5</span> LIN: Abhängigkeit von der elektrischen Leitfähigkeit</a>
+  <ul class="collapse">
+  <li><a href="#azimutabhängigkeit-bei-steilstehenden-leitfähigkeitsanomalien" id="toc-azimutabhängigkeit-bei-steilstehenden-leitfähigkeitsanomalien" class="nav-link" data-scroll-target="#azimutabhängigkeit-bei-steilstehenden-leitfähigkeitsanomalien"><span class="header-section-number">13.5.1</span> Azimutabhängigkeit bei steilstehenden Leitfähigkeitsanomalien</a></li>
+  <li><a href="#beispiele" id="toc-beispiele" class="nav-link" data-scroll-target="#beispiele"><span class="header-section-number">13.5.2</span> Beispiele</a></li>
+  </ul></li>
+  <li><a href="#lin-näherung" id="toc-lin-näherung" class="nav-link" data-scroll-target="#lin-näherung"><span class="header-section-number">13.6</span> LIN-Näherung</a></li>
+  <li><a href="#hubschrauber-em" id="toc-hubschrauber-em" class="nav-link" data-scroll-target="#hubschrauber-em"><span class="header-section-number">13.7</span> Hubschrauber-EM</a></li>
+  <li><a href="#das-fugro-dighem-system" id="toc-das-fugro-dighem-system" class="nav-link" data-scroll-target="#das-fugro-dighem-system"><span class="header-section-number">13.8</span> Das Fugro DIGHEM System</a></li>
+  <li><a href="#messgröße-hem" id="toc-messgröße-hem" class="nav-link" data-scroll-target="#messgröße-hem"><span class="header-section-number">13.9</span> Messgröße HEM</a></li>
+  <li><a href="#darstellungsgröße" id="toc-darstellungsgröße" class="nav-link" data-scroll-target="#darstellungsgröße"><span class="header-section-number">13.10</span> Darstellungsgröße</a></li>
+  <li><a href="#beispiele-salzwasserintrusion-cuxhavener-rinne-bgr" id="toc-beispiele-salzwasserintrusion-cuxhavener-rinne-bgr" class="nav-link" data-scroll-target="#beispiele-salzwasserintrusion-cuxhavener-rinne-bgr"><span class="header-section-number">13.11</span> Beispiele: Salzwasserintrusion Cuxhavener Rinne (BGR)</a></li>
+  <li><a href="#anwendungsbeispiel" id="toc-anwendungsbeispiel" class="nav-link" data-scroll-target="#anwendungsbeispiel"><span class="header-section-number">13.12</span> Anwendungsbeispiel</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">13.13</span> </a>
+  <ul class="collapse">
+  <li><a href="#synthetische-datensätze" id="toc-synthetische-datensätze" class="nav-link" data-scroll-target="#synthetische-datensätze"><span class="header-section-number">13.13.1</span> Synthetische Datensätze</a></li>
+  </ul></li>
+  <li><a href="#magnetfeld-vs.-frequenz" id="toc-magnetfeld-vs.-frequenz" class="nav-link" data-scroll-target="#magnetfeld-vs.-frequenz"><span class="header-section-number">13.14</span> Magnetfeld vs.&nbsp;Frequenz</a></li>
+  <li><a href="#r-und-q-vs.-frequenz" id="toc-r-und-q-vs.-frequenz" class="nav-link" data-scroll-target="#r-und-q-vs.-frequenz"><span class="header-section-number">13.15</span> R und Q vs.&nbsp;Frequenz</a></li>
+  <li><a href="#semi-airborne-methoden" id="toc-semi-airborne-methoden" class="nav-link" data-scroll-target="#semi-airborne-methoden"><span class="header-section-number">13.16</span> Semi-airborne-Methoden</a></li>
+  <li><a href="#messkonzept" id="toc-messkonzept" class="nav-link" data-scroll-target="#messkonzept"><span class="header-section-number">13.17</span> Messkonzept</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><span class="header-section-number">13.18</span> </a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><span class="header-section-number">13.19</span> </a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./einfuehrung_em.html">Elektromagnetik</a></li><li class="breadcrumb-item"><a href="./csem.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Controlled-Source-EM-methoden</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Controlled-Source-EM-methoden</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip callout-titled" title="Lernziele">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tipp</span>Lernziele
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>EM mit Dipolquellen</li>
+<li>Messgrößen</li>
+<li>Interpretation</li>
+<li>Grenzen</li>
+</ul>
+</div>
+</div>
+<section id="einführung" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="einführung"><span class="header-section-number">13.1</span> Einführung</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM-TXRX.excalidraw.svg" class="img-fluid figure-img"></p>
+<figcaption>Prinzip der elektromagnetischen Induktion</figcaption>
+</figure>
+</div>
+<p>Über Transmitter <strong>TX</strong> (Spule, geerdetes Kabel) wird Feld angekoppelt.</p>
+<ul>
+<li>Magnetfeld <span class="math inline">\(\mathbf{H}\)</span></li>
+<li>Elektrisches Feld <span class="math inline">\(\mathbf{E}\)</span></li>
+</ul>
+<p>Primäres, zeitlich variables Magnetfeld induziert im Leiter Wirbelströme. Diese besitzen wiederum ein Magnetfeld, das sich in Stärke, Richtung und Phase vom primären Feld unterscheidet.</p>
+<p>Wir messen <span class="math inline">\(\vb B\)</span> im Receiver <strong>RX</strong> als Funktion von Frequenz und Transmitter-Receiver-Abstand (Offset).</p>
+<p>Frequenz und Offset sind technische Sondierungsparameter, die gesteuert werden können in Abhängigkeit von</p>
+<ul>
+<li>Targettiefe</li>
+<li>Targetgröße und Leitfähigkeit.</li>
+</ul>
+<p>In Abhängigkeit von der geophysikalischen Fragestellung sind zwei methodische Varianten in Verwendung:</p>
+<ul>
+<li>Kartierung</li>
+<li>Sondierung</li>
+</ul>
+<p><em>Kartierung</em> durch Bewegung von TX und RX entlang eines Profils oder auf einer Fläche unter Beibehaltung des Abstandes (TX-RX-Offset) <em>Sondierung</em> durch Veränderung von Frequenz und/oder Offset.</p>
+<p>Es gibt auch Varianten, die eine Kombination von Kartierung und Sondierung realisieren (Beispiel: Aero-EM)</p>
+<p>Wir unterscheiden zwei grundsätzliche Varianten:</p>
+<ul>
+<li>Abstandssondierung</li>
+<li>Frequenzsondierung</li>
+</ul>
+</section>
+<section id="dipolquellen" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="dipolquellen"><span class="header-section-number">13.2</span> Dipolquellen</h2>
+<section id="magnetischer-dipol" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="magnetischer-dipol"><span class="header-section-number">13.2.1</span> Magnetischer Dipol</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM-VMD-HMD.excalidraw.svg" class="img-fluid figure-img"></p>
+<figcaption>Schematische Darstellung eines horizontalen (HMD) und vertikalen magnetischen Dipols (VMD) mit Dipolmoment <span class="math inline">\(\mathbf{m}\)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="elektrischer-dipol" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="elektrischer-dipol"><span class="header-section-number">13.2.2</span> Elektrischer Dipol</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM-HED.excalidraw.svg" class="img-fluid figure-img"></p>
+<figcaption>Schematische Darstellung eines horizontalen elektrischen Dipols (HED) mit Dipolmoment <span class="math inline">\(\mathbf{p}\)</span></figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="em-34" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="em-34"><span class="header-section-number">13.3</span> EM-34</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM-EM-34.excalidraw.svg" class="img-fluid figure-img"></p>
+<figcaption>Schematisches Messprinzip und Messergebnis bei gutleitendem vertikalstehenden Störkörper (EM-34)</figcaption>
+</figure>
+</div>
+<section id="spulenkonfigurationen" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="spulenkonfigurationen"><span class="header-section-number">13.3.1</span> Spulenkonfigurationen</h3>
+<p>Unterschiedliche Transmitter-Receiver-konfigurationen bewirken unterschiedliche</p>
+<ul>
+<li>Kopplung</li>
+<li>Eindringtiefe</li>
+<li>Response-Charakteristik</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM-Anordnungen.excalidraw.svg" class="img-fluid figure-img"></p>
+<figcaption>Gebräuchliche Transmitter-Receiver-Konfigurationen</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="em-34-konfigurationen" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="em-34-konfigurationen"><span class="header-section-number">13.4</span> EM-34 Konfigurationen</h2>
+<p>Für die Apparatur EM-34 gelten die folgenden Abschätzungen für die Tiefenreichweite (in Metern) bei typischen Offset-Frequenz-Konfigurationen:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>r in m</th>
+<th>VCP</th>
+<th>HCP</th>
+<th>f in Hz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>6-7.5</td>
+<td>12-15</td>
+<td>6400</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>12-15</td>
+<td>25-30</td>
+<td>1600</td>
+</tr>
+<tr class="odd">
+<td>40</td>
+<td>24-30</td>
+<td>50-60</td>
+<td>400</td>
+</tr>
+</tbody>
+</table>
+<p>Produkt aus <span class="math inline">\(\omega\)</span> und <span class="math inline">\(r^{2}\)</span> ist konstant. <span class="math display">\[
+\omega r^{2} = \text{const}
+\]</span> Induktionszahl:</p>
+<p><span class="math display">\[
+|k|r = \sqrt{\omega \mu_{0} \sigma } r
+\]</span></p>
+<p>Es gilt die <em>LIN</em>- oder <em>low induction number</em>-Näherung, wenn <span class="math inline">\(|k|r \ll 1\)</span></p>
+</section>
+<section id="lin-abhängigkeit-von-der-elektrischen-leitfähigkeit" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="lin-abhängigkeit-von-der-elektrischen-leitfähigkeit"><span class="header-section-number">13.5</span> LIN: Abhängigkeit von der elektrischen Leitfähigkeit</h2>
+<div id="ec865277" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> np.logspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">51</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> [<span class="dv">400</span>, <span class="dv">1600</span>, <span class="dv">6400</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> [<span class="dv">40</span>, <span class="dv">20</span>, <span class="dv">10</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ax.loglog(<span class="dv">1</span> <span class="op">/</span> sigma, [np.<span class="bu">abs</span>(np.sqrt(<span class="op">-</span><span class="ot">1j</span><span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> f[<span class="dv">0</span>] <span class="op">*</span> np.pi <span class="op">*</span> <span class="fl">4e-7</span> <span class="op">*</span> s)) <span class="op">*</span> r[<span class="dv">0</span>] <span class="cf">for</span> s <span class="kw">in</span> sigma]) </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"</span><span class="dv">$</span><span class="ch">\r</span><span class="vs">ho</span><span class="dv">$</span><span class="vs"> in </span><span class="dv">$</span><span class="er">\</span><span class="vs">Omega </span><span class="er">\</span><span class="vs">cdot</span><span class="dv">$</span><span class="vs">m"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="cf">|</span><span class="vs">k</span><span class="cf">|</span><span class="vs">r</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.4</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="csem_files/figure-html/cell-2-output-1.png" width="676" height="359" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="azimutabhängigkeit-bei-steilstehenden-leitfähigkeitsanomalien" class="level3" data-number="13.5.1">
+<h3 data-number="13.5.1" class="anchored" data-anchor-id="azimutabhängigkeit-bei-steilstehenden-leitfähigkeitsanomalien"><span class="header-section-number">13.5.1</span> Azimutabhängigkeit bei steilstehenden Leitfähigkeitsanomalien</h3>
+<p><img src="pics/em/CSEM-inline-broadside.excalidraw.svg" class="img-fluid"></p>
+</section>
+<section id="beispiele" class="level3" data-number="13.5.2">
+<h3 data-number="13.5.2" class="anchored" data-anchor-id="beispiele"><span class="header-section-number">13.5.2</span> Beispiele</h3>
+<p>Die Apparatur EM-34 berechnet intern die <em>scheinbare Leitfähigkeit</em> auf Grundlage der LIN-Näherung:</p>
+<p><span class="math display">\[
+\sigma_s = \frac{4}{\omega\mu_0 r^2} \,\mathrm{imag}\left ( \frac{H}{H_0} \right)
+\]</span></p>
+<p>Wir rechnen mit <code>empymod</code> nach.</p>
+<div id="dc09d850" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> empymod</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> VCP(res, freq, offset, height):</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    src <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span>height, <span class="dv">90</span>, <span class="dv">0</span>]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    rec <span class="op">=</span> [offset, <span class="dv">0</span>, <span class="op">-</span>height, <span class="dv">90</span>, <span class="dv">0</span>]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    depth <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    inp <span class="op">=</span> {<span class="st">'src'</span>: src, <span class="st">'rec'</span>: rec, <span class="st">'depth'</span>: depth, <span class="st">'res'</span>: [<span class="fl">2e20</span>, res],</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>       <span class="st">'freqtime'</span>: freq, <span class="st">'verb'</span>: <span class="dv">1</span>, <span class="st">'xdirect'</span>: <span class="va">True</span>}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    fhz_num <span class="op">=</span> empymod.loop(<span class="op">**</span>inp)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fhz_num</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rhoa(H, offset, freq):</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    omega <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> freq</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    hz_air <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span> <span class="op">/</span> (<span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">*</span> offset<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    sig <span class="op">=</span> <span class="dv">4</span> <span class="op">/</span> (omega <span class="op">*</span> mu0 <span class="op">*</span> offset<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> np.imag(H <span class="op">/</span> hz_air)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="op">/</span> sig</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>mu0 <span class="op">=</span> np.pi <span class="op">*</span> <span class="fl">4e-7</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="37a82b01" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>offset <span class="op">=</span> <span class="fl">10.0</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>freq <span class="op">=</span> <span class="fl">6400.0</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">500.0</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> VCP(rho, freq, offset, h)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"rhoa = </span><span class="sc">{</span>rhoa(H, offset, freq)<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>rhoa = 520.19</code></pre>
+</div>
+</div>
+<div id="948936c2" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>RHO <span class="op">=</span> np.logspace(<span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">41</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>ax.loglog(RHO, [rhoa(VCP(v, freq, offset, h), offset, freq) <span class="cf">for</span> v <span class="kw">in</span> RHO], label<span class="op">=</span><span class="st">"LIN"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>ax.loglog(RHO,RHO, label<span class="op">=</span><span class="st">"true"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Scheinbarer spezifischer Widerstand eines </span><span class="ch">\n</span><span class="st"> homogenen Halbraums berechnet aus LIN-Näherung"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"</span><span class="dv">$</span><span class="ch">\r</span><span class="vs">ho</span><span class="dv">$</span><span class="vs"> in </span><span class="dv">$</span><span class="er">\</span><span class="vs">Omega</span><span class="er">\</span><span class="vs">cdot</span><span class="dv">$</span><span class="vs">m"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="ch">\r</span><span class="vs">ho_{s}</span><span class="dv">$</span><span class="vs"> in </span><span class="dv">$</span><span class="er">\</span><span class="vs">Omega</span><span class="er">\</span><span class="vs">cdot</span><span class="dv">$</span><span class="vs">m"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.5</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="csem_files/figure-html/cell-5-output-1.png" width="519" height="545" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="lin-näherung" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="lin-näherung"><span class="header-section-number">13.6</span> LIN-Näherung</h2>
+<p>Wir stellen die Magnetfeldresponse eines VMD über einem homogenen Halbraum dar. Variiert wird hier nur die Leitfähigkeit, während die Frequenz konstant gehalten wird.</p>
+<p>Wir beobachten einen typischen Verlauf von Real- und Imaginärteil.</p>
+<p>Für die Kalibrierung der scheinbaren Leitfähigkeit bei der Anzeige der Messwerte wird folgendes ausgenutzt:</p>
+<ul>
+<li>Annahme eines homogenen Halbraums</li>
+<li>Realteil konstant</li>
+<li>Imaginärteil ist nur eine Funktion von <span class="math inline">\(\sigma\)</span>, wenn <span class="math inline">\(\omega r^2\)</span> konstant</li>
+<li>Kalibrierung liefert <em>scheinbare Leitfähigkeit</em> <span class="math inline">\(\sigma_{a}\)</span> in mS/m</li>
+</ul>
+<div id="cf6d80f2" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.array([VCP(<span class="dv">1</span> <span class="op">/</span> s, freq, offset, h) <span class="cf">for</span> s <span class="kw">in</span> sigma])</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Hz0 <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span> <span class="op">/</span> (<span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">*</span> offset<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>kr <span class="op">=</span> np.array([np.<span class="bu">abs</span>(np.sqrt(<span class="op">-</span><span class="ot">1j</span><span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> freq <span class="op">*</span> np.pi <span class="op">*</span> <span class="fl">4e-7</span> <span class="op">*</span> s)) <span class="op">*</span> offset <span class="cf">for</span> s <span class="kw">in</span> sigma])</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"|k|r"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="vs">H_{z}</span><span class="dv">$</span><span class="vs"> in A/m"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>ax.loglog(kr, np.<span class="bu">abs</span>(np.real(data)), label<span class="op">=</span><span class="st">"Re"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>ax.loglog(kr, np.<span class="bu">abs</span>(np.imag(data)), label<span class="op">=</span><span class="st">"Im"</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.5</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="csem_files/figure-html/cell-6-output-1.png" width="675" height="357" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="hubschrauber-em" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="hubschrauber-em"><span class="header-section-number">13.7</span> Hubschrauber-EM</h2>
+<ul>
+<li>TX: Magnetischer Dipol</li>
+<li>RX: Induktionsspule</li>
+<li>Konfiguration: HCP</li>
+<li>Kartierung mit Frequenzsondierung</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/CSEM-HEM.excalidraw.svg" class="img-fluid figure-img"></p>
+<figcaption>Messprinzip Hubschrauber-EM</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/aero-em-skizze.gif" class="img-fluid figure-img"></p>
+<figcaption>Aufbau eines Hubschraubermesssystems (Quelle: BGR)</figcaption>
+</figure>
+</div>
+</section>
+<section id="das-fugro-dighem-system" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="das-fugro-dighem-system"><span class="header-section-number">13.8</span> Das Fugro DIGHEM System</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>DIGHEM</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aufgabe</td>
+<td>Bestimmung der elektrischen Leitfähigkeit bis zu Tiefen von eta 150 m</td>
+</tr>
+<tr class="even">
+<td>Abstand TX-RX</td>
+<td>7.9 bis 8.0 (für jede Frequenz verschieden)</td>
+</tr>
+<tr class="odd">
+<td>Frequenzen in Hz</td>
+<td>375, 1778, 8510, 37830, 129000</td>
+</tr>
+<tr class="even">
+<td>Spulenkonfiguration</td>
+<td>HCP</td>
+</tr>
+<tr class="odd">
+<td>Hersteller</td>
+<td>Fugro Airborne Survey (Kanada)</td>
+</tr>
+<tr class="even">
+<td>Sensorhöhe</td>
+<td>30 m</td>
+</tr>
+<tr class="odd">
+<td>Fluggeschwindigkeit</td>
+<td>140 km/h</td>
+</tr>
+<tr class="even">
+<td>Abtastrate</td>
+<td>10 Hz</td>
+</tr>
+<tr class="odd">
+<td>Räumliches Abtastintervall</td>
+<td>4 m</td>
+</tr>
+<tr class="even">
+<td>Weitere Messgeräte</td>
+<td>Cs-Magnetometer Geometrics (USA)</td>
+</tr>
+<tr class="odd">
+<td>davon im Hubschrauber</td>
+<td>Gammastrahlen-Spektrometer, DGPS, Höhenmesser</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="messgröße-hem" class="level2" data-number="13.9">
+<h2 data-number="13.9" class="anchored" data-anchor-id="messgröße-hem"><span class="header-section-number">13.9</span> Messgröße HEM</h2>
+<p>Nach Kompensation (Auslöschung des Primärfeldes im RX) misst RX nur das sekundäre Magnetfeld <span class="math inline">\(\vb{H}_{s}\)</span>.</p>
+<div class="columns">
+<div class="column">
+<p>In HCP-Konfiguration beträgt das Vakuum-Feld im RX im Abstand <span class="math inline">\(r\)</span> vom TX <span class="math display">\[
+H_{0}(r) = - \frac{1}{4 \pi r^{3}}
+\]</span> Das im RX gemessene Vertikalfeld ist damit <span class="math display">\[
+H_{s}(\omega) = \vb{H}(\omega)\cdot \vb{e}_{z} - {H}_{0} = H_{z}(\omega) - H_{0}
+\]</span></p>
+</div><div class="column">
+<p><img src="pics/em/CSEM-Kompensation.excalidraw.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="darstellungsgröße" class="level2" data-number="13.10">
+<h2 data-number="13.10" class="anchored" data-anchor-id="darstellungsgröße"><span class="header-section-number">13.10</span> Darstellungsgröße</h2>
+<p>Das komplexwertige kompensierte Magnetfeld wird auf das Vakuumfeld normiert und in Real- und Imaginärteil zerlegt. Rechnerisch: <span class="math display">\[
+\frac{H_{s}}{H_{0}} = \frac{\mathrm{Re}(H_{z}) + i \mathrm{Im}(H_{z}) - H_{0}}{H_{0}}
+\]</span></p>
+<p><span class="math display">\[
+\overline R = \mathrm{Re} \left( \frac{H_{s}}{H_{0}} \right) = \frac{\mathrm{Re}(H_{z})}{H_{0}}-1  , \qquad \overline Q = \mathrm{Im} \left( \frac{H_{s}}{H_{0}} \right) = \frac{\mathrm{Im}(H_{z})}{H_{0}}
+\]</span> In der Praxis werden diese Größen in der Einheit ppm=<span class="math inline">\(10^{-6}\)</span> dargestellt: <span class="math display">\[
+R := \overline R \times 10^{6}, \qquad Q := \overline Q \times 10^{6}
+\]</span> R: Realteil oder <em>real part</em></p>
+<p>Q: Imaginärteil oder <em>quadrature part</em></p>
+</section>
+<section id="beispiele-salzwasserintrusion-cuxhavener-rinne-bgr" class="level2" data-number="13.11">
+<h2 data-number="13.11" class="anchored" data-anchor-id="beispiele-salzwasserintrusion-cuxhavener-rinne-bgr"><span class="header-section-number">13.11</span> Beispiele: Salzwasserintrusion Cuxhavener Rinne (BGR)</h2>
+<div class="columns">
+<div class="column">
+<p><img src="pics/em/rho_a2_land.jpg" class="img-fluid"></p>
+</div><div class="column">
+<p><img src="pics/em/rho_a3_land.jpg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="anwendungsbeispiel" class="level2" data-number="13.12">
+<h2 data-number="13.12" class="anchored" data-anchor-id="anwendungsbeispiel"><span class="header-section-number">13.12</span> Anwendungsbeispiel</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Lernziel">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Lernziel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Darstellungsgrößen der Hubschrauberelektromagnetik</li>
+<li>Modellierung in 1-D</li>
+<li>Horizontal-koplanare Spulenanordnung (<strong>H</strong>orizontal <strong>C</strong>o-<strong>P</strong>lanar)</li>
+<li>Vertikaler Magnetischer Dipol</li>
+<li>Vakuumresponse in HCP</li>
+<li>Anwenden von <code>empymod</code></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section" class="level2" data-number="13.13">
+<h2 data-number="13.13" class="anchored" data-anchor-id="section"><span class="header-section-number">13.13</span> </h2>
+<section id="synthetische-datensätze" class="level3" data-number="13.13.1">
+<h3 data-number="13.13.1" class="anchored" data-anchor-id="synthetische-datensätze"><span class="header-section-number">13.13.1</span> Synthetische Datensätze</h3>
+<p>Wir erstellen synthetische Datensätze für eine horizontal-koplanare Spulenaufstellung. Der Spulenabstand beträgt 8 m. Die diskreten Frequenzen sind <span class="math display">\[
+f \in (387, 1820, 8225, 41550, 133200) \text{ Hz.}
+\]</span> Die spezifischen Widerstände der 4 Schichten sind <span class="math display">\[
+\rho \in ([50, 200], 100, 5, 1000) ~ \Omega\cdot m,
+\]</span> ihre Mächtigkeiten betragen <span class="math display">\[
+h \in (20, 30, 10) ~m.
+\]</span></p>
+<p>In der Aero-Elektromagnetik werden die Messwerte in folgender Weise dargestellt: <span class="math display">\[
+\begin{align}
+R &amp; = 10^6 \cdot \frac{\mathrm{Re}(H_z - H_z^0)}{H_z^0} = 10^6 \cdot \left(\frac{\mathrm{Re}(H_z)}{H_z^0}-1\right) \\
+Q &amp; = 10^6 \cdot \frac{\mathrm{Im}(H_z - H_z^0)}{H_z^0} = 10^6 \cdot \frac{\mathrm{Im}(H_z)}{H_z^0}
+\end{align}
+\]</span></p>
+</section>
+</section>
+<section id="magnetfeld-vs.-frequenz" class="level2" data-number="13.14">
+<h2 data-number="13.14" class="anchored" data-anchor-id="magnetfeld-vs.-frequenz"><span class="header-section-number">13.14</span> Magnetfeld vs.&nbsp;Frequenz</h2>
+<div id="bc08adf3" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>offset <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>src <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">30</span>, <span class="dv">0</span>, <span class="dv">90</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>rec <span class="op">=</span> [offset, <span class="dv">0</span>, <span class="op">-</span><span class="dv">30</span>, <span class="dv">0</span>, <span class="dv">90</span>]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>depth <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">60</span>]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> [<span class="fl">2e14</span>, <span class="dv">200</span>, <span class="dv">100</span>, <span class="dv">5</span>, <span class="dv">1000</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># res = [2e14, 50, 100, 5, 1000]</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>freq <span class="op">=</span> [<span class="dv">387</span>, <span class="dv">1820</span>, <span class="dv">8225</span>, <span class="dv">41550</span>, <span class="dv">133200</span>]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>inp <span class="op">=</span> {<span class="st">'src'</span>: src, <span class="st">'rec'</span>: rec, <span class="st">'depth'</span>: depth, <span class="st">'res'</span>: res,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>       <span class="st">'freqtime'</span>: freq, <span class="st">'verb'</span>: <span class="dv">0</span>}</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>fhz_num <span class="op">=</span> empymod.loop(<span class="op">**</span>inp)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>hz_air <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span> <span class="op">/</span> (<span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">*</span> offset<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> fhz_num <span class="op">/</span> hz_air</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>R_ppm <span class="op">=</span> <span class="fl">1e6</span> <span class="op">*</span> (np.real(Z) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>Q_ppm <span class="op">=</span> <span class="fl">1e6</span> <span class="op">*</span> np.imag(Z)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="47354d6e" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pos(data):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return positive data; set negative data to NaN."""</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([x <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> np.nan <span class="cf">for</span> x <span class="kw">in</span> data])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> neg(data):</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return -negative data; set positive data to NaN."""</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([<span class="op">-</span>x <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span> <span class="cf">else</span> np.nan <span class="cf">for</span> x <span class="kw">in</span> data])</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>plt.plot(freq, pos(fhz_num.real), <span class="st">'C0-'</span>, label<span class="op">=</span><span class="st">'Real'</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>plt.plot(freq, neg(fhz_num.real), <span class="st">'C0--'</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>plt.plot(freq, pos(fhz_num.imag), <span class="st">'C1-'</span>, label<span class="op">=</span><span class="st">'Imaginary'</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.plot(freq, neg(fhz_num.imag), <span class="st">'C1--'</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>plt.xscale(<span class="st">'log'</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="fl">1e2</span>, <span class="fl">1e6</span>])</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.ylim([1e-12, 1e-6])</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'FREQUENCY (Hz)'</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'$H_z$ (A/m)'</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="csem_files/figure-html/cell-8-output-1.png" width="362" height="371" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="r-und-q-vs.-frequenz" class="level2" data-number="13.15">
+<h2 data-number="13.15" class="anchored" data-anchor-id="r-und-q-vs.-frequenz"><span class="header-section-number">13.15</span> R und Q vs.&nbsp;Frequenz</h2>
+<div id="7ed99fcd" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Code anzeigen</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(freq, R_ppm, label<span class="op">=</span><span class="st">'R'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(freq, Q_ppm, label<span class="op">=</span><span class="st">'Q'</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.xscale(<span class="st">'log'</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="fl">1e2</span>, <span class="fl">1e6</span>])</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="fl">1e1</span>, <span class="fl">1e4</span>])</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'FREQUENCY (Hz)'</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'R, Q in ppm'</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="csem_files/figure-html/cell-9-output-1.png" width="660" height="466" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="semi-airborne-methoden" class="level2" data-number="13.16">
+<h2 data-number="13.16" class="anchored" data-anchor-id="semi-airborne-methoden"><span class="header-section-number">13.16</span> Semi-airborne-Methoden</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/desmex-model.png" class="img-fluid figure-img"></p>
+<figcaption>Explorationsmethoden (Quelle: LIAG Hannover)</figcaption>
+</figure>
+</div>
+</section>
+<section id="messkonzept" class="level2" data-number="13.17">
+<h2 data-number="13.17" class="anchored" data-anchor-id="messkonzept"><span class="header-section-number">13.17</span> Messkonzept</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/desmex-messkonzept.png" class="img-fluid figure-img"></p>
+<figcaption>(Quelle: LIAG Hannover)</figcaption>
+</figure>
+</div>
+</section>
+<section id="section-1" class="level2" data-number="13.18">
+<h2 data-number="13.18" class="anchored" data-anchor-id="section-1"><span class="header-section-number">13.18</span> </h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/em/desmex-oberharz.png" class="img-fluid figure-img"></p>
+<figcaption>Befliegungsgebietr Oberharz (Quelle: LIAG Hannover)</figcaption>
+</figure>
+</div>
+</section>
+<section id="section-2" class="level2" data-number="13.19">
+<h2 data-number="13.19" class="anchored" data-anchor-id="section-2"><span class="header-section-number">13.19</span> </h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/ysCX9XXussM" width="100%" height="100%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./magnetotellurik.html" class="pagination-link" aria-label="Magnetotellurik">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Magnetotellurik</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./zusammenfassung.html" class="pagination-link" aria-label="Zusammenfassung">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Zusammenfassung</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

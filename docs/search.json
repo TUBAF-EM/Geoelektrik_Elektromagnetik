@@ -192,7 +192,7 @@
     "href": "sens_arrays.html#mess-strategien",
     "title": "4  Sensitivitäten und Messanordnungen",
     "section": "4.3 Mess-Strategien",
-    "text": "4.3 Mess-Strategien\n\n\n\n\n\n\nKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)\n\n\n\n4.3.1 Widerstands-Kartierung\n\nKartierungen mit festen Anordnungen werden heutzutage nur noch selten eingesetzt (wenn die Teufenlage eines zu suchenden, eher kleineren Objekts gut bekannt ist). Auch Sondierungen, die zur Erkundung von horizontal geschichteten Untergründen eingesetzt werden) treten immer weiter in den Hintergrund. Bei weitem häufigstes Verfahren ist die 2D-Geoelektrik (nur noch selten als Sondierungs-Kartierung bezeichnet). Manchmal werden 3D-Anordnungen oder Anordnungen unter Zuhilfenahme von Bohrlöchern eingesetzt.",
+    "text": "4.3 Mess-Strategien\n\n\n\n\n\n\nHinweisKartierung\n\n\n\n“Bewegung” einer festen Anordnung entlang eines Profils\n\n\n\n\n\n\n\n\nHinweisSondierung\n\n\n\nVergrößerung der Auslage bei festem Mittelpunkt\n\n\n\n\n\n\n\n\nHinweisSondierungskartierung/2D-Geoelektrik\n\n\n\nKombination aus Kartierung und Sondierung, meist bei festem Aufbau einer Elektrodenkette (Multielektroden-Geoelektrik): Electrical Resistivity Tomography (ERT)\n\n\n\n4.3.1 Widerstands-Kartierung\n\nKartierungen mit festen Anordnungen werden heutzutage nur noch selten eingesetzt (wenn die Teufenlage eines zu suchenden, eher kleineren Objekts gut bekannt ist). Auch Sondierungen, die zur Erkundung von horizontal geschichteten Untergründen eingesetzt werden) treten immer weiter in den Hintergrund. Bei weitem häufigstes Verfahren ist die 2D-Geoelektrik (nur noch selten als Sondierungs-Kartierung bezeichnet). Manchmal werden 3D-Anordnungen oder Anordnungen unter Zuhilfenahme von Bohrlöchern eingesetzt.",
     "crumbs": [
       "Geoelektrik",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Sensitivitäten und Messanordnungen</span>"
@@ -919,6 +919,325 @@
     "text": "Here are the slide decks:\n\n👉 Methods — Slides\n\n\n\n\n👉 History — Slides",
     "crumbs": [
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Slide decks</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html",
+    "href": "csem.html",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "",
+    "text": "13.1 Einführung\nÜber Transmitter TX (Spule, geerdetes Kabel) wird Feld angekoppelt.\nPrimäres, zeitlich variables Magnetfeld induziert im Leiter Wirbelströme. Diese besitzen wiederum ein Magnetfeld, das sich in Stärke, Richtung und Phase vom primären Feld unterscheidet.\nWir messen \\(\\vb B\\) im Receiver RX als Funktion von Frequenz und Transmitter-Receiver-Abstand (Offset).\nFrequenz und Offset sind technische Sondierungsparameter, die gesteuert werden können in Abhängigkeit von\nIn Abhängigkeit von der geophysikalischen Fragestellung sind zwei methodische Varianten in Verwendung:\nKartierung durch Bewegung von TX und RX entlang eines Profils oder auf einer Fläche unter Beibehaltung des Abstandes (TX-RX-Offset) Sondierung durch Veränderung von Frequenz und/oder Offset.\nEs gibt auch Varianten, die eine Kombination von Kartierung und Sondierung realisieren (Beispiel: Aero-EM)\nWir unterscheiden zwei grundsätzliche Varianten:",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#einführung",
+    "href": "csem.html#einführung",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "",
+    "text": "Prinzip der elektromagnetischen Induktion\n\n\n\n\nMagnetfeld \\(\\mathbf{H}\\)\nElektrisches Feld \\(\\mathbf{E}\\)\n\n\n\n\n\nTargettiefe\nTargetgröße und Leitfähigkeit.\n\n\n\nKartierung\nSondierung\n\n\n\n\n\nAbstandssondierung\nFrequenzsondierung",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#em-34",
+    "href": "csem.html#em-34",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.3 EM-34",
+    "text": "13.3 EM-34\n\n\n\nSchematisches Messprinzip und Messergebnis bei gutleitendem vertikalstehenden Störkörper (EM-34)\n\n\n\n13.3.1 Spulenkonfigurationen\nUnterschiedliche Transmitter-Receiver-konfigurationen bewirken unterschiedliche\n\nKopplung\nEindringtiefe\nResponse-Charakteristik\n\n\n\n\nGebräuchliche Transmitter-Receiver-Konfigurationen\n\n\n\n\n13.3.2 EM-34 Konfigurationen\nFür die Apparatur EM-34 gelten die folgenden Abschätzungen für die Tiefenreichweite (in Metern) bei typischen Offset-Frequenz-Konfigurationen:\n\n\n\nr in m\nVCP\nHCP\nf in Hz\n\n\n\n\n10\n6-7.5\n12-15\n6400\n\n\n20\n12-15\n25-30\n1600\n\n\n40\n24-30\n50-60\n400\n\n\n\nProdukt aus \\(\\omega\\) und \\(r^{2}\\) ist konstant. \\[\n\\omega r^{2} = \\text{const}\n\\] Induktionszahl:\n\\[\n|k|r = \\sqrt{\\omega \\mu_{0} \\sigma } r\n\\]\nEs gilt die LIN- oder low induction number-Näherung, wenn \\(|k|r \\ll 1\\)\n\n\n13.3.3 LIN: Abhängigkeit von der elektrischen Leitfähigkeit\n\n\nCode anzeigen\nimport numpy as np\nimport matplotlib.pyplot as plt\nsigma = np.logspace(-5, 0, 51)\nf = [400, 1600, 6400]\nr = [40, 20, 10]\n\nfig, ax = plt.subplots(figsize=(8, 4))\nax.loglog(1 / sigma, [np.abs(np.sqrt(-1j* 2 * np.pi * f[0] * np.pi * 4e-7 * s)) * r[0] for s in sigma]) \nax.set_xlabel(r\"$\\rho$ in $\\Omega \\cdot$m\")\nax.set_ylabel(r\"$|k|r$\")\nax.grid(alpha=0.4)\n\n\n\n\n\n\n\n\n\n\n\n13.3.4 Azimutabhängigkeit bei steilstehenden Leitfähigkeitsanomalien\n\n\n\n13.3.5 Beispiele\nDie Apparatur EM-34 berechnet intern die scheinbare Leitfähigkeit auf Grundlage der LIN-Näherung:\n\\[\n\\sigma_s = \\frac{4}{\\omega\\mu_0 r^2} \\,\\mathrm{imag}\\left ( \\frac{H}{H_0} \\right)\n\\]\nWir rechnen mit empymod nach.\n\n\nCode anzeigen\nimport empymod\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef VCP(res, freq, offset, height):\n    src = [0, 0, -height, 90, 0]\n    rec = [offset, 0, -height, 90, 0]\n    depth = 0.0\n    inp = {'src': src, 'rec': rec, 'depth': depth, 'res': [2e20, res],\n       'freqtime': freq, 'verb': 1, 'xdirect': True}\n    fhz_num = empymod.loop(**inp)\n    return fhz_num\n\ndef rhoa(H, offset, freq):\n    omega = 2 * np.pi * freq\n    hz_air = -1.0 / (4 * np.pi * offset**3)\n    sig = 4 / (omega * mu0 * offset**2) * np.imag(H / hz_air)\n    return 1 / sig\n\nmu0 = np.pi * 4e-7\n\n\n\n\nCode anzeigen\noffset = 10.0\nfreq = 6400.0\nh = 0.0\nrho = 500.0\nH = VCP(rho, freq, offset, h)\nprint(f\"rhoa = {rhoa(H, offset, freq):.2f}\")\n\n\nrhoa = 520.19\n\n\n\n\nCode anzeigen\nRHO = np.logspace(0, 4, 41)\nfig, ax = plt.subplots(figsize=(6, 6))\nax.loglog(RHO, [rhoa(VCP(v, freq, offset, h), offset, freq) for v in RHO], label=\"LIN\")\nax.loglog(RHO,RHO, label=\"true\")\nax.set_title(\"Scheinbarer spezifischer Widerstand eines \\n homogenen Halbraums berechnet aus LIN-Näherung\")\nax.set_xlabel(r\"$\\rho$ in $\\Omega\\cdot$m\")\nax.set_ylabel(r\"$\\rho_{s}$ in $\\Omega\\cdot$m\")\nax.legend()\nax.grid(alpha=0.5)\n\n\n\n\n\n\n\n\n\n\n\n13.3.6 LIN-Näherung\nWir stellen die Magnetfeldresponse eines VMD über einem homogenen Halbraum dar. Variiert wird hier nur die Leitfähigkeit, während die Frequenz konstant gehalten wird.\nWir beobachten einen typischen Verlauf von Real- und Imaginärteil.\nFür die Kalibrierung der scheinbaren Leitfähigkeit bei der Anzeige der Messwerte wird folgendes ausgenutzt:\n\nAnnahme eines homogenen Halbraums\nRealteil konstant\nImaginärteil ist nur eine Funktion von \\(\\sigma\\), wenn \\(\\omega r^2\\) konstant\nKalibrierung liefert scheinbare Leitfähigkeit \\(\\sigma_{a}\\) in mS/m\n\n\n\nCode anzeigen\ndata = np.array([VCP(1 / s, freq, offset, h) for s in sigma])\nHz0 = -1.0 / (4 * np.pi * offset**3)\nkr = np.array([np.abs(np.sqrt(-1j* 2 * np.pi * freq * np.pi * 4e-7 * s)) * offset for s in sigma])\nfig, ax = plt.subplots(figsize=(8, 4))\nax.set_xlabel(\"|k|r\")\nax.set_ylabel(r\"$H_{z}$ in A/m\")\nax.loglog(kr, np.abs(np.real(data)), label=\"Re\")\nax.loglog(kr, np.abs(np.imag(data)), label=\"Im\")\nax.legend()\nax.grid(alpha=0.5)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#spulenkonfigurationen",
+    "href": "csem.html#spulenkonfigurationen",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.3 Spulenkonfigurationen",
+    "text": "13.3 Spulenkonfigurationen\n\nKopplung\nEindringtiefe\nResponse-Charakteristik",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#dipolquellen",
+    "href": "csem.html#dipolquellen",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.2 Dipolquellen",
+    "text": "13.2 Dipolquellen\n\n13.2.1 Magnetischer Dipol\n\n\n\nSchematische Darstellung eines horizontalen (HMD) und vertikalen magnetischen Dipols (VMD) mit Dipolmoment \\(\\mathbf{m}\\)\n\n\n\n\n13.2.2 Elektrischer Dipol\n\n\n\nSchematische Darstellung eines horizontalen elektrischen Dipols (HED) mit Dipolmoment \\(\\mathbf{p}\\)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#em-34-konfigurationen",
+    "href": "csem.html#em-34-konfigurationen",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.4 EM-34 Konfigurationen",
+    "text": "13.4 EM-34 Konfigurationen\nFür die Apparatur EM-34 gelten die folgenden Abschätzungen für die Tiefenreichweite (in Metern) bei typischen Offset-Frequenz-Konfigurationen:\n\n\n\nr in m\nVCP\nHCP\nf in Hz\n\n\n\n\n10\n6-7.5\n12-15\n6400\n\n\n20\n12-15\n25-30\n1600\n\n\n40\n24-30\n50-60\n400\n\n\n\nProdukt aus \\(\\omega\\) und \\(r^{2}\\) ist konstant. \\[\n\\omega r^{2} = \\text{const}\n\\] Induktionszahl:\n\\[\n|k|r = \\sqrt{\\omega \\mu_{0} \\sigma } r\n\\]\nEs gilt die LIN- oder low induction number-Näherung, wenn \\(|k|r \\ll 1\\)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#lin-abhängigkeit-von-leitfähigkeit",
+    "href": "csem.html#lin-abhängigkeit-von-leitfähigkeit",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.5 LIN: Abhängigkeit von Leitfähigkeit",
+    "text": "13.5 LIN: Abhängigkeit von Leitfähigkeit\n\n\nCode anzeigen\nimport numpy as np\nimport matplotlib.pyplot as plt\nsigma = np.logspace(-5, 0, 51)\nf = [400, 1600, 6400]\nr = [40, 20, 10]\n\nfig, ax = plt.subplots(figsize=(8, 4))\nax.loglog(1 / sigma, [np.abs(np.sqrt(-1j* 2 * np.pi * f[0] * np.pi * 4e-7 * s)) * r[0] for s in sigma]) \nax.set_xlabel(r\"$\\rho$ in $\\Omega \\cdot$m\")\nax.set_ylabel(r\"$|k|r$\")\nax.grid(alpha=0.4)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#section",
+    "href": "csem.html#section",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.13 ",
+    "text": "13.13 \n\n13.13.1 Synthetische Datensätze\nWir erstellen synthetische Datensätze für eine horizontal-koplanare Spulenaufstellung. Der Spulenabstand beträgt 8 m. Die diskreten Frequenzen sind \\[\nf \\in (387, 1820, 8225, 41550, 133200) \\text{ Hz.}\n\\] Die spezifischen Widerstände der 4 Schichten sind \\[\n\\rho \\in ([50, 200], 100, 5, 1000) ~ \\Omega\\cdot m,\n\\] ihre Mächtigkeiten betragen \\[\nh \\in (20, 30, 10) ~m.\n\\]\nIn der Aero-Elektromagnetik werden die Messwerte in folgender Weise dargestellt: \\[\n\\begin{align}\nR & = 10^6 \\cdot \\frac{\\mathrm{Re}(H_z - H_z^0)}{H_z^0} = 10^6 \\cdot \\left(\\frac{\\mathrm{Re}(H_z)}{H_z^0}-1\\right) \\\\\nQ & = 10^6 \\cdot \\frac{\\mathrm{Im}(H_z - H_z^0)}{H_z^0} = 10^6 \\cdot \\frac{\\mathrm{Im}(H_z)}{H_z^0}\n\\end{align}\n\\]",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#beispiele",
+    "href": "csem.html#beispiele",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.7 Beispiele",
+    "text": "13.7 Beispiele\nDie Apparatur EM-34 berechnet intern die scheinbare Leitfähigkeit auf Grundlage der LIN-Näherung:\n\\[\n\\sigma_s = \\frac{4}{\\omega\\mu_0 r^2} \\,\\mathrm{imag}\\left ( \\frac{H}{H_0} \\right)\n\\]\nWir rechnen mit empymod nach.\n\n\nCode anzeigen\nimport empymod\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef VCP(res, freq, offset, height):\n    src = [0, 0, -height, 90, 0]\n    rec = [offset, 0, -height, 90, 0]\n    depth = 0.0\n    inp = {'src': src, 'rec': rec, 'depth': depth, 'res': [2e20, res],\n       'freqtime': freq, 'verb': 1, 'xdirect': True}\n    fhz_num = empymod.loop(**inp)\n    return fhz_num\n\ndef rhoa(H, offset, freq):\n    omega = 2 * np.pi * freq\n    hz_air = -1.0 / (4 * np.pi * offset**3)\n    sig = 4 / (omega * mu0 * offset**2) * np.imag(H / hz_air)\n    return 1 / sig\n\nmu0 = np.pi * 4e-7\n\n\n\n\nCode anzeigen\noffset = 10.0\nfreq = 6400.0\nh = 0.0\nrho = 500.0\nH = VCP(rho, freq, offset, h)\nprint(f\"rhoa = {rhoa(H, offset, freq):.2f}\")\n\n\nrhoa = 520.19",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#section-1",
+    "href": "csem.html#section-1",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.18 ",
+    "text": "13.18 \n\n\n\nBefliegungsgebietr Oberharz (Quelle: LIAG Hannover)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#lin",
+    "href": "csem.html#lin",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.6 LIN",
+    "text": "13.6 LIN\nAusgenutzt wird:\n\nAnnahme eines homogenen Halbraums\nRealteil konstant\nImaginärteil ist nur eine Funktion von \\(\\sigma\\), wenn \\(\\omega r^2\\) konstant\nKalibrierung liefert scheinbare Leitfähigkeit \\(\\sigma_{a}\\) in mS/m\n\n\n\nCode anzeigen\ndata = np.array([VCP(1 / s, freq, offset, h) for s in sigma])\nHz0 = -1.0 / (4 * np.pi * offset**3)\nkr = np.array([np.abs(np.sqrt(-1j* 2 * np.pi * freq * np.pi * 4e-7 * s)) * offset for s in sigma])\nfig, ax = plt.subplots(figsize=(8, 4))\nax.set_xlabel(\"|k|r\")\nax.set_ylabel(r\"$H_{z}$ in A/m\")\nax.loglog(kr, np.abs(np.real(data)), label=\"Re\")\nax.loglog(kr, np.abs(np.imag(data)), label=\"Im\")\nax.legend()\nax.grid(alpha=0.5)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#hubschrauber-em",
+    "href": "csem.html#hubschrauber-em",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.4 Hubschrauber-EM",
+    "text": "13.4 Hubschrauber-EM\n\nTX: Magnetischer Dipol\nRX: Induktionsspule\nKonfiguration: HCP\nKartierung mit Frequenzsondierung\n\n\n\n\nMessprinzip Hubschrauber-EM\n\n\n\n\n\nAufbau eines Hubschraubermesssystems (Quelle: BGR)\n\n\n\n13.4.1 Das Fugro DIGHEM System\n\n\n\n\n\n\n\nDIGHEM\n\n\n\n\n\nAufgabe\nBestimmung der elektrischen Leitfähigkeit bis zu Tiefen von eta 150 m\n\n\nAbstand TX-RX\n7.9 bis 8.0 (für jede Frequenz verschieden)\n\n\nFrequenzen in Hz\n375, 1778, 8510, 37830, 129000\n\n\nSpulenkonfiguration\nHCP\n\n\nHersteller\nFugro Airborne Survey (Kanada)\n\n\nSensorhöhe\n30 m\n\n\nFluggeschwindigkeit\n140 km/h\n\n\nAbtastrate\n10 Hz\n\n\nRäumliches Abtastintervall\n4 m\n\n\nWeitere Messgeräte\nCs-Magnetometer Geometrics (USA)\n\n\ndavon im Hubschrauber\nGammastrahlen-Spektrometer, DGPS, Höhenmesser\n\n\n\n\n\n13.4.2 Messgröße HEM\nNach Kompensation (Auslöschung des Primärfeldes im RX) misst RX nur das sekundäre Magnetfeld \\(\\vb{H}_{s}\\).\nIn HCP-Konfiguration beträgt das Vakuum-Feld im RX im Abstand \\(r\\) vom TX \\[\nH_{0}(r) = - \\frac{1}{4 \\pi r^{3}}.\n\\] Das im RX gemessene Vertikalfeld ist damit \\[\nH_{s}(\\omega) = \\vb{H}(\\omega)\\cdot \\vb{e}_{z} - {H}_{0} = H_{z}(\\omega) - H_{0}\n\\]\n\n\n\n13.4.3 Darstellungsgrößen\nDas komplexwertige kompensierte Magnetfeld wird auf das Vakuumfeld normiert und in Real- und Imaginärteil zerlegt.\nRechnerisch: \\[\n\\frac{H_{s}}{H_{0}} = \\frac{\\mathrm{Re}(H_{z}) + i \\mathrm{Im}(H_{z}) - H_{0}}{H_{0}}\n\\]\n\\[\n\\overline R = \\mathrm{Re} \\left( \\frac{H_{s}}{H_{0}} \\right) = \\frac{\\mathrm{Re}(H_{z})}{H_{0}}-1  , \\qquad \\overline Q = \\mathrm{Im} \\left( \\frac{H_{s}}{H_{0}} \\right) = \\frac{\\mathrm{Im}(H_{z})}{H_{0}}\n\\] In der Praxis werden diese Größen in ppm (parts per million, \\(10^{-6}\\)) dargestellt: \\[\nR := \\overline R \\times 10^{6}, \\qquad Q := \\overline Q \\times 10^{6}\n\\] R: Realteil oder real part\nQ: Imaginärteil oder quadrature part\n\n\n13.4.4 Beispiele: Salzwasserintrusion Cuxhavener Rinne (BGR)\n\n\n\n\n\n\n\n\n\n13.4.5 Anwendungsbeispiel\n\n\n\n\n\n\nHinweisLernziel\n\n\n\n\nDarstellungsgrößen der Hubschrauberelektromagnetik\nModellierung in 1-D\nHorizontal-koplanare Spulenanordnung (Horizontal Co-Planar)\nVertikaler Magnetischer Dipol\nVakuumresponse in HCP\nAnwenden von empymod\n\n\n\n\n\n13.4.6 Synthetische Datensätze\nWir erstellen synthetische Datensätze für eine horizontal-koplanare Spulenaufstellung. Der Spulenabstand beträgt 8 m. Die diskreten Frequenzen sind \\[\nf \\in (387, 1820, 8225, 41550, 133200) \\text{ Hz.}\n\\] Die spezifischen Widerstände der 4 Schichten sind \\[\n\\rho \\in ([50, 200], 100, 5, 1000) ~ \\Omega\\cdot m,\n\\] ihre Mächtigkeiten betragen \\[\nh \\in (20, 30, 10) ~m.\n\\]\nIn der Aero-Elektromagnetik werden die Messwerte in folgender Weise dargestellt: \\[\n\\begin{align}\nR & = 10^6 \\cdot \\frac{\\mathrm{Re}(H_z - H_z^0)}{H_z^0} = 10^6 \\cdot \\left(\\frac{\\mathrm{Re}(H_z)}{H_z^0}-1\\right) \\\\\nQ & = 10^6 \\cdot \\frac{\\mathrm{Im}(H_z - H_z^0)}{H_z^0} = 10^6 \\cdot \\frac{\\mathrm{Im}(H_z)}{H_z^0}\n\\end{align}\n\\]\n\n\n13.4.7 Magnetfeld vs. Frequenz\n\n\nCode anzeigen\noffset = 8\nsrc = [0, 0, -30, 0, 90]\nrec = [offset, 0, -30, 0, 90]\ndepth = [0, 20, 50, 60]\nres = [2e14, 200, 100, 5, 1000]\n# res = [2e14, 50, 100, 5, 1000]\nfreq = [387, 1820, 8225, 41550, 133200]\n\ninp = {'src': src, 'rec': rec, 'depth': depth, 'res': res,\n       'freqtime': freq, 'verb': 0}\n\nfhz_num = empymod.loop(**inp)\n\nhz_air = -1.0 / (4 * np.pi * offset**3)\n\nZ = fhz_num / hz_air\nR_ppm = 1e6 * (np.real(Z) - 1)\nQ_ppm = 1e6 * np.imag(Z)\n\n\n\n\nCode anzeigen\ndef pos(data):\n    \"\"\"Return positive data; set negative data to NaN.\"\"\"\n    return np.array([x if x &gt; 0 else np.nan for x in data])\n\n\ndef neg(data):\n    \"\"\"Return -negative data; set positive data to NaN.\"\"\"\n    return np.array([-x if x &lt; 0 else np.nan for x in data])\n\n\nfig, ax = plt.subplots(figsize=(6, 4))\n\nplt.plot(freq, pos(fhz_num.real), 'C0-', label='Real')\nplt.plot(freq, neg(fhz_num.real), 'C0--')\n\nplt.plot(freq, pos(fhz_num.imag), 'C1-', label='Imaginary')\nplt.plot(freq, neg(fhz_num.imag), 'C1--')\n\nplt.xscale('log')\nplt.yscale('log')\nplt.xlim([1e2, 1e6])\n# plt.ylim([1e-12, 1e-6])\nplt.xlabel('FREQUENCY (Hz)')\nplt.ylabel('$H_z$ (A/m)')\nplt.legend()\nax.set_aspect('equal')\nax.grid(alpha=0.5)\nplt.tight_layout()\n\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n13.4.8 R und Q vs. Frequenz\n\n\nCode anzeigen\nplt.scatter(freq, R_ppm, label='R')\nplt.scatter(freq, Q_ppm, label='Q')\nplt.xscale('log')\nplt.yscale('log')\nplt.xlim([1e2, 1e6])\nplt.ylim([1e1, 1e4])\nplt.grid(True)\nplt.legend()\nplt.xlabel('FREQUENCY (Hz)')\nplt.ylabel('R, Q in ppm')\nplt.tight_layout()\n\nplt.show()",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#section-2",
+    "href": "csem.html#section-2",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.19 ",
+    "text": "13.19",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#fugro-dighem",
+    "href": "csem.html#fugro-dighem",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.8 Fugro DIGHEM",
+    "text": "13.8 Fugro DIGHEM\n\n\n\n\n\n\n\nDIGHEM\n\n\n\n\n\nAufgabe\nBestimmung der elektrischen Leitfähigkeit bis zu Tiefen von eta 150 m\n\n\nAbstand TX-RX\n7.9 bis 8.0 (für jede Frequenz verschieden)\n\n\nFrequenzen in Hz\n375, 1778, 8510, 37830, 129000\n\n\nSpulenkonfiguration\nHCP\n\n\nHersteller\nFugro Airborne Survey (Kanada)\n\n\nSensorhöhe\n30 m\n\n\nFluggeschwindigkeit\n140 km/h\n\n\nAbtastrate\n10 Hz\n\n\nRäumliches Abtastintervall\n4 m\n\n\nWeitere Messgeräte\nCs-Magnetometer Geometrics (USA)\n\n\ndavon im Hubschrauber\nGammastrahlen-Spektrometer, DGPS, Höhenmesser",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#messgröße-hem",
+    "href": "csem.html#messgröße-hem",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.9 Messgröße HEM",
+    "text": "13.9 Messgröße HEM\nNach Kompensation (Auslöschung des Primärfeldes im RX) misst RX nur das sekundäre Magnetfeld \\(\\vb{H}_{s}\\).\nIn HCP-Konfiguration beträgt das Vakuum-Feld im RX im Abstand \\(r\\) vom TX \\[\nH_{0}(r) = - \\frac{1}{4 \\pi r^{3}}.\n\\] Das im RX gemessene Vertikalfeld ist damit \\[\nH_{s}(\\omega) = \\vb{H}(\\omega)\\cdot \\vb{e}_{z} - {H}_{0} = H_{z}(\\omega) - H_{0}\n\\]",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#darstellungsgröße",
+    "href": "csem.html#darstellungsgröße",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.10 Darstellungsgröße",
+    "text": "13.10 Darstellungsgröße\nDas komplexwertige kompensierte Magnetfeld wird auf das Vakuumfeld normiert und in Real- und Imaginärteil zerlegt. Rechnerisch: \\[\n\\frac{H_{s}}{H_{0}} = \\frac{\\mathrm{Re}(H_{z}) + i \\mathrm{Im}(H_{z}) - H_{0}}{H_{0}}\n\\]\n\\[\n\\overline R = \\mathrm{Re} \\left( \\frac{H_{s}}{H_{0}} \\right) = \\frac{\\mathrm{Re}(H_{z})}{H_{0}}-1  , \\qquad \\overline Q = \\mathrm{Im} \\left( \\frac{H_{s}}{H_{0}} \\right) = \\frac{\\mathrm{Im}(H_{z})}{H_{0}}\n\\] In der Praxis werden diese Größen in der Einheit ppm=\\(10^{-6}\\) dargestellt: \\[\nR := \\overline R \\times 10^{6}, \\qquad Q := \\overline Q \\times 10^{6}\n\\] R: Realteil oder real part\nQ: Imaginärteil oder quadrature part",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#beispiele-salzwasserintrusion-cuxhavener-rinne-bgr",
+    "href": "csem.html#beispiele-salzwasserintrusion-cuxhavener-rinne-bgr",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.11 Beispiele: Salzwasserintrusion Cuxhavener Rinne (BGR)",
+    "text": "13.11 Beispiele: Salzwasserintrusion Cuxhavener Rinne (BGR)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#anwendungsbeispiel",
+    "href": "csem.html#anwendungsbeispiel",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.12 Anwendungsbeispiel",
+    "text": "13.12 Anwendungsbeispiel\n\n\n\n\n\n\nHinweisLernziel\n\n\n\n\nDarstellungsgrößen der Hubschrauberelektromagnetik\nModellierung in 1-D\nHorizontal-koplanare Spulenanordnung (Horizontal Co-Planar)\nVertikaler Magnetischer Dipol\nVakuumresponse in HCP\nAnwenden von empymod\n\n\n\n\n13.12.1 Synthetische Datensätze\nWir erstellen synthetische Datensätze für eine horizontal-koplanare Spulenaufstellung. Der Spulenabstand beträgt 8 m. Die diskreten Frequenzen sind \\[\nf \\in (387, 1820, 8225, 41550, 133200) \\text{ Hz.}\n\\] Die spezifischen Widerstände der 4 Schichten sind \\[\n\\rho \\in ([50, 200], 100, 5, 1000) ~ \\Omega\\cdot m,\n\\] ihre Mächtigkeiten betragen \\[\nh \\in (20, 30, 10) ~m.\n\\]\nIn der Aero-Elektromagnetik werden die Messwerte in folgender Weise dargestellt: \\[\n\\begin{align}\nR & = 10^6 \\cdot \\frac{\\mathrm{Re}(H_z - H_z^0)}{H_z^0} = 10^6 \\cdot \\left(\\frac{\\mathrm{Re}(H_z)}{H_z^0}-1\\right) \\\\\nQ & = 10^6 \\cdot \\frac{\\mathrm{Im}(H_z - H_z^0)}{H_z^0} = 10^6 \\cdot \\frac{\\mathrm{Im}(H_z)}{H_z^0}\n\\end{align}\n\\]",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#section-3",
+    "href": "csem.html#section-3",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.20 ",
+    "text": "13.20",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#magnetfeld-vs.-frequenz",
+    "href": "csem.html#magnetfeld-vs.-frequenz",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.13 Magnetfeld vs. Frequenz",
+    "text": "13.13 Magnetfeld vs. Frequenz\n\n\nCode anzeigen\noffset = 8\nsrc = [0, 0, -30, 0, 90]\nrec = [offset, 0, -30, 0, 90]\ndepth = [0, 20, 50, 60]\nres = [2e14, 200, 100, 5, 1000]\n# res = [2e14, 50, 100, 5, 1000]\nfreq = [387, 1820, 8225, 41550, 133200]\n\ninp = {'src': src, 'rec': rec, 'depth': depth, 'res': res,\n       'freqtime': freq, 'verb': 0}\n\nfhz_num = empymod.loop(**inp)\n\nhz_air = -1.0 / (4 * np.pi * offset**3)\n\nZ = fhz_num / hz_air\nR_ppm = 1e6 * (np.real(Z) - 1)\nQ_ppm = 1e6 * np.imag(Z)\n\n\n\n\nCode anzeigen\ndef pos(data):\n    \"\"\"Return positive data; set negative data to NaN.\"\"\"\n    return np.array([x if x &gt; 0 else np.nan for x in data])\n\n\ndef neg(data):\n    \"\"\"Return -negative data; set positive data to NaN.\"\"\"\n    return np.array([-x if x &lt; 0 else np.nan for x in data])\n\n\nfig, ax = plt.subplots(figsize=(6, 4))\n\nplt.plot(freq, pos(fhz_num.real), 'C0-', label='Real')\nplt.plot(freq, neg(fhz_num.real), 'C0--')\n\nplt.plot(freq, pos(fhz_num.imag), 'C1-', label='Imaginary')\nplt.plot(freq, neg(fhz_num.imag), 'C1--')\n\nplt.xscale('log')\nplt.yscale('log')\nplt.xlim([1e2, 1e6])\n# plt.ylim([1e-12, 1e-6])\nplt.xlabel('FREQUENCY (Hz)')\nplt.ylabel('$H_z$ (A/m)')\nplt.legend()\nax.set_aspect('equal')\nax.grid(alpha=0.5)\nplt.tight_layout()\n\nplt.show()",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#r-und-q-vs.-frequenz",
+    "href": "csem.html#r-und-q-vs.-frequenz",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.14 R und Q vs. Frequenz",
+    "text": "13.14 R und Q vs. Frequenz\n\n\nCode anzeigen\nplt.scatter(freq, R_ppm, label='R')\nplt.scatter(freq, Q_ppm, label='Q')\nplt.xscale('log')\nplt.yscale('log')\nplt.xlim([1e2, 1e6])\nplt.ylim([1e1, 1e4])\nplt.grid(True)\nplt.legend()\nplt.xlabel('FREQUENCY (Hz)')\nplt.ylabel('R, Q in ppm')\nplt.tight_layout()\n\nplt.show()",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#semi-airborne-methoden",
+    "href": "csem.html#semi-airborne-methoden",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.5 Semi-airborne-Methoden",
+    "text": "13.5 Semi-airborne-Methoden\n\n\n\nExplorationsmethoden (Quelle: LIAG Hannover)\n\n\n\n13.5.1 Messkonzept\n\n\n\n(Quelle: LIAG Hannover)\n\n\n\n\n\nBefliegungsgebiet Oberharz (Quelle: LIAG Hannover)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#messkonzept",
+    "href": "csem.html#messkonzept",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.16 Messkonzept",
+    "text": "13.16 Messkonzept\n\n\n\n(Quelle: LIAG Hannover)\n\n\n\n\n\nBefliegungsgebietr Oberharz (Quelle: LIAG Hannover)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#section-4",
+    "href": "csem.html#section-4",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.22 ",
+    "text": "13.22 \n\n\n\nBefliegungsgebietr Oberharz (Quelle: LIAG Hannover)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#section-5",
+    "href": "csem.html#section-5",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.23 ",
+    "text": "13.23",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#lin-abhängigkeit-von-der-elektrischen-leitfähigkeit",
+    "href": "csem.html#lin-abhängigkeit-von-der-elektrischen-leitfähigkeit",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.5 LIN: Abhängigkeit von der elektrischen Leitfähigkeit",
+    "text": "13.5 LIN: Abhängigkeit von der elektrischen Leitfähigkeit\n\n\nCode anzeigen\nimport numpy as np\nimport matplotlib.pyplot as plt\nsigma = np.logspace(-5, 0, 51)\nf = [400, 1600, 6400]\nr = [40, 20, 10]\n\nfig, ax = plt.subplots(figsize=(8, 4))\nax.loglog(1 / sigma, [np.abs(np.sqrt(-1j* 2 * np.pi * f[0] * np.pi * 4e-7 * s)) * r[0] for s in sigma]) \nax.set_xlabel(r\"$\\rho$ in $\\Omega \\cdot$m\")\nax.set_ylabel(r\"$|k|r$\")\nax.grid(alpha=0.4)\n\n\n\n\n\n\n\n\n\n\n13.5.1 Azimutabhängigkeit bei steilstehenden Leitfähigkeitsanomalien\n\n\n\n13.5.2 Beispiele\nDie Apparatur EM-34 berechnet intern die scheinbare Leitfähigkeit auf Grundlage der LIN-Näherung:\n\\[\n\\sigma_s = \\frac{4}{\\omega\\mu_0 r^2} \\,\\mathrm{imag}\\left ( \\frac{H}{H_0} \\right)\n\\]\nWir rechnen mit empymod nach.\n\n\nCode anzeigen\nimport empymod\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef VCP(res, freq, offset, height):\n    src = [0, 0, -height, 90, 0]\n    rec = [offset, 0, -height, 90, 0]\n    depth = 0.0\n    inp = {'src': src, 'rec': rec, 'depth': depth, 'res': [2e20, res],\n       'freqtime': freq, 'verb': 1, 'xdirect': True}\n    fhz_num = empymod.loop(**inp)\n    return fhz_num\n\ndef rhoa(H, offset, freq):\n    omega = 2 * np.pi * freq\n    hz_air = -1.0 / (4 * np.pi * offset**3)\n    sig = 4 / (omega * mu0 * offset**2) * np.imag(H / hz_air)\n    return 1 / sig\n\nmu0 = np.pi * 4e-7\n\n\n\n\nCode anzeigen\noffset = 10.0\nfreq = 6400.0\nh = 0.0\nrho = 500.0\nH = VCP(rho, freq, offset, h)\nprint(f\"rhoa = {rhoa(H, offset, freq):.2f}\")\n\n\nrhoa = 520.19\n\n\n\n\nCode anzeigen\nRHO = np.logspace(0, 4, 41)\nfig, ax = plt.subplots(figsize=(6, 6))\nax.loglog(RHO, [rhoa(VCP(v, freq, offset, h), offset, freq) for v in RHO], label=\"LIN\")\nax.loglog(RHO,RHO, label=\"true\")\nax.set_title(\"Scheinbarer spezifischer Widerstand eines \\n homogenen Halbraums berechnet aus LIN-Näherung\")\nax.set_xlabel(r\"$\\rho$ in $\\Omega\\cdot$m\")\nax.set_ylabel(r\"$\\rho_{s}$ in $\\Omega\\cdot$m\")\nax.legend()\nax.grid(alpha=0.5)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#lin-näherung",
+    "href": "csem.html#lin-näherung",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.6 LIN-Näherung",
+    "text": "13.6 LIN-Näherung\nWir stellen die Magnetfeldresponse eines VMD über einem homogenen Halbraum dar. Variiert wird hier nur die Leitfähigkeit, während die Frequenz konstant gehalten wird.\nWir beobachten einen typischen Verlauf von Real- und Imaginärteil.\nFür die Kalibrierung der scheinbaren Leitfähigkeit bei der Anzeige der Messwerte wird folgendes ausgenutzt:\n\nAnnahme eines homogenen Halbraums\nRealteil konstant\nImaginärteil ist nur eine Funktion von \\(\\sigma\\), wenn \\(\\omega r^2\\) konstant\nKalibrierung liefert scheinbare Leitfähigkeit \\(\\sigma_{a}\\) in mS/m\n\n\n\nCode anzeigen\ndata = np.array([VCP(1 / s, freq, offset, h) for s in sigma])\nHz0 = -1.0 / (4 * np.pi * offset**3)\nkr = np.array([np.abs(np.sqrt(-1j* 2 * np.pi * freq * np.pi * 4e-7 * s)) * offset for s in sigma])\nfig, ax = plt.subplots(figsize=(8, 4))\nax.set_xlabel(\"|k|r\")\nax.set_ylabel(r\"$H_{z}$ in A/m\")\nax.loglog(kr, np.abs(np.real(data)), label=\"Re\")\nax.loglog(kr, np.abs(np.imag(data)), label=\"Im\")\nax.legend()\nax.grid(alpha=0.5)",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#das-fugro-dighem-system",
+    "href": "csem.html#das-fugro-dighem-system",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.8 Das Fugro DIGHEM System",
+    "text": "13.8 Das Fugro DIGHEM System\n\n\n\n\n\n\n\nDIGHEM\n\n\n\n\n\nAufgabe\nBestimmung der elektrischen Leitfähigkeit bis zu Tiefen von eta 150 m\n\n\nAbstand TX-RX\n7.9 bis 8.0 (für jede Frequenz verschieden)\n\n\nFrequenzen in Hz\n375, 1778, 8510, 37830, 129000\n\n\nSpulenkonfiguration\nHCP\n\n\nHersteller\nFugro Airborne Survey (Kanada)\n\n\nSensorhöhe\n30 m\n\n\nFluggeschwindigkeit\n140 km/h\n\n\nAbtastrate\n10 Hz\n\n\nRäumliches Abtastintervall\n4 m\n\n\nWeitere Messgeräte\nCs-Magnetometer Geometrics (USA)\n\n\ndavon im Hubschrauber\nGammastrahlen-Spektrometer, DGPS, Höhenmesser",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
+    ]
+  },
+  {
+    "objectID": "csem.html#darstellungsgrößen",
+    "href": "csem.html#darstellungsgrößen",
+    "title": "13  Controlled-Source-EM-methoden",
+    "section": "13.10 Darstellungsgrößen",
+    "text": "13.10 Darstellungsgrößen\nDas komplexwertige kompensierte Magnetfeld wird auf das Vakuumfeld normiert und in Real- und Imaginärteil zerlegt.\nRechnerisch: \\[\n\\frac{H_{s}}{H_{0}} = \\frac{\\mathrm{Re}(H_{z}) + i \\mathrm{Im}(H_{z}) - H_{0}}{H_{0}}\n\\]\n\\[\n\\overline R = \\mathrm{Re} \\left( \\frac{H_{s}}{H_{0}} \\right) = \\frac{\\mathrm{Re}(H_{z})}{H_{0}}-1  , \\qquad \\overline Q = \\mathrm{Im} \\left( \\frac{H_{s}}{H_{0}} \\right) = \\frac{\\mathrm{Im}(H_{z})}{H_{0}}\n\\] In der Praxis werden diese Größen in ppm (parts per million, \\(10^{-6}\\)) dargestellt: \\[\nR := \\overline R \\times 10^{6}, \\qquad Q := \\overline Q \\times 10^{6}\n\\] R: Realteil oder real part\nQ: Imaginärteil oder quadrature part",
+    "crumbs": [
+      "Elektromagnetik",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Controlled-Source-EM-methoden</span>"
     ]
   }
 ]

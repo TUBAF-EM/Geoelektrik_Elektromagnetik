@@ -30,6 +30,7 @@ book:
         - einfuehrung_em.qmd
         - grundgleichungen_em.qmd
         - magnetotellurik.qmd
+        - csem.qmd
     - zusammenfassung.qmd
     - literatur.qmd
     - slidedecks.qmd
