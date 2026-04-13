@@ -49,6 +49,7 @@ Salz-Süßwasser-Interaktion im [DynaDeep-Projekt](https://www.liag-institut.de/
 :::
 
 Im vorliegenden Beispiel aus dem DynaDeep-Projekt kommen 3 verschiedene Skalen zum Einsatz, um die Dynamik der Salz-Süßwasser-Grenze abzubilden:
+
 * 4-Punkt-Messung (1D) ($a$=2.5cm) an einem DirectPush-Gerät (links)
 * 1.5D-Messung ($a$=25cm) an einer vergrabenen vertikalen Elektroden-Strecke
 * horizontale 2D-Messung ($a$=2.5m) an der Oberfläche

@@ -24,7 +24,7 @@ book:
         - ert.qmd
         - timelapse_ert.qmd
         - induzierte_polarisation.qmd
-        - ert_praxis.qmd
+        # - ert_praxis.qmd
     - part: "Elektromagnetik"
       chapters:
         - einfuehrung_em.qmd
@@ -64,6 +64,6 @@ format:
           </script>
 
 editor: source
-jupyter: 00python3
+jupyter: python3
 execute:
   freeze: true
