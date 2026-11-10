@@ -197,3 +197,126 @@ Auch hier wird der Stromfluss vom guten Leiter eingezogen und vom schlechten Lei
 Dabei wird die Null-Potentiallinie in Richtung des Schlechten Leiters verdrängt.
 Hier ist aber die Lage der Anomalien von Bedeutung.
 Wie genau Leitfähigkeits-Änderungen das Potentialfeld und damit die Messung verändern, wird mit dem Begriff Sensitivität beschrieben.
+
+## Das Reziprozitätsprinzip
+
+Das Reziprozitätsprinzip erlaubt die Vertauschung von Strom- und Potential-Elektroden und besagt:
+
+::: {.callout-note title="Reziprozitätsprinzip"}
+Sei $U_{AB}$ die von einer Stromeinspeisung $I_{AB}$ in die Stromelektroden erzeugte Spannung, und $u_{MN}$ die von einer Stromeinspeisung $I_{MN}$ in die Potentialelektroden erzeugte Spannung. Dann gilt für die Impedanz
+
+$$ Z = \frac{U_{MN}}{I_{AB}} = \frac{U_{AB}}{I_{MN}} $$
+:::
+
+Es wird nach @Geselowitz1971 folgendermaßen hergeleitet:
+
+Die Quellterme lauten $\vb j_s^{AB}=I_{AB}(\delta(\vb r-\vb r_A)-\delta(\vb r-\vb r_B))$ (Experiment 1) und $\vb j_s^{MN}=I_{MN}(\delta(\vb r-\vb r_M)-\delta(\vb r-\vb r_N))$ (Experiment 2)
+
+$$ \div(u_1\vb j_2 - u_2\vb j_1) = \grad u_1 \vdot \vb j_2 + u_1\div \vb j_2 - \grad u_2 \vdot \vb j_1 - u_2 \div \vb j_1 $$
+
+Das Ohmsche Gesetz ($\vb j=-\sigma\grad u$) wird in die Skalarprodukte eingesetzt
+
+$$ \grad u_1\vdot \vb j_2 = -\frac{\vb j_1}{\sigma}\vdot j_2 = -\frac{\vb j_1 \vdot \vb j_2}{\sigma} = -\frac{\vb j_2}{\sigma}\vdot j_1 = \grad u_2\vdot \vb j_1 $$
+
+Damit ergibt sich $\grad u_1 \vdot \vb j_2 - \grad u_2 \vdot \vb j_1=0$, wodurch sich die Gleichung vereinfacht
+
+$$ \div(u_1\vb j_2-u_2\vb j_1) = u_1 \div\vb j_2 - u_2 \div\vb j_2 $$
+
+Dies wird über das komplette Volumen $V$ integriert
+
+$$ \int_V \div(u_1\vb j_2-u_2\vb j_1) \dd V = \int_V u_1 \div\vb j_2 - u_2 \div\vb j_2 \dd V $$
+
+und mit Hilfe des Gauss-schen Satzes bzw. Greenschen Theorems die linke Seite in ein Oberflächen-Integral über die Oberfläche $S$ überführt
+
+$$ \int_S (u_1\vb j_2-u_2\vb j_1)\vdot \vb n \dd S = \int_V u_1 \div\vb j_2 - u_2 \div\vb j_2 \dd V $$
+
+Da durch die äußere Oberfläche kein Strom treten kann ($\vb j\vdot\vb n=0$), ist der linke Teil Null und es ergibt sich
+
+$$ \int_V u_1 \div\vb j_2 \dd V = \int_V u_2 \div\vb j_2 \dd V $$
+
+Die Divergenz von $\vb j$ ist überall Null außer an den Einspeisepunkten, d.h. das Volumenintegral löst sich auf
+
+$$ u_1 I_{MN} (\delta(\vb r - \vb r_M)-\delta(\vb r-\vb r_N)) = u_2 I_{AB}(\delta(\vb r-\vb r_A)-\delta(\vb r-\vb r_B)) $$
+
+womit sich das Reziprozitätsprinzip ergibt
+
+$$ \frac{U_{MN}}{I_{AB}} = \frac{u_1(\vb r_M) - u_1(\vb r_N)}{I_{AB}} = \frac{u_2(\vb r_A) - u_2(\vb r_B)}{I_{MN}} = \frac{U_{AB}}{I_{MN}} $$
+
+In der Herleitung haben wir Punktquellen ohne zusätzliche Kopplungswiderstände vorausgesetzt, die es in der Praxis aber nicht gibt, da die Stromdichte nicht unendlich werden kann.
+
+## Ausgedehnte Elektroden
+
+Im Allgemeinen braucht eine Elektrode eine endliche Fläche, um den Übergang des gesamten Stroms in den Untergrund zu gewährleisten, dabei entstehen auch Ankopplungswiderstände.
+Für klassische 2D/3D-Geoelektrik sind das Spieße mit einer Länge $l$ und einer Dicke $d\ll l$, also Linienelektroden.
+Bei versiegelten Flächen kommen aber auch Plattenelektroden zum Einsatz die (wie EKG-Elektroden in der Medizin) mit einem Gel angekoppelt werden.
+In Bohrungen verwendet man auch Ringelektroden.
+Die Form der Elektroden beeinflusst auch die Lösung, welche im Allgemeinen nur noch numerisch gelöst werden kann.
+Nur für (balb)kugelförmige Elektroden bleibt die Lösung einfach: nach dem Newtonschen Kugelschalen-Theorem der Potentialtheorie ist sie (im Außenraum) identisch zur Punktquelle.
+
+
+Zur numerischen Modellierung wird das aus der medizinischen Impedanztomographie entlehnte *Complete Electrode Model* (CEM) verwendet [@Ruecker2011].
+Dabei wird die Elektroden diskretisiert (s. Abb. oben) und das Schaltbild entsprechend um Ankopplungswiderstände erweitert:
+
+![Ersatzschaltbild für (a) Punktquelle und (b) ausgedehnte Quellen [@Ruecker2011]](pics/rueckerguenther2011_fig1.png)
+
+Damit entstehen Zusätzliche Gleichungen für die Elektrodenoberfläche $\Gamma_l$, zum einen der Verteilung der Gesamtstromstärke
+
+$$\int_{\Gamma_l}\sigma \pdv{u}{n}ds=I$$
+
+und zum Anderen die Abhängigkeit des Potentials auf der Oberfläche von Messelektroden ($U_l$ ist das abgegriffene Potential).
+
+$$z_l\sigma\pdv{u}{n} + u = U_l$$
+
+### Modellierung von langen Elektroden
+
+In der Praxis sind vor allem lange Elektroden (Spieße) relevant.
+Dazu kann das Schaltbild vereinfacht werden, indem in der Modellierung Knoten über Shunt-Widerstände kurzgeschlossen werden [@Ronczka2015].
+Die Potentialverteilung verändert sich dergestalt, dass im Bereich der Stecktiefe die Ströme horizontal fließen:
+
+![Stromdichte für Langelektroden [@Ronczka2015]](pics/LE_Stromdichte.png)
+
+Auch passive Elektroden (M und N) verzerren das Potentialbild, wie hier zu sehen ist.
+
+### Einfluss der Stecktiefe
+
+![Prozentuale Abweichung des Geometriefaktors versch. Anordnungen in Abhängigkeit von der Stecktiefe [@Ruecker2011]](pics/rueckerguenther2011_tab1.png)
+
+
+### Langelektroden - Sensitivitäten
+
+:::: {.columns}
+::: {.column}
+![[@Ronczka2015]](pics/LE_sens1.png)
+:::
+::: {.column}
+![](pics/LE_sens2.png)
+:::
+::::
+
+### Anwendung
+
+Die Verwendung stahlverrohrter Bohrungen als Elektroden wird als Lang-Elektroden-Geoelektrik bezeichnet, wie z.B. im Projekt SaMoLEG (Salzwasser-Monitoring mittels Langelektroden-Geoelektrik).
+
+:::: {.columns}
+::: {.column}
+![](pics/samoleg.png)
+:::
+::: {.column}
+* stahlverrohrte Bohrlöcher als Elektroden [@Guenther2015]
+
+![](pics/briesen.png){.fragment}
+:::
+::::
+
+Ringelektroden finden in Bohrloch-Installationen, z.B. in automatisierten Messtellen Einsatz, z.B. beim Salzwasser-Monitoring-System [SAMOS](https://www.liag-institut.de/samos.html).
+Zur Berechnung muss die Oberfläche der Elektrode in der Vorwärtsrechnung mit diskretisiert werden.
+Für die Inversion muss entweder ein solches Netz benutzt werden, alternativ kann eine Korrektur der Daten mit dem Geometrie-Effekt endlicher Elektroden (und hier der gesamten Installation) erfolgen.
+
+:::: {.columns}
+::: {.column width="46%"}
+![Salzwasser-Monitoring-System](pics/samos-aufbau.jpg)
+:::
+::: {.column width="53%" .fragment}
+![Modellierung Ringelektroden [@Ronczka2015]](pics/SAMOS-Ringelektroden.png)
+:::
+::::

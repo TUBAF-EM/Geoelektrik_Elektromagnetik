@@ -190,6 +190,7 @@ Zur Bestimmung des Daten-Fehlers kann die sogenannte Normal-Reziprok-Methode, ei
 ![Untersuchung von Halden [@Guenther2006]](pics/ert/haldeModel.png)
 
 
+<!--
 ## Ausgedehnte Elektroden
 
 * Vereinfachtes Modell: Punktförmige Stromeinspeisung $j=I\frac{\vb r}{r^3}$
@@ -253,3 +254,4 @@ Zusätzliche Gleichungen: $z_l\sigma\pdv{u}{n} + u = U_l$ auf $\Gamma_l$ und $\i
 ![Modellierung Ringelektroden [@Ronczka2015]](pics/SAMOS-Ringelektroden.png)
 :::
 ::::
+-->

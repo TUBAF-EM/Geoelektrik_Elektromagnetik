@@ -9,7 +9,7 @@ Frage: Wie wirkt sich eine Änderung der Leitfähigkeit $\delta\sigma$ auf den M
 
 ![](pics/sens_scheme.png)
 
-Dabei betrachten wir als Messgröße den scheinbaren spezifischen Widerstand $\rho_a$ und als Variable den spezifischen Widerstand $\rho$, um eine einheitenlose Größe zu erhalten.
+Dabei betrachten wir anstatt als Messgröße den scheinbaren spezifischen Widerstand $\rho_a$ und als Variable den spezifischen Widerstand $\rho$, um eine einheitenlose Größe zu erhalten.
 
 $$S(\vb r)=\pdv{\rho_a}{\rho(\vb r)}$$
 
